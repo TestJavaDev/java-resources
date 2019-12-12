@@ -1,6 +1,13 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default
+title: Home
+nav_order: 1
+description: "Java resources to learn"
+permalink: /
 ---
+
+# Java Developer Roadmap
+
+## Roadmap
+
+![Roadmap](https://1.bp.blogspot.com/-cp6qvxsK2XI/XYcbm9Sn2uI/AAAAAAAAahA/Fc7FXjs-TTc60Sj0c_Wr0Ofwzc60ys9wwCLcBGAsYHQ/s1600/The%2B2019%2BJava%2BDeveloper%2BRoadMap.jpg)
