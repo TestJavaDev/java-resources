@@ -10,4 +10,4 @@ permalink: /
 
 ## Roadmap
 
-![Roadmap](https://1.bp.blogspot.com/-cp6qvxsK2XI/XYcbm9Sn2uI/AAAAAAAAahA/Fc7FXjs-TTc60Sj0c_Wr0Ofwzc60ys9wwCLcBGAsYHQ/s1600/The%2B2019%2BJava%2BDeveloper%2BRoadMap.jpg "Title" {width=1036px height=1593px})
+![Roadmap](https://1.bp.blogspot.com/-cp6qvxsK2XI/XYcbm9Sn2uI/AAAAAAAAahA/Fc7FXjs-TTc60Sj0c_Wr0Ofwzc60ys9wwCLcBGAsYHQ/s1600/The%2B2019%2BJava%2BDeveloper%2BRoadMap.jpg)
