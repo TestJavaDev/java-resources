@@ -2,13 +2,13 @@
 title: Java resources to learn
 description: Useful resources to learn java
 
-# Remote Setting
-# baseurl: "/java-resources-to-learn"
-# url: "http://andriylevchenko.github.com"
+## Local Setting
+baseurl: ""
+url: ""
 
 # Theme
-# theme: "just-the-docs"
-remote_theme: pmarsceill/just-the-docs
+theme: "just-the-docs"
+# remote_theme: pmarsceill/just-the-docs
 
 # Theme settings
 # Color scheme currently only supports "dark" or nil (default)
