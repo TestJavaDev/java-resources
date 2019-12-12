@@ -10,4 +10,4 @@ permalink: /
 
 ## Roadmap
 
-![Roadmap](Java_Developer_RoadMap.jpg)
+![Roadmap](Java_Developer_RoadMap.jpg "Title" {width=1036px height=1593px})
