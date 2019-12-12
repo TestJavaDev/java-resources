@@ -2,7 +2,7 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Java resources to learn"
+description: "Java resources"
 permalink: /
 ---
 
