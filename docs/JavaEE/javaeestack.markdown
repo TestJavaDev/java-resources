@@ -2,7 +2,7 @@
 layout: default
 title: JavaEE
 nav_order: 3
-permalink: /spring
+permalink: /javaee
 has_children: true
 ---
 <div align="center" markdown="1">
