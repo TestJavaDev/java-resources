@@ -1,0 +1,12 @@
+---
+layout: default
+title: JMS
+parent: JavaEE
+# nav_order: 1
+permalink: /javaee/jms
+---
+<div align="center" markdown="1">
+JavaEE / Java resources / Tutorial
+
+{: .fs-6 .fw-300 }
+</div>
