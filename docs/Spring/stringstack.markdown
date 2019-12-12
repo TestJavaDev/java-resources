@@ -2,7 +2,7 @@
 layout: default
 title: Spring
 nav_order: 4
-permalink: /
+permalink: /spring
 has_children: true
 ---
 <div align="center" markdown="1">
