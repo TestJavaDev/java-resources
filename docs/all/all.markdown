@@ -8,7 +8,11 @@ has_children: true
 <div align="center" markdown="1">
 JavaEE / Java resources / Tutorial
 
-  - [Оптимизация запросов. Основы EXPLAIN в PostgreSQL](https://habrahabr.ru/post/203320/)
+{: .fs-6 .fw-300 }
+</div>
+
+
+ - [Оптимизация запросов. Основы EXPLAIN в PostgreSQL](https://habrahabr.ru/post/203320/)
   - [Оптимизация запросов. Часть 2](https://habrahabr.ru/post/203386/)
   - [Оптимизация запросов. Часть 3](https://habrahabr.ru/post/203484/)
   - [Документация Postgres: индексы](https://postgrespro.ru/docs/postgresql/9.6/indexes.html)
@@ -181,5 +185,130 @@ ORM. Hibernate. JPA.</a>
 [Объяснение SQL JOIN](http://www.skillz.ru/dev/php/article-Obyasnenie_SQL_obedinenii_JOIN_INNER_OUTER.html)
 
 
-{: .fs-6 .fw-300 }
-</div>
+### REST
+-  Дополнительно:
+   - [Подборка практик REST](https://gist.github.com/Londeren/838c8a223b92aa4017d3734d663a0ba3)
+   -  <a href="http://www.infoq.com/articles/springmvc_jsx-rs">JAX-RS vs Spring MVC</a>
+   - <a href="http://habrahabr.ru/post/144011/">RESTful API для сервера – делаем правильно (Часть 1)</a>
+   - <a href="http://habrahabr.ru/post/144259/">RESTful API для сервера – делаем правильно (Часть 2)</a>
+   - <a href="https://www.youtube.com/watch?v=Q84xT4Zd7vs&list=PLoij6udfBncivGZAwS2yQaFGWz4O7oH48">И. Головач. RestAPI</a>
+   - [value/name в аннотациях @PathVariable и @RequestParam](https://habr.com/ru/post/440214/)
+- [15 тривиальных фактов о правильной работе с протоколом HTTP](https://habrahabr.ru/company/yandex/blog/265569/)
+- <a href="https://medium.com/@mwaysolutions/10-best-practices-for-better-restful-api-cbe81b06f291">10 Best Practices for Better RESTful
+- [REST resource hierarchy (если кратко: не рекомендуется)](https://stackoverflow.com/questions/15259843/how-to-structure-rest-resource-hierarchy)
+
+- **[15 тривиальных фактов о правильной работе с протоколом HTTP](https://habrahabr.ru/company/yandex/blog/265569/)**
+    - **<a href="https://medium.com/@mwaysolutions/10-best-practices-for-better-restful-api-cbe81b06f291">10 Best Practices for Better RESTful API</a>**
+    - [REST resource hierarchy](https://stackoverflow.com/questions/20951419/what-are-best-practices-for-rest-nested-resources)
+
+
+### Spring Security
+
+-  <a href="http://projects.spring.io/spring-security/">Spring Security</a>
+-  <a href="https://ru.wikipedia.org/wiki/Протокол_AAA">Протокол AAA</a>
+-  <a href="https://ru.wikipedia.org/wiki/Аутентификация_в_Интернете">Методы аутентификации</a>.
+-  <a href="https://en.wikipedia.org/wiki/Basic_access_authentication">Basic access authentication</a>
+-  <a href="http://articles.javatalks.ru/articles/17">Использование ThreadLocal</a>
+-  <a href="http://www.baeldung.com/security-spring">Security with Spring</a>
+-  [Decode/Encode Base64 online](http://decodebase64.com/)
+-  <a class="anchor" id="csrf"></a><a href="https://ru.wikipedia.org/wiki/Межсайтовая_подделка_запроса">Межсайтовая подделка запроса (CSRF)</a>
+-  <a href="https://docs.spring.io/spring-security/site/docs/current/reference/html/web-app-security.html#csrf-using">Using Spring Security CSRF Protection</a>
+-  <a href="https://docs.spring.io/spring-security/site/docs/current/reference/html/web-app-security.html#csrf-include-csrf-token-ajax">Ajax and JSON Requests</a>
+-  <a href="http://blog.jdriven.com/2014/10/stateless-spring-security-part-1-stateless-csrf-protection/">Stateless CSRF protection</a>
+-  Ресурсы:
+    -  <a href="http://habrahabr.ru/post/264641/">Spring Security 4 + CSRF</a>
+    -  <a href="http://stackoverflow.com/questions/11008469/are-json-web-services-vulnerable-to-csrf-attacks">Are JSON web services vulnerable to CSRF attacks</a>
+    -  <a href="https://ru.wikipedia.org/wiki/Правило_ограничения_домена">Правило ограничения домена (SOP)</a>
+    -  <a href="https://ru.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-origin resource sharing (CORS)</a>
+
+### Servlets
+
+-  <a href="https://ru.wikipedia.org/wiki/HTTP_cookie">HTTP cookie</a></h3>
+-  <a href="http://stackoverflow.com/questions/595872/under-what-conditions-is-a-jsessionid-created">Under what conditions is a JSESSIONID created?</a>
+-  <a href="http://halyph.blogspot.ru/2014/08/how-to-disable-tomcat-session.html">Tomcat Session Serialization</a>
+
+Для хранения сосотяния сессии (например корзины покупателя) в Servlet API есть механизм хранения объектов сессии (грубо- мультимапмапа, которая достается из хранилища по ключу). При создании сессии на стороне сервера (через `request.getSession`) создается кука `JSESSIONID`, которая передается между клиентом и сервером и является ключом в хранилище объектов сессий. См. <a href="http://javatutor.net/books/tiej/servlets#_Toc39472970">обработка сессий с помощью сервлетов</a>
+
+### GIT
+
+<a href="https://drive.google.com/file/d/0B9Ye2auQ_NsFSUNrdVc0bDZuX2s">Системы управления версиями. Git.</a>
+-  **<a href="https://github.com/JavaOPs/topjava/wiki/Git">Wiki по ведению проекта в Git</a>**
+-  <a href="http://ru.wikipedia.org/wiki/Система_управления_версиями">Система управления версиями</a>. <a href="http://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8#.D0.A0.D0.B0.D1.81.D0.BF.D1.80.D0.B5.D0.B4.D0.B5.D0.BB.D1.91.D0.BD.D0.BD.D1.8B.D0.B5_.D1.81.D0.B8.D1.81.D1.82.D0.B5.D0.BC.D1.8B_.D1.83.D0.BF.D1.80.D0.B0.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D1.8F_.D0.B2.D0.B5.D1.80.D1.81.D0.B8.D1.8F.D0.BC.D0.B8">VCS/DVSC</a>.
+-  Ресурсы:            
+    -  <a href="https://try.github.io/levels/1/challenges/1">Интерактивная Git обучалка</a>
+    -  <a href="http://learngitbranching.js.org/">Еще одна интерактивная обучалка, по-русски</a>    
+    -  <a href="https://git-scm.com/book/ru/v2">Книга Git</a>
+    -  <a href="https://illustrated-git.readthedocs.org/en/latest/#working-with-remote-repositories">Working with remote repositories</a>
+    -  <a href="https://www.youtube.com/playlist?list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR">Видео по обучению Git</a>
+    -  <a href="https://blog.interlinked.org/tutorials/git.html">Git Overview</a>
+    -  [Основы Git за 20 минут](https://www.youtube.com/watch?v=TMeZGvtQnT8)
+    -  [Git - для новичков](https://www.youtube.com/watch?list=PLY4rE9dstrJyTdVJpv7FibSaXB4BHPInb&v=PEKN8NtBDQ0)
+
+### Java8
+
+
+Сделать реализацию через Java 8 Stream API.
+```
+-  <a href="http://www.youtube.com/watch?v=_PDIVhEs6TM">Видео: Доступно о Java 8 Lambda</a>
+-  <a href="https://devcolibri.com/java-8-killer-features-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1/">Java 8: Lambda выражения</a>
+-  <a href="https://devcolibri.com/java-8-killer-features-%D1%87%D0%B0%D1%81%D1%82%D1%8C-2/">Java 8: Потоки</a>
+-  <a href="https://javadevblog.com/polnoe-rukovodstvo-po-java-8-stream.html">Pуководство по Java 8 Stream</a>
+-  <a href="https://annimon.com/article/2778">Java 8 Stream API в картинках и примерах</a>
+-  [7 способов использовать groupingBy в Stream API](https://habrahabr.ru/post/348536)
+-  <a href="http://habrahabr.ru/post/224593/">Лямбда-выражения в Java 8</a>
+-  <a href="https://github.com/winterbe/java8-tutorial">A Guide to Java 8</a>
+-  <a href="http://habrahabr.ru/company/luxoft/blog/270383/">Шпаргалка Java Stream API</a>
+-  <a href="https://www.youtube.com/watch?v=hEyCK4ueBlc">Алексея Владыкин: Элементы функционального программирования в Java</a>
+-  <a href="https://www.youtube.com/watch?v=iD8H7cmxw_w">Yakov Fain о новом в Java 8</a>
+-  <a href="http://stackoverflow.com/questions/28319064/java-8-best-way-to-transform-a-list-map-or-foreach">stream.map vs forEach</a>
+-  Дополнительно
+   - [Сергей Куксенко — Stream API, часть 1](https://www.youtube.com/watch?v=O8oN4KSZEXE)
+   - [Сергей Куксенко — Stream API, часть 2](https://www.youtube.com/watch?v=i0Jr2l3jrDA)
+- [Используйте Stream API проще (или не используйте вообще)](https://habrahabr.ru/post/337350/)
+- Если вас беспокоить производительность стримов, обязательно прочитайте про оптимизацию 
+    - ["Что? Где? Когда?"](http://optimization.guide/intro.html)
+    - [Перформанс: что в имени тебе моём?](https://habrahabr.ru/company/jugru/blog/338732/)
+    - [Performance это праздник](https://habrahabr.ru/post/326242/)
+
+
+#### Java (базовые вещи)
+- <a href="http://www.intuit.ru/studies/courses/16/16/info">Интуит. Программирование на Java</a>
+- <a href="https://github.com/JavaOPs/masterjava#Первое-занятие-многопоточность">1й урок MasterJava: Многопоточность</a>
+- <a href="http://ggenikus.github.io/blog/2014/05/04/gc">Основы Java garbage collection</a>
+- <a href="https://habrahabr.ru/post/134102/">Размер Java объектов</a>
+- <a href="http://www.quizful.net/post/java-reflection-api">Введение в Java Reflection API</a>
+- <a href="https://habrahabr.ru/users/tarzan82/topics/">Структуры данных в картинках</a>
+- <a href="https://habrahabr.ru/company/luxoft/blog/157273/">Обзор java.util.concurrent.*</a>
+- <a href="http://www.skipy.ru/technics/synchronization.html">Синхронизация потоков</a>
+- <a href="http://java67.blogspot.ru/2014/08/difference-between-string-literal-and-new-String-object-Java.html">String literal pool</a>
+- <a href="https://habrahabr.ru/post/132241/">Маленькие хитрости Java</a>
+-  <a href="https://github.com/winterbe/java8-tutorial">A Guide to Java 8</a>
+
+
+
+
+#### Сервлеты
+-  <a href="https://devcolibri.com/как-создать-servlet-полное-руководство/">Как создать Servlet? Полное руководство.</a>
+-  [Сервлеты](https://metanit.com/java/javaee/4.1.php)
+
+#### JDBC, SQL
+- <a href="https://habrahabr.ru/post/123636/">Основы SQL на примере задачи</a>
+-  <a href="https://www.youtube.com/playlist?list=PLIU76b8Cjem5qdMQLXiIwGLTLyUHkTqi2">Уроки по JDBC</a>
+-  <a href="https://www.codecademy.com/learn/learn-sql">Learn SQL</a>
+-  <a href="http://www.intuit.ru/studies/courses/5/5/info">Интуит. Основы SQL</a>
+-  <a href="http://campus.codeschool.com/courses/try-sql/contents">Try SQL</a>
+-  <a href="https://stepic.org/course/Введение-в-базы-данных-551">Курс "Введение в базы данных"</a>
+
+#### Разное
+-  <a href="http://javaops.ru/view/test">Вопросы по собеседованию, ресурсы для подготовки</a>
+-  <a href="http://jeeconf.com/materials/intellij-idea/">Эффективная работа с кодом в IntelliJ IDEA</a>
+-  <a href="http://www.quizful.net/test">Quizful- тесты онлайн</a>
+-  <a href="https://stepic.org/course/Введение-в-Linux-73">Введение в Linux</a>
+
+#### Книги
+-  <a href="http://www.ozon.ru/context/detail/id/24828676/">Джошуа Блох: Java. Эффективное программирование. Второе издание</a>
+-  <a href="http://www.labirint.ru/books/87603/">Гамма, Хелм, Джонсон: Приемы объектно-ориентированного проектирования. Паттерны проектирования</a>
+-  <a href="http://www.bookvoed.ru/book?id=639284">Редмонд Э.: Семь баз данных за семь недель. Введение в современные базы данных и идеологию NoSQL</a>
+-  <a href="http://www.ozon.ru/context/detail/id/3174887/">Brian Goetz: Java Concurrency in Practice</a>
+-  <a href="http://bookvoed.ru/book?id=2593572">G.L. McDowell: Cracking the Coding Interview</a>
+

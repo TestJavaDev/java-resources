@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Spring
-nav_order: 4
-permalink: /spring
-has_children: true
+title: SpringBoot
+parent: spring
+# nav_order: 1
+permalink: /spring/springboot
 ---
 <div align="center" markdown="1">
 Spring / Java resources / Tutorial
