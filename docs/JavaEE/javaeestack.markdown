@@ -6,7 +6,7 @@ permalink: /javaee
 has_children: true
 ---
 <div align="center" markdown="1">
-JavaEE / Java resources / Tutorial
+JavaEE / Java resources / Articles
 
 {: .fs-6 .fw-300 }
 </div>

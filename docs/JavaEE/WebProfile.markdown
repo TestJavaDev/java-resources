@@ -6,9 +6,12 @@ parent: JavaEE
 permalink: /javaee/webprofile
 ---
 <div align="center" markdown="1">
-JavaEE / Java resources / Tutorial
+JavaEE / Java resources / Articles
 
-#### Servlets and JSP
+{: .fs-6 .fw-300 }
+</div>
+
+#### JavaEE WebProfile
 
 - <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol/">HTTP</a>
 - <a href="https://stackoverflow.com/tags/servlets/info/">Servlets</a>
@@ -26,5 +29,9 @@ JavaEE / Java resources / Tutorial
   - [Как создать Servlet? Полное руководство](https://devcolibri.com/как-создать-servlet-полное-руководство)
   - [JSTL для написания JSP страниц](https://devcolibri.com/jstl-для-написания-jsp-страниц/)
   - <a href="http://javatutor.net/articles/jstl-patterns-for-developing-web-application-1">JSTL: Шаблоны для разработки веб-приложений в java</a>
-{: .fs-6 .fw-300 }
-</div>
+-  <a href="https://ru.wikipedia.org/wiki/HTTP_cookie">HTTP cookie</a></h3>
+-  <a href="http://stackoverflow.com/questions/595872/under-what-conditions-is-a-jsessionid-created">Under what conditions is a JSESSIONID created?</a>
+-  <a href="http://halyph.blogspot.ru/2014/08/how-to-disable-tomcat-session.html">Tomcat Session Serialization</a>
+
+Для хранения сосотяния сессии (например корзины покупателя) в Servlet API есть механизм хранения объектов сессии (грубо- мультимапмапа, которая достается из хранилища по ключу). При создании сессии на стороне сервера (через `request.getSession`) создается кука `JSESSIONID`, которая передается между клиентом и сервером и является ключом в хранилище объектов сессий.
+<a href="http://javatutor.net/books/tiej/servlets#_Toc39472970">Обработка сессий с помощью сервлетов</a>
