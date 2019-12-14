@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Maven
-nav_order: 7
+nav_order: 11
 permalink: /maven
 has_children: true
 ---
@@ -31,4 +31,10 @@ Maven / Java resources / Articles
 - <a href="https://www.tutorialspoint.com/maven/maven_interview_questions.htm/">Maven Interview Questions</a>
 - <a href="https://jsehelper.blogspot.com/2016/05/maven-1.html/">Maven Вопросы</a>
 -  Разрешение зависимостей: <a href="http://howtodoinjava.com/2014/02/18/maven-bom-bill-of-materials-dependency/">Maven BOM [Bill Of Materials]
+- <a href="https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html">Maven transitive dependencies</a>
+- <a href="https://maven.apache.org/components/plugins/maven-project-info-reports-plugin/">Project Info Reports Plugin</a>
+- <a href="http://stackoverflow.com/questions/28098566/maven-site-warning-the-repository-url-https-maven-repository-dev-java-net-no/40040093#40040093">Disable blacklisted repository warnings</a>
+- <a href="https://habrahabr.ru/company/jugru/blog/191246/">Разрешение конфликтов в транзитивных зависимостях</a>
+- <a href="https://ru.wikipedia.org/wiki/Dependency_hell">Dependency hell</a>
+- <a href="http://maven.apache.org/enforcer/maven-enforcer-plugin/">Maven Enforcer Plugin</a>
 

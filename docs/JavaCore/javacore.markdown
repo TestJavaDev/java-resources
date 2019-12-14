@@ -11,6 +11,21 @@ JavaCore / Java resources / Articles
 {: .fs-6 .fw-300 }
 </div>
 
+- <a href="https://habrahabr.ru/post/283290/">Сравнение EE и Spring в комментариях</a>
+- [The Top 20 Most Popular Java Libraries](https://dzone.com/articles/the-top-100-java-libraries-in-2016-after-analyzing)
+- [Guava Wiki](https://github.com/google/guava/wiki)
+  - [Apache Commons](https://commons.apache.org/)
+  - [Spring Boot cache providers](http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-caching.html#_supported_cache_providers)
+- [Release 21.0: Java 8!](https://github.com/google/guava/wiki/Release21)
+- [118 слайдов от Егора Чернышева](https://www.slideshare.net/echernyshev/guava-41982734)
+
+
+
+
+
+
+
+
 - [Java](http://ru.wikipedia.org/wiki/Java), [JVM](http://ru.wikipedia.org/wiki/Виртуальная_машина_Java), [JIT-компиляция](http://ru.wikipedia.org/wiki/JIT) (wiki)
 - [Что такое Java? История создания](http://www.intuit.ru/studies/courses/16/16/lecture/27105)
 - [Что такое JDK? Введение в средства разработки Java](https://topjava.ru/blog/what-is-the-jdk)
@@ -89,6 +104,9 @@ JavaCore / Java resources / Articles
 ### Classloader
 - <a href="https://habrahabr.ru/post/103830/">Загрузка классов в Java</a>
 - <a href="https://tomcat.apache.org/tomcat-8.0-doc/class-loader-howto.html">Apache Tomcat Class Loader</a>
+- <a href="https://tomcat.apache.org/tomcat-8.0-doc/class-loader-howto.html">Class Loader HOW-TO</a>
+- Библиотеки vs Frameworks и Tomcat Common Lib. <a href="https://habrahabr.ru/post/222443/">Memory Leaks</a>. 
+- <a href="https://www.youtube.com/watch?v=sSmQ6W-ovZE">Никита Сальников-Тарновский — Утечки памяти</a>
 
 ### Java Collections
 
@@ -100,6 +118,7 @@ JavaCore / Java resources / Articles
 - [Java собеседование по коллекциям](http://habrahabr.ru/post/162017/)
 - [Часто задаваемые на собеседованиях вопросы по классам коллекциям в Java](http://info.javarush.ru/translation/2013/10/08/Часто-задаваемые-на-собеседованиях-вопросы-по-классам-коллекциям-в-Java-Часть-2-.html#1)
 - [Собеседование по Java — коллекции](http://javastudy.ru/interview/collections/)
+- [Коллекции в Java (стандартные, guava, apache, trove, gs-collections и другие)](https://habr.com/ru/company/luxoft/blog/256877/)
 - [Collection.toArray(new T[0]) or Collection.toArray(new T[size]), that's the question](https://shipilev.net/blog/2016/arrays-wisdom-ancients)
 - [Автоупаковка и распаковка в Java](https://habrahabr.ru/post/329498/)
 - [Преобразования Integer и int](https://habrahabr.ru/post/104231/)
@@ -109,6 +128,7 @@ JavaCore / Java resources / Articles
 - [Паттерн проектирования Итератор](https://refactoring.guru/ru/design-patterns/iterator/java/example)
 - [Iterator / Iterable](http://www.javenue.info/post/101)
 - [Iterator in Java](https://www.journaldev.com/13460/java-iterator)
+- <a href="http://stackoverflow.com/questions/1132507/java-array-thread-safety">Java array thread-safety</a>
 
 ### Java Nested and Inner Class
 - [Вложенные классы в Java](https://habrahabr.ru/post/342090/) 
@@ -151,6 +171,29 @@ JavaCore / Java resources / Articles
 - <a href="http://www.duct-tape-architect.ru/?p=315">XML формат и технологии</a>
 - Wiki: <a href="https://ru.wikipedia.org/wiki/XML">XML</a>, <a href="https://ru.wikipedia.org/wiki/XSL">XSL</a> , <a href="https://ru.wikipedia.org/wiki/Document_Object_Model">DOM</a>, <a href="https://ru.wikipedia.org/wiki/SAX">SAX</a>, <a href="https://en.wikipedia.org/wiki/StAX">StAX</a>, <a href="https://ru.wikipedia.org/wiki/Java_Architecture_for_XML_Binding">JAXB</a>
 - <a href="http://www.vogella.com/tutorials/JavaXML/article.html">Работа с XML в Java</a>. Реализация хранения в XML. 
+- <a href="http://genberm.narod.ru/xml/lections/xml/introduction.html">История создания</a>. <a href="http://www.duct-tape-architect.ru/?p=315">XML формат и технологии</a>, <a href="https://ru.wikipedia.org/wiki/XML">XML</a>
+- <a href="http://stackoverflow.com/questions/33746/xml-attribute-vs-xml-element#33757">Attribute vs Element</a>. 
+- <a href="http://genberm.narod.ru/xml/schema/schema0/2.7.html">sequence/ choice/ all/ group</a>. <a href="https://docstore.mik.ua/orelly/xml/schema/ch09_01.htm">Define referring to Another XML Element</a>
+- <a href="http://genberm.narod.ru/xml/lections.html">Лекции по XML</a>
+- <a href="http://www.vogella.com/tutorials/JavaXML/article.html">Работа с XML в Java</a>.
+- <a href="https://ru.wikipedia.org/wiki/Document_Object_Model">DOM</a>, <a href="https://ru.wikipedia.org/wiki/SAX">SAX</a>
+- <a href="http://www.ibm.com/developerworks/ru/library/x-jaxp/">JAXP: вспомогательный слой над SAX и DOM API</a>
+- <a href="https://ru.wikipedia.org/wiki/Java_Architecture_for_XML_Binding">JAXB</a>, <a href="https://ru.wikipedia.org/wiki/JAXP">JAXP</a>, <a href="https://ru.wikipedia.org/wiki/Xerces">Xerces</a>, <a href="https://ru.wikipedia.org/wiki/Xalan">Xalan</a>
+- <a href="https://www.ibm.com/developerworks/ru/library/x-javaxmlvalidapi/">Валидации XML</a>
+
+### Структура памяти: куча, стек, permanent/metaspace
+- <a href="https://www.slideshare.net/solit/jvm-16948708">JVM изнутри - оптимизация и профилирование</a>.
+- <a href="http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap#24171266">Stack and Heap</a>
+- <a href="http://habrahabr.ru/post/117274/">Из каких частей состоит память java процесса</a>.
+- <a href="http://www.javaspecialist.ru/2011/04/permanent.html">Permanent область памяти</a>
+- <a href="http://www.javaspecialist.ru/2011/04/java-thread-stack.html">Java thread stack </a>
+- <a href="http://habrahabr.ru/post/134102/">Размер Java объектов</a>
+
+### Ленивая инициализация Singleton
+- <a href="https://habrahabr.ru/post/27108/">Реализация Singleton в JAVA</a>
+- <a href="https://ru.wikipedia.org/wiki/Double_checked_locking">Double checked locking</a>
+- <a href="https://en.wikipedia.org/wiki/Initialization-on-demand_holder_idiom">Initialization-on-demand holder idiom</a>
+- <a href="https://tproger.ru/translations/singleton-pitfalls/">Подводные камни Singleton</a>
 
 ### Multithreading
 
@@ -163,6 +206,17 @@ JavaCore / Java resources / Articles
 - <a href="https://ru.wikipedia.org/wiki/Double_checked_locking">Double checked locking</a>
 -  <a href="http://www.javaspecialist.ru/2011/06/java-memory-model.html">Java Memory Model</a>. final, volatile
 - <a href="https://en.wikipedia.org/wiki/Initialization-on-demand_holder_idiom">Initialization-on-demand holder idiom</a>
+- <a href="https://ru.wikipedia.org/wiki/Параллелизм_в_Java">Параллелизм в Java</a>
+- <a href="https://ru.wikipedia.org/wiki/Монитор_(синхронизация)">Монитор (синхронизация)</a>
+- <a href="https://en.wikipedia.org/wiki/Compare-and-swap">Compare-and-swap</a>
+- <a href="http://www.javaspecialist.ru/2011/06/java-memory-model.html">Java Memory Model</a>
+- <a href="http://www.skipy.ru/technics/synchronization.html">Синхронизация потоков</a>
+- <a href="https://habrahabr.ru/company/luxoft/blog/157273">Обзор java.util.concurrent.*</a>
+- <a href="https://habrahabr.ru/post/132884/">Как работает ConcurrentHashMap</a>
+- <a href="https://habrahabr.ru/post/277669/"> Справочник по синхронизаторам java.util.concurrent.*</a>
+- <a href="http://articles.javatalks.ru/articles/17">Использование ThreadLocal переменных</a>
+- <a href="https://www.youtube.com/watch?v=8piqauDj2yo">Николай Алименков — Прикладная многопоточность</a>
+- <a href="http://stackoverflow.com/questions/20163056/in-java-can-thread-switching-happen-in-the-synchronized-block">Can thread switching happen in the synchronized block?</a>
 - Алексей Владыкин, <a href="https://www.youtube.com/watch?v=zxZ0BXlTys0&list=PLlb7e2G7aSpRSBWi5jbGjIe-v_CjRO_Ug">Основы многопоточность в Java</a>
 - Виталий Чибриков, <a href="https://www.youtube.com/watch?v=dLDhB6SRXzw&list=PLrCZzMib1e9qkzxEuU_huxtSAxrW1t9NZ">Java. Многопоточность</a>
 - Computer Science Center, курс <a href="https://compscicenter.ru/courses/hp-course/2016-spring">Параллельное программирование</a>

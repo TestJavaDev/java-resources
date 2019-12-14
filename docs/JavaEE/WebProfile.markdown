@@ -33,3 +33,8 @@ JavaEE / Java resources / Articles
 
 Для хранения сосотяния сессии (например корзины покупателя) в Servlet API есть механизм хранения объектов сессии (грубо- мультимапмапа, которая достается из хранилища по ключу). При создании сессии на стороне сервера (через `request.getSession`) создается кука `JSESSIONID`, которая передается между клиентом и сервером и является ключом в хранилище объектов сессий.
 <a href="http://javatutor.net/books/tiej/servlets#_Toc39472970">Обработка сессий с помощью сервлетов</a>
+
+- [Tomcat 7 Async Processing](http://stackoverflow.com/questions/7287244/tomcat-7-async-processing)
+- [Async in Servlet 3.0 vs NIO in Servlet 3.1](http://stackoverflow.com/questions/39802643/java-async-in-servlet-3-0-vs-nio-in-servlet-3-1)
+- [AsyncContext.start in Servlet 3.0](https://stackoverflow.com/questions/10073392/whats-the-purpose-of-asynccontext-start-in-servlet-3-0)
+- [The Limited Usefulness of AsyncContext.start()](https://dzone.com/articles/limited-usefulness)
