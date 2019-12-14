@@ -11,8 +11,6 @@ JavaCore / Java resources / Articles
 {: .fs-6 .fw-300 }
 </div>
 
-### Java
-
 - [Java](http://ru.wikipedia.org/wiki/Java), [JVM](http://ru.wikipedia.org/wiki/Виртуальная_машина_Java), [JIT-компиляция](http://ru.wikipedia.org/wiki/JIT) (wiki)
 - [Что такое Java? История создания](http://www.intuit.ru/studies/courses/16/16/lecture/27105)
 - [Что такое JDK? Введение в средства разработки Java](https://topjava.ru/blog/what-is-the-jdk)

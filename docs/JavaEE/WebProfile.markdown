@@ -11,8 +11,6 @@ JavaEE / Java resources / Articles
 {: .fs-6 .fw-300 }
 </div>
 
-#### JavaEE WebProfile
-
 - <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol/">HTTP</a>
 - <a href="https://stackoverflow.com/tags/servlets/info/">Servlets</a>
 - <a href="https://stackoverflow.com/tags/jsp/info/">JSP (JavaServer Pages)</a>

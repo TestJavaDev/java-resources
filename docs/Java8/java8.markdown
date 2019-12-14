@@ -11,9 +11,6 @@ Java8 / Java resources / Articles
 {: .fs-6 .fw-300 }
 </div>
 
-
-### Java8
-
 - [Нововведения в java 8](https://habrahabr.ru/post/216431/)
 - [Лямбда-выражения в Java 8](https://www.youtube.com/watch?v=DNC6Lknn2AE) (youtube)
 - [Функциональный интерфейс](https://geekbrains.ru/posts/java_interfaces)

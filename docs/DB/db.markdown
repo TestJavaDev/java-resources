@@ -11,8 +11,6 @@ DB / Java resources / Articles
 {: .fs-6 .fw-300 }
 </div>
 
-### DB
-
 - <a href="https://www.youtube.com/watch?v=dFASbaIG-UU">Видео: Вячеслав Круглов — Как начинающему Java-разработчику подружиться со своей базой данных?</a>
 -  [BoneCP to be deprecated ](https://stackoverflow.com/a/1662916/548473)
 -  Выбор реализации пула коннектов: <a href="https://commons.apache.org/proper/commons-dbcp/">Commons Database Connection Pooling</a>, <a href="https://github.com/brettwooldridge/HikariCP">HikariCP</a>

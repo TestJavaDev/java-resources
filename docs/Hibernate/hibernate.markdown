@@ -11,8 +11,6 @@ Hibernate / Java resources / Articles
 {: .fs-6 .fw-300 }
 </div>
 
-### Hibernate
-
 - <a href="https://dou.ua/lenta/articles/hibernate-fetch-types/">Стратегии загрузки коллекций в Hibernate</a>
 - <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model">Entity</a>- класс (объект Java), который в ORM маппится в таблицу DB.
 -  <a href="http://ru.wikipedia.org/wiki/ORM">ORM</a>.

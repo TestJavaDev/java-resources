@@ -11,7 +11,6 @@ JPA/ Java resources / Articles
 {: .fs-6 .fw-300 }
 </div>
 
-### JPA
  -  <a href="http://ru.wikipedia.org/wiki/Java_Persistence_API">JPA (wiki)</a> 
  - <a href="https://en.wikipedia.org/wiki/Java_Persistence_API">JPA (english wiki)</a>
  - <a href="https://dou.ua/lenta/articles/jpa-fetch-types/">Стратегии загрузки коллекций в JPA</a>
@@ -39,6 +38,7 @@ JPA/ Java resources / Articles
  - [JPA ENTITY GRAPHS](http://www.radcortez.com/jpa-entity-graphs/)
  - [`EntityGraphType.FETCH` vs `LOAD`](http://stackoverflow.com/questions/31978011/what-is-the-diffenece-between-fetch-and-load-for-entity-graph-of-jpa)
  - [Ordering a join fetched collection in JPA using JPQL/HQL](http://stackoverflow.com/questions/5903774/ordering-a-join-fetched-collection-in-jpa-using-jpql-hql)
+-  <a href="http://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.repositories">JPA Repositories</a>
 
 
 

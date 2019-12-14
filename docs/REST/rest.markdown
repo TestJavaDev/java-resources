@@ -6,12 +6,10 @@ permalink: /rest
 has_children: true
 ---
 <div align="center" markdown="1">
-Maven / Java resources / Articles
+REST / Java resources / Articles
 
 {: .fs-6 .fw-300 }
 </div>
-
-### REST
 
 - [Подборка практик REST](https://gist.github.com/Londeren/838c8a223b92aa4017d3734d663a0ba3)
 -  <a href="http://www.infoq.com/articles/springmvc_jsx-rs">JAX-RS vs Spring MVC</a>

@@ -8,8 +8,6 @@ permalink: /spring/springcore
 <div align="center" markdown="1">
 SpringCore / Java resources / Tutorial
 
-#### Spring Core
-
 -  <a href="http://en.wikipedia.org/wiki/Spring_Framework">Spring Framework</a>
 -  <a href="http://spring.io/projects">Проекты Spring</a>.
 -  <a href=https://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview.html>Обзор Spring Framework</a>

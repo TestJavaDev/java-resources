@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SpringData
-parent: spring
+parent: Spring
 # nav_order: 1
 permalink: /spring/springdata
 ---
@@ -11,11 +11,7 @@ SpringData / Java resources / Articles
 {: .fs-6 .fw-300 }
 </div>
 
-### Spring Data
-
 -  <a class="anchor" id="datajpa"></a><a href="http://projects.spring.io/spring-data-jpa/">Spring Data JPA</a>
--  Замена AbstractDAO: <a href="http://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.repositories">JPA Repositories</a>
- Dependency</a>
 -  <a href="https://habrahabr.ru/post/232381/#datajpa">Делегирование (в конце статьи)</a>
 -  <a href="https://spring.io/blog/2011/02/10/getting-started-with-spring-data-jpa">Getting started with Spring Data JPA</a>
 -  <a href="http://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation">Query methods</a>

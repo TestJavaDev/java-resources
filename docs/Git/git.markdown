@@ -11,8 +11,6 @@ Maven / Java resources / Articles
 {: .fs-6 .fw-300 }
 </div>
 
-### Git
-
 ![image](https://cloud.githubusercontent.com/assets/18701152/15219746/9295a2fe-186d-11e6-876b-c61cc9be71e4.png)
 
   - [Система управления версиями](https://ru.wikipedia.org/wiki/Система_управления_версиями) (wiki)

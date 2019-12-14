@@ -11,8 +11,6 @@ SpringSecurity / Java resources / Articles
 {: .fs-6 .fw-300 }
 </div>
 
-### Spring Security
-
 -  <a href="http://projects.spring.io/spring-security/">Spring Security</a>
 -  <a href="https://ru.wikipedia.org/wiki/Протокол_AAA">Протокол AAA</a>
 -  <a href="https://ru.wikipedia.org/wiki/Аутентификация_в_Интернете">Методы аутентификации</a>.

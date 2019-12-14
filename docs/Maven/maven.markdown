@@ -11,7 +11,6 @@ Maven / Java resources / Articles
 {: .fs-6 .fw-300 }
 </div>
 
-### Maven
 - Среда сборки проектов <a href="http://www.apache-maven.ru/" target="_blank">Maven</a>.
 - <a href="http://search.maven.org/#browse">The Central Repository</a>
 - <a href="http://maven.apache.org/guides/mini/guide-multiple-modules.html">The Reactor</a>. Snapshots
