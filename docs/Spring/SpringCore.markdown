@@ -6,7 +6,10 @@ parent: Spring
 permalink: /spring/springcore
 ---
 <div align="center" markdown="1">
-SpringCore / Java resources / Tutorial
+SpringCore / Java resources / Articles
+
+{: .fs-6 .fw-300 }
+</div>
 
 -  <a href="http://en.wikipedia.org/wiki/Spring_Framework">Spring Framework</a>
 -  <a href="http://spring.io/projects">Проекты Spring</a>.
@@ -33,6 +36,3 @@ SpringCore / Java resources / Tutorial
 - [Евгений Борисов — Spring-потрошитель, часть 1](https://www.youtube.com/watch?v=BmBr5diz8WA)
 - [Евгений Борисов — Spring-потрошитель, часть 2](https://www.youtube.com/watch?v=cou_qomYLNU)
 - [Mapping Entity->DTO: Controller or Service?](http://stackoverflow.com/questions/31644131)
-
-{: .fs-6 .fw-300 }
-</div>

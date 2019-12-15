@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Git
-nav_order: 9
+nav_order: 11
 permalink: /git
 has_children: true
 ---

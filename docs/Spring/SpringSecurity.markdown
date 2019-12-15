@@ -3,7 +3,7 @@ layout: default
 title: SpringSecurity
 parent: Spring
 # nav_order: 1
-permalink: /spring/springmvc
+permalink: /spring/springsecurity
 ---
 <div align="center" markdown="1">
 SpringSecurity / Java resources / Articles
