@@ -3,7 +3,7 @@ layout: default
 title: JavaI/O
 parent: JavaCore
 # nav_order: 1
-permalink: /javacore/javacollections
+permalink: /javacore/javaio
 ---
 <div align="center" markdown="1">
 JavaI/O / Java resources / Articles
