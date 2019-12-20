@@ -29,7 +29,7 @@ JavaCore / Java resources / Articles
 - [Ведение лога приложения](http://skipy.ru/useful/logging.html)
 - [Java Logging: история кошмара](http://habrahabr.ru/post/113145/)
 
-###Classloader
+### Classloader
 
 - <a href="https://habrahabr.ru/post/103830/">Загрузка классов в Java</a>
 - <a href="http://java-online.ru/java-classloader.xhtml">Загрузка классов, ClassLoader</a>
@@ -59,11 +59,11 @@ JavaCore / Java resources / Articles
 - <a href="http://www.javaspecialist.ru/2011/04/java-thread-stack.html">Java thread stack </a>
 - <a href="http://habrahabr.ru/post/134102/">Размер Java объектов</a>
  - [От Java-кода к Java-куче](https://www.ibm.com/developerworks/ru/library/j-codetoheap/index.html)
- - [JVM - краткий курс общей анатомии](https://www.youtube.com/watch?v=-fcj6EL9rc4) (youtube)
+ - [JVM - краткий курс общей анатомии](https://www.youtube.com/watch?v=-fcj6EL9rc4)
 
 ### Nested and Inner classes
 
-- [Вложенные и внутренние классы в Java] (http://easy-code.ru/lesson/java-nested-classes)
+- [Вложенные и внутренние классы в Java](http://easy-code.ru/lesson/java-nested-classes)
 - [Локальные и анонимные классы](http://easy-code.ru/lesson/local-anonymous-nested-classes-java). 
 - [Интерфейсы Comparable и Comparator](https://metanit.com/java/tutorial/5.6.php)
 - [Дженерики (Java, обучающая статья)](http://www.quizful.net/post/java-generics-tutorial)
@@ -82,17 +82,17 @@ JavaCore / Java resources / Articles
 - <a href="https://www.youtube.com/watch?v=8piqauDj2yo">Николай Алименков — Прикладная многопоточность</a>
 - <a href="https://www.youtube.com/playlist?list=PL6jg6AGdCNaXo06LjCBmRao-qJdf38oKp">Advanced Java - Concurrency</a>
 - <a href="https://www.youtube.com/playlist?list=PLoij6udfBncgVRq487Me6yQa1kqtxobZS">Java Multithreading</a>
-- <a href="http://habrahabr.ru/company/luxoft/blog/157273/">Обзор java.util.concurrent.*</a></li>
+- <a href="http://habrahabr.ru/company/luxoft/blog/157273/">Обзор java.util.concurrent.*</a>
 - <a href="https://en.wikipedia.org/wiki/Compare-and-swap">Compare-and-swap</a>
 - <a href="https://habrahabr.ru/post/277669/"> Справочник по синхронизаторам java.util.concurrent.*</a>
 - <a href="http://www.intuit.ru/studies/courses/16/16/lecture/27127">Потоки выполнения. Синхронизация.</a>
 - <a href="http://www.intuit.ru/studies/courses/16/16/lecture/27127?page=4">Методы wait(), notify(), notifyAll() класса Object</a>
 
-###OOP
+### OOP
 
 - [Java-Interview-Questions  OOP](https://github.com/ichimax/Java-Interview-Questions/blob/master/Questions/1.%20OOP.md#%D0%A7%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%BF%D0%BE%D0%BB%D0%B8%D0%BC%D0%BE%D1%80%D1%84%D0%B8%D0%B7%D0%BC)
 - [Основы Объектно-Ориентированного Программирования (ООП)](https://github.com/ichimax/Core-Java-Interview-Questions/blob/master/Questions/1.%20OOP.md)
-- [Наследование, агрегация, композиция, ассоциация](https://ru.wikipedia.org/wiki/Диаграмма_классов#Взаимосвязи) (wiki)
+- [Наследование, агрегация, композиция, ассоциация](https://ru.wikipedia.org/wiki/Диаграмма_классов#Взаимосвязи)
 - [Типы отношений между классами](http://www.intuit.ru/studies/courses/16/16/lecture/27107?page=4)
 - [Достоинства / Недостатки ООП](http://www.intuit.ru/studies/courses/16/16/lecture/27107?page=5)
 - [Зачем нам ООП и что это такое?](https://habrahabr.ru/post/148015/)
