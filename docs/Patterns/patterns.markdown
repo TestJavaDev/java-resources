@@ -11,13 +11,13 @@ Patterns / Java resources / Articles
 {: .fs-6 .fw-300 }
 </div>
 
-Введение в шаблоны корпоративных приложений
+## Введение в шаблоны корпоративных приложений
 {: .label }
 *  OOP
 *  UML
 *  Понятие паттерна и история их создания
 
-Логика слоя предметной области
+## Логика слоя предметной области
 {: .label }
 
 * Организация domain logic
@@ -27,7 +27,134 @@ Patterns / Java resources / Articles
   * Service Layer
 * Организация Layers
 
+## Шаблоны работы с данными
+{: .label .label-purple }
 
+* Data Source
+  * Data Accessor
+  * Table Data Gateway
+  * Row Data Gateway
+  * Active Record
+  * Data Mapper
+* Resource Pattern
+  * Resource Decorator
+  * Resource Pool
+  * Resource Timer
+  * Resource Descriptor
+  * Retryer
+* Input and Output Patterns
+  * Selection Factory
+  * Domain Object Factory
+  * Update Factory
+  * Domain Object Assembler
+  * Paging Iterator
+* Cache Patterns
+  * Cache Accessor
+  * Demand Cache
+  * Primed Cache
+  * Cache Search Sequence
+  * Cache Collector
+  * Cache Replicator
+  * Cache Statistics
+  
+## ORM Paterns
+{: .label .label-yellow }
+
+* Behavioral
+  * Unit of Work
+  * Identity Map
+  * Lazy Load
+* Metadata Mapping
+  * Metadata Mapping
+  * Query Object
+  * Repository
+* Structural
+  * Identity Field
+  * Foreign Key Mapping
+  * Association Table Mapping
+  * Dependent Mapping
+  * Embedded Value
+  * Serialized LOB
+  * Single Table Inheritance
+  * Class Table Inheritance
+  * Concrete Table Inheritance
+  * Inheritance Mappers
+  
+##  Presentation Patterns
+{: .label .label-red }
+
+* Delegation (When Not to Use Inheritance)
+* Interface
+* Abstract Superclass
+* Interface and Abstract Class
+* Immutable
+* Marker Interface
+* Object Pool
+* Filter
+* Read-only Interface
+* Dynamic Linkage
+* Virtual Proxy
+* Cache Management
+
+## Complex Patterns
+{: .label .label-purple }
+
+* Distribution Patterns
+  * Remote Facade
+  * Data Transfer Object
+* Offline Concurrency Patterns
+  * Optimistic Offline Lock
+  * Pessimistic Offline Lock
+  * Coarse-Grained Lock
+  * Implicit Lock
+* Session State Patterns
+  * Client Session State
+  * Server Session State
+  * Database Session State
+* Web Presentation Patterns:
+  * Model View Controller
+  * Page Controller
+  * Front Controller
+  * Template View
+  * Transform View
+  * Two-Step View
+  * Application Controller
+
+## Distribution Patterns:
+{: .label .label-purple }
+
+* Remote Facade
+* Data Transfer Object
+
+## Offline Concurrency Patterns:
+{: .label .label-purple }
+
+* Optimistic Offline Lock
+* Pessimistic Offline Lock
+* Coarse Grained Lock
+* Implicit Lock
+
+## Session State Patterns
+{: .label .label-purple }
+
+* Client Session State
+* Server Session State
+* Database Session State
+
+## Base Patterns:
+{: .label .label-purple }
+
+* Gateway
+* Mapper
+* Layer Supertype
+* Separated Interface
+* Registry
+* Value Object
+* Money
+* Special Case
+* Plugin
+* Service Stub
+* Record Set
 
 
 
