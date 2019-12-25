@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Maven
-nav_order: 10
+nav_order: 11
 permalink: /maven
 has_children: true
 ---
