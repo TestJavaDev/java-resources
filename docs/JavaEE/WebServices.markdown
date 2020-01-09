@@ -11,16 +11,7 @@ JavaEE / Java resources / Tutorial
 {: .fs-6 .fw-300 }
 </div>
 
-- <a href="https://ru.wikipedia.org/wiki/Веб-служба">Веб-служба</a>. <a href="https://en.wikipedia.org/wiki/Web_service">Web service</a>
-- SOAP:
-- <a href="http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx">Веб-сервис Центробанка, для получения ежедневных данных.</a>
-- <a href="http://api.yandex.ru/speller/doc/dg/concepts/api-overview.xml">Яндекса проверки правописания.</a>
-- <a href="https://tech.yandex.ru/#catalog">Yandex каталог технологий</a>
-- <a href="https://www.flightstats.com/developers/bin/view/Web+Services/WSDL">Ряд веб сервисов авиастатистики, для мониторинга полетов, сведений о погоде, и.т.п.</a>
-- <a href="https://en.wikipedia.org/wiki/Web_API#Resource_vs._service">Resource vs. service</a>
 - <a href="https://habrahabr.ru/post/131343/">REST vs SOAP.</a>
-
-#### REST</a>.
 - <a href="http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/">10 Best Practices for Better RESTful API</a>
   - <a href="https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services">JAX-RS</a>, <a href="https://jersey.java.net/documentation/latest/wadl.html">WADL</a>
 

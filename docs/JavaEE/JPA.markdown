@@ -11,6 +11,12 @@ JPA/ Java resources / Articles
 {: .fs-6 .fw-300 }
 </div>
 
+- <a href="https://habrahabr.ru/post/123636/">Основы SQL на примере задачи</a>
+-  <a href="https://www.youtube.com/playlist?list=PLIU76b8Cjem5qdMQLXiIwGLTLyUHkTqi2">Уроки по JDBC</a>
+-  <a href="https://www.codecademy.com/learn/learn-sql">Learn SQL</a>
+-  <a href="http://www.intuit.ru/studies/courses/5/5/info">Интуит. Основы SQL</a>
+-  <a href="http://campus.codeschool.com/courses/try-sql/contents">Try SQL</a>
+-  <a href="https://stepic.org/course/Введение-в-базы-данных-551">Курс "Введение в базы данных"</a>
  -  <a href="http://ru.wikipedia.org/wiki/Java_Persistence_API">JPA (wiki)</a> 
  - <a href="https://en.wikipedia.org/wiki/Java_Persistence_API">JPA (english wiki)</a>
  - <a href="https://dou.ua/lenta/articles/jpa-fetch-types/">Стратегии загрузки коллекций в JPA</a>
