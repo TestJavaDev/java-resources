@@ -27,8 +27,7 @@ Maven / Java resources / Articles
 -  <a href="https://www.youtube.com/playlist?list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR">Видео по обучению Git</a>
 -  <a href="https://blog.interlinked.org/tutorials/git.html">Git Overview</a>
 -  <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">Git Overview</a>
--  <a href="https://foxminded.com.ua/enterprise-patterns-advanced-course/?utm_source=youtube&utm_medium=smm&utm_campaign=video&utm_content=NYZm4gDRjgk&utm_term=2">Git Overview</a>
-
+-
 
 
 

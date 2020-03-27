@@ -28,6 +28,7 @@ JavaCore / Java resources / Articles
 - [Логирование в Java / quick start](https://habrahabr.ru/post/130195/)
 - [Ведение лога приложения](http://skipy.ru/useful/logging.html)
 - [Java Logging: история кошмара](http://habrahabr.ru/post/113145/)
+- [Generics](https://habr.com/ru/company/sberbank/blog/416413/)
 
 ### Classloader
 
