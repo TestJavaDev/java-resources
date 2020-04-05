@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Java-Based Architecture 
-nav_order: 9
+nav_order: 10
 permalink: /architecture 
 has_children: true
 ---
