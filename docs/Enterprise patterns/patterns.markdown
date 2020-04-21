@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Patterns
+title: Enterprise patterns
 nav_order: 8
-permalink: /patterns
+permalink: /enterprise_patterns
 has_children: true
 ---
 <div align="center" markdown="1">
-Patterns / Java resources / Articles
+Enterprise patterns / Java resources / Articles
 
 {: .fs-6 .fw-300 }
 </div>

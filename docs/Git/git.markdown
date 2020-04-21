@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Git
-nav_order: 12
+nav_order: 13
 permalink: /git
 has_children: true
 ---
@@ -26,6 +26,8 @@ Maven / Java resources / Articles
 -  <a href="https://illustrated-git.readthedocs.org/en/latest/#working-with-remote-repositories">Working with remote repositories</a>
 -  <a href="https://www.youtube.com/playlist?list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR">Видео по обучению Git</a>
 -  <a href="https://blog.interlinked.org/tutorials/git.html">Git Overview</a>
+-  <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">Git Overview</a>
+-
 
 
 

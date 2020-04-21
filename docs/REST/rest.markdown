@@ -26,6 +26,10 @@ REST / Java resources / Articles
 - [REST — это новый SOAP](https://habr.com/ru/company/mailru/blog/345184/)
 - [Разработка web API](https://habr.com/ru/post/181988/)
 - [REST resource hierarchy](https://stackoverflow.com/questions/20951419/what-are-best-practices-for-rest-nested-resources)
+- [Приложение двенадцати факторов — The Twelve-Factor App](https://habr.com/ru/post/258739/#dependencies)
+- [RESTful API для сервера – делаем правильно 1](https://habr.com/ru/post/144011/)
+- [RESTful API для сервера – делаем правильно 2](https://habr.com/ru/post/144259/)
+- [REST API Best Practices](https://habr.com/ru/post/351890/)
 
 
 
