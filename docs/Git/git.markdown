@@ -6,7 +6,7 @@ permalink: /git
 has_children: true
 ---
 <div align="center" markdown="1">
-Maven / Java resources / Articles
+Git / Java resources / Articles
 
 {: .fs-6 .fw-300 }
 </div>
@@ -27,7 +27,7 @@ Maven / Java resources / Articles
 -  <a href="https://www.youtube.com/playlist?list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR">Видео по обучению Git</a>
 -  <a href="https://blog.interlinked.org/tutorials/git.html">Git Overview</a>
 -  <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">Git Overview</a>
--
+-  <a href="http://gkislin.ru/help.html">Git Overview</a>
 
 
 
