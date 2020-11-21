@@ -2,7 +2,7 @@
 layout: default
 title: OOP
 nav_order: 15
-permalink: /git
+permalink: /oop
 has_children: true
 ---
 <div align="center" markdown="1">
