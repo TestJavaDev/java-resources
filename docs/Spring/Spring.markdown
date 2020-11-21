@@ -6,7 +6,7 @@ permalink: /spring
 has_children: true
 ---
 <div align="center" markdown="1">
-Spring / Java resources / Articles
+Spring / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

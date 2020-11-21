@@ -6,7 +6,7 @@ permalink: /microservices
 has_children: true
 ---
 <div align="center" markdown="1">
-Maven / Java resources / Articles
+Maven / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

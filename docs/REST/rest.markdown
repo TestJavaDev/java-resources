@@ -6,7 +6,7 @@ permalink: /rest
 has_children: true
 ---
 <div align="center" markdown="1">
-REST / Java resources / Articles
+REST / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

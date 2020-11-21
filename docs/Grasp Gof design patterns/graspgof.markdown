@@ -6,7 +6,7 @@ permalink: /graspgof_patterns
 has_children: true
 ---
 <div align="center" markdown="1">
-Patterns / Java resources / Articles
+Patterns / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

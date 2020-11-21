@@ -6,7 +6,7 @@ permalink: /architecture
 has_children: true
 ---
 <div align="center" markdown="1">
-Java-Based Architecture / Java resources / Articles
+Java-Based Architecture / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

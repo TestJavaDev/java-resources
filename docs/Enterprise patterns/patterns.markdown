@@ -6,7 +6,7 @@ permalink: /enterprise_patterns
 has_children: true
 ---
 <div align="center" markdown="1">
-Enterprise patterns / Java resources / Articles
+Enterprise patterns / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

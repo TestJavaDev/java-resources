@@ -6,7 +6,7 @@ permalink: /javacore
 has_children: true
 ---
 <div align="center" markdown="1">
-JavaCore / Java resources / Articles
+JavaCore / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

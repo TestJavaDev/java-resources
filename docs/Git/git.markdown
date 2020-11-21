@@ -6,7 +6,7 @@ permalink: /git
 has_children: true
 ---
 <div align="center" markdown="1">
-Git / Java resources / Articles
+Git / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

@@ -6,7 +6,7 @@ permalink: /java8
 has_children: true
 ---
 <div align="center" markdown="1">
-Java8 / Java resources / Articles
+Java8 / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>
@@ -17,7 +17,7 @@ Java8 / Java resources / Articles
 - [Лямбды в Java 8](https://habrahabr.ru/post/224593/)
 - [Java 8 Functional Interfaces](https://www.journaldev.com/2763/java-8-functional-interfaces)
 - [Lambda expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
-- <a href="https://github.com/winterbe/java8-tutorial#date-api">Java 8 Date API</a>
+- <a href="https://github.com/winterbe/java8-tutorial">Java 8 </a>
 -  <a href="http://www.youtube.com/watch?v=_PDIVhEs6TM">Доступно о Java 8 Lambda</a>
 -  <a href="https://devcolibri.com/java-8-killer-features-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1/">Java 8: Lambda выражения</a>
 -  <a href="https://devcolibri.com/java-8-killer-features-%D1%87%D0%B0%D1%81%D1%82%D1%8C-2/">Java 8: Потоки</a>

@@ -6,7 +6,7 @@ parent: Patterns
 permalink: /patterns/singleton
 ---
 <div align="center" markdown="1">
-Singleton / Java resources / Tutorial
+Singleton / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

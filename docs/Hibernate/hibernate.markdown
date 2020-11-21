@@ -6,7 +6,7 @@ permalink: /hibernate
 has_children: true
 ---
 <div align="center" markdown="1">
-Hibernate / Java resources / Articles
+Hibernate / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

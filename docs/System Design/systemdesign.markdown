@@ -6,7 +6,7 @@ permalink: /systemdesign
 has_children: true
 ---
 <div align="center" markdown="1">
-System Design / Java resources / Articles
+<h1>System Design</h1> / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

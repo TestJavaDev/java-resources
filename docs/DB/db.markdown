@@ -6,7 +6,7 @@ permalink: /db
 has_children: true
 ---
 <div align="center" markdown="1">
-DB / Java resources / Articles
+DB / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>
