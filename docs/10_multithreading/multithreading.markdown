@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data structures
-nav_order: 9
+nav_order: 10
 permalink: /multithreading
 has_children: true
 ---

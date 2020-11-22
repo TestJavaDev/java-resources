@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data structures
-nav_order: 8
+nav_order: 9
 permalink: /datastructures
 has_children: true
 ---
