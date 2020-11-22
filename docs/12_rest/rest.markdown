@@ -1,7 +1,7 @@
 ---
 layout: default
 title: REST
-nav_order: 6
+nav_order: 12
 permalink: /rest
 has_children: true
 ---

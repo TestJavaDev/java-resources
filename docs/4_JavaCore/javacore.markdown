@@ -1,7 +1,7 @@
 ---
 layout: default
 title: JavaCore
-nav_order: 1
+nav_order: 4
 permalink: /javacore
 has_children: true
 ---
@@ -88,16 +88,6 @@ JavaCore / Java resources / Grokking the interview
 - <a href="https://habrahabr.ru/post/277669/"> Справочник по синхронизаторам java.util.concurrent.*</a>
 - <a href="http://www.intuit.ru/studies/courses/16/16/lecture/27127">Потоки выполнения. Синхронизация.</a>
 - <a href="http://www.intuit.ru/studies/courses/16/16/lecture/27127?page=4">Методы wait(), notify(), notifyAll() класса Object</a>
-
-### OOP
-
-- [Java-Interview-Questions  OOP](https://github.com/ichimax/Java-Interview-Questions/blob/master/Questions/1.%20OOP.md#%D0%A7%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%BF%D0%BE%D0%BB%D0%B8%D0%BC%D0%BE%D1%80%D1%84%D0%B8%D0%B7%D0%BC)
-- [Основы Объектно-Ориентированного Программирования (ООП)](https://github.com/ichimax/Core-Java-Interview-Questions/blob/master/Questions/1.%20OOP.md)
-- [Наследование, агрегация, композиция, ассоциация](https://ru.wikipedia.org/wiki/Диаграмма_классов#Взаимосвязи)
-- [Типы отношений между классами](http://www.intuit.ru/studies/courses/16/16/lecture/27107?page=4)
-- [Достоинства / Недостатки ООП](http://www.intuit.ru/studies/courses/16/16/lecture/27107?page=5)
-- [Зачем нам ООП и что это такое?](https://habrahabr.ru/post/148015/)
-- [Николай Алименков — Парадигмы ООП](https://www.youtube.com/watch?v=G6LJkWwZGuc)
 
 
 

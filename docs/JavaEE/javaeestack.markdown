@@ -1,7 +1,7 @@
 ---
 layout: default
 title: JavaEE
-nav_order: 3
+nav_order: 15
 permalink: /javaee
 has_children: true
 ---
