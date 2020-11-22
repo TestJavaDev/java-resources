@@ -2,7 +2,7 @@
 layout: default
 title: Behavioral interview
 nav_order: 2
-permalink: /behavioral-interview
+permalink: /behavioral
 has_children: true
 ---
 <div align="center" markdown="1">
