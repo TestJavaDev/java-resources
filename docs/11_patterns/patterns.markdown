@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Enterprise patterns
-nav_order: 11
+nav_order: 12
 permalink: /enterprise_patterns
 has_children: true
 ---

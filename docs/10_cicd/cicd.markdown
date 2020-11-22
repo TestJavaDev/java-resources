@@ -1,7 +1,7 @@
 ---
 layout: default
 title: CI/CD
-nav_order: 10
+nav_order: 11
 permalink: /cicd
 has_children: true
 ---
