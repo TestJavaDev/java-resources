@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Java8
-nav_order: 6
+nav_order: 5
 permalink: /java8
 has_children: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Behavioral interview
-nav_order: 2
+nav_order: 1
 permalink: /behavioral-interview
 has_children: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: System design
-nav_order: 4
+nav_order: 3
 permalink: /systemdesign
 has_children: true
 ---

@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Data structures
-nav_order: 10
-permalink: /datastructures
+nav_order: 9
+permalink: /multithreading
 has_children: true
 ---
 <div align="center" markdown="1">
-Data structures / Java resources / Grokking the interview
+Multithreading / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

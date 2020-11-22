@@ -1,7 +1,7 @@
 ---
 layout: default
 title: DB
-nav_order: 7
+nav_order: 6
 permalink: /db
 has_children: true
 ---
