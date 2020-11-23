@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Data structures
+title: Multithreading
 nav_order: 10
 permalink: /multithreading
 has_children: true
