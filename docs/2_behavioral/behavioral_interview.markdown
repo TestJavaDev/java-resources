@@ -6,7 +6,7 @@ permalink: /behavioral
 has_children: true
 ---
 <div align="center" markdown="1">
-Behavioral interview / Java resources / Grokking the interview
+Behavioral and English interview / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

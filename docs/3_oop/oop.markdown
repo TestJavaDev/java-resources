@@ -20,9 +20,6 @@ OOP / Java resources / Grokking the interview
    - [Достоинства / Недостатки ООП](http://www.intuit.ru/studies/courses/16/16/lecture/27107?page=5)
    - [Зачем нам ООП и что это такое?](https://habrahabr.ru/post/148015/)
    - [Николай Алименков — Парадигмы ООП](https://www.youtube.com/watch?v=G6LJkWwZGuc)
-   
-
--  <a href="https://www.educative.io/courses/grokking-the-object-oriented-design-interview">Grokking the Object Oriented Design Interview</a>
 
 ## Object-Oriented Design and UML
 {: .label }
