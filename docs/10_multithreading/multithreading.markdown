@@ -13,20 +13,17 @@ Multithreading / Java resources / Grokking the interview
   
 ### Multithreading basics
 {: .label }
-*  Program vs Process vs Thread  [first site](https://learnc.info/c/processes_and_threads.html) [second site](https://coderoad.ru/200469/%D0%92-%D1%87%D0%B5%D0%BC-%D1%80%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D0%BC-%D0%B8-%D0%BF%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BC)
-*  Concurrency vs Parallelism
-*  Cooperative Multitasking vs Preemptive Multitasking
-*  Synchronous vs Asynchronous
-*  I/O Bound vs CPU Bound
-*  Throughput vs Latency
-*  Critical Sections & Race Conditions
-*  Deadlocks, Liveness & Reentrant Locks
-*  Mutex vs Semaphore
-*  Mutex vs Monitor
-*  Java's Monitor & Hoare vs Mesa Monitors
-*  Semaphore vs Monitor
-*  Amdahl's Law
-*  Moore's Law
+*  Program vs Process vs Thread  [first site](https://neharustagiblog.wordpress.com/2014/09/26/program-vs-process-vs-thread-vs-task/) [second site](https://learnc.info/c/processes_and_threads.html) [third site](https://coderoad.ru/200469/%D0%92-%D1%87%D0%B5%D0%BC-%D1%80%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D0%BC-%D0%B8-%D0%BF%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BC) [fourth site](https://habr.com/ru/post/40275/)
+*  Concurrency vs Parallelism  [first site](http://tutorials.jenkov.com/java-concurrency/concurrency-vs-parallelism.html) [second site](https://learnc.info/c/processes_and_threads.html)
+*  Cooperative Multitasking vs Preemptive Multitasking [first site](https://ru.qaz.wiki/wiki/Cooperative_multitasking) [second site](https://ru.qaz.wiki/wiki/Preemption_(computing))
+*  Synchronous vs Asynchronous [first site](https://itsobes.ru/JavaSobes/chem-sinkhronnyi-server-otlichaetsia-ot-asinkhronnogo/) [second site](https://coderoad.ru/5385407/%D0%92-%D1%87%D0%B5%D0%BC-%D1%80%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-Jetty-%D0%B8-Netty)
+*  I/O Bound vs CPU Bound [first site](https://coderoad.ru/868568/%D0%A7%D1%82%D0%BE-%D0%BE%D0%B7%D0%BD%D0%B0%D1%87%D0%B0%D1%8E%D1%82-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D1%8B-%D1%81%D0%B2%D1%8F%D0%B7%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-CPU-bound-%D0%B8-I-O) [second site](https://stackoverflow.com/questions/868568/what-do-the-terms-cpu-bound-and-i-o-bound-mean)
+*  Throughput vs Latency  [first site](https://dzone.com/articles/what-latency-throughput-and)
+*  Critical Sections & Race Conditions  [first site](https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%B5%D0%BA%D1%86%D0%B8%D1%8F) [second site](https://github.com/merry75/educative.io_courses/blob/master/Java%20Multithreading%20for%20Senior%20Engineering%20Interviews%20-%20Learn%20Interactively/8_Critical_Sections___Race_Conditions.pdf)
+*  Deadlocks, Liveness & Reentrant Locks  [first site](https://www.baeldung.com/java-deadlock-livelock)
+*  Mutex vs Semaphore vs Monitor   [first site](https://javarush.ru/groups/posts/2174-v-chem-raznica-mezhdu-mjhjuteksom-monitorom-i-semaforom) [second site](https://github.com/merry75/educative.io_courses/blob/master/Java%20Multithreading%20for%20Senior%20Engineering%20Interviews%20-%20Learn%20Interactively/10_Mutex_vs_Semaphore.pdf) [third site](https://github.com/merry75/educative.io_courses/blob/master/Java%20Multithreading%20for%20Senior%20Engineering%20Interviews%20-%20Learn%20Interactively/11_Mutex_vs_Monitor.pdf)
+*  Amdahl's Law  [first site](https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD_%D0%90%D0%BC%D0%B4%D0%B0%D0%BB%D0%B0)
+*  Moore's Law  [first site](https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD_%D0%9C%D1%83%D1%80%D0%B0)
 
 ### Multithreading in Java
 {: .label }
@@ -86,6 +83,10 @@ Multithreading / Java resources / Grokking the interview
 *  Concurrent Collections
 
 - [Фундаментальный поворот к параллелизму в программировании](https://habrahabr.ru/post/145432/)
+- <a href="https://habr.com/ru/post/164487/">Многопоточность в Java</a>
+- <a href="https://habr.com/ru/post/143237/">А как же всё-таки работает многопоточность? Часть I: синхронизация</a>
+- <a href="https://habr.com/ru/post/209128/">А как же всё-таки работает многопоточность? Часть II: memory ordering</a>
+- <a href="https://habr.com/ru/post/150801/">Немного о многопоточном программировании. Часть 1. Синхронизация зло или все-таки нет</a>
 - <a href="https://ru.wikipedia.org/wiki/Параллелизм_в_Java">Параллелизм в Java</a>
 - <a href="http://www.skipy.ru/technics/synchronization.html">Синхронизация потоков</a>
 - <a href="https://habrahabr.ru/post/132884/">Как работает ConcurrentHashMap</a>

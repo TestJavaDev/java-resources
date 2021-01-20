@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Behavioral interview
+title: Behavioral and English interview
 nav_order: 2
 permalink: /behavioral
 has_children: true
