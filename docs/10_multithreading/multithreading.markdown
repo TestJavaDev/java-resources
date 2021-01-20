@@ -10,8 +10,95 @@ Multithreading / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>
+  
+### Multithreading basics
+{: .label }
+*  Program vs Process vs Thread
+*  Concurrency vs Parallelism
+*  Cooperative Multitasking vs Preemptive Multitasking
+*  Synchronous vs Asynchronous
+*  I/O Bound vs CPU Bound
+*  Throughput vs Latency
+*  Critical Sections & Race Conditions
+*  Deadlocks, Liveness & Reentrant Locks
+*  Mutex vs Semaphore
+*  Mutex vs Monitor
+*  Java's Monitor & Hoare vs Mesa Monitors
+*  Semaphore vs Monitor
+*  Amdahl's Law
+*  Moore's Law
 
-  <a href="https://www.educative.io/courses/java-multithreading-for-senior-engineering-interviews">Java Multithreading for Senior Engineering Interviews</a>
+### Multithreading in Java
+{: .label }
+*  Thready Safety & Synchronized
+*  Wait & Notify
+*  Interrupting Threads
+*  Volatile
+*  Reentrant Locks & Condition Variables
+*  Missed Signals
+*  Semaphore in Java
+*  Spurious Wakeups
+*  Miscellaneous Topics
+
+### Java Memory Model
+{: .label }
+*  Java Memory Model
+*  Reordering Effects
+*  The happens-before Relationship
+
+### Interview Practice Problems
+{: .label }
+*  Blocking Queue | Bounded Buffer | Consumer Producer
+*  Rate Limiting Using Token Bucket Filter
+*  Thread Safe Deferred Callback
+*  Implementing Semaphore
+*  ReadWrite Lock
+*  Unisex Bathroom Problem
+*  Implementing a Barrier
+*  Uber Ride Problem
+*  Dining Philosophers
+*  Barber Shop
+*  Superman Problem
+*  Multithreaded Merge Sort
+*  Asynchronous to Synchronous Problem
+*  Epilogue
+*  Ordered Printing
+*  Printing Foo Bar n Times
+*  Printing Number Series (Zero, Even, Odd)
+*  Build a Molecule
+*  Fizz Buzz Problem
+
+### Java Thread Basics
+{: .label }
+*  Setting-up Threads
+*  Basic Thread Handling
+*  Executor Framework
+*  Executor Implementations
+*  Thread Pools
+*  Types of Thread Pools
+*  An Example: Timer vs ScheduledThreadPool
+*  Callable Interface
+*  Future Interface
+*  CompletionService Interface
+*  ThreadLocal
+*  CountDownLatch
+*  CyclicBarrier
+*  Concurrent Collections
+
+- [Фундаментальный поворот к параллелизму в программировании](https://habrahabr.ru/post/145432/)
+- <a href="https://ru.wikipedia.org/wiki/Параллелизм_в_Java">Параллелизм в Java</a>
+- <a href="http://www.skipy.ru/technics/synchronization.html">Синхронизация потоков</a>
+- <a href="https://habrahabr.ru/post/132884/">Как работает ConcurrentHashMap</a>
+- <a href="https://habrahabr.ru/post/277669/"> Справочник по синхронизаторам java.util.concurrent.*</a>
+- <a href="http://articles.javatalks.ru/articles/17">Использование ThreadLocal переменных</a>
+- <a href="https://www.youtube.com/watch?v=8piqauDj2yo">Николай Алименков — Прикладная многопоточность</a>
+- <a href="https://www.youtube.com/playlist?list=PL6jg6AGdCNaXo06LjCBmRao-qJdf38oKp">Advanced Java - Concurrency</a>
+- <a href="https://www.youtube.com/playlist?list=PLoij6udfBncgVRq487Me6yQa1kqtxobZS">Java Multithreading</a>
+- <a href="http://habrahabr.ru/company/luxoft/blog/157273/">Обзор java.util.concurrent.*</a>
+- <a href="https://en.wikipedia.org/wiki/Compare-and-swap">Compare-and-swap</a>
+- <a href="https://habrahabr.ru/post/277669/"> Справочник по синхронизаторам java.util.concurrent.*</a>
+- <a href="http://www.intuit.ru/studies/courses/16/16/lecture/27127">Потоки выполнения. Синхронизация.</a>
+- <a href="http://www.intuit.ru/studies/courses/16/16/lecture/27127?page=4">Методы wait(), notify(), notifyAll() класса Object</a>
 
 ### Многопоточное программирование в Java
 
