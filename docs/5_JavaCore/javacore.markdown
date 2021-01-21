@@ -52,7 +52,10 @@ JavaCore / Java resources / Grokking the interview
 
 ### Memory Model
 
--  <a href="http://www.javaspecialist.ru/2011/06/java-memory-model.html">Java Memory Model</a>
+- <a href="https://elizarov.livejournal.com/33610.html">Теоретический минимум для понимания Java Memory Model</a>
+- <a href="https://www.youtube.com/watch?v=iB2N8aqwtxc">Прагматики Java Memory Mode</a>
+- <a href="https://habr.com/ru/company/golovachcourses/blog/221133/">JSR 133 (Java Memory Model) FAQ</a>
+- <a href="http://www.javaspecialist.ru/2011/06/java-memory-model.html">Java Memory Model</a>
 - <a href="https://www.slideshare.net/solit/jvm-16948708">JVM изнутри - оптимизация и профилирование</a>.
 - <a href="https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap">Stack and Heap</a>
 - <a href="http://habrahabr.ru/post/117274/">Из каких частей состоит память java процесса</a>.
