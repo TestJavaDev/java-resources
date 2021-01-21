@@ -58,12 +58,6 @@ Multithreading / Java resources / Grokking the interview
 *  Multithreaded Merge Sort  [first site](https://github.com/merry75/educative.io_courses/blob/master/Java%20Multithreading%20for%20Senior%20Engineering%20Interviews%20-%20Learn%20Interactively/43_Multithreaded_Merge_Sort.pdf)
 *  Asynchronous to Synchronous Problem  [first site](https://www.geeksforgeeks.org/asynchronous-synchronous-callbacks-java/) [second site](https://github.com/merry75/educative.io_courses/blob/master/Java%20Multithreading%20for%20Senior%20Engineering%20Interviews%20-%20Learn%20Interactively/44_Asynchronous_to_Synchronous_Problem.pdf)
 
-*  Ordered Printing  [first site]() [second site]() [third site]() [fourth site]()
-*  Printing Foo Bar n Times  [first site]() [second site]() [third site]() [fourth site]()
-*  Printing Number Series (Zero, Even, Odd)  [first site]() [second site]() [third site]() [fourth site]()
-*  Build a Molecule  [first site]() [second site]() [third site]() [fourth site]()
-*  Fizz Buzz Problem  [first site]() [second site]() [third site]() [fourth site]()
-
 ### Java Thread Basics
 {: .label }
 *  Setting-up Threads  [first site]() [second site]() [third site]() [fourth site]()
