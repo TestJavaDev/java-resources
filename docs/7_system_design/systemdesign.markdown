@@ -33,6 +33,9 @@ System Design / Java resources / Grokking the interview
  - <a href="https://www.studytonight.com/computer-networks/complete-osi-model">The OSI Model - Features, Principles and Layers</a>
  - <a href="https://www.bmc.com/blogs/osi-model-7-layers/">OSI Model: The 7 Layers of Network Architecture</a>
  
+ - <a href="https://habr.com/ru/post/232881/">Ubiquitous Language и Bounded Context в DDD</a>
+ - <a href="https://balashov-mikhail.com/posts/bounded-context">BOUNDED CONTEXT</a>
+ 
 ##  System Design Problems
 {: .label }
 

@@ -29,6 +29,7 @@ JavaCore / Java resources / Grokking the interview
 - [Ведение лога приложения](http://skipy.ru/useful/logging.html)
 - [Java Logging: история кошмара](http://habrahabr.ru/post/113145/)
 - [Generics](https://habr.com/ru/company/sberbank/blog/416413/)
+- [The JVM Architecture Explained](https://habr.com/ru/company/sberbank/blog/416413/)
 
 ### Classloader
 
@@ -36,6 +37,13 @@ JavaCore / Java resources / Grokking the interview
 - <a href="http://java-online.ru/java-classloader.xhtml">Загрузка классов, ClassLoader</a>
 - <a href="https://habrahabr.ru/post/222443/">Memory Leaks</a>. 
 - <a href="https://www.youtube.com/watch?v=sSmQ6W-ovZE">Никита Сальников-Тарновский — Утечки памяти</a>
+
+### GC
+
+- <a href="https://habr.com/ru/post/148322/">GC и большой heap</a>
+- <a href="https://javarush.ru/quests/lectures/questcollections.level04.lecture03">Сборка мусора</a>
+- <a href="http://java-online.ru/garbage-collection.xhtml">Сборщик мусора Garbage Collection</a> 
+- <a href="https://ziginsider.github.io/Garbage_Collector_Java/">ткий конспект реализации Garbage Collector в Java</a>
 
 ### Collections
 
@@ -98,7 +106,6 @@ JavaCore / Java resources / Grokking the interview
 - [Сергей Куксенко — Stream API, часть 1](https://www.youtube.com/watch?v=O8oN4KSZEXE)
 - [Сергей Куксенко — Stream API, часть 2](https://www.youtube.com/watch?v=i0Jr2l3jrDA)
 - [Используйте Stream API проще (или не используйте вообще)](https://habrahabr.ru/post/337350/)
--  <a href="https://habr.com/ru/post/337350/">Используйте Stream API проще (или не используйте вообще)</a>
 -  <a href="https://habr.com/ru/company/jugru/blog/307938/">Java Stream API: что делает хорошо, а что не очень</a>
 -  <a href="https://habr.com/ru/post/437038/">Перевод руководства по Stream API от Benjamin Winterberg</a>
 -  <a href="https://habr.com/ru/company/luxoft/blog/270383/">Шпаргалка Java программиста. Java Stream API</a>

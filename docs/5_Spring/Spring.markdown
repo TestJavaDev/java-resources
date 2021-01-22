@@ -11,6 +11,11 @@ Spring / Java resources / Grokking the interview
 {: .fs-6 .fw-300 }
 </div>
 
+- <a href="https://habr.com/ru/post/350682/">Spring interview questions</a>
+- <a href="https://www.baeldung.com/spring-boot-interview-questions">Spring Boot Interview Questions</a>
+- <a href="https://stackoverflow.com/questions/1061717/what-exactly-is-spring-framework-for">What exactly is Spring framework for</a>
+- <a href="https://habr.com/ru/post/535816/">Мониторинг и профилирование Spring Boot приложения</a>
+
 ### Spring Core
 
 -  <a href="http://habrahabr.ru/post/222579/">Spring изнутри. Этапы инициализации контекста.</a>

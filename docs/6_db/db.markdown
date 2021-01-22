@@ -44,6 +44,7 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 - [Интерактивная обучалка по postgreSQL](https://www.pgexercises.com/)
 - <a href="http://ru.wikipedia.org/wiki/Транзакция_(информатика)">Транзакция. ACID.</a> <a href="https://ru.wikipedia.org/wiki/Уровень_изолированности_транзакций">Уровни изоляции транзакций.</a>
 - <a href="http://www.osp.ru/pcworld/2009/07/9708191/">Уровни изоляции транзакций в SQL</a>
+- <a href="https://habr.com/ru/post/120003/">БД Oracle для программиста</a>
 
 
 ### ORM
