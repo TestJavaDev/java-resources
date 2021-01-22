@@ -14,7 +14,7 @@ System Design / Java resources / Grokking the interview
  
  <a href="https://github.com/donnemartin/system-design-primer">The System Design Primer</a>
  
- ##  System Design Basics
+##  System Design Basics
  *  Load Balancing
  *  Key Characteristics of Distributed Systems
  *  Caching
@@ -26,6 +26,12 @@ System Design / Java resources / Grokking the interview
  *  CAP Theorem
  *  Consistent Hashing
  *  Long-Polling vs WebSockets vs Server-Sent Events
+ 
+ ## OSI Model
+ 
+ - <a href="https://en.wikipedia.org/wiki/OSI_model">OSI model</a>
+ - <a href="https://www.studytonight.com/computer-networks/complete-osi-model">The OSI Model - Features, Principles and Layers</a>
+ - <a href="https://www.bmc.com/blogs/osi-model-7-layers/">OSI Model: The 7 Layers of Network Architecture</a>
  
 ##  System Design Problems
 {: .label }

@@ -10,6 +10,8 @@ Multithreading / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>
+
+[Concurrency interview questions](https://github.com/enhorse/java-interview/blob/master/concurrency.md)
   
 ### Multithreading basics
 {: .label }
@@ -66,17 +68,16 @@ Multithreading / Java resources / Grokking the interview
 *  Executor Framework  [first site](http://java-online.ru/concurrent-executor.xhtml) [second site](https://medium.com/nuances-of-programming/%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA-executor-%D0%B2-java-d5d4c68ccc55) [third site](https://habr.com/ru/post/260953/)
 *  Executor Implementations  [first site](https://javarush.ru/quests/lectures/questmultithreading.level08.lecture09) [second site](https://javarush.ru/groups/posts/2078-threadom-java-ne-isportishjh--chastjh-v---executor-threadpool-fork-join-pool) [third site](https://habr.com/ru/sandbox/114046/)
 *  Thread Pools  [first site](https://habr.com/ru/post/326146/) [second site](https://www.codeflow.site/ru/article/thread-pool-java-and-guava) [third site](https://coderoad.ru/10360974/%D0%A7%D1%82%D0%BE-%D0%B8%D0%BC%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B4%D0%B5%D0%BB%D0%B0%D0%B5%D1%82-%D0%BF%D1%83%D0%BB-%D0%BF%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%B2-%D0%B2-Java)
-*  Types of Thread Pools  [first site]() [second site]() [third site]() [fourth site]()
+*  Types of Thread Pools  [first site](https://www.baeldung.com/thread-pool-java-and-guava) [second site](https://stackoverflow.com/questions/17186206/types-of-thread-pools-in-java)
 *  ForkJoinPool [first site](https://habr.com/ru/post/128985/) [second site](https://javarush.ru/groups/posts/2078-threadom-java-ne-isportishjh--chastjh-v---executor-threadpool-fork-join-pool) [third site](https://www.youtube.com/watch?v=t0dGLFtRR9c)
-*  An Example: Timer vs ScheduledThreadPool  [first site]() [second site]() [third site]() [fourth site]()
-*  Callable Interface  [first site]() [second site]() [third site]() [fourth site]()
-*  Future Interface  [first site]() [second site]() [third site]() [fourth site]()
-*  CompletionService Interface  [first site]() [second site]() [third site]() [fourth site]()
-*  ThreadLocal  [first site]() [second site]() [third site]() [fourth site]()
-*  CountDownLatch  [first site]() [second site]() [third site]() [fourth site]()
-*  CyclicBarrier  [first site]() [second site]() [third site]() [fourth site]()
-*  Concurrent Collections  [first site]() [second site]() [third site]() [fourth site]()
-*  CompletableFuture  [first site](https://www.youtube.com/watch?v=hqR41XVx3kM) [second site]() [third site]() [fourth site]()
+*  Callable Interface  [first site](https://javadevblog.com/java-callable-kratkoe-opisanie-i-primer-ispol-zovaniya.html) [second site](https://coderoad.ru/30976946/%D0%B2-%D1%87%D0%B5%D0%BC-%D0%BF%D1%80%D0%B5%D0%B8%D0%BC%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%BE-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-FutureTask-%D0%BF%D0%B5%D1%80%D0%B5%D0%B4-Callable)
+*  Future Interface  [first site](https://pro-java.ru/java-dlya-opytnyx/interfejsy-callable-i-future-v-java/) [second site](http://java-online.ru/concurrent-callable.xhtml)
+*  CompletionService Interface  [first site](https://coderoad.ru/11872520/ExecutorCompletionService-%D0%97%D0%B0%D1%87%D0%B5%D0%BC-%D0%BD%D1%83%D0%B6%D0%B5%D0%BD-%D0%BE%D0%B4%D0%B8%D0%BD-%D0%B5%D1%81%D0%BB%D0%B8-%D1%83-%D0%BD%D0%B0%D1%81-%D0%B5%D1%81%D1%82%D1%8C-invokeAll)
+*  ThreadLocal  [first site](https://articles.javatalks.ru/articles/17) [second site]() [third site]() [fourth site]()
+*  CountDownLatch  [first site](https://coderoad.ru/17827022/%D0%9A%D0%B0%D0%BA-CountDownLatch-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B5%D1%82%D1%81%D1%8F-%D0%B2-Java-%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D0%B8) [second site](https://www.codeflow.site/ru/article/java-countdown-latch) [third site](https://pro-java.ru/parallelizm-v-java/klass-countdownlatch-primery-realizacii-koda-v-java/)
+*  CyclicBarrier  [first site](https://javanerd.ru/%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-java/%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%BA%D0%BB%D0%B0%D1%81%D1%81-cyclicbarrier/) [second site](https://pro-java.ru/parallelizm-v-java/klass-cyclicbarrier-primery-realizacii-koda-v-java/)
+*  Concurrent Collections  [first site](https://habr.com/ru/company/luxoft/blog/157273/) [second site](https://habr.com/ru/post/473352/) [third site](http://java-online.ru/concurrent-collections.xhtml)
+*  CompletableFuture  [first site](https://www.youtube.com/watch?v=hqR41XVx3kM) [second site](https://annimon.com/article/3462) [third site](https://www.codeflow.site/ru/article/java-completablefuture)
 
 ### Многопоточное программирование в Java
 

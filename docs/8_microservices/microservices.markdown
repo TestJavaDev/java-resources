@@ -1,19 +1,23 @@
 ---
 layout: default
-title: Microservoces
+title: Microservices
 nav_order: 8
 permalink: /microservices
 has_children: true
 ---
 <div align="center" markdown="1">
-Maven / Java resources / Grokking the interview
+Microservices / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>
 
+## Cloud
 
+- <a href="https://en.wikipedia.org/wiki/Cloud_computing">Cloud computing</a>
 
-- <a href="http://ru.wikipedia.org/wiki/Сервис-ориентированная_архитектура">Сервис-ориентированная архитектура</a> как повышение абстракции производства ПО
+## Microservices
+
+ - <a href="http://ru.wikipedia.org/wiki/Сервис-ориентированная_архитектура">Сервис-ориентированная архитектура</a> как повышение абстракции производства ПО </a>
  - <a href="http://www.javaworld.com/article/2071889/soa/what-is-service-oriented-architecture.html">What is service-oriented architecture?</a>
  - <a href="https://ru.wikipedia.org/wiki/Микросервисы">Современное представление (SOA): Микросервисы</a>
  - [Микросервисная архитектура в разрезе](https://proglib.io/p/po-stopam-luchshih-mikroservisnaya-arhitektura-v-razreze-2019-11-07)

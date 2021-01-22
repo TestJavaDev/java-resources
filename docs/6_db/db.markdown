@@ -11,6 +11,7 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 {: .fs-6 .fw-300 }
 </div>
 
+## DB SQL
 - <a href="https://www.youtube.com/watch?v=dFASbaIG-UU">Видео: Вячеслав Круглов — Как начинающему Java-разработчику подружиться со своей базой данных?</a>
 - <a href="https://docs.google.com/document/d/1ul1jH7sccyQVqpjItdFo_OQI9YxJV3V5hxqI7xa-YPM">DB Migration rules</a>
 - [Опыт 1440 миграций баз данных](https://habr.com/company/wrike/blog/414441/)

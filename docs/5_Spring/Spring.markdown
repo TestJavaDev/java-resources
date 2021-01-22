@@ -13,9 +13,6 @@ Spring / Java resources / Grokking the interview
 
 ### Spring Core
 
--  <a href="http://en.wikipedia.org/wiki/Spring_Framework">Spring Framework</a>
--  <a href="http://spring.io/projects">Проекты Spring</a>.
--  <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview.html">Обзор Spring Framework</a>
 -  <a href="http://habrahabr.ru/post/222579/">Spring изнутри. Этапы инициализации контекста.</a>
 -  <a href="https://ru.wikipedia.org/wiki/Инверсия_управления">Инверсия управления.</a>
 -  <a href="http://habrahabr.ru/post/131993/">IoC, DI, IoC-контейнер — Просто о простом</a>
