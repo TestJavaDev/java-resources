@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Multithreading
-nav_order: 10
+nav_order: 4
 permalink: /multithreading
 has_children: true
 ---
@@ -61,12 +61,13 @@ Multithreading / Java resources / Grokking the interview
 
 ### Java Thread Basics
 {: .label }
-*  Setting-up Threads  [first site](http://tutorials.jenkov.com/java-concurrency/creating-and-starting-threads.html) [second site](https://dzone.com/articles/java-thread-tutorial-creating-threads-and-multithr) [third site](https://www.geeksforgeeks.org/lifecycle-and-states-of-a-thread-in-java/)
+*  Setting-up Threads  [first site](https://javarush.ru/groups/posts/2047-threadom-java-ne-isportishjh--chastjh-i---potoki) [second site](http://tutorials.jenkov.com/java-concurrency/creating-and-starting-threads.html) [third site](https://dzone.com/articles/java-thread-tutorial-creating-threads-and-multithr) [fourth site](https://javarush.ru/groups/posts/2048-threadom-java-ne-isportishjh--chastjh-ii---sinkhronizacija) [fifth site](https://javarush.ru/groups/posts/2065-threadom-java-ne-isportishjh--chastjh-iv---callable-future-i-druzjhja) [sixth site](https://javarush.ru/groups/posts/2111-threadom-java-ne-isportishjh--chastjh-vi---k-barjheru)
 *  Basic Thread Handling  [first site](http://java-online.ru/java-thread.xhtml) [second site](https://dataart.ua/articles/mnogopotochnost-v-java-lekfiya-4-puly-potokov/) [third site](https://stackoverflow.com/questions/6546193/how-to-catch-an-exception-from-a-thread)
 *  Executor Framework  [first site](http://java-online.ru/concurrent-executor.xhtml) [second site](https://medium.com/nuances-of-programming/%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA-executor-%D0%B2-java-d5d4c68ccc55) [third site](https://habr.com/ru/post/260953/)
 *  Executor Implementations  [first site](https://javarush.ru/quests/lectures/questmultithreading.level08.lecture09) [second site](https://javarush.ru/groups/posts/2078-threadom-java-ne-isportishjh--chastjh-v---executor-threadpool-fork-join-pool) [third site](https://habr.com/ru/sandbox/114046/)
-*  Thread Pools  [first site]() [second site]() [third site]() [fourth site]()
+*  Thread Pools  [first site](https://habr.com/ru/post/326146/) [second site](https://www.codeflow.site/ru/article/thread-pool-java-and-guava) [third site](https://coderoad.ru/10360974/%D0%A7%D1%82%D0%BE-%D0%B8%D0%BC%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B4%D0%B5%D0%BB%D0%B0%D0%B5%D1%82-%D0%BF%D1%83%D0%BB-%D0%BF%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%B2-%D0%B2-Java)
 *  Types of Thread Pools  [first site]() [second site]() [third site]() [fourth site]()
+*  ForkJoinPool [first site](https://habr.com/ru/post/128985/) [second site](https://javarush.ru/groups/posts/2078-threadom-java-ne-isportishjh--chastjh-v---executor-threadpool-fork-join-pool) [third site](https://www.youtube.com/watch?v=t0dGLFtRR9c)
 *  An Example: Timer vs ScheduledThreadPool  [first site]() [second site]() [third site]() [fourth site]()
 *  Callable Interface  [first site]() [second site]() [third site]() [fourth site]()
 *  Future Interface  [first site]() [second site]() [third site]() [fourth site]()
@@ -75,6 +76,7 @@ Multithreading / Java resources / Grokking the interview
 *  CountDownLatch  [first site]() [second site]() [third site]() [fourth site]()
 *  CyclicBarrier  [first site]() [second site]() [third site]() [fourth site]()
 *  Concurrent Collections  [first site]() [second site]() [third site]() [fourth site]()
+*  CompletableFuture  [first site](https://www.youtube.com/watch?v=hqR41XVx3kM) [second site]() [third site]() [fourth site]()
 
 ### Многопоточное программирование в Java
 

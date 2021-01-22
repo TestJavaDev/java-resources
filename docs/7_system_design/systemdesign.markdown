@@ -1,7 +1,7 @@
 ---
 layout: default
 title: System design
-nav_order: 4
+nav_order: 7
 permalink: /systemdesign
 has_children: true
 ---
@@ -11,10 +11,21 @@ System Design / Java resources / Grokking the interview
 {: .fs-6 .fw-300 }
 </div>
 
-
- <a href="http://ru.wikipedia.org/wiki/Сервис-ориентированная_архитектура">Course: Grokking the System Design Interview</a> 
  
  <a href="https://github.com/donnemartin/system-design-primer">The System Design Primer</a>
+ 
+ ##  System Design Basics
+ *  Load Balancing
+ *  Key Characteristics of Distributed Systems
+ *  Caching
+ *  Data Partitioning
+ *  Indexes
+ *  Proxies
+ *  Redundancy and Replication
+ *  SQL vs. NoSQL
+ *  CAP Theorem
+ *  Consistent Hashing
+ *  Long-Polling vs WebSockets vs Server-Sent Events
  
 ##  System Design Problems
 {: .label }
@@ -27,30 +38,13 @@ System Design / Java resources / Grokking the interview
    
    * <a href="https://coursehunters.online/t/educative-io-design-gurus-grokking-the-system-design-interview-part-4/583">Designing Facebook’s Newsfeed, Designing Yelp or Nearby Friends, Designing Uber backend, Design Ticketmaster</a>
    
-   * <a href="https://coursehunters.online/t/educative-io-design-gurus-grokking-the-system-design-interview-part-5/584">Glossary of System Design Basics:</a> (contains all this items below) logic
-     *  Load Balancing
-     *  Key Characteristics of Distributed Systems
-     *  Caching
-     *  Data Partitioning
-     *  Indexes
-     *  Proxies
-     *  Redundancy and Replication
-     *  SQL vs. NoSQL
-     *  CAP Theorem
-     *  Consistent Hashing
-     *  Long-Polling vs WebSockets vs Server-Sent Events
+   * <a href="https://coursehunters.online/t/educative-io-design-gurus-grokking-the-system-design-interview-part-5/584">Glossary of System Design Basics
      
 ##  Twelve-Factor App methodology
 {: .label }
 
-   * <a href="https://12factor.net/build-release-run">The twelve-factor app</a>
-   * <a href="https://12factor.net/ru/">The twelve-factor app with translation</a>
-   * <a href="https://12factor.net/ru/">The twelve-factor app</a>
+   * <a href="https://12factor.net/uk/">The twelve-factor app</a>
    * <a href="https://medium.com/hashmapinc/how-i-use-the-twelve-factor-app-methodology-for-building-saas-applications-with-java-scala-4cdb668cc908">How I Use the Twelve-Factor App Methodology for Building SaaS Applications with Java & Scala</a>
-   
-   
-   *  Мартин Фаулер «Шаблоны корпоративных приложений»
-   *  Джошуа Блох «Java Эфективное программирование»
    *  [Основы архитектуры приложений](https://www.youtube.com/watch?v=NR73Gkm3iXc&list=PLmqFxxywkatSezlaoxwFbdBBnAk_JJ__5&index=2&t=0s)
    *  [Декомпозиция предметной области, типовые решения](https://www.youtube.com/watch?v=xOx-si8s3K8&list=PLmqFxxywkatSezlaoxwFbdBBnAk_JJ__5&index=2)
    *  [Про модель, логику, ООП, разработку и остальное](https://habr.com/ru/post/263025/)

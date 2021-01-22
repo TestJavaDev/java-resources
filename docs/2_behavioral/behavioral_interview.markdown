@@ -13,4 +13,4 @@ Behavioral and English interview / Java resources / Grokking the interview
 
 ## Behavioral interview
 {: .label }
-*  <a href="https://www.educative.io/courses/grokking-the-behavioral-interview">Grokking the Behavioral Interview</a>
+*  Behavioral Interview

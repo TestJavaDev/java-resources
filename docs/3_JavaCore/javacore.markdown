@@ -1,7 +1,7 @@
 ---
 layout: default
 title: JavaCore
-nav_order: 5
+nav_order: 3
 permalink: /javacore
 has_children: true
 ---
@@ -52,7 +52,6 @@ JavaCore / Java resources / Grokking the interview
 
 ### Memory Model
 
-- <a href="https://elizarov.livejournal.com/33610.html">Теоретический минимум для понимания Java Memory Model</a>
 - <a href="https://www.youtube.com/watch?v=iB2N8aqwtxc">Прагматики Java Memory Mode</a>
 - <a href="https://habr.com/ru/company/golovachcourses/blog/221133/">JSR 133 (Java Memory Model) FAQ</a>
 - <a href="http://www.javaspecialist.ru/2011/06/java-memory-model.html">Java Memory Model</a>
