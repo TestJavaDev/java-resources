@@ -21,6 +21,8 @@ Spring / Java resources / Grokking the interview
 -  <a href="http://habrahabr.ru/post/222579/">Spring изнутри. Этапы инициализации контекста.</a>
 -  <a href="https://ru.wikipedia.org/wiki/Инверсия_управления">Инверсия управления.</a>
 -  <a href="http://habrahabr.ru/post/131993/">IoC, DI, IoC-контейнер — Просто о простом</a>
+-  <a href="https://www.ibm.com/developerworks/ru/library/ws-springjava/index.html">Управление bean-компонентами Spring при конфигурировании на основе Java</a>
+-  <a href="https://habr.com/ru/post/334448/">Обратная сторона Spring</a>
 -  <a href="http://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in">Difference between @Component, @Repository & @Service annotations in Spring</a>
 -  <a href="http://www.mkyong.com/spring/spring-auto-scanning-components/">Spring Auto Scanning Components</a>
 -  <a href="http://www.seostella.com/ru/article/2012/02/12/ispolzovanie-annotacii-autowired-v-spring-3.html">Использование аннотации @Autowired</a>
@@ -38,6 +40,14 @@ Spring / Java resources / Grokking the interview
 - [Евгений Борисов — Spring-потрошитель, часть 1](https://www.youtube.com/watch?v=BmBr5diz8WA)
 - [Евгений Борисов — Spring-потрошитель, часть 2](https://www.youtube.com/watch?v=cou_qomYLNU)
 - [Mapping Entity->DTO: Controller or Service?](http://stackoverflow.com/questions/31644131)
+
+### Spring Boot
+
+- [Spring Boot the Ripper (Evgeny Borisov and Kirill Tolkachev)](https://www.youtube.com/watch?v=zEdHFXr9D9Y)
+- [Введение в Spring Boot: создание простого REST API на Java](https://habr.com/ru/post/435144/)
+- [Understanding Spring Boot](https://geowarin.com/understanding-spring-boot/)
+- [В чем различие между Spring Framework и Spring Boot](https://ru.stackoverflow.com/questions/318146/%D0%92-%D1%87%D0%B5%D0%BC-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%B8%D0%B5-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-spring-framework-%D0%B8-spring-boot)
+- [Использование аннотации @SpringBootApplication](https://java-ru-blog.blogspot.com/2020/02/annotation-springbootapplication.html)
 
 ### Spring Data
 

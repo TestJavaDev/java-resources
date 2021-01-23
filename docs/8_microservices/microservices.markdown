@@ -14,6 +14,7 @@ Microservices / Java resources / Grokking the interview
 ## Cloud
 
 - <a href="https://en.wikipedia.org/wiki/Cloud_computing">Cloud computing</a>
+- <a href="https://habr.com/ru/company/jugru/blog/341026/">Что такое Spring Cloud и как его готовить</a>
 - <a href="https://www.kennybastani.com/2016/04/event-sourcing-microservices-spring-cloud.html">Event Sourcing in Microservices Using Spring Cloud and Reactor</a>
 
 ## Microservices

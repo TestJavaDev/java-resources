@@ -90,6 +90,10 @@ JavaCore / Java resources / Grokking the interview
 - [Лямбды в Java 8](https://habrahabr.ru/post/224593/)
 - [Java 8 Functional Interfaces](https://www.journaldev.com/2763/java-8-functional-interfaces)
 - [Lambda expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
+- <a href="https://habrahabr.ru/post/183150/"> Функторы, аппликативные функторы и монады в картинках</a>
+- <a href="https://habrahabr.ru/company/cit/blog/262055/">Монады в Java 8</a>
+- <a href="http://stackoverflow.com/a/19932439/548473">Three Monad laws.</a>
+- <a href="https://dzone.com/articles/whats-wrong-java-8-part-iv">What's Wrong in Java 8 Monads</a>
 - <a href="https://github.com/winterbe/java8-tutorial">Java 8 </a>
 -  <a href="http://www.youtube.com/watch?v=_PDIVhEs6TM">Доступно о Java 8 Lambda</a>
 -  <a href="https://devcolibri.com/java-8-killer-features-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1/">Java 8: Lambda выражения</a>

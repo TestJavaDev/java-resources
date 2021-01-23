@@ -12,6 +12,8 @@ Multithreading / Java resources / Grokking the interview
 </div>
 
 [Concurrency interview questions](https://github.com/enhorse/java-interview/blob/master/concurrency.md)
+[The Deadlock Empire](https://deadlockempire.github.io/)
+[Java Concurrent Animated](http://www.jconcurrent.com/)
   
 ### Multithreading basics
 {: .label }
@@ -99,6 +101,9 @@ Multithreading / Java resources / Grokking the interview
 - <a href="https://habrahabr.ru/post/277669/"> Справочник по синхронизаторам java.util.concurrent.*</a>
 - <a href="http://www.intuit.ru/studies/courses/16/16/lecture/27127">Потоки выполнения. Синхронизация.</a>
 - <a href="http://www.intuit.ru/studies/courses/16/16/lecture/27127?page=4">Методы wait(), notify(), notifyAll() класса Object</a>
+
+- <a href="https://habr.com/ru/post/276255/">Визуализация concurrency в Go с WebGL</a>
+- <a href="https://www.overops.com/blog/5-things-you-didnt-know-about-synchronization-in-java-and-scala/">5 Things You Didn’t Know About Synchronization in Java and Scala</a>
 
 - <a href="https://tproger.ru/translations/java8-concurrency-tutorial-1/">1. Параллельное выполнение кода с помощью потоков</a>
 - <a href="https://tproger.ru/translations/java8-concurrency-tutorial-2/">2. Синхронизация доступа к изменяемым объектам</a>
