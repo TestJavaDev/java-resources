@@ -2,7 +2,7 @@
 layout: default
 title: DB, JDBC, ORM
 nav_order: 6
-permalink: /db
+permalink: /db_jdbc_orm
 has_children: true
 ---
 <div align="center" markdown="1">
@@ -11,41 +11,67 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 {: .fs-6 .fw-300 }
 </div>
 
-## DB SQL
-- <a href="https://www.youtube.com/watch?v=dFASbaIG-UU">Видео: Вячеслав Круглов — Как начинающему Java-разработчику подружиться со своей базой данных?</a>
-- <a href="https://docs.google.com/document/d/1ul1jH7sccyQVqpjItdFo_OQI9YxJV3V5hxqI7xa-YPM">DB Migration rules</a>
-- [Опыт 1440 миграций баз данных](https://habr.com/company/wrike/blog/414441/)
--  [BoneCP to be deprecated ](https://stackoverflow.com/a/1662916/548473)
--  Выбор реализации пула коннектов: <a href="https://commons.apache.org/proper/commons-dbcp/">Commons Database Connection Pooling</a>, <a href="https://github.com/brettwooldridge/HikariCP">HikariCP</a>
--  <a href="https://habrahabr.ru/post/269023/">Самый быстрый пул соединений на java (читаем комменты)</a>
--  <a href="http://blog.ippon.fr/2013/03/13/improving-the-performance-of-the-spring-petclinic-sample-application-part-3-of-5">Tomcat pool</a>
-- [Оптимизация запросов. Основы EXPLAIN в PostgreSQL](https://habrahabr.ru/post/203320/)
-- [Оптимизация запросов. Часть 2](https://habrahabr.ru/post/203386/)
-- [Оптимизация запросов. Часть 3](https://habrahabr.ru/post/203484/)
-- [Документация Postgres: индексы](https://postgrespro.ru/docs/postgresql/9.6/indexes.html)
-- [Стратегии работы с транзакциями, pаспространенные ошибки](https://www.ibm.com/developerworks/ru/library/j-ts1/index.html)
-- <a href="https://ru.wikipedia.org/wiki/Транзакция_(информатика)">wiki Транзакция</a>
-- <a href="https://jira.spring.io/browse/DATAJPA-601">readOnly и Propagation.SUPPORTS</a>
-- <a href="http://www.ibm.com/developerworks/ru/library/j-ts1/">Стратегии работы с транзакциями: Распространенные ошибки</a>
-- <a href="http://habrahabr.ru/post/208400/">Принципы работы СУБД. MVCC</a>
-- <a href="https://ru.wikipedia.org/wiki/MVCC">MVCC</a>
-- <a href="http://ru.wikipedia.org/wiki/Транзакция_(информатика)">Транзакция. ACID. Уровни изоляции транзакций.</a>
-- <a href="https://www.ibm.com/developerworks/ru/library/j-ts2/">Стратегии работы с транзакциями</a>
-- [DB-Engines Ranking](http://db-engines.com/en/ranking)
-- [Реляционная СУБД](https://ru.wikipedia.org/wiki/Реляционная_СУБД) (wiki)
-- [Введение в базы данных](http://www.codenet.ru/progr/vbasic/vb_db/1.php)
-- [Реляционные базы vs NoSQL](http://habrahabr.ru/post/103021). SQL. Денормализация. PK, FK, Cascade
-- [PostgreSQL: надёжность](https://ru.wikipedia.org/wiki/PostgreSQL#Качество_исходного_кода)
-- [Работа с базами данных из IDEA](https://habrahabr.ru/company/JetBrains/blog/204064)
-- [IDEA Database tools](https://www.jetbrains.com/datagrip/features)
-- [Как работает реляционная БД](https://habrahabr.ru/company/mailru/blog/266811)
-- [SQL ключи во всех подробностях](https://habrahabr.ru/company/oleg-bunin/blog/348172)
-- [Книги по postgreSQL](https://postgrespro.ru/education/books)
-- [Интерактивная обучалка по postgreSQL](https://www.pgexercises.com/)
-- <a href="http://ru.wikipedia.org/wiki/Транзакция_(информатика)">Транзакция. ACID.</a> <a href="https://ru.wikipedia.org/wiki/Уровень_изолированности_транзакций">Уровни изоляции транзакций.</a>
-- <a href="http://www.osp.ru/pcworld/2009/07/9708191/">Уровни изоляции транзакций в SQL</a>
-- <a href="https://habr.com/ru/post/120003/">БД Oracle для программиста</a>
+## JDBC
+{: .label }
 
+* Intro
+  * Install MySQL RDBMS + MySQL Workbench
+  * RDBMS vs DB, create database
+  * JDBC architecture: JDBC API + JDBC Driver
+  * JDBC Driver types, transport types
+  * Connector/J: JDBC Driver to MySQL
+  * JDBC / SQL versions, SQL dialects
+* Connect to database
+  * Driver, DriverManager, DataSource
+  * Connection
+  * JDBC URL
+  * Connector/J properties
+* Query database
+  * DDL and DML (TEXT)
+  * Statement
+  * Statement.executeUpdate: INSERT, UPDATE, DELETE
+  * Get auto-generated keys
+  * Statement.executeQuery: SELECT, ResultSet
+  * Statement.execute
+  * SQLWarning
+  * SQLException: errorCode and errorState
+  * DAO Pattern
+  * Альтернатива DAO: Transaction Script, Active Record, ORM // шаблон DAO (cуть шаблона, generic-предок, рекурсивное объединение)
+* ResultSet
+  * ResultSet: positioning and transition
+  * ResultSet: type
+  * ResultSet: concurrency
+  * ResultSet: holdability
+* Optimizations
+  * PreparedStatement = + precompilation — SQL injection
+  * Batch update = vectorization
+  * Connection pooling
+* Transactions
+  * Transaction manager
+  * ACID properties
+  * Transaction boundaries
+  * SQLTransientException
+  * Savepoints //Connection.commit()/.rollback()/.setAutoCommit(), savepoint
+  * Transaction isolation levels
+  * MySQL transactions: MyISAM vs InnoDB
+  * READ UNCOMMITED, Dirty Read “phenomena”
+  * READ COMMITED, NonRepeatable Read “phenomena”
+  * REPEATABLE READ, Phantom Read “phenomena”
+  * SERIALIZABLE
+  
+* Local Tx-Manager: by-hands
+  * Base realization: ThreadLocal Tx-context
+  * @Transactional annotation
+  * AOP realization of @Transactional
+  * Application server = Tx-context + Auth-context + Thread management
+* Distributed Transactions
+  * 2PC-protocol
+  * javax.jdbc.xa.* — XA-standart realization of 2PC-client
+  * Distribured-Tx Manager Architecture
+*  Query Meta-Information
+  * Database meta-info
+  * Table meta-info
+  * Row meta-info
 
 ### ORM
 
@@ -96,6 +122,64 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 - <a href="http://stackoverflow.com/questions/9470442/why-is-the-hibernate-default-generator-for-postgresql-sequencegenerator-not?lq=1">SequenceGenerator/IdentityGenerator in PostgreSql</a>
 - <a href="http://stackoverflow.com/questions/7793395">hbm2ddl.auto and autoincrement</a>
 - <a href="http://stackoverflow.com/questions/2585641">Hibernate/JPA DB Schema Generation Best Practices</a>
+
+
+## DB
+{: .label }
+
+* Реляционные базы данных (MySQL)
+  * Устанавливаем, администрируем
+  * Физическая организация данных
+  * реляционная алгебра, реляционное исчисление
+  * SQL types, CREATE/ALTER/DELETE table
+* Логическое проектирование
+  * ER-моделирование
+  * Нормальные формы, денормализация
+  * Целостность данных
+  * Транзакции
+* Физическое проектирование
+  * Индексы
+  * Блокировки
+* Документно-ориентированные (MongoDB)
+  * архитектура и особенности MongoDB
+  * работаем с MongoDB на Java
+* Key-value хранилища (Riak)
+  * архитектура и особенности Riak
+  * работаем с Riak на Java
+  
+- <a href="https://www.youtube.com/watch?v=dFASbaIG-UU">Видео: Вячеслав Круглов — Как начинающему Java-разработчику подружиться со своей базой данных?</a>
+- <a href="https://docs.google.com/document/d/1ul1jH7sccyQVqpjItdFo_OQI9YxJV3V5hxqI7xa-YPM">DB Migration rules</a>
+- [Опыт 1440 миграций баз данных](https://habr.com/company/wrike/blog/414441/)
+-  [BoneCP to be deprecated ](https://stackoverflow.com/a/1662916/548473)
+-  Выбор реализации пула коннектов: <a href="https://commons.apache.org/proper/commons-dbcp/">Commons Database Connection Pooling</a>, <a href="https://github.com/brettwooldridge/HikariCP">HikariCP</a>
+-  <a href="https://habrahabr.ru/post/269023/">Самый быстрый пул соединений на java (читаем комменты)</a>
+-  <a href="http://blog.ippon.fr/2013/03/13/improving-the-performance-of-the-spring-petclinic-sample-application-part-3-of-5">Tomcat pool</a>
+- [Оптимизация запросов. Основы EXPLAIN в PostgreSQL](https://habrahabr.ru/post/203320/)
+- [Оптимизация запросов. Часть 2](https://habrahabr.ru/post/203386/)
+- [Оптимизация запросов. Часть 3](https://habrahabr.ru/post/203484/)
+- [Документация Postgres: индексы](https://postgrespro.ru/docs/postgresql/9.6/indexes.html)
+- [Стратегии работы с транзакциями, pаспространенные ошибки](https://www.ibm.com/developerworks/ru/library/j-ts1/index.html)
+- <a href="https://ru.wikipedia.org/wiki/Транзакция_(информатика)">wiki Транзакция</a>
+- <a href="https://jira.spring.io/browse/DATAJPA-601">readOnly и Propagation.SUPPORTS</a>
+- <a href="http://www.ibm.com/developerworks/ru/library/j-ts1/">Стратегии работы с транзакциями: Распространенные ошибки</a>
+- <a href="http://habrahabr.ru/post/208400/">Принципы работы СУБД. MVCC</a>
+- <a href="https://ru.wikipedia.org/wiki/MVCC">MVCC</a>
+- <a href="http://ru.wikipedia.org/wiki/Транзакция_(информатика)">Транзакция. ACID. Уровни изоляции транзакций.</a>
+- <a href="https://www.ibm.com/developerworks/ru/library/j-ts2/">Стратегии работы с транзакциями</a>
+- [DB-Engines Ranking](http://db-engines.com/en/ranking)
+- [Реляционная СУБД](https://ru.wikipedia.org/wiki/Реляционная_СУБД) (wiki)
+- [Введение в базы данных](http://www.codenet.ru/progr/vbasic/vb_db/1.php)
+- [Реляционные базы vs NoSQL](http://habrahabr.ru/post/103021). SQL. Денормализация. PK, FK, Cascade
+- [PostgreSQL: надёжность](https://ru.wikipedia.org/wiki/PostgreSQL#Качество_исходного_кода)
+- [Работа с базами данных из IDEA](https://habrahabr.ru/company/JetBrains/blog/204064)
+- [IDEA Database tools](https://www.jetbrains.com/datagrip/features)
+- [Как работает реляционная БД](https://habrahabr.ru/company/mailru/blog/266811)
+- [SQL ключи во всех подробностях](https://habrahabr.ru/company/oleg-bunin/blog/348172)
+- [Книги по postgreSQL](https://postgrespro.ru/education/books)
+- [Интерактивная обучалка по postgreSQL](https://www.pgexercises.com/)
+- <a href="http://ru.wikipedia.org/wiki/Транзакция_(информатика)">Транзакция. ACID.</a> <a href="https://ru.wikipedia.org/wiki/Уровень_изолированности_транзакций">Уровни изоляции транзакций.</a>
+- <a href="http://www.osp.ru/pcworld/2009/07/9708191/">Уровни изоляции транзакций в SQL</a>
+- <a href="https://habr.com/ru/post/120003/">БД Oracle для программиста</a>
 
 
 

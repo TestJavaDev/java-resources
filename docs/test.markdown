@@ -24,46 +24,7 @@
 ....Основные шаблоны проектирования (Builder, Singleton, Factory Method, Adapter, Decorator, Composite, Facade, Proxy, Command, Iterator, Listener, Strategy, Template Method).
 ....Продвинутые возможности (Reflection API, аннотации, генерики, загрузка классов)
 ....Java 8 (методы в интерфейсах и ссылки на методы, Лямбды (Project Lambda), Stream API, функциональные алгоритмы)
-
-3. Программа курса «Server-side Java programming (Junior Java Developer)»
-....Доступ к реляционным базам данных (JDBC 4.1)
-........соединяемся с базой данных (JDBC URL, Driver, Connection, DriverManager, DataSource, Типы JDBC драйверов)
-........делаем запрос (Statement, ResultSet, SQLException, SQLWarning, SQLTransientException, делаем SELECT, INSERT, UPDATE, DELETE)
-........шаблон DAO (cуть шаблона, generic-предок, рекурсивное объединение, альтернативы (Transaction Script, Active Record, ORM))
-........PreparedStatement (оптимизация, SQL injection)
-........Трюки (Пакетное обновление (batch update), извлечение сгенерированных ключей, режимы работы ResultSet (прокрутка (scroll), обновление (update)))
-........Транзакции (свойства ACID, Connection.commit()/.rollback()/.setAutoCommit(), savepoint)
-........Уровнип изолированности транзакций (READ UNCOMMITED, «феномен» Dirty Read, READ COMMITED, «феномен» NonRepeatable Read, REPEATABLE READ, «феномен» Phantom Read, SERIALIZABLE)
-........Менеджер транзакций (Transaction manager)
-........Пул соединений (JDBC connection pool)
-....основы ORM (Hibernate или OpenJPA)
-........Objects vs Relations
-........Caching
-
-4. Программа курса «Базы данных (MySQL, MongoDB, Riak)»
-....Реляционные базы данных (MySQL)
-........MySQL
-............Устанавливаем, администрируем
-............Физическая организация данных
-........язык SQL
-............реляционная алгебра, реляционное исчисление
-............SQL types, CREATE/ALTER/DELETE table
-............INSERT, UPDATE, DELETE
-............SELECT, HAVING/GROUP BY, подзапросы,
-........Логическое проектирование
-............ER-моделирование
-............Нормальные формы, денормализация
-............Целостность данных
-............Транзакции
-........Физическое проектирование
-............Индексы
-............Блокировки
-....Документно-ориентированные (MongoDB)
-........архитектура и особенности MongoDB
-........работаем с MongoDB на Java
-....Key-value хранилища (Riak)
-........архитектура и особенности Riak
-........работаем с Riak на Java
+.
 
 
 Модуль #1: Между “железом” и “математикой”, примитивы
