@@ -30,6 +30,20 @@ JavaCore / Java resources / Grokking the interview
 - [Java Logging: история кошмара](http://habrahabr.ru/post/113145/)
 - [Generics](https://habr.com/ru/company/sberbank/blog/416413/)
 - [The JVM Architecture Explained](https://habr.com/ru/company/sberbank/blog/416413/)
+- [State of Valhalla](https://cr.openjdk.java.net/~briangoetz/valhalla/sov/02-object-model.html)
+
+### JVM
+
+- [Understanding JVM Architecture](https://medium.com/platform-engineer/understanding-jvm-architecture-22c0ddf09722)
+- [JVM Tutorial - Java Virtual Machine Architecture Explained for Beginners](https://www.freecodecamp.org/news/jvm-tutorial-java-virtual-machine-architecture-explained-for-beginners/)
+- <a href="https://julio-falbo.medium.com/understand-jvm-and-jit-compiler-part-1-a94c27d32478">Understand JVM and JIT Compiler — Part 1</a>
+- <a href="https://julio-falbo.medium.com/understand-jvm-and-jit-compiler-part-2-cc6f26fff721">Understand JVM and JIT Compiler — Part 2</a>
+- <a href="https://julio-falbo.medium.com/understand-jvm-and-jit-compiler-part-3-556d3f21df9f">Understand JVM and JIT Compiler — Part 3</a>
+- <a href="https://julio-falbo.medium.com/understand-jvm-and-jit-compiler-part-4-9738194ad06e">Understand JVM and JIT Compiler — Part 4</a>
+- [The JVM Architecture (&C) Shipilev blog](https://shipilev.net/)
+- <a href="https://medium.com/runtimeerror/java-jit-compiler-c538e5e06a2">Java JIT Compiler</a>. 
+- <a href="http://cr.openjdk.java.net/~vlivanov/talks/2015_JIT_Overview.pdf">JVM JIT-compiler overview</a>
+- <a href="https://habr.com/ru/company/billing/blog/351682/">Graal: как использовать новый JIT-компилятор JVM в реальной жизни</a>. 
 
 ### Classloader
 
@@ -60,6 +74,9 @@ JavaCore / Java resources / Grokking the interview
 
 ### Memory Model
 
+- [The JMM](https://shipilev.net/talks/narnia-2555-jmm-pragmatics-ru.pdf)
+- [Java Memory Model Pragmatics](https://shipilev.net/blog/2014/jmm-pragmatics/)
+- [All Fields Are Final](https://shipilev.net/blog/2014/all-fields-are-final/)
 - <a href="https://www.youtube.com/watch?v=iB2N8aqwtxc">Прагматики Java Memory Mode</a>
 - <a href="https://habr.com/ru/company/golovachcourses/blog/221133/">JSR 133 (Java Memory Model) FAQ</a>
 - <a href="http://www.javaspecialist.ru/2011/06/java-memory-model.html">Java Memory Model</a>
@@ -84,6 +101,7 @@ JavaCore / Java resources / Grokking the interview
 
 ### Java8
 
+- [Расширенный материал по Java 8](https://habr.com/ru/company/golovachcourses/blog/228603/)
 - [Нововведения в java 8](https://habrahabr.ru/post/216431/)
 - [Лямбда-выражения в Java 8](https://www.youtube.com/watch?v=DNC6Lknn2AE) (youtube)
 - [Функциональный интерфейс](https://geekbrains.ru/posts/java_interfaces)

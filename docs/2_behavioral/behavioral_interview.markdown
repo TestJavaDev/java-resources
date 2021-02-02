@@ -19,6 +19,12 @@ Behavioral and English interview / Java resources / Grokking the interview
 *  Rapid application development
 *  Agile development
 
+- [Software Engineering — Introduction](https://medium.com/omarelgabrys-blog/software-engineering-introduction-part-1-b79238ec97ee)
+- [Software Engineering — Software Process and Software Process Models](https://medium.com/omarelgabrys-blog/software-engineering-software-process-and-software-process-models-part-2-4a9d06213fdc)
+- [Software Engineering — Software Process Activities](https://medium.com/omarelgabrys-blog/software-engineering-process-activities-part-3-ca1ef6818fd6)
+- [Component Based Architecture](https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348)
+- [Software development process](https://en.wikipedia.org/wiki/Software_development_process)
+
 ## Behavioral interview
 {: .label }
 
@@ -32,6 +38,13 @@ Behavioral and English interview / Java resources / Grokking the interview
 
 - [5 Things Never to Lie About in a Job Interview](https://insights.dice.com/2019/04/17/5-things-never-lie-job-interview/)
 - [behavioral-based interview question ](https://www.vawizard.org/wiz-pdf/STAR_Method_Interviews.pdf)
+
+- [Java Community Process](https://uk.wikipedia.org/wiki/Java_Community_Process)
+- [Java Community Process](https://jcp.org/en/jsr/all?sortBy=date)
+- [Refactoring](https://refactoring.com/)
+- [JRebel](https://habr.com/ru/post/135633/)
+- [JRebel Quickstart](https://habr.com/ru/post/135922/)
+
 
 - [3 Month Coding Interview Preparation Bootcamp](https://medium.com/educative/3-month-coding-interview-bootcamp-904422926ce8)
 - [Why I studied full-time for 8 months for a Google interview](https://www.freecodecamp.org/news/why-i-studied-full-time-for-8-months-for-a-google-interview-cc662ce9bb13/)

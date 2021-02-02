@@ -16,6 +16,9 @@ Spring / Java resources / Grokking the interview
 - <a href="https://stackoverflow.com/questions/1061717/what-exactly-is-spring-framework-for">What exactly is Spring framework for</a>
 - <a href="https://habr.com/ru/post/535816/">Мониторинг и профилирование Spring Boot приложения</a>
 
+- <a href="https://martinfowler.com/articles/injection.html">Inversion of Control Containers and the Dependency Injection pattern</a>
+- <a href="https://martinfowler.com/bliki/InversionOfControl.html">InversionOfControl</a>
+
 ### Spring Core
 
 -  <a href="http://habrahabr.ru/post/222579/">Spring изнутри. Этапы инициализации контекста.</a>

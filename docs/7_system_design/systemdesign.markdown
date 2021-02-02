@@ -58,3 +58,4 @@ System Design / Java resources / Grokking the interview
    *  [Декомпозиция предметной области, типовые решения](https://www.youtube.com/watch?v=xOx-si8s3K8&list=PLmqFxxywkatSezlaoxwFbdBBnAk_JJ__5&index=2)
    *  [Про модель, логику, ООП, разработку и остальное](https://habr.com/ru/post/263025/)
    *  [Создание архитектуры программы](https://habr.com/ru/post/276593/)
+   * <a href="https://martinfowler.com/books/dsl.html">Domain Specific Languages</a>
