@@ -11,7 +11,7 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 {: .fs-6 .fw-300 }
 </div>
 
-## JDBC
+### JDBC
 {: .label }
 
 * Intro
@@ -75,6 +75,93 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 
 ### ORM
 
+* Introduction
+  * O/R Mismatch
+  * JPA vs. Hibernate
+  * Logging SQL Statements 
+  * Schema Management 
+* Connection Management
+  * Connection Management and Hibernate Connection Providers
+  * Hibernate Connection Lifecycle
+  * Connection Monitoring
+  * Hibernate Statistics
+* Types and Identifiers
+  * JPA and Hibernate Types
+  * Custom Hibernate Types
+  * The hibernate-types project
+  * JPA and Hibernate Identifiers
+  * Hibernate Identifier Optimizers (e.g. hilo, pooled, pooled-lo)
+* Relationships
+  * JPA and Hibernate Relationships
+  * Equals and Hashcode
+  * ManyToOne
+  * OneToMany
+  * OneToOne
+  * ManyToMany
+  
+* Inheritance
+  * JPA Inheritance Basics
+  * Single Table Inheritance 
+  * Discriminator Column
+  * Joined Inheritance
+  * TablePerClass Inheritance
+* Persistence Context
+  * Persistence Context and Flushing Basics
+  * Action Queue
+  * The AUTO FlushModeType
+  * Dirty Checking Mechanism
+  * Bytecode Enhancement Dirty Checking
+* Batching and Statement Caching
+  * Statement Lifecycle and Execution Plans
+  * Statement Caching
+  * Statement Batching and Cascade Operations
+  * Batching Update Operations
+  * SQL Injection
+* Fetching
+  * Direct and Natural id fetching
+  * DTO projections vs Entity queries
+  * LAZY vs. EAGER
+  * Query-time fetching
+  * Pagination queries
+  
+* Transactions and Concurrency Control
+  * ACID
+  * Phenomena
+    * Dirty Write,
+    * Dirty Read,
+    * Non-Repeatable Read,
+    * Phantom Read,
+    * Read Skew,
+    * Write Skew,
+    * Lost Update
+  * 2PL (Two-Phase Locking)
+  * MVCC (Multi-Version Concurrency Control)
+  * Isolation levels and database concurrency control
+  * Logical vs. physical clock optimistic locking:
+    * OPTIMISTIC,
+    * OPTIMISTIC FORCE INCREMENT,
+    * PESSIMISTIC FORCE INCREMENT,
+    * PESSIMISTIC READ,
+    * PESSIMISTIC WRITE
+  * Versionless optimistic locking
+  * JPA physical and optimistic lock types
+  * Skip locked and queuing access
+  * Preventing lost updates in long conversations
+  
+* Database, Application and Hibernate Caching
+  * Database caching
+  * Application-level caching
+  * Second-level caching
+  * Cache synchronization strategies
+  * Cache concurrency strategies
+    * READ ONLY,
+    * NONSTRICT READ WRITE,
+    * READ WRITE,
+    * TRANSACTIONAL
+  * Collection Cache
+  * Query Cache
+
+
 - <a href="https://dou.ua/lenta/articles/hibernate-fetch-types/">Стратегии загрузки коллекций в Hibernate</a>
 - <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model">Entity</a>- класс (объект Java), который в ORM маппится в таблицу DB.
 -  <a href="http://ru.wikipedia.org/wiki/ORM">ORM</a>.
@@ -91,8 +178,6 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 - <a href="http://en.wikipedia.org/wiki/EclipseLink">EсlipseLink</a>, 
 - <a href="http://en.wikipedia.org/wiki/Ebean">EBean</a> (<a href="http://www.playframework.com/documentation/2.2.x/JavaEbean">used in Playframework</a>).
 - <a href="http://validator.hibernate.org">hibernate-validator</a>
-- <a href="http://www.youtube.com/watch?v=YzOTZTt-PR0">Видео: Николай Алименков — Босиком по граблям Hibernate</a>
-- <a href="https://www.youtube.com/watch?v=b52Qz6qlic0">Видео: Николай Алименков — Сделаем Hibernate снова быстрым</a>
 - <a href="https://ru.wikipedia.org/wiki/ORM">ORM</a> это технология связывания БД и объектов приложения, <a href="https://ru.wikipedia.org/wiki/Java_Persistence_API">JPA</a> - это JavaEE спецификация (API) этой технологии.
 Реализации JPA - Hibernate, OpenJPA, EclipceLink, но, например, Hibernate может работать по собственному API (без JPA, которая появилась позже). Spring-JDBC, MyBatis, JDBI не реализуют JPA, это обертки к JDBC. Все ORM и JPA также реализованы поверх JDBC.
 - <a href="http://stackoverflow.com/questions/8994864/how-would-i-specify-a-hibernate-pattern-annotation-using-a-regular-expression">Validate by RegExp</a>
@@ -116,7 +201,6 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 -  <a href="https://www.javacodegeeks.com/2014/06/pitfalls-of-the-hibernate-second-level-query-caches.html">Pitfalls of the Hibernate Second-Level / Query Caches</a>
 - <a href="http://articles.javatalks.ru/articles/17">Использование ThreadLocal переменных</a>
 - <a href="http://stackoverflow.com/questions/1069992/jpa-entitymanager-why-use-persist-over-merge">Merge vs Persist</a>
-- <a href="http://www.youtube.com/watch?v=1KphwODu1gg">Видео: работа в ZK с OpenJPA (в чем Hibernate хуже)</a>
 - <a href="https://developer.jboss.org/wiki/OpenSessionInView">Паттерн "открытие транзакции в фильтре"</a> и <a href="http://stackoverflow.com/questions/1103363/why-is-hibernate-open-session-in-view-considered-a-bad-practice">почему это bad-practice</a>
 - <a href="https://en.wikibooks.org/wiki/Java_Persistence/Identity_and_Sequencing#Sequence_Strategies">Sequence Strategies</a>
 - <a href="http://stackoverflow.com/questions/9470442/why-is-the-hibernate-default-generator-for-postgresql-sequencegenerator-not?lq=1">SequenceGenerator/IdentityGenerator in PostgreSql</a>
@@ -124,7 +208,7 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 - <a href="http://stackoverflow.com/questions/2585641">Hibernate/JPA DB Schema Generation Best Practices</a>
 
 
-## DB
+### DB
 {: .label }
 
 * Реляционные базы данных (MySQL)
@@ -180,10 +264,24 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 - <a href="http://www.osp.ru/pcworld/2009/07/9708191/">Уровни изоляции транзакций в SQL</a>
 - <a href="https://habr.com/ru/post/120003/">БД Oracle для программиста</a>
 
-## Database Performance Tuning
+### Database Performance Tuning
+{: .label }
+
+### Blog
+{: .label }
+
+- [Vlad Mihalcea High-Performance Java Persistence Book ](https://vladmihalcea.com/books/high-performance-java-persistence/)
+- [The best Tutorials on High-Performance Hibernate](https://vladmihalcea.com/tutorials/hibernate/)
+
+### Video
 {: .label }
 
 - <a href="https://www.youtube.com/watch?v=dFASbaIG-UU">Видео: Вячеслав Круглов — Как начинающему Java-разработчику подружиться со своей базой данных?</a>
+- <a href="http://www.youtube.com/watch?v=YzOTZTt-PR0">Видео: Николай Алименков — Босиком по граблям Hibernate</a>
+- <a href="https://www.youtube.com/watch?v=-EpP0Vo63FM">Hibernate, how the magic is really done?</a>   - [code](https://github.com/xpinjection/hibernate-basics)
+- <a href="https://www.youtube.com/watch?v=b52Qz6qlic0">Видео: Николай Алименков — Сделаем Hibernate снова быстрым</a>   - [code](https://github.com/xpinjection/hibernate-performance)
+- <a href="https://www.youtube.com/watch?list=PLYj3Bx1JM6Y7BKivc3eZwRUhWwBmbIFXg&v=V-ljsrVy6pE">Hibernate performance tuning (Mikalai Alimenkou /Igor Dmitriev)</a>
+- <a href="http://www.youtube.com/watch?v=1KphwODu1gg">Видео: работа в ZK с OpenJPA (в чем Hibernate хуже)</a>
 
 
 

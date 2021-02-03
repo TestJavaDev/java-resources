@@ -1,12 +1,12 @@
 ---
 layout: default
-title: HTTP, Servlets API, REST
+title: Network, Servlets API, REST
 nav_order: 10
 permalink: /http_servlets_rest
 has_children: true
 ---
 <div align="center" markdown="1">
-HTTP, Servlets API, REST / Java resources / Grokking the interview
+Network, Servlets API, REST / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>
@@ -36,8 +36,6 @@ HTTP, Servlets API, REST / Java resources / Grokking the interview
 
 Java Networking – TCP/UDP Sockets
 
-Description
-This training covers the major aspects of Java networking: the OSI and TCP/IP models, Java classes for IP addresses and sockets, Java client/server applications with TCP and Java datagram communication with UDP. Participants will discover how to develop Java client-server applications using TCP/IP and how to develop Java connectionless applications using UDP.
 Roadmap
 OSI Model
 OSI Layer 1 - The Physical Layer
