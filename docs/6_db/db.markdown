@@ -74,6 +74,7 @@ DB, JDBC, ORM / Java resources / Grokking the interview
   * Row meta-info
 
 ### ORM
+{: .label }
 
 * Introduction
   * O/R Mismatch

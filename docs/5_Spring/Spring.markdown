@@ -23,6 +23,7 @@ Spring / Java resources / Grokking the interview
 
 -  <a href="http://habrahabr.ru/post/222579/">Spring изнутри. Этапы инициализации контекста.</a>
 -  <a href="https://ru.wikipedia.org/wiki/Инверсия_управления">Инверсия управления.</a>
+-  <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-servlet-context-hierarchy">Spring Web MVC Tutorial</a>
 -  <a href="http://habrahabr.ru/post/131993/">IoC, DI, IoC-контейнер — Просто о простом</a>
 -  <a href="https://www.ibm.com/developerworks/ru/library/ws-springjava/index.html">Управление bean-компонентами Spring при конфигурировании на основе Java</a>
 -  <a href="https://habr.com/ru/post/334448/">Обратная сторона Spring</a>

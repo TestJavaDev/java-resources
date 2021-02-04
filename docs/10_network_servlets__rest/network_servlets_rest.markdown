@@ -13,7 +13,9 @@ Network, Servlets API, REST / Java resources / Grokking the interview
 
 - [Что на самом деле происходит, когда пользователь вбивает в браузер адрес google.com](https://habr.com/ru/company/htmlacademy/blog/254825/)
 
-## REST
+### REST
+{: .label }
+
 - [Подборка практик REST](https://gist.github.com/Londeren/838c8a223b92aa4017d3734d663a0ba3)
 -  <a href="http://www.infoq.com/articles/springmvc_jsx-rs">JAX-RS vs Spring MVC</a>
 - <a href="http://habrahabr.ru/post/144011/">RESTful API для сервера – делаем правильно (Часть 1)</a>
@@ -34,82 +36,70 @@ Network, Servlets API, REST / Java resources / Grokking the interview
 - [RESTful API для сервера – делаем правильно 2](https://habr.com/ru/post/144259/)
 - [REST API Best Practices](https://habr.com/ru/post/351890/)
 
-Java Networking – TCP/UDP Sockets
+### Java Networking – TCP/UDP Sockets
+{: .label }
 
-Roadmap
-OSI Model
-OSI Layer 1 - The Physical Layer
-OSI Layer 2 - The Data Link Layer
-OSI Layer 3 - The Network Layer
-OSI Layer 4 – The Transport Layer
-OSI Layer 5 – The Session Layer
-OSI Layer 6 – The Presentation Layer
-OSI Layer 7 – The Application Layer
-
-TCP/IP Model
-TCP/IP Layer 1 - The Link Layer
-TCP/IP Layer 2 - The Internet Layer
-TCP/IP Layer 3 - The Transport Layer
-TCP/IP Layer 4 – The Application Layer
-
-The TCP Protocol
-TCP 3-Way Handshake
-TCP 4-Way Disconnect
-TCP Header Format
-Socket Programming
-The ServerSocket Class
-EchoServer and EchoClient
-Multiple clients EchoServer2
-
-Working with Thread Pools
-Thread Pooling Client-Server
-Cached Thread Pool
-
-A Template for TCP Server
-An Upload Client-Server Program
-A Chat Client-Server Program
-Remote Procedure Call through Proxy
-
-Java NIO
-Streams
-Input and Output
-NIO Channel vs. Stream
-Stream Oriented vs. Buffer Oriented
-
-Java NIO core components
-Channels
-Buffers
-Selectors
-
-Java Networking: TCP/UDP Sockets
-The UDP Protocol
-UDP Limitations
-UDP Header Format
-UDP Header Format
-Application Layer Protocols to Use UDP
-
-Datagram Sockets, Datagram Packets
-The DatagramSocket Class
-The DatagramPacket Class
-EchoUdpServer and EchoUdpClient
-Predefined Socket Connection
-UDP Chat
-Multicast Receiver and Sender
-
-....Сети
-........IP, TCP, UDP
-........telnet, FTP, DNS, SMTP/POP3
-....протокол HTTP 1.1
-........Methods, status codes, headers (GET VS POST Idempotent)
-........Persistent connection, pipelining
-........Chunked encoding
-........Caching, encription, compression
-........основы REST
-........Архитектура простейшего многопоточного HTTP-сервера на Java
-....Servlet API 3.0 (Tomcat)
-........шаблон MVC
-........HttpServlet, HttpServletRequest, HttpServletResponse
-........Dependency Injection / Inversion-of-Control framework (Spring)
+* OSI Model
+  * OSI Layer 1 - The Physical Layer
+  * OSI Layer 2 - The Data Link Layer
+  * OSI Layer 3 - The Network Layer
+  * OSI Layer 4 – The Transport Layer
+  * OSI Layer 5 – The Session Layer
+  * OSI Layer 6 – The Presentation Layer
+  * OSI Layer 7 – The Application Layer
+* TCP/IP Model
+  * TCP/IP Layer 1 - The Link Layer
+  * TCP/IP Layer 2 - The Internet Layer
+  * TCP/IP Layer 3 - The Transport Layer
+  * TCP/IP Layer 4 – The Application Layer 
+* The TCP Protocol
+  * TCP 3-Way Handshake
+  * TCP 4-Way Disconnect
+  * TCP Header Format
+  * Socket Programming
+  * The ServerSocket Class
+  * EchoServer and EchoClient
+  * Multiple clients EchoServer2
+* Working with Thread Pools
+  * Thread Pooling Client-Server
+  * Cached Thread Pool
+* A Template for TCP Server
+  * An Upload Client-Server Program
+  * A Chat Client-Server Program
+  * Remote Procedure Call through Proxy
+* Java NIO
+  * Streams
+  * Input and Output
+  * NIO Channel vs. Stream
+  * Stream Oriented vs. Buffer Oriented
+* Java NIO core components
+  * Channels
+  * Buffers
+  * Selectors
+* Java Networking: TCP/UDP Sockets
+  * The UDP Protocol
+  * UDP Limitations
+  * UDP Header Format
+  * Application Layer Protocols to Use UDP
+* Datagram Sockets, Datagram Packets
+  * The DatagramSocket Class
+  * The DatagramPacket Class
+  * EchoUdpServer and EchoUdpClient
+  * Predefined Socket Connection
+  * UDP Chat
+  * Multicast Receiver and Sender
+* HTTP
+  * Methods, status codes, headers (GET VS POST Idempotent)
+  * Persistent connection, pipelining
+  * Chunked encoding
+  * Caching, encription, compression
+  * основы REST
+  * Архитектура простейшего многопоточного HTTP-сервера на Java
+  
+* Network
+  * IP, TCP, UDP
+  * telnet, FTP, DNS, SMTP/POP3
+ 
 
 Руководство по Servlets
 1. Введение
@@ -132,68 +122,9 @@ Multicast Receiver and Sender
 18. Загрузка файлов
 19. Отправка email
 
-
-
-The difference between GET and POST
-
-Servlet redirect makes the browser do the work
-Using relative URLs in sendRedirect()
-
-A request dispatch does the work on the server side
-
-Redirect vs. Request Dispatch
-
-Review: HttpServletResponse
-
-Coffee Cram: Mock Exam Chapter 4
-
-Coffee Cram: Chapter 4 Answers
-
-6. Session Management: Conversational state
-Session lifecycle Events
-
-Don’t forget about HttpSessionBindingListener
-Session migration
-The Beer Web App distributed across two VMs
-Session migration in action
-
-HttpSessionActivationListener lets attributes prepare for the big move...
-Listener examples
-Listener examples
-Listener examples
-Session-related Listeners
-Session-related Event Listeners and Event Objects API overview
-
-Session-related Listeners
-
-14. Patterns and Struts: Enterprise Design Patterns
-
-Web site hardware can get complicated
-
-Web application software can get complicated
-
-Lucky for us, we have J2EE patterns
-Common pressures
-
-Performance (and the “ilities”)
-
-Aligning our vernaculars...
-Code to interfaces
-Separation of Concerns & Cohesion
-Hide Complexity
-
-More design principles...
-Loose Coupling
-Remote Proxy
-Increase Declarative Control
-
-RMI makes life easy
-What we want...
-How RMI pulls it off
-
-Just a little more RMI review
-
-Adding RMI and JNDI to the controller
+<a href="https://stackoverflow.com/questions/3106452/how-do-servlets-work-instantiation-sessions-shared-variables-and-multithreadi">How do servlets work? Instantiation, sessions, shared variables and multithreading</a>
+<a href="https://mkyong.com/servlet/what-is-listener-servletcontextlistener-example/">ServletContextListener Example</a>
+<a href="https://docs.oracle.com/javaee/6/tutorial/doc/bnafi.html">The Java EE 6 Tutorial</a>
 
 
 
