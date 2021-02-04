@@ -15,63 +15,29 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 {: .label }
 
 * Intro
-  * Install MySQL RDBMS + MySQL Workbench
-  * RDBMS vs DB, create database
-  * JDBC architecture: JDBC API + JDBC Driver
-  * JDBC Driver types, transport types
-  * Connector/J: JDBC Driver to MySQL
-  * JDBC / SQL versions, SQL dialects
+  * RDBMS vs DB  [first site](https://stackoverflow.com/questions/18419137/what-is-the-difference-between-dbms-and-rdbms)
+  * JDBC Driver types, transport types  [first site](https://proselyte.net/tutorials/jdbc/introduction/) [second site](https://www.tutorialspoint.com/jdbc/jdbc-driver-types.htm) [third site](https://www.progress.com/faqs/datadirect-jdbc-faqs/what-are-the-types-of-jdbc-drivers)
 * Connect to database
-  * Driver, DriverManager, DataSource
-  * Connection
-  * JDBC URL
-  * Connector/J properties
+  * Driver, DriverManager, DataSource  [first site](https://stackoverflow.com/questions/15198319/why-do-we-use-a-datasource-instead-of-a-drivermanager) [second site](http://java-online.ru/jdbc-drivermanager.xhtml) [third site](https://overcoder.net/q/80648/%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BC%D1%8B-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B5%D0%BC-datasource-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE-drivermanager)
+  * Connection, JDBC URL   [first site](https://proselyte.net/tutorials/jdbc/connection/) [second site](https://www.tutorialspoint.com/jdbc/jdbc-db-connections.htm)
 * Query database
-  * DDL and DML (TEXT)
-  * Statement
-  * Statement.executeUpdate: INSERT, UPDATE, DELETE
-  * Get auto-generated keys
-  * Statement.executeQuery: SELECT, ResultSet
-  * Statement.execute
-  * SQLWarning
-  * SQLException: errorCode and errorState
-  * DAO Pattern
-  * Альтернатива DAO: Transaction Script, Active Record, ORM // шаблон DAO (cуть шаблона, generic-предок, рекурсивное объединение)
+  * DDL and DML [first site](https://info-comp.ru/what-is-ddl-dml-dcl-tcl)
+  * Statement  [first site](https://proselyte.net/tutorials/jdbc/statements/) [second site](https://www.tutorialspoint.com/jdbc/jdbc-statements.htm)
+  * Statement.executeUpdate: INSERT, UPDATE, DELETE  [first site](https://www.codota.com/code/java/methods/java.sql.Statement/executeUpdate)
+  * Statement.executeQuery: SELECT, ResultSet  [first site](https://www.codota.com/code/java/methods/java.sql.Statement/executeQuery)
+  * Statement.execute  [first site](http://tutorials.jenkov.com/jdbc/statement.html) [second site](https://www.codota.com/code/java/methods/java.sql.Statement/execute)
+  * SQLException: errorCode and errorState  [first site](https://docs.microsoft.com/en-us/sql/connect/jdbc/handling-errors?view=sql-server-ver15) [second site](https://www.codota.com/code/java/classes/java.sql.SQLException) [third site](https://www.codota.com/code/java/methods/java.sql.Statement/getWarnings)
 * ResultSet
-  * ResultSet: positioning and transition
-  * ResultSet: type
-  * ResultSet: concurrency
-  * ResultSet: holdability
-* Optimizations
-  * PreparedStatement = + precompilation — SQL injection
-  * Batch update = vectorization
-  * Connection pooling
-* Transactions
+  * ResultSet: (positioning, transition, type, concurrency, holdability)  [first site](https://proselyte.net/tutorials/jdbc/result-set/) [second site](https://stackoverflow.com/questions/55531375/why-is-reading-a-jdbc-resultset-by-position-faster-than-by-name-and-how-much-fas)
+* Optimizations(important)
+  * PreparedStatement = + precompilation — SQL injection  [first site](https://stackoverflow.com/questions/23845383/what-does-it-mean-when-i-say-prepared-statement-is-pre-compiled) [second site](https://stackoverflow.com/questions/1582161/how-does-a-preparedstatement-avoid-or-prevent-sql-injection)
+  * Batch update = vectorization  [first site](https://www.codejava.net/java-se/jdbc/jdbc-batch-update-examples)  [second site](https://stackoverflow.com/questions/14264953/how-is-jdbc-batch-update-helpful)  [third site](http://tutorials.jenkov.com/jdbc/batchupdate.html)
+  * Connection pooling  [first site](https://stackoverflow.com/questions/2835090/how-to-establish-a-connection-pool-in-jdbc)
+* Transactions for JDBC
   * Transaction manager
-  * ACID properties
   * Transaction boundaries
-  * SQLTransientException
   * Savepoints //Connection.commit()/.rollback()/.setAutoCommit(), savepoint
-  * Transaction isolation levels
-  * MySQL transactions: MyISAM vs InnoDB
-  * READ UNCOMMITED, Dirty Read “phenomena”
-  * READ COMMITED, NonRepeatable Read “phenomena”
-  * REPEATABLE READ, Phantom Read “phenomena”
-  * SERIALIZABLE
-  
-* Local Tx-Manager: by-hands
-  * Base realization: ThreadLocal Tx-context
-  * @Transactional annotation
-  * AOP realization of @Transactional
-  * Application server = Tx-context + Auth-context + Thread management
-* Distributed Transactions
-  * 2PC-protocol
-  * javax.jdbc.xa.* — XA-standart realization of 2PC-client
-  * Distribured-Tx Manager Architecture
-*  Query Meta-Information
-  * Database meta-info
-  * Table meta-info
-  * Row meta-info
+  * SQLTransientException
 
 ### ORM
 {: .label }
@@ -101,19 +67,22 @@ DB, JDBC, ORM / Java resources / Grokking the interview
   * ManyToMany
   
 * Inheritance
-  * JPA Inheritance Basics
-  * Single Table Inheritance 
-  * Discriminator Column
-  * Joined Inheritance
-  * TablePerClass Inheritance
-* Persistence Context
-  * Persistence Context and Flushing Basics
-  * Action Queue
-  * The AUTO FlushModeType
-  * Dirty Checking Mechanism
-  * Bytecode Enhancement Dirty Checking
-* Batching and Statement Caching
-  * Statement Lifecycle and Execution Plans
+  * ORM implementations  [Hibernate](https://ru.wikipedia.org/wiki/Hibernate_(библиотека)) [OpenJPA](https://en.wikipedia.org/wiki/Apache_OpenJPA) [EсlipseLink](http://en.wikipedia.org/wiki/EclipseLink) [TopLink](http://en.wikipedia.org/wiki/TopLink)
+  * Hibernate VS JDBC  [first site](https://habiletechnologies.com/blog/reasons-to-choose-hibernate-over-jdbc)
+  * JPA Inheritance Basics  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Single Table Inheritance   [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Discriminator Column  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Joined Inheritance  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * TablePerClass Inheritance  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Hibernate Cache  [first site](http://habrahabr.ru/post/135176/) [second site](http://habrahabr.ru/post/136375/) [third site](http://www.tutorialspoint.com/hibernate/hibernate_caching.htm) [fourth site](http://stackoverflow.com/questions/3663979/how-to-use-jpa2s-cacheable-instead-of-hibernates-cache) [fifth site](http://vladmihalcea.com/2015/06/08/how-does-hibernate-query-cache-work/) [sixth](https://www.javacodegeeks.com/2014/06/pitfalls-of-the-hibernate-second-level-query-caches.html)
+* Persistence Context  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Persistence Context and Flushing Basics  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Action Queue  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * The AUTO FlushModeType  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Dirty Checking Mechanism  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Bytecode Enhancement Dirty Checking  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+* Batching and Statement Caching  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Statement Lifecycle and Execution Plans  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
   * Statement Caching
   * Statement Batching and Cascade Operations
   * Batching Update Operations
@@ -126,28 +95,28 @@ DB, JDBC, ORM / Java resources / Grokking the interview
   * Pagination queries
   
 * Transactions and Concurrency Control
-  * ACID
-  * Phenomena
-    * Dirty Write,
-    * Dirty Read,
-    * Non-Repeatable Read,
-    * Phantom Read,
-    * Read Skew,
-    * Write Skew,
-    * Lost Update
-  * 2PL (Two-Phase Locking)
-  * MVCC (Multi-Version Concurrency Control)
-  * Isolation levels and database concurrency control
-  * Logical vs. physical clock optimistic locking:
-    * OPTIMISTIC,
-    * OPTIMISTIC FORCE INCREMENT,
-    * PESSIMISTIC FORCE INCREMENT,
-    * PESSIMISTIC READ,
-    * PESSIMISTIC WRITE
-  * Versionless optimistic locking
-  * JPA physical and optimistic lock types
-  * Skip locked and queuing access
-  * Preventing lost updates in long conversations
+  * ACID  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Phenomena  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Dirty Write,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Dirty Read,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Non-Repeatable Read,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Phantom Read,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Read Skew,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Write Skew,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Lost Update  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * 2PL (Two-Phase Locking)  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * MVCC (Multi-Version Concurrency Control)  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Isolation levels and database concurrency control  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Logical vs. physical clock optimistic locking:  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * OPTIMISTIC,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * OPTIMISTIC FORCE INCREMENT,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * PESSIMISTIC FORCE INCREMENT,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * PESSIMISTIC READ,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * PESSIMISTIC WRITE  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Versionless optimistic locking  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * JPA physical and optimistic lock types  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Skip locked and queuing access  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Preventing lost updates in long conversations  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
   
 * Database, Application and Hibernate Caching
   * Database caching
@@ -161,26 +130,29 @@ DB, JDBC, ORM / Java resources / Grokking the interview
     * TRANSACTIONAL
   * Collection Cache
   * Query Cache
+  
+* Local Tx-Manager: by-hands  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Base realization: ThreadLocal Tx-context  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * @Transactional annotation  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * AOP realization of @Transactional  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Application server = Tx-context + Auth-context + Thread management  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+* Distributed Transactions
+  * 2PC-protocol  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * javax.jdbc.xa.* — XA-standart realization of 2PC-client  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Distribured-Tx Manager Architecture  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+*  Query Meta-Information  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Database meta-info  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Table meta-info  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Row meta-info  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
 
 
 - <a href="https://dou.ua/lenta/articles/hibernate-fetch-types/">Стратегии загрузки коллекций в Hibernate</a>
-- <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model">Entity</a>- класс (объект Java), который в ORM маппится в таблицу DB.
--  <a href="http://ru.wikipedia.org/wiki/ORM">ORM</a>.
 -  <a href="http://habrahabr.ru/post/265061/">JPA и Hibernate в вопросах и ответах</a>
 - [Hibernate — о чем молчат туториалы](https://habr.com/ru/post/416851/)
--  <a href="http://docs.jboss.org/hibernate/orm/4.2/devguide/en-US/html/ch11.html">HQL</a>
 - [Наследование в Hibernate: выбор стратегии](https://habrahabr.ru/post/337488/)
 - [Field vs property access](http://stackoverflow.com/a/6084701/548473)
-- <a href="http://www.quizful.net/post/Hibernate-3-introduction-and-writing-hello-world-application">Hibernate: введение и написания Hello world приложения</a>
-- [15 reasons why we need to choose Hibernate over JDBC](https://habiletechnologies.com/blog/reasons-to-choose-hibernate-over-jdbc)
--  <a href="http://en.wikibooks.org/wiki/Java_Persistence/Mapping">Mapping: описания модели Hibernate (hbm.xml/annotation)</a>.
--  <a href="https://ru.wikipedia.org/wiki/Hibernate_(библиотека)">Hibernate</a>
-- <a href="http://en.wikipedia.org/wiki/TopLink">TopLink</a>
-- <a href="http://en.wikipedia.org/wiki/EclipseLink">EсlipseLink</a>, 
-- <a href="http://en.wikipedia.org/wiki/Ebean">EBean</a> (<a href="http://www.playframework.com/documentation/2.2.x/JavaEbean">used in Playframework</a>).
+
 - <a href="http://validator.hibernate.org">hibernate-validator</a>
-- <a href="https://ru.wikipedia.org/wiki/ORM">ORM</a> это технология связывания БД и объектов приложения, <a href="https://ru.wikipedia.org/wiki/Java_Persistence_API">JPA</a> - это JavaEE спецификация (API) этой технологии.
-Реализации JPA - Hibernate, OpenJPA, EclipceLink, но, например, Hibernate может работать по собственному API (без JPA, которая появилась позже). Spring-JDBC, MyBatis, JDBI не реализуют JPA, это обертки к JDBC. Все ORM и JPA также реализованы поверх JDBC.
 - <a href="http://stackoverflow.com/questions/8994864/how-would-i-specify-a-hibernate-pattern-annotation-using-a-regular-expression">Validate by RegExp</a>
 - <a href="http://stackoverflow.com/questions/13027214">Do not use `CascadeType` for @ManyToOne</a>
 - <a href="http://stackoverflow.com/questions/836569">CascadeType meaning</a>
@@ -189,24 +161,12 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 - <a href="http://stackoverflow.com/questions/3087040">Hibernate second level cache and ON DELETE CASCADE in database schema</a>
 - [`orphanRemoval=true` vs `CascadeType.REMOVE`](http://stackoverflow.com/a/19645397/548473)
 - [JPA `cascade/orphanRemoval` doesn't work with `NamedQuery`](http://stackoverflow.com/questions/7825484/jpa-delete-where-does-not-delete-children-and-throws-an-exception)
--  <a href="http://habrahabr.ru/post/135176/">Уровни кэширования Hibernate</a>
--  <a href="http://habrahabr.ru/post/136375/">Hibernate Cache. Практика</a>
--  <a href="http://www.tutorialspoint.com/hibernate/hibernate_caching.htm">Hibernate - Caching</a>
--  Починка тестов: <a href="http://stackoverflow.com/questions/1603846/hibernate-2nd-level-cache-invalidation-when-another-process-modifies-the-databas">инвалидация кэша Hibernate</a>
--  [Hibernate User Guide: Caching](http://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#caching)
--  [Hibernate 5, Ehcache 3.x](https://www.boraji.com/index.php/hibernate-5-jcache-ehcache-3-configuration-example)
+
+
 -  Ресурсы:
-- <a href="https://www.youtube.com/watch?list=PLYj3Bx1JM6Y7BKivc3eZwRUhWwBmbIFXg&v=V-ljsrVy6pE">Hibernate performance tuning (Mikalai Alimenkou /Igor Dmitriev)</a>
--  <a href="http://stackoverflow.com/questions/3663979/how-to-use-jpa2s-cacheable-instead-of-hibernates-cache">JPA2 @Cacheable vs Hibernate @Cache</a>
--  <a href="http://vladmihalcea.com/2015/06/08/how-does-hibernate-query-cache-work/">How does Hibernate Query Cache work</a>
--  <a href="https://www.javacodegeeks.com/2014/06/pitfalls-of-the-hibernate-second-level-query-caches.html">Pitfalls of the Hibernate Second-Level / Query Caches</a>
-- <a href="http://articles.javatalks.ru/articles/17">Использование ThreadLocal переменных</a>
 - <a href="http://stackoverflow.com/questions/1069992/jpa-entitymanager-why-use-persist-over-merge">Merge vs Persist</a>
 - <a href="https://developer.jboss.org/wiki/OpenSessionInView">Паттерн "открытие транзакции в фильтре"</a> и <a href="http://stackoverflow.com/questions/1103363/why-is-hibernate-open-session-in-view-considered-a-bad-practice">почему это bad-practice</a>
-- <a href="https://en.wikibooks.org/wiki/Java_Persistence/Identity_and_Sequencing#Sequence_Strategies">Sequence Strategies</a>
-- <a href="http://stackoverflow.com/questions/9470442/why-is-the-hibernate-default-generator-for-postgresql-sequencegenerator-not?lq=1">SequenceGenerator/IdentityGenerator in PostgreSql</a>
-- <a href="http://stackoverflow.com/questions/7793395">hbm2ddl.auto and autoincrement</a>
-- <a href="http://stackoverflow.com/questions/2585641">Hibernate/JPA DB Schema Generation Best Practices</a>
+
 
 
 ### DB
