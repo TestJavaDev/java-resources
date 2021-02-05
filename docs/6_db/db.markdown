@@ -29,10 +29,10 @@ DB, JDBC, ORM / Java resources / Grokking the interview
   * SQLException: errorCode and errorState  [first site](https://docs.microsoft.com/en-us/sql/connect/jdbc/handling-errors?view=sql-server-ver15) [second site](https://www.codota.com/code/java/classes/java.sql.SQLException) [third site](https://www.codota.com/code/java/methods/java.sql.Statement/getWarnings)
 * ResultSet
   * ResultSet: (positioning, transition, type, concurrency, holdability)  [first site](https://proselyte.net/tutorials/jdbc/result-set/) [second site](https://stackoverflow.com/questions/55531375/why-is-reading-a-jdbc-resultset-by-position-faster-than-by-name-and-how-much-fas)
-* Optimizations(important)
+* JDBC Optimizations(important)
   * PreparedStatement = + precompilation — SQL injection  [first site](https://stackoverflow.com/questions/23845383/what-does-it-mean-when-i-say-prepared-statement-is-pre-compiled) [second site](https://stackoverflow.com/questions/1582161/how-does-a-preparedstatement-avoid-or-prevent-sql-injection)
   * Batch update = vectorization  [first site](https://www.codejava.net/java-se/jdbc/jdbc-batch-update-examples)  [second site](https://stackoverflow.com/questions/14264953/how-is-jdbc-batch-update-helpful)  [third site](http://tutorials.jenkov.com/jdbc/batchupdate.html)
-  * Connection pooling  [first site](https://stackoverflow.com/questions/2835090/how-to-establish-a-connection-pool-in-jdbc)
+  * Connection pooling  [first site](https://vladmihalcea.com/the-anatomy-of-connection-pooling/) [second  site](https://stackoverflow.com/questions/2835090/how-to-establish-a-connection-pool-in-jdbc)
 
 ### ORM
 {: .label }
@@ -40,54 +40,48 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 * Introduction
   * ORM implementations  [Hibernate](https://ru.wikipedia.org/wiki/Hibernate_(библиотека)) [OpenJPA](https://en.wikipedia.org/wiki/Apache_OpenJPA) [EсlipseLink](http://en.wikipedia.org/wiki/EclipseLink) [TopLink](http://en.wikipedia.org/wiki/TopLink)
   * Hibernate VS JDBC  [first site](https://habiletechnologies.com/blog/reasons-to-choose-hibernate-over-jdbc)
-  * O/R Mismatch
-  * JPA vs. Hibernate
-  * Logging SQL Statements 
-  * Schema Management 
+  * O/R Mismatch  [first site](https://uk.wikipedia.org/wiki/%D0%9E%D0%B1%27%D1%94%D0%BA%D1%82%D0%BD%D0%BE-%D1%80%D0%B5%D0%BB%D1%8F%D1%86%D1%96%D0%B9%D0%BD%D0%B8%D0%B9_%D1%80%D0%BE%D0%B7%D1%80%D0%B8%D0%B2)
+  * JPA vs. Hibernate  [first site](https://dzone.com/articles/what-is-the-difference-between-hibernate-and-sprin-1) [second site]()
+  * Schema Management   [first site](https://stackoverflow.com/questions/2585641/hibernate-jpa-db-schema-generation-best-practices) [second site](https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/chapters/schema/Schema.html)  [Flyway vs. Liquibase](https://habr.com/ru/company/haulmont/blog/440696/)
 * Connection Management
-  * Connection Management and Hibernate Connection Providers
-  * Hibernate Connection Lifecycle
-  * Connection Monitoring
-  * Hibernate Statistics
+  * Hibernate Connection Lifecycle, Open Session In View  [first site](http://java-latte.blogspot.com/2014/10/how-hibernate-works-and-its-architecture-and-Persistence-Lifecycle-of-hibernate.html) [second site](https://stackoverflow.com/questions/1103363/why-is-hibernate-open-session-in-view-considered-a-bad-practice) [third site](https://stackoverflow.com/questions/8724259/spring-hibernate-session-lifecycle)
+  * Connection Monitoring  [first site](https://stackoverflow.com/questions/3522051/hibernate-monitoring-solution) [second site](https://vladmihalcea.com/connection-monitoring-jpa-hibernate/)
+  * Hibernate Statistics  [first site](https://vladmihalcea.com/hibernate-statistics/)
 * Types and Identifiers
-  * JPA and Hibernate Types
-  * Custom Hibernate Types
-  * The hibernate-types project
-  * JPA and Hibernate Identifiers
-  * Hibernate Identifier Optimizers (e.g. hilo, pooled, pooled-lo)
+  * JPA and Hibernate Types  [first site](https://vladmihalcea.com/a-beginners-guide-to-hibernate-types/) [second site](https://docs.jboss.org/hibernate/stable/core.old/reference/en/html/mapping-types.html)
+  * Custom Hibernate Types  [first site](https://vladmihalcea.com/how-to-implement-a-custom-basic-type-using-hibernate-usertype/) [second site](https://stackoverflow.com/questions/35227986/implementing-custom-hibernate-type)
+  * JPA and Hibernate Identifiers  [first site](https://vladmihalcea.com/jpa-entity-identifier-sequence/) [second site](https://thorben-janssen.com/jpa-generate-primary-keys/)
+  * Hibernate Identifier Optimizers (e.g. hilo, pooled, pooled-lo)  [first site](https://stackoverflow.com/questions/25204019/how-to-use-the-pooled-lo-optimizer-with-hibernate) [second site](https://vladmihalcea.com/hibernate-hidden-gem-the-pooled-lo-optimizer/)
 * Relationships
-  * JPA and Hibernate Relationships
-  * Equals and Hashcode
-  * ManyToOne
-  * OneToMany
-  * OneToOne
-  * ManyToMany
+  * JPA and Hibernate Relationships  [first site](https://stackabuse.com/a-guide-to-jpa-with-hibernate-relationship-mapping/) [second site](https://thorben-janssen.com/ultimate-guide-association-mappings-jpa-hibernate/)
+  * Equals and Hashcode  [first site](https://stackoverflow.com/questions/1638723/how-should-equals-and-hashcode-be-implemented-when-using-jpa-and-hibernate) [second site](https://vladmihalcea.com/the-best-way-to-implement-equals-hashcode-and-tostring-with-jpa-and-hibernate/) [third site](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/)
+  * ManyToOne  [first site](https://vladmihalcea.com/manytoone-jpa-hibernate/) [second site](https://qna.habr.com/q/62258)
+  * OneToMany  [first site](https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/) [second site](https://medium.com/@rajibrath20/the-best-way-to-map-a-onetomany-relationship-with-jpa-and-hibernate-dbbf6dba00d3)
+  * OneToOne  [first site](https://vladmihalcea.com/the-best-way-to-map-a-onetoone-relationship-with-jpa-and-hibernate/) [second site](https://stackoverflow.com/questions/21762328/java-hibernate-onetoone-mapping)
+  * ManyToMany  [first site](https://thorben-janssen.com/best-practices-for-many-to-many-associations-with-hibernate-and-jpa/) [second site](https://www.baeldung.com/jpa-many-to-many)
   
-* Inheritance
-  * JPA Inheritance Basics  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Single Table Inheritance   [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Discriminator Column  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Joined Inheritance  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * TablePerClass Inheritance  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-* Persistence Context  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Persistence Context and Flushing Basics  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Action Queue  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * The AUTO FlushModeType  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Dirty Checking Mechanism  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Bytecode Enhancement Dirty Checking  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-* Batching and Statement Caching  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Statement Lifecycle and Execution Plans  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Statement Caching
-  * Statement Batching and Cascade Operations
-  * Batching Update Operations
-  * SQL Injection
+* Inheritance  [first site](https://habr.com/ru/post/337488/)
+  * JPA Inheritance Basics  [first site](https://vladmihalcea.com/the-best-way-to-use-entity-inheritance-with-jpa-and-hibernate/)
+  * Single Table Inheritance   [first site](https://vladmihalcea.com/the-best-way-to-map-the-single_table-inheritance-with-jpa-and-hibernate/) [second site](https://stackoverflow.com/questions/63656497/jpa-repository-with-single-table-inheritance-hibernate)
+  * Discriminator Column  [first site](https://vladmihalcea.com/the-best-way-to-map-the-discriminatorcolumn-with-jpa-and-hibernate/) [second site](https://stackoverflow.com/questions/16772370/when-to-use-discriminatorvalue-annotation-in-hibernate)
+  * Joined Inheritance  [first site](https://habr.com/ru/post/337488/)
+  * TablePerClass Inheritance  [first site](https://stackoverflow.com/questions/3557879/hibernate-and-inheritance-table-per-class)
+* Persistence Context
+  * Persistence Context and Flushing Basics  [first site](https://vladmihalcea.com/a-beginners-guide-to-jpahibernate-flush-strategies/) [second site](https://vladmihalcea.com/hibernate-facts-knowing-flush-operations-order-matters/)
+  * The AUTO FlushModeType  [first site](https://stackoverflow.com/questions/18149876/what-to-use-flush-mode-auto-or-commit)
+  * Dirty Checking Mechanism  [first site](https://vladmihalcea.com/the-anatomy-of-hibernate-dirty-checking/) [second site](https://vladmihalcea.com/how-to-customize-hibernate-dirty-checking-mechanism/) [third site](https://stackoverflow.com/questions/5268466/how-does-hibernate-detect-dirty-state-of-an-entity-object)
+  * Bytecode Enhancement Dirty Checking  [first site](https://vladmihalcea.com/how-to-enable-bytecode-enhancement-dirty-checking-in-hibernate/)
+* Batching and Statement Caching
+  * Statement Lifecycle and Execution Plans  [first site](https://vladmihalcea.com/execution-plan-sql-server/)
+  * Statement Caching  [first site](https://vladmihalcea.com/hibernate-performance-tuning-tips/) [second site](https://stackoverflow.com/questions/17764142/does-hibernate-use-preparedstatement-by-default)
+  * Statement Batching and Cascade Operations  [first site](https://vladmihalcea.com/how-to-batch-delete-statements-with-hibernate/) [second site](https://vladmihalcea.com/how-to-optimize-the-merge-operation-using-update-while-batching-with-jpa-and-hibernate/)
+  * Batching Update Operations  [first site](https://www.codejava.net/frameworks/hibernate/how-to-execute-batch-insert-update-in-hibernate)
+  * SQL Injection  [first site](https://habr.com/ru/company/parallels/blog/272589/)
   * Hibernate Cache  [first site](http://habrahabr.ru/post/135176/) [second site](http://habrahabr.ru/post/136375/) [third site](http://www.tutorialspoint.com/hibernate/hibernate_caching.htm) [fourth site](http://stackoverflow.com/questions/3663979/how-to-use-jpa2s-cacheable-instead-of-hibernates-cache) [fifth site](http://vladmihalcea.com/2015/06/08/how-does-hibernate-query-cache-work/) [sixth](https://www.javacodegeeks.com/2014/06/pitfalls-of-the-hibernate-second-level-query-caches.html)
 * Fetching
-  * Direct and Natural id fetching
-  * DTO projections vs Entity queries
-  * LAZY vs. EAGER
-  * Query-time fetching
-  * Pagination queries
+  * Direct and Natural id fetching  [first site](https://vladmihalcea.com/the-best-way-to-map-a-naturalid-business-key-with-jpa-and-hibernate/)
+  * DTO projections vs Entity queries  [first site](https://vladmihalcea.com/the-best-way-to-map-a-projection-query-to-a-dto-with-jpa-and-hibernate/) [second site](https://thorben-janssen.com/entities-dtos-use-projection/)
+  * LAZY vs. EAGER  [first site](https://stackoverflow.com/questions/2990799/difference-between-fetchtype-lazy-and-eager-in-java-persistence-api)
   
 * Transactions and Concurrency Control
   * ACID  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
@@ -113,18 +107,18 @@ DB, JDBC, ORM / Java resources / Grokking the interview
   * Skip locked and queuing access  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
   * Preventing lost updates in long conversations  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
   
-* Database, Application and Hibernate Caching
-  * Database caching
-  * Application-level caching
-  * Second-level caching
-  * Cache synchronization strategies
-  * Cache concurrency strategies
-    * READ ONLY,
-    * NONSTRICT READ WRITE,
-    * READ WRITE,
-    * TRANSACTIONAL
-  * Collection Cache
-  * Query Cache
+* Database, Application and Hibernate Caching  
+  * Database caching  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Application-level caching  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Second-level caching  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Cache synchronization strategies  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Cache concurrency strategies   [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * READ ONLY,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * NONSTRICT READ WRITE,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * READ WRITE,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * TRANSACTIONAL  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Collection Cache  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Query Cache  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
   
 * Local Tx-Manager: by-hands  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
   * Base realization: ThreadLocal Tx-context  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
@@ -167,26 +161,6 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 ### DB
 {: .label }
 
-* Реляционные базы данных (MySQL)
-  * Устанавливаем, администрируем
-  * Физическая организация данных
-  * реляционная алгебра, реляционное исчисление
-  * SQL types, CREATE/ALTER/DELETE table
-* Логическое проектирование
-  * ER-моделирование
-  * Нормальные формы, денормализация
-  * Целостность данных
-  * Транзакции
-* Физическое проектирование
-  * Индексы
-  * Блокировки
-* Документно-ориентированные (MongoDB)
-  * архитектура и особенности MongoDB
-  * работаем с MongoDB на Java
-* Key-value хранилища (Riak)
-  * архитектура и особенности Riak
-  * работаем с Riak на Java
-  
 - <a href="https://docs.google.com/document/d/1ul1jH7sccyQVqpjItdFo_OQI9YxJV3V5hxqI7xa-YPM">DB Migration rules</a>
 - [Опыт 1440 миграций баз данных](https://habr.com/company/wrike/blog/414441/)
 -  [BoneCP to be deprecated ](https://stackoverflow.com/a/1662916/548473)
