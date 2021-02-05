@@ -82,58 +82,8 @@ DB, JDBC, ORM / Java resources / Grokking the interview
   * Direct and Natural id fetching  [first site](https://vladmihalcea.com/the-best-way-to-map-a-naturalid-business-key-with-jpa-and-hibernate/)
   * DTO projections vs Entity queries  [first site](https://vladmihalcea.com/the-best-way-to-map-a-projection-query-to-a-dto-with-jpa-and-hibernate/) [second site](https://thorben-janssen.com/entities-dtos-use-projection/)
   * LAZY vs. EAGER  [first site](https://stackoverflow.com/questions/2990799/difference-between-fetchtype-lazy-and-eager-in-java-persistence-api)
-  
-* Transactions and Concurrency Control
-  * ACID  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Phenomena  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * Dirty Write,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * Dirty Read,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * Non-Repeatable Read,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * Phantom Read,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * Read Skew,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * Write Skew,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * Lost Update  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * 2PL (Two-Phase Locking)  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * MVCC (Multi-Version Concurrency Control)  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Isolation levels and database concurrency control  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Logical vs. physical clock optimistic locking:  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * OPTIMISTIC,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * OPTIMISTIC FORCE INCREMENT,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * PESSIMISTIC FORCE INCREMENT,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * PESSIMISTIC READ,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * PESSIMISTIC WRITE  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Versionless optimistic locking  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * JPA physical and optimistic lock types  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Skip locked and queuing access  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Preventing lost updates in long conversations  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  
-* Database, Application and Hibernate Caching  
-  * Database caching  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Application-level caching  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Second-level caching  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Cache synchronization strategies  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Cache concurrency strategies   [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * READ ONLY,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * NONSTRICT READ WRITE,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * READ WRITE,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-    * TRANSACTIONAL  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Collection Cache  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Query Cache  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  
-* Local Tx-Manager: by-hands  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Base realization: ThreadLocal Tx-context  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * @Transactional annotation  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * AOP realization of @Transactional  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Application server = Tx-context + Auth-context + Thread management  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-* Distributed Transactions
-  * 2PC-protocol  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * javax.jdbc.xa.* — XA-standart realization of 2PC-client  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Distribured-Tx Manager Architecture  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-*  Query Meta-Information  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Database meta-info  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Table meta-info  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Row meta-info  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
 
+### Hibernate flush
 
 - <a href="https://dou.ua/lenta/articles/hibernate-fetch-types/">Стратегии загрузки коллекций в Hibernate</a>
 -  <a href="http://habrahabr.ru/post/265061/">JPA и Hibernate в вопросах и ответах</a>
@@ -160,6 +110,42 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 
 ### DB
 {: .label }
+
+* Transactions and Concurrency Control
+  * ACID  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Phenomena  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Dirty Write,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Dirty Read,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Non-Repeatable Read,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Phantom Read,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Read Skew,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Write Skew,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * Lost Update  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * 2PL (Two-Phase Locking)  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * MVCC (Multi-Version Concurrency Control)  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Isolation levels and database concurrency control  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Logical vs. physical clock optimistic locking:  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * OPTIMISTIC,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * OPTIMISTIC FORCE INCREMENT,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * PESSIMISTIC FORCE INCREMENT,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * PESSIMISTIC READ,  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+    * PESSIMISTIC WRITE  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Versionless optimistic locking  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * JPA physical and optimistic lock types  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Skip locked and queuing access  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  * Preventing lost updates in long conversations  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
+  
+* Database, Application and Hibernate Caching  
+  * Database caching  [first site](https://stackoverflow.com/questions/12227752/what-is-a-database-cache-and-how-does-one-use-it) [second site](https://blog.bluzelle.com/things-you-should-know-about-database-caching-2e8451656c2d)
+  * Application-level caching  [first site](https://dzone.com/articles/introducing-amp-assimilating-caching-quick-read-fo) [second site](https://vladmihalcea.com/things-to-consider-before-jumping-to-enterprise-caching/)
+  * Cache synchronization strategies  [first site](https://vladmihalcea.com/a-beginners-guide-to-cache-synchronization-strategies/) [second site](https://stackoverflow.com/questions/40759479/how-to-keep-the-cache-in-sync-with-the-database)
+  * Cache concurrency strategies  [first site](https://habr.com/ru/post/268747/)  [second side](https://stackoverflow.com/questions/1837651/hibernate-cache-strategy)
+    * READ ONLY,  [first site](https://vladmihalcea.com/how-does-hibernate-read_only-cacheconcurrencystrategy-work/)
+    * NONSTRICT READ WRITE,  [first site](https://vladmihalcea.com/how-does-hibernate-read_write-cacheconcurrencystrategy-work/) [second site](https://stackoverflow.com/questions/8662609/hibernate-l2-cache-read-write-or-transactional-cache-concurrency-strategy-on-cl)
+    * READ WRITE,  [first site](https://stackoverflow.com/questions/1837651/hibernate-cache-strategy)
+    * TRANSACTIONAL  [first site](https://vladmihalcea.com/how-does-hibernate-transactional-cacheconcurrencystrategy-work/)
+  * Collection Cache  [first site](https://stackoverflow.com/questions/14080735/hibernate-collection-cache-how-to-use)
+  * Query Cache  [first site](https://vladmihalcea.com/hibernate-query-cache-n-plus-1-issue/)
 
 - <a href="https://docs.google.com/document/d/1ul1jH7sccyQVqpjItdFo_OQI9YxJV3V5hxqI7xa-YPM">DB Migration rules</a>
 - [Опыт 1440 миграций баз данных](https://habr.com/company/wrike/blog/414441/)
