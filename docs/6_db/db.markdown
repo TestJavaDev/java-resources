@@ -33,16 +33,13 @@ DB, JDBC, ORM / Java resources / Grokking the interview
   * PreparedStatement = + precompilation — SQL injection  [first site](https://stackoverflow.com/questions/23845383/what-does-it-mean-when-i-say-prepared-statement-is-pre-compiled) [second site](https://stackoverflow.com/questions/1582161/how-does-a-preparedstatement-avoid-or-prevent-sql-injection)
   * Batch update = vectorization  [first site](https://www.codejava.net/java-se/jdbc/jdbc-batch-update-examples)  [second site](https://stackoverflow.com/questions/14264953/how-is-jdbc-batch-update-helpful)  [third site](http://tutorials.jenkov.com/jdbc/batchupdate.html)
   * Connection pooling  [first site](https://stackoverflow.com/questions/2835090/how-to-establish-a-connection-pool-in-jdbc)
-* Transactions for JDBC
-  * Transaction manager
-  * Transaction boundaries
-  * Savepoints //Connection.commit()/.rollback()/.setAutoCommit(), savepoint
-  * SQLTransientException
 
 ### ORM
 {: .label }
 
 * Introduction
+  * ORM implementations  [Hibernate](https://ru.wikipedia.org/wiki/Hibernate_(библиотека)) [OpenJPA](https://en.wikipedia.org/wiki/Apache_OpenJPA) [EсlipseLink](http://en.wikipedia.org/wiki/EclipseLink) [TopLink](http://en.wikipedia.org/wiki/TopLink)
+  * Hibernate VS JDBC  [first site](https://habiletechnologies.com/blog/reasons-to-choose-hibernate-over-jdbc)
   * O/R Mismatch
   * JPA vs. Hibernate
   * Logging SQL Statements 
@@ -67,14 +64,11 @@ DB, JDBC, ORM / Java resources / Grokking the interview
   * ManyToMany
   
 * Inheritance
-  * ORM implementations  [Hibernate](https://ru.wikipedia.org/wiki/Hibernate_(библиотека)) [OpenJPA](https://en.wikipedia.org/wiki/Apache_OpenJPA) [EсlipseLink](http://en.wikipedia.org/wiki/EclipseLink) [TopLink](http://en.wikipedia.org/wiki/TopLink)
-  * Hibernate VS JDBC  [first site](https://habiletechnologies.com/blog/reasons-to-choose-hibernate-over-jdbc)
   * JPA Inheritance Basics  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
   * Single Table Inheritance   [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
   * Discriminator Column  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
   * Joined Inheritance  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
   * TablePerClass Inheritance  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
-  * Hibernate Cache  [first site](http://habrahabr.ru/post/135176/) [second site](http://habrahabr.ru/post/136375/) [third site](http://www.tutorialspoint.com/hibernate/hibernate_caching.htm) [fourth site](http://stackoverflow.com/questions/3663979/how-to-use-jpa2s-cacheable-instead-of-hibernates-cache) [fifth site](http://vladmihalcea.com/2015/06/08/how-does-hibernate-query-cache-work/) [sixth](https://www.javacodegeeks.com/2014/06/pitfalls-of-the-hibernate-second-level-query-caches.html)
 * Persistence Context  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
   * Persistence Context and Flushing Basics  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
   * Action Queue  [first site]() [second site]() [third site]() [fourth site]() [fifth site]()
@@ -87,6 +81,7 @@ DB, JDBC, ORM / Java resources / Grokking the interview
   * Statement Batching and Cascade Operations
   * Batching Update Operations
   * SQL Injection
+  * Hibernate Cache  [first site](http://habrahabr.ru/post/135176/) [second site](http://habrahabr.ru/post/136375/) [third site](http://www.tutorialspoint.com/hibernate/hibernate_caching.htm) [fourth site](http://stackoverflow.com/questions/3663979/how-to-use-jpa2s-cacheable-instead-of-hibernates-cache) [fifth site](http://vladmihalcea.com/2015/06/08/how-does-hibernate-query-cache-work/) [sixth](https://www.javacodegeeks.com/2014/06/pitfalls-of-the-hibernate-second-level-query-caches.html)
 * Fetching
   * Direct and Natural id fetching
   * DTO projections vs Entity queries
@@ -227,6 +222,8 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 
 ### Database Performance Tuning
 {: .label }
+
+* JPA Inheritance Basics  [first site]()
 
 ### Blog
 {: .label }
