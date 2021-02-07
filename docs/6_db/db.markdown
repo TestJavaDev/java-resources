@@ -85,24 +85,12 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 
 ### Hibernate flush
 
+-  Ресурсы:
 - <a href="https://dou.ua/lenta/articles/hibernate-fetch-types/">Стратегии загрузки коллекций в Hibernate</a>
 -  <a href="http://habrahabr.ru/post/265061/">JPA и Hibernate в вопросах и ответах</a>
 - [Hibernate — о чем молчат туториалы](https://habr.com/ru/post/416851/)
 - [Наследование в Hibernate: выбор стратегии](https://habrahabr.ru/post/337488/)
 - [Field vs property access](http://stackoverflow.com/a/6084701/548473)
-
-- <a href="http://validator.hibernate.org">hibernate-validator</a>
-- <a href="http://stackoverflow.com/questions/8994864/how-would-i-specify-a-hibernate-pattern-annotation-using-a-regular-expression">Validate by RegExp</a>
-- <a href="http://stackoverflow.com/questions/13027214">Do not use `CascadeType` for @ManyToOne</a>
-- <a href="http://stackoverflow.com/questions/836569">CascadeType meaning</a>
-- <a href="https://en.wikibooks.org/wiki/Java_Persistence/ElementCollection">No cascade option on an ElementCollection, the target objects are always persisted, merged, removed with their parent.</a>
-- <a href="http://stackoverflow.com/questions/21149660">Create ON DELETE CASCADE: `@OnDelete`</a>
-- <a href="http://stackoverflow.com/questions/3087040">Hibernate second level cache and ON DELETE CASCADE in database schema</a>
-- [`orphanRemoval=true` vs `CascadeType.REMOVE`](http://stackoverflow.com/a/19645397/548473)
-- [JPA `cascade/orphanRemoval` doesn't work with `NamedQuery`](http://stackoverflow.com/questions/7825484/jpa-delete-where-does-not-delete-children-and-throws-an-exception)
-
-
--  Ресурсы:
 - <a href="http://stackoverflow.com/questions/1069992/jpa-entitymanager-why-use-persist-over-merge">Merge vs Persist</a>
 - <a href="https://developer.jboss.org/wiki/OpenSessionInView">Паттерн "открытие транзакции в фильтре"</a> и <a href="http://stackoverflow.com/questions/1103363/why-is-hibernate-open-session-in-view-considered-a-bad-practice">почему это bad-practice</a>
 
@@ -183,7 +171,11 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 ### Database Performance Tuning
 {: .label }
 
-* JPA Inheritance Basics  [first site]()
+*  Common Performance Problems and Their Solutions
+*  Database-related problems;
+*  JVM performance problems;
+*  Application specific performance problems;
+*  Network-related problems.
 
 ### Blog
 {: .label }
