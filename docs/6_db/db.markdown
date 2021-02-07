@@ -86,8 +86,11 @@ DB, JDBC, ORM / Java resources / Grokking the interview
 ### Hibernate flush
 
 -  Ресурсы:
+- <a href="https://dou.ua/lenta/articles/how-to-use-hibernate/">Как использовать Hibernate</a>
 - <a href="https://dou.ua/lenta/articles/hibernate-fetch-types/">Стратегии загрузки коллекций в Hibernate</a>
--  <a href="http://habrahabr.ru/post/265061/">JPA и Hibernate в вопросах и ответах</a>
+- <a href="http://habrahabr.ru/post/265061/">JPA и Hibernate в вопросах и ответах</a>
+- <a href="https://habr.com/ru/post/416851/">Hibernate</a>
+- <a href="https://stackoverflow.com/questions/9108224/can-someone-explain-mappedby-in-jpa-and-hibernate">mappedBy in JPA and Hibernate</a>
 - [Hibernate — о чем молчат туториалы](https://habr.com/ru/post/416851/)
 - [Наследование в Hibernate: выбор стратегии](https://habrahabr.ru/post/337488/)
 - [Field vs property access](http://stackoverflow.com/a/6084701/548473)
