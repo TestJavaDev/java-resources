@@ -83,11 +83,12 @@ DB, JDBC, ORM / Java resources / Grokking the interview
   * DTO projections vs Entity queries  [first site](https://vladmihalcea.com/the-best-way-to-map-a-projection-query-to-a-dto-with-jpa-and-hibernate/) [second site](https://thorben-janssen.com/entities-dtos-use-projection/)
   * LAZY vs. EAGER  [first site](https://stackoverflow.com/questions/2990799/difference-between-fetchtype-lazy-and-eager-in-java-persistence-api)
 
-### Hibernate flush
-
 -  Ресурсы:
 - <a href="https://dou.ua/lenta/articles/how-to-use-hibernate/">Как использовать Hibernate</a>
 - <a href="https://dou.ua/lenta/articles/hibernate-fetch-types/">Стратегии загрузки коллекций в Hibernate</a>
+- <a href="http://akorsa.ru/2016/08/kak-rabotaet-flush-v-hibernate/">Hibernate flush()</a>
+- <a href="http://akorsa.ru/2016/08/kak-rabotaet-flush-v-hibernate/">Hibernate flush()</a>
+- Open Session in View   [first site](https://coderoad.ru/1103363/%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-Hibernate-Open-Session-in-View-%D1%81%D1%87%D0%B8%D1%82%D0%B0%D0%B5%D1%82%D1%81%D1%8F-%D0%BF%D0%BB%D0%BE%D1%85%D0%BE%D0%B9-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%BE%D0%B9) [second site](https://habr.com/ru/post/440734/)
 - <a href="http://habrahabr.ru/post/265061/">JPA и Hibernate в вопросах и ответах</a>
 - <a href="https://habr.com/ru/post/416851/">Hibernate</a>
 - <a href="https://stackoverflow.com/questions/9108224/can-someone-explain-mappedby-in-jpa-and-hibernate">mappedBy in JPA and Hibernate</a>
