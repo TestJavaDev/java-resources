@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Multithreading
-nav_order: 4
+nav_order: 10
 permalink: /multithreading
 has_children: true
 ---

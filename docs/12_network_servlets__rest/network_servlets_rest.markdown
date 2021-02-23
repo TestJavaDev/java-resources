@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Network, Servlets API, REST
-nav_order: 10
+nav_order: 12
 permalink: /http_servlets_rest
 has_children: true
 ---

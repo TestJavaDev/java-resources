@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Behavioral and English interview
+title: Job interview in English
 nav_order: 2
 permalink: /behavioral
 has_children: true
 ---
 <div align="center" markdown="1">
-Behavioral and English interview / Java resources / Grokking the interview
+Job interview in English / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>
