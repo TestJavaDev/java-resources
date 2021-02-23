@@ -131,6 +131,9 @@ JavaCore / Java resources / Grokking the interview
 -  <a href="https://habr.com/ru/company/jugru/blog/307938/">Java Stream API: что делает хорошо, а что не очень</a>
 -  <a href="https://habr.com/ru/post/437038/">Перевод руководства по Stream API от Benjamin Winterberg</a>
 -  <a href="https://habr.com/ru/company/luxoft/blog/270383/">Шпаргалка Java программиста. Java Stream API</a>
+- [Pair (tuple) in Java](http://stackoverflow.com/questions/521171/a-java-collection-of-value-pairs-tuples) 
+- [Java 8 Lambda with exception](http://stackoverflow.com/questions/18198176/java-8-lambda-function-that-throws-exception)
+- [What's Wrong in Java 8](https://dzone.com/articles/whats-wrong-java-8-part-iv)
 
 
 

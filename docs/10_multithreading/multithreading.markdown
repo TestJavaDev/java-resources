@@ -84,60 +84,45 @@ Multithreading / Java resources / Grokking the interview
 *  Concurrent Collections  [first site](https://habr.com/ru/company/luxoft/blog/157273/) [second site](https://habr.com/ru/post/473352/) [third site](http://java-online.ru/concurrent-collections.xhtml)
 *  CompletableFuture  [first site](https://www.youtube.com/watch?v=hqR41XVx3kM) [second site](https://annimon.com/article/3462) [third site](https://www.codeflow.site/ru/article/java-completablefuture)
 
+
 ### Многопоточное программирование в Java
 
 - [Фундаментальный поворот к параллелизму в программировании](https://habrahabr.ru/post/145432/)
-- [Non-blocking algorithm](https://en.wikipedia.org/wiki/Non-blocking_algorithm)
 - <a href="https://habr.com/ru/post/164487/">Многопоточность в Java</a>
 - <a href="https://habr.com/ru/post/143237/">А как же всё-таки работает многопоточность? Часть I: синхронизация</a>
 - <a href="https://habr.com/ru/post/209128/">А как же всё-таки работает многопоточность? Часть II: memory ordering</a>
 - <a href="https://habr.com/ru/post/150801/">Немного о многопоточном программировании. Часть 1. Синхронизация зло или все-таки нет</a>
-- <a href="https://ru.wikipedia.org/wiki/Параллелизм_в_Java">Параллелизм в Java</a>
 - <a href="http://www.skipy.ru/technics/synchronization.html">Синхронизация потоков</a>
 - <a href="https://habrahabr.ru/post/132884/">Как работает ConcurrentHashMap</a>
 - <a href="https://habrahabr.ru/post/277669/"> Справочник по синхронизаторам java.util.concurrent.*</a>
 - <a href="http://articles.javatalks.ru/articles/17">Использование ThreadLocal переменных</a>
-- <a href="https://www.youtube.com/watch?v=8piqauDj2yo">Николай Алименков — Прикладная многопоточность</a>
-- <a href="https://www.youtube.com/playlist?list=PL6jg6AGdCNaXo06LjCBmRao-qJdf38oKp">Advanced Java - Concurrency</a>
-- <a href="https://www.youtube.com/playlist?list=PLoij6udfBncgVRq487Me6yQa1kqtxobZS">Java Multithreading</a>
 - <a href="http://habrahabr.ru/company/luxoft/blog/157273/">Обзор java.util.concurrent.*</a>
-- <a href="https://en.wikipedia.org/wiki/Compare-and-swap">Compare-and-swap</a>
-- <a href="https://habrahabr.ru/post/277669/"> Справочник по синхронизаторам java.util.concurrent.*</a>
 - <a href="https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html">The "Double-Checked Locking is Broken" Declaration</a>
 - <a href="https://habr.com/ru/post/248041/">Ещё раз (надеюсь, последний) про double-checked locking</a>
-- <a href="http://www.intuit.ru/studies/courses/16/16/lecture/27127?page=4">Методы wait(), notify(), notifyAll() класса Object</a>
-
 - <a href="https://habr.com/ru/post/276255/">Визуализация concurrency в Go с WebGL</a>
 - <a href="https://www.overops.com/blog/5-things-you-didnt-know-about-synchronization-in-java-and-scala/">5 Things You Didn’t Know About Synchronization in Java and Scala</a>
-
-- <a href="https://tproger.ru/translations/java8-concurrency-tutorial-1/">1. Параллельное выполнение кода с помощью потоков</a>
-- <a href="https://tproger.ru/translations/java8-concurrency-tutorial-2/">2. Синхронизация доступа к изменяемым объектам</a>
-- <a href="https://tproger.ru/translations/java8-concurrency-tutorial-3/">3. Атомарные переменные и конкурентные таблицы</a>
-
 - [Fork/Join Framework в Java 7](https://habrahabr.ru/post/128985/)
 - [Java Parallel Streams Are Bad for Your Health](https://zeroturnaround.com/rebellabs/java-parallel-streams-are-bad-for-your-health/)
 - [Custom thread pool in Java 8 parallel stream](https://stackoverflow.com/a/21172732/548473)
 
-- <a href="http://tutorials.jenkov.com/java-performance/jmh.html">JMH - Java Microbenchmark Harness</a>
-- <a href="http://java-performance.info/jmh/">Java Performance Tuning Guide</a>
+### Video
+{: .label }
 
-- <a href="https://habrahabr.ru/post/183150/"> Функторы, аппликативные функторы и монады в картинках</a>
-- <a href="https://habrahabr.ru/company/cit/blog/262055/">Монады в Java 8</a>
-- <a href="http://stackoverflow.com/a/19932439/548473">Three Monad laws.</a>
-- <a href="https://dzone.com/articles/whats-wrong-java-8-part-iv">What's Wrong in Java 8 Monads</a>
-
+- <a href="https://www.youtube.com/watch?v=8piqauDj2yo">Николай Алименков — Прикладная многопоточность</a>
+- <a href="https://www.youtube.com/playlist?list=PL6jg6AGdCNaXo06LjCBmRao-qJdf38oKp">Advanced Java - Concurrency</a>
+- <a href="https://www.youtube.com/playlist?list=PLoij6udfBncgVRq487Me6yQa1kqtxobZS">Java Multithreading</a>
 - [Руслан Черёмин — Disruptor и прочие фокусы](https://www.youtube.com/watch?v=IsGBA9KEtTM) 
-- [Pair (tuple) in Java](http://stackoverflow.com/questions/521171/a-java-collection-of-value-pairs-tuples) 
-- [Java 8 Lambda with exception](http://stackoverflow.com/questions/18198176/java-8-lambda-function-that-throws-exception)
-- [What's Wrong in Java 8](https://dzone.com/articles/whats-wrong-java-8-part-iv)
-- [Durian](https://github.com/diffplug/durian) ( [Дуриан](https://ru.wikipedia.org/wiki/Дуриан) )
 
 ### Books
+{: .label }
+
 - [Brian Goetz и другие, “Java Concurrency in Practice”](http://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601/)
 - [Doug Lea, “Concurrent Programming in Java: Design Principles and Pattern”](http://www.amazon.com/Concurrent-Programming-Java-Principles-Pattern/dp/0201310090/)
 - [Maurice Herlihy, Nir Shavit, “The Art of Multiprocessor Programming”](http://www.amazon.com/The-Multiprocessor-Programming-Revised-Reprint/dp/0123973376/)
 
 ### Articles
+{: .label }
+
 - [Martin Thompson, etc, “Disruptor: High performance alternative to bounded queues for exchanging data between concurrent threads”](http://disruptor.googlecode.com/files/Disruptor-1.0.pdf)
 - [Ulrich Drepper, “What Every Programmer Should Know About Memory”](http://diyhpl.us/~bryan/papers2/distributed/distributed-systems/what-every-programmer-should-know-about-memory.2007.pdf)
 - [Doug Lea, “The JSR-133 Cookbook for Compiler Writers”](http://gee.cs.oswego.edu/dl/jmm/cookbook.html)
@@ -149,6 +134,8 @@ Multithreading / Java resources / Grokking the interview
 - [Doug Lea, “A Java Fork/Join Framework”](http://gee.cs.oswego.edu/dl/papers/fj.pdf)
 
 ### Blog
+{: .label }
+
 - [Martin Thompson, “Mechanical Sympathy”](http://mechanical-sympathy.blogspot.com/)
 - [Руслан Черемин, “Рабочие заметки”](http://cheremin.blogspot.com/)
 
