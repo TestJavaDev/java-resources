@@ -11,7 +11,7 @@ Database / Java resources / Grokking the interview
 {: .fs-6 .fw-300 }
 </div>
 
-### DB
+### Database
 {: .label }
 
 * Transactions and Concurrency Control

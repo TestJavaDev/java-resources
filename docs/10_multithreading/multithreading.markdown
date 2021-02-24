@@ -85,8 +85,8 @@ Multithreading / Java resources / Grokking the interview
 *  CompletableFuture  [first site](https://www.youtube.com/watch?v=hqR41XVx3kM) [second site](https://annimon.com/article/3462) [third site](https://www.codeflow.site/ru/article/java-completablefuture)
 
 
-### Многопоточное программирование в Java
-
+### Multithreading programming in Java
+{: .label }
 - [Фундаментальный поворот к параллелизму в программировании](https://habrahabr.ru/post/145432/)
 - <a href="https://habr.com/ru/post/164487/">Многопоточность в Java</a>
 - <a href="https://habr.com/ru/post/143237/">А как же всё-таки работает многопоточность? Часть I: синхронизация</a>
@@ -107,7 +107,6 @@ Multithreading / Java resources / Grokking the interview
 
 ### Video
 {: .label }
-
 - <a href="https://www.youtube.com/watch?v=8piqauDj2yo">Николай Алименков — Прикладная многопоточность</a>
 - <a href="https://www.youtube.com/playlist?list=PL6jg6AGdCNaXo06LjCBmRao-qJdf38oKp">Advanced Java - Concurrency</a>
 - <a href="https://www.youtube.com/playlist?list=PLoij6udfBncgVRq487Me6yQa1kqtxobZS">Java Multithreading</a>
@@ -115,14 +114,12 @@ Multithreading / Java resources / Grokking the interview
 
 ### Books
 {: .label }
-
 - [Brian Goetz и другие, “Java Concurrency in Practice”](http://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601/)
 - [Doug Lea, “Concurrent Programming in Java: Design Principles and Pattern”](http://www.amazon.com/Concurrent-Programming-Java-Principles-Pattern/dp/0201310090/)
 - [Maurice Herlihy, Nir Shavit, “The Art of Multiprocessor Programming”](http://www.amazon.com/The-Multiprocessor-Programming-Revised-Reprint/dp/0123973376/)
 
 ### Articles
 {: .label }
-
 - [Martin Thompson, etc, “Disruptor: High performance alternative to bounded queues for exchanging data between concurrent threads”](http://disruptor.googlecode.com/files/Disruptor-1.0.pdf)
 - [Ulrich Drepper, “What Every Programmer Should Know About Memory”](http://diyhpl.us/~bryan/papers2/distributed/distributed-systems/what-every-programmer-should-know-about-memory.2007.pdf)
 - [Doug Lea, “The JSR-133 Cookbook for Compiler Writers”](http://gee.cs.oswego.edu/dl/jmm/cookbook.html)
@@ -135,7 +132,6 @@ Multithreading / Java resources / Grokking the interview
 
 ### Blog
 {: .label }
-
 - [Martin Thompson, “Mechanical Sympathy”](http://mechanical-sympathy.blogspot.com/)
 - [Руслан Черемин, “Рабочие заметки”](http://cheremin.blogspot.com/)
 
