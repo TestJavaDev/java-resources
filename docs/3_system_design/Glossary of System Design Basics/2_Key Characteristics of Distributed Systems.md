@@ -8,7 +8,7 @@ permalink: /systemdesign/key
 <div align="center" markdown="1">
 Key Characteristics of Distributed Systems / Java resources / Tutorial
 
-{: .fs-6 .fw-300 }
+{: .fs-8 .fw-400 }
 </div>
 
 Key characteristics of a distributed system include Scalability, Reliability, Availability, Efficiency, and Manageability. Let’s briefly review them:

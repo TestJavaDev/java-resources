@@ -8,7 +8,7 @@ permalink: /systemdesign/basics
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial
 
-{: .fs-6 .fw-300 }
+{: .fs-8 .fw-400 }
 </div>
 
 ## System Design Basics

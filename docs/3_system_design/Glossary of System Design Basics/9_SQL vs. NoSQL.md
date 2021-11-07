@@ -8,7 +8,7 @@ permalink: /systemdesign/sql
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial
 
-{: .fs-6 .fw-300 }
+{: .fs-8 .fw-400 }
 </div>
 
 In the world of databases, there are two main types of solutions: SQL and NoSQL (or relational databases and non-relational databases). Both of them differ in the way they were built, the kind of information they store, and the storage method they use.

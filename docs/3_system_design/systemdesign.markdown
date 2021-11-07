@@ -8,7 +8,7 @@ has_children: true
 <div align="center" markdown="1">
 System Design / Java resources / Grokking the interview
 
-{: .fs-6 .fw-300 }
+{: .fs-8 .fw-400 }
 </div>
 
  <a href="https://github.com/donnemartin/system-design-primer">The System Design Primer</a>

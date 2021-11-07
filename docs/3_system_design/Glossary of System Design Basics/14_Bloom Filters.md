@@ -8,7 +8,7 @@ permalink: /systemdesign/filters
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial
 
-{: .fs-6 .fw-300 }
+{: .fs-8 .fw-400 }
 </div>
 
 ## Background
@@ -25,6 +25,6 @@ The Bloom filter data structure tells whether an element may be in a set, or def
     * If all are 1, then the element may be in the set.
 Here is a Bloom filter with three elements P, Q, and R. It consists of 20 bits and uses three hash functions. The colored arrows point to the bits that the elements of the set are mapped to.
 
-![bloom](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/load2.png)
+![bloom](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bloom.png)
 * The element X definitely is not in the set, since it hashes to a bit position containing 0.
 * For a fixed error rate, adding a new element and testing for membership are both constant time operations, and a filter with room for ‘n’ elements requires O(n)O(n) space.

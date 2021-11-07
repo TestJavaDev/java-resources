@@ -8,7 +8,7 @@ permalink: /systemdesign/pacelc
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial
 
-{: .fs-6 .fw-300 }
+{: .fs-8 .fw-400 }
 </div>
 
 ## Background
@@ -21,7 +21,7 @@ The PACELC theorem states that in a system that replicates data:
 
 * if there is a partition (‘P’), a distributed system can tradeoff between availability and consistency (i.e., ‘A’ and ‘C’);
 * else (‘E’), when the system is running normally in the absence of partitions, the system can tradeoff between latency (‘L’) and consistency (‘C’).
-PACELC theorem![PACELC theorem](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/load2.png)
+PACELC theorem![PACELC theorem](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/pacelc.png)
 The first part of the theorem (PAC) is the same as the CAP theorem, and the ELC is the extension. The whole thesis is assuming we maintain high availability by replication. So, when there is a failure, CAP theorem prevails. But if not, we still have to consider the tradeoff between consistency and latency of a replicated system.
 
 ## Examples

@@ -8,7 +8,7 @@ permalink: /systemdesign/leader
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial
 
-{: .fs-6 .fw-300 }
+{: .fs-8 .fw-400 }
 </div>
 
 ## Background
@@ -21,4 +21,4 @@ At any time, one server is elected as the leader. This leader becomes responsibl
 
 
 Leader entertains requests from the client and is responsible for replicating and coordinating with followers
-![Leader](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/load2.png)
+![Leader](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/leader.png)
