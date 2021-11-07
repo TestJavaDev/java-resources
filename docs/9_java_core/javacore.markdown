@@ -47,6 +47,7 @@ JavaCore / Java resources / Grokking the interview
 
 ### Classloader
 
+- [JVM ( java virtual machine) architecture - tutorial](https://www.youtube.com/watch?v=ZBJ0u9MaKtM&t=2s)
 - <a href="https://habrahabr.ru/post/103830/">Загрузка классов в Java</a>
 - <a href="http://java-online.ru/java-classloader.xhtml">Загрузка классов, ClassLoader</a>
 - <a href="https://habrahabr.ru/post/222443/">Memory Leaks</a>. 

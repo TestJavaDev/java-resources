@@ -21,4 +21,4 @@ search_enabled: true
 # Aux links for the upper right navigation
 aux_links:
   "View on GitHub":
-    - "//github.com/andriylevchenko/java-resources-to-learn"
+    - "//github.com/JavaLvivDev/prog-resources"
