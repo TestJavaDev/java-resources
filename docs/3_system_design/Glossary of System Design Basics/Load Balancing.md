@@ -15,14 +15,14 @@ Load Balancer (LB) is another critical component of any distributed system. It h
 
 Typically a load balancer sits between the client and the server accepting incoming network and application traffic and distributing the traffic across multiple backend servers using various algorithms. By balancing application requests across multiple servers, a load balancer reduces individual server load and prevents any one application server from becoming a single point of failure, thus improving overall application availability and responsiveness.
 
-![Load1](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/scrolling.png)
+![Load1](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/load1.png)
 To utilize full scalability and redundancy, we can try to balance the load at each layer of the system. We can add LBs at three places:
 
 * Between the user and the web server
 * Between web servers and an internal platform layer, like application servers or cache servers
 * Between internal platform layer and database.
 
-![Load2](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/scrolling.png)
+![Load2](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/load2.png)
 
 ## Benefits of Load Balancing
 * Users experience faster, uninterrupted service. Users won’t have to wait for a single struggling server to finish its previous tasks. Instead, their requests are immediately passed on to a more readily available resource.
@@ -49,7 +49,7 @@ There is a variety of load balancing methods, which use different algorithms for
 ## Redundant Load Balancers
 The load balancer can be a single point of failure; to overcome this, a second load balancer can be connected to the first to form a cluster. Each LB monitors the health of the other and, since both of them are equally capable of serving traffic and failure detection, in the event the main load balancer fails, the second load balancer takes over.
 
-![Load3](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/scrolling.png)
+![Load3](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/load3.png)
 Following links have some good discussion about load balancers:
  - [What is load balancing](https://avinetworks.com/what-is-load-balancing/)
  - [Introduction to architecting systems](https://lethain.com/introduction-to-architecting-systems-for-scale/)
