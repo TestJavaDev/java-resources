@@ -36,6 +36,12 @@ Network, Servlets API, REST / Java resources / Grokking the interview
 - [RESTful API для сервера – делаем правильно 2](https://habr.com/ru/post/144259/)
 - [REST API Best Practices](https://habr.com/ru/post/351890/)
 
+ ## OSI Model
+ 
+ - <a href="https://en.wikipedia.org/wiki/OSI_model">OSI model</a>
+ - <a href="https://www.studytonight.com/computer-networks/complete-osi-model">The OSI Model - Features, Principles and Layers</a>
+ - <a href="https://www.bmc.com/blogs/osi-model-7-layers/">OSI Model: The 7 Layers of Network Architecture</a>
+
 ### Java Networking – TCP/UDP Sockets
 {: .label }
 
