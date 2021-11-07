@@ -8,7 +8,7 @@ permalink: /systemdesign/loadbalancer
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial
 
-{: .fs-6 .fw-300 }
+{: .fs-8 .fw-300 }
 </div>
 
 Load Balancer (LB) is another critical component of any distributed system. It helps to spread the traffic across a cluster of servers to improve responsiveness and availability of applications, websites or databases. LB also keeps track of the status of all the resources while distributing requests. If a server is not available to take new requests or is not responding or has elevated error rate, LB will stop sending traffic to such a server.
@@ -53,4 +53,4 @@ The load balancer can be a single point of failure; to overcome this, a second l
 Following links have some good discussion about load balancers:
  - [What is load balancing](https://avinetworks.com/what-is-load-balancing/)
  - [Introduction to architecting systems](https://lethain.com/introduction-to-architecting-systems-for-scale/)
- - [Load balancing](https://en.wikipedia.org/wiki/Load_balancing_(computing)
+ - [Load balancing](https://en.wikipedia.org/wiki/Load_balancing_(computing))
