@@ -25,7 +25,8 @@ System Design / Java resources / Grokking the interview
    * <a href="https://coursehunters.online/t/educative-io-design-gurus-grokking-the-system-design-interview-part-4/583">Designing Facebook’s Newsfeed, Designing Yelp or Nearby Friends, Designing Uber backend, Design Ticketmaster</a>
    
    * <a href="https://coursehunters.online/t/educative-io-design-gurus-grokking-the-system-design-interview-part-5/584">Glossary of System Design Basics
-     
+
+//TODO add this in architecture     
 ##  Twelve-Factor App methodology
 {: .label }
 

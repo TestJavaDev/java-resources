@@ -11,6 +11,14 @@ JavaCore / Java resources / Grokking the interview
 {: .fs-6 .fw-300 }
 </div>
 
+- [JVM architecture ](https://www.youtube.com/watch?v=ZBJ0u9MaKtM&t=2s)
+- [How HashMap works in Java? With Animation](https://www.youtube.com/watch?v=c3RVW3KGIIE&t=151s)
+- [Garbage collection in Java, with Animation](https://www.youtube.com/watch?v=UnaNQgzw4zY&t=1707s)
+- [Garbage collection in Java, with Animation](https://www.youtube.com/watch?v=UnaNQgzw4zY&t=1707s)
+- [Сборщик мусора Garbage-First (G1) в Java VM](https://java-ru-blog.blogspot.com/2020/01/garbage-first-g1-java-vm.html)
+- [VM Tutorial - Java Virtual Machine Architecture Explained for Beginners](https://www.freecodecamp.org/news/jvm-tutorial-java-virtual-machine-architecture-explained-for-beginners/)
+- [Java Virtual Machine (JVM) Architecture Explained](https://medium.com/nerd-for-tech/jvm-java-virtual-machine-architecture-explained-for-beginners-776eea4215ab)
+
 - <a href="http://java67.blogspot.ru/2014/08/difference-between-string-literal-and-new-String-object-Java.html">String literal pool</a>
 - <a href="https://habrahabr.ru/post/132241/">Маленькие хитрости Java</a>
 -  <a href="https://github.com/winterbe/java8-tutorial">A Guide to Java 8</a>
