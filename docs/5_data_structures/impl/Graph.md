@@ -116,15 +116,15 @@ Structure of Graph Class #
 Graph class consists of two data members: a total number of vertices in the graph, and an array of the linked list to store the adjacency list of vertices. Below is a code snippet of our Graph class:
 ![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/graph15.png)
 
-Explanation (Describing Graph Structure) #
+## Explanation (Describing Graph Structure)
 As you can see in the code snippet above, we have a basic structure of Graph class.
 
-Variables #
+## Variables 
 vertices to store the total number of vertices of the graph.
 
 adjacencyList to store an array of linked lists. Each index of the array represents a vertex of the graph, and the linked list represents the adjacent vertices.
 
-Methods #
+## Methods
 printGraph() method prints the graph (adjacency list). addEdge() creates a source and destination vertex and connects them with an edge.
 
 Code Snippet:
