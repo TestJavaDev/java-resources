@@ -227,7 +227,6 @@ public void bfs(Coordinate startingNode) {
         for (Coordinate neighbor : getNeighbors(node)) {
             if (visited.contains(neighbor)) {
             continue;
-            // Do stuff with the node if required
             queue.add(neighbor);
             visited.add(neighbor);
             }
