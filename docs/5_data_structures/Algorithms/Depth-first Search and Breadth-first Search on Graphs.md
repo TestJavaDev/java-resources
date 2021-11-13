@@ -225,10 +225,12 @@ public void bfs(Coordinate startingNode) {
     while (queue.size() > 0) {
         Coordinate node = queue.pop();
         for (Coordinate neighbor : getNeighbors(node)) {
-            if (visited.contains(neighbor)) continue;
+            if (visited.contains(neighbor)) {
+            continue;
             // Do stuff with the node if required
             queue.add(neighbor);
             visited.add(neighbor);
+            }
         }
     }
 }
