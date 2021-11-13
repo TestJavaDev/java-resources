@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Caching
-parent: System design
+parent: Glossary of System Design Basics
+grand_parent: System design
 # nav_order: 4
 permalink: /systemdesign/cachind
 ---

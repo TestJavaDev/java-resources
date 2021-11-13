@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Key Characteristics of Distributed Systems
-parent: System design
+parent: Glossary of System Design Basics
+grand_parent: System design
 # nav_order: 2
 permalink: /systemdesign/key
 ---

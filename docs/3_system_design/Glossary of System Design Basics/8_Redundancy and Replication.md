@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Redundancy and Replication
-parent: System design
+parent: Glossary of System Design Basics
+grand_parent: System design
 # nav_order: 8
 permalink: /systemdesign/randr
 ---

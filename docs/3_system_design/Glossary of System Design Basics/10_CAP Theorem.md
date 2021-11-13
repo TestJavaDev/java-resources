@@ -1,7 +1,8 @@
 ---
 layout: default
 title: CAP Theorem
-parent: System design
+parent: Glossary of System Design Basics
+grand_parent: System design
 # nav_order: 10
 permalink: /systemdesign/cap
 ---

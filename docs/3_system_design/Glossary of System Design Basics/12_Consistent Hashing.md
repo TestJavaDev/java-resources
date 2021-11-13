@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Consistent Hashing
-parent: System design
+parent: Glossary of System Design Basics
+grand_parent: System design
 # nav_order: 12
 permalink: /systemdesign/hashing
 ---

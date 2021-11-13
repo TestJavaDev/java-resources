@@ -1,7 +1,8 @@
 ---
 layout: default
 title: SQL vs. NoSQL
-parent: System design
+parent: Glossary of System Design Basics
+grand_parent: System design
 # nav_order: 9
 permalink: /systemdesign/sql
 ---

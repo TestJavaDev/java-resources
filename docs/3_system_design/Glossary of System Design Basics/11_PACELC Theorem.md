@@ -1,7 +1,8 @@
 ---
 layout: default
 title: PACELC Theorem
-parent: System design
+parent: Glossary of System Design Basics
+grand_parent: System design
 # nav_order: 11
 permalink: /systemdesign/pacelc
 ---
