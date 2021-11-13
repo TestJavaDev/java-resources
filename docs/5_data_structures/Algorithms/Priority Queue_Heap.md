@@ -3,7 +3,7 @@ layout: default
 title: DFS
 parent: Data Structures
 # nav_order: 1
-permalink: /data_structures/bfs
+permalink: /data_structures/heap
 ---
 <div align="center" markdown="1">
 Priority Queue and Heap / Java resources / Tutorial
