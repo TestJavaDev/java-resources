@@ -221,17 +221,6 @@ public void bfs(Coordinate startingNode) {
     queue.add(startingNode);
     Set<Coordinate> visited = new HashSet<>();
     visited.add(startingNode)
-
-    while (queue.size() > 0) {
-        Coordinate node = queue.pop();
-        for (Coordinate neighbor : getNeighbors(node)) {
-            if (visited.contains(neighbor)) {
-            continue;
-            queue.add(neighbor);
-            visited.add(neighbor);
-            }
-        }
-    }
 }
 {% endhighlight %}
 
