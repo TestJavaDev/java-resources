@@ -194,7 +194,7 @@ public List<Coordinate> getNeighbors(Coordinate coord) {
 
 BFS template#
 Here’s the complete template for BFS on the matrix:
-% highlight java %}
+{% highlight java %}
 
 public int numRows = grid.length;
 public int numCols = grid[0].length;
@@ -215,6 +215,24 @@ public List<Coordinate> getNeighbors(Coordinate coord) {
     }
     return res;
 }
+
+public void bfs(Coordinate startingNode) {
+    Deque<Coordinate> queue = new ArrayDeque<>();
+    queue.add(startingNode);
+    Set<Coordinate> visited = new HashSet<>();
+    visited.add(startingNode)
+
+    while (queue.size() > 0) {
+        Coordinate node = queue.pop();
+        for (Coordinate neighbor : getNeighbors(node)) {
+            if (visited.contains(neighbor)) {
+            continue;
+            queue.add(neighbor);
+            visited.add(neighbor);
+            }
+        }
+    }
+}
 {% endhighlight %}
 
 ## Shortest Path [BFS]
@@ -230,7 +248,7 @@ BFS can find the shortest path for unweighted graphs. For weighted graphs, we ne
 
 The time complexity is O(E + V)O(E+V), where EE is the number of edges of the graph, and VV is the number of vertices of the graph.
 
-% highlight java %}
+{% highlight java %}
 
 class Solution {
 
@@ -310,7 +328,7 @@ The 2D grid (matrix) is a graph as discussed in the Matrix as Graph module. To f
 Since there might be multiple islands, we have to do flood fill on every cell. Wouldn’t that blow up the time complexity, though? Remember, we record the visited cells and we can skip cells that have been visited already. So overall, every cell is visited only once.
 
 Applying the BFS for matrix graph template:
-% highlight java %}
+{% highlight java %}
 
 class Solution {
     
@@ -421,7 +439,7 @@ The get_neighbors function now returns cells in 8 directions.
 //34
 The chessboard is infinite so we no longer have to worry about bound checking.
 ## Solution
-% highlight java %}
+{% highlight java %}
 
 class Solution {
 
