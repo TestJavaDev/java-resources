@@ -284,7 +284,7 @@ class Solution {
     // Driver code
     public static void main(String[] args) {
         String[] inputs =  {"4"};
-        String[][] inputs1 = {{"1", "2"},{"0", "2", "3"},{"0", "1"},{"1"}};
+        String[][] inputs1 = [{"1", "2"},{"0", "2", "3"},{"0", "1"},{"1"}];
         String[] inputs2 = {"0"};
         String[] inputs3 = {"3"};
 
