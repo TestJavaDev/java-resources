@@ -215,13 +215,6 @@ public List<Coordinate> getNeighbors(Coordinate coord) {
     }
     return res;
 }
-
-public void bfs(Coordinate startingNode) {
-    Deque<Coordinate> queue = new ArrayDeque<>();
-    queue.add(startingNode);
-    Set<Coordinate> visited = new HashSet<>();
-    visited.add(startingNode)
-}
 {% endhighlight %}
 
 ## Shortest Path [BFS]
