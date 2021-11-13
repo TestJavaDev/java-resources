@@ -22,3 +22,5 @@ search_enabled: true
 aux_links:
   "View on GitHub":
     - "//github.com/JavaLvivDev/prog-resources"
+
+theme: jekyll-theme-cayman
