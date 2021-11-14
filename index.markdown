@@ -9,11 +9,6 @@ permalink: /
 # Java Developer Roadmap
 
 # Color scheme
-
-```yaml
-# Color scheme supports "light" (default) and "dark"
-color_scheme: dark
-```
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>

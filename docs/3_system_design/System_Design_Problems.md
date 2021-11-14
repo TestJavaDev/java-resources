@@ -2,7 +2,8 @@
 layout: default
 title: System Design Problems
 parent: System design
-# nav_order: 1
+has_children: true
+nav_order: 1
 permalink: /systemdesign/problems
 ---
 <div align="center" markdown="1">
