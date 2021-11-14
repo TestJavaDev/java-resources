@@ -125,6 +125,7 @@ A few observations about the nature of the data we will store:
 ## Database Schema:
 We would need two tables: one for storing information about the URL mappings and one for the user’s data who created the short link.
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design4.png)
+
 What kind of database should we use? Since we anticipate storing billions of rows, and we don’t need to use relationships between objects – a NoSQL store like DynamoDB, Cassandra or Riak is a better choice. A NoSQL choice would also be easier to scale. Please see SQL vs NoSQL for more details.
 
 ## 6. Basic System Design and Algorithm

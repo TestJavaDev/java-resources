@@ -32,11 +32,15 @@ The problem we are trying to solve is that we have a lot of ‘strings’ that w
 As we have to serve a lot of queries with minimum latency, we need to come up with a scheme that can efficiently store our data such that it can be queried quickly. We can’t depend upon some database for this; we need to store our index in memory in a highly efficient data structure.
 
 One of the most appropriate data structures that can serve our purpose is the Trie (pronounced “try”). A trie is a tree-like data structure used to store phrases where each node stores a character of the phrase in a sequential manner. For example, if we need to store ‘cap, cat, caption, captain, capital’ in the trie, it would look like:
+
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design55.png)
+
 Now if the user has typed ‘cap’, our service can traverse the trie to go to the node ‘P’ to find all the terms that start with this prefix (e.g., cap-tion, cap-ital etc).
 
 We can merge nodes that have only one branch to save storage space. The above trie can be stored like this:
+
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design56.png)
+
 Should we have case insensitive trie? For simplicity and search use-case, let’s assume our data is case insensitive.
 
 How to find top suggestion? Now that we can find all the terms for a given prefix, how can we find the top 10 terms for the given prefix? One simple solution could be to store the count of searches that terminated at each node, e.g., if users have searched about ‘CAPTAIN’ 100 times and ‘CAPTION’ 500 times, we can store this number with the last character of the phrase. Now if the user types ‘CAP’ we know the top most searched word under the prefix ‘CAP’ is ‘CAPTION’. So, to find the top suggestions for a given prefix, we can traverse the sub-tree under it.
@@ -68,6 +72,7 @@ What could be different ranking criteria for suggestions? In addition to a simpl
 ## 4. Permanent Storage of the Trie
 How to store trie in a file so that we can rebuild our trie easily - this will be needed when a machine restarts? We can take a snapshot of our trie periodically and store it in a file. This will enable us to rebuild a trie if the server goes down. To store, we can start with the root node and save the trie level-by-level. With each node, we can store what character it contains and how many children it has. Right after each node, we should put all of its children. Let’s assume we have the following trie:
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design57.png)
+
 If we store this trie in a file with the above-mentioned scheme, we will have: “C2,A2,R1,T,P,O1,D”. From this, we can easily rebuild our trie.
 
 If you’ve noticed, we are not storing top suggestions and their counts with each node. It is hard to store this information; as our trie is being stored top-down, we don’t have child nodes created before the parent, so there is no easy way to store their references. For this, we have to recalculate all the top terms with counts. This can be done while we are building the trie. Each node will calculate its top suggestions and pass it to its parent. Each parent node will merge results from all of its children to figure out its top suggestions.

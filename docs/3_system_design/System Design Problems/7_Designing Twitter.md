@@ -89,6 +89,7 @@ We need a system that can efficiently store all the new tweets, 100M/86400s => 1
 
 At a high level, we need multiple application servers to serve all these requests with load balancers in front of them for traffic distributions. On the backend, we need an efficient database that can store all the new tweets and can support a huge number of reads. We also need some file storage to store photos and videos.
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design49.png)
+
 Although our expected daily write load is 100 million and read load is 28 billion tweets. This means on average our system will receive around 1160 new tweets and 325K read requests per second. This traffic will be distributed unevenly throughout the day, though, at peak time we should expect at least a few thousand write requests and around 1M read requests per second. We should keep this in mind while designing the architecture of our system.
 
 ## 6. Database Schema

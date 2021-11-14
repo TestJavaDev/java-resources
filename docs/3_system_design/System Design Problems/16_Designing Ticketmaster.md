@@ -77,6 +77,7 @@ sorting_order (string): Sorting order of the search result. Some allowable value
 Returns: (JSON)
 Here is a sample list of movies and their shows:
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design79.png)
+
 ReserveSeats(api_dev_key, session_id, movie_id, show_id, seats_to_reserve[])
 Parameters:
 api_dev_key (string): same as above
@@ -131,6 +132,7 @@ If seats are reserved successfully, the user has five minutes to pay for the res
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design87.png)
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design88.png)
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design89.png)
+
 How would the server keep track of all the active reservations that haven’t been booked yet? And how would the server keep track of all the waiting customers?
 We need two daemon services, one to keep track of all active reservations and remove any expired reservation from the system; let’s call it ActiveReservationService. The other service would be keeping track of all the waiting user requests and, as soon as the required number of seats become available, it will notify the (the longest waiting) user to choose the seats; let’s call it WaitingUserService.
 
@@ -157,6 +159,7 @@ On the server, ActiveReservationsService keeps track of expiry (based on reserva
 ## 9. Concurrency
 How to handle concurrency, such that no two users are able to book the same seat. We can use transactions in SQL databases to avoid any clashes. For example, if we are using an SQL server we can utilize Transaction Isolation Levels to lock the rows before we can update them. Here is the sample code:
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design91.png)
+
 ‘Serializable’ is the highest isolation level and guarantees safety from Dirty, Nonrepeatable, and Phantoms reads. One thing to note here; within a transaction, if we read rows, we get a write lock on them so that they can’t be updated by anyone else.
 
 Once the above database transaction is successful, we can start tracking the reservation in ActiveReservationService.

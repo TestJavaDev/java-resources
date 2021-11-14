@@ -63,6 +63,7 @@ Following are the two types of algorithms used for Rate Limiting:
 
 Fixed Window Algorithm: In this algorithm, the time window is considered from the start of the time-unit to the end of the time-unit. For example, a period would be considered 0-60 seconds for a minute irrespective of the time frame at which the API request has been made. In the diagram below, there are two messages between 0-1 second and three messages between 1-2 seconds. If we have a rate limiting of two messages a second, this algorithm will throttle only ‘m5’.
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design58.png)
+
 Rolling Window Algorithm: In this algorithm, the time window is considered from the fraction of the time at which the request is made plus the time window length. For example, if there are two messages sent at the 300th millisecond and 400th millisecond of a second, we’ll count them as two messages from the 300th millisecond of that second up to the 300th millisecond of next second. In the above diagram, keeping two messages a second, we’ll throttle ‘m3’ and ‘m4’.
 
 ## 7. High level design for Rate Limiter
@@ -79,11 +80,12 @@ Let’s assume our rate limiter is allowing three requests per minute per user, 
  * If ‘Count < 3’, increment the Count and allow the request.
  * If ‘Count >= 3’, reject the request.
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design61.png)
+
 What are some of the problems with our algorithm?
 
-1. This is a Fixed Window algorithm since we’re resetting the ‘StartTime’ at the end of every minute, which means it can potentially allow twice the number of requests per minute. Imagine if Kristie sends three requests at the last second of a minute, then she can immediately send three more requests at the very first second of the next minute, resulting in 6 requests in the span of two seconds. The solution to this problem would be a sliding window algorithm which we’ll discuss later.
+1.This is a Fixed Window algorithm since we’re resetting the ‘StartTime’ at the end of every minute, which means it can potentially allow twice the number of requests per minute. Imagine if Kristie sends three requests at the last second of a minute, then she can immediately send three more requests at the very first second of the next minute, resulting in 6 requests in the span of two seconds. The solution to this problem would be a sliding window algorithm which we’ll discuss later.
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design62.png)
-2. Atomicity: In a distributed environment, the “read-and-then-write” behavior can create a race condition. Imagine if Kristie’s current ‘Count’ is “2” and that she issues two more requests. If two separate processes served each of these requests and concurrently read the Count before either of them updated it, each process would think that Kristie could have one more request and that she had not hit the rate limit.
+2.Atomicity: In a distributed environment, the “read-and-then-write” behavior can create a race condition. Imagine if Kristie’s current ‘Count’ is “2” and that she issues two more requests. If two separate processes served each of these requests and concurrently read the Count before either of them updated it, each process would think that Kristie could have one more request and that she had not hit the rate limit.
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design63.png)
 If we are using Redis to store our key-value, one solution to resolve the atomicity problem is to use Redis lock for the duration of the read-update operation. This, however, would come at the expense of slowing down concurrent requests from the same user and introducing another layer of complexity. We can use Memcached, but it would have comparable complications.
 
@@ -109,6 +111,7 @@ Let’s assume our rate limiter is allowing three requests per minute per user, 
 2. Count the total number of elements in the sorted set. Reject the request if this count is greater than our throttling limit of “3”.
 3. Insert the current time in the sorted set and accept the request.
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design65.png)
+
 How much memory would we need to store all of the user data for sliding window? Let’s assume ‘UserID’ takes 8 bytes. Each epoch time will require 4 bytes. Let’s suppose we need a rate limiting of 500 requests per hour. Let’s assume 20 bytes overhead for hash-table and 20 bytes overhead for the Sorted Set. At max, we would need a total of 12KB to store one user’s data:
 
 8 + (4 + 20 (sorted set overhead)) * 500 + 20 (hash-table overhead) = 12KB
@@ -124,6 +127,7 @@ What if we keep track of request counts for each user using multiple fixed time 
 
 We can store our counters in a Redis Hash since it offers incredibly efficient storage for fewer than 100 keys. When each request increments a counter in the hash, it also sets the hash to expire an hour later. We will normalize each ‘time’ to a minute.
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design66.png)
+
 How much memory we would need to store all the user data for sliding window with counters? Let’s assume ‘UserID’ takes 8 bytes. Each epoch time will need 4 bytes, and the Counter would need 2 bytes. Let’s suppose we need a rate limiting of 500 requests per hour. Assume 20 bytes overhead for hash-table and 20 bytes for Redis hash. Since we’ll keep a count for each minute, at max, we would need 60 entries for each user. We would need a total of 1.6KB to store one user’s data:
 
 8 + (4 + 2 + 20 (Redis hash overhead)) * 60 + 20 (hash-table overhead) = 1.6KB

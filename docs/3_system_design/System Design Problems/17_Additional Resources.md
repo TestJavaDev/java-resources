@@ -4,7 +4,7 @@ title: Additional Resources
 parent: System Design Problems
 grand_parent: System design
 nav_order: 17
-permalink: /systemdesign/problems/ticket
+permalink: /systemdesign/problems/resources
 ---
 <div align="center" markdown="1">
 Additional Resources / Java resources / Tutorial

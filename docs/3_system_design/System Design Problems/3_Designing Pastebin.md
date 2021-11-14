@@ -122,14 +122,19 @@ A few observations about the nature of the data we are storing:
 
 ## Database Schema:
 We would need two tables, one for storing information about the Pastes and the other for users’ data.
+
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design27.png)
+
 Here, ‘URlHash’ is the URL equivalent of the TinyURL, and ‘ContentKey’ is a reference to an external object storing the contents of the paste; we’ll discuss the external storage of the paste contents later in the chapter.
 
 ## 7. High Level Design
 At a high level, we need an application layer that will serve all the read and write requests. Application layer will talk to a storage layer to store and retrieve data. We can segregate our storage layer with one database storing metadata related to each paste, users, etc., while the other storing the paste contents in some object storage (like Amazon S3). This division of data will also allow us to scale them individually.
+
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design28.png)
-8. Component Design#
-a. Application layer#
+
+## 8. Component Design
+##a. Application layer
+
 Our application layer will process all incoming and outgoing requests. The application servers will be talking to the backend data store components to serve the requests.
 
 How to handle a write request? Upon receiving a write-request, our application server will generate a six-letter random string, which would serve as the key of the paste (if the user has not provided a custom key). The application server will then store the contents of the paste and the generated key in the database. After the successful insertion, the server can return the key to the user. One possible problem here could be that the insertion fails because of a duplicate key. Since we are generating a random key, there is a possibility that the newly generated key could match an existing one. In that case, we should regenerate a new key and try again. We should keep retrying until we don’t see failure due to the duplicate key. We should return an error to the user if the custom key they have provided is already present in our database.
@@ -148,6 +153,7 @@ We can divide our datastore layer into two:
 Metadata database: We can use a relational database like MySQL or a Distributed Key-Value store like Dynamo or Cassandra.
 Object storage: We can store our contents in an Object Storage like Amazon’s S3. Whenever we feel like hitting our full capacity on content storage, we can easily increase it by adding more servers.
 ![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design29.png)
+
 ## 9. Load Balancer (LB)
 We can add a Load balancing layer at three places in our system:
 * Between Clients and Application servers
