@@ -313,7 +313,7 @@ class Solution {
     //Driver code
     public static void main(String[] arg){
       String[] inputs = {"3","1"};
-	    String[][] inputs1 = {{"1 3 5", "2 4 6", "7 10"}, {"1 2 3"}};
+	    String[][] inputs1 = [{"1 3 5", "2 4 6", "7 10"}, {"1 2 3"}];
       for(int i = 0; i < inputs.length; i++) {
         int n = Integer.parseInt(inputs[i]);
         List<List<Integer>> lists = new ArrayList<>(n);
@@ -396,7 +396,7 @@ class MedianOfStream {
     //Driver code
     public static void main(String[] arg){
         String[] inputs = {"6"};
-        String[][] inputs1 ={{"1", "2", "3" ,"get","4","get"}};
+        String[][] inputs1 =[{"1", "2", "3" ,"get","4","get"}];
         for(int i = 0; i < inputs.length; i++) {
             int numInputs = Integer.parseInt(inputs[i]);
             MedianOfStream medianOfStream = new MedianOfStream();

@@ -620,7 +620,7 @@ class Solution {
 
         String[] inputs = {"2","2", "4"};
         String[] inputs1 = {"1", "2", "4"};
-        String[][] inputs2 = {{"0 1"},{"0 1","1 0"},{"0 1","1 2","2 3","3 1"}};
+        String[][] inputs2 = [{"0 1"},{"0 1","1 0"},{"0 1","1 2","2 3","3 1"}];
 		for (int i = 0; i<inputs.length; i++) {
 			int n = Integer.parseInt(inputs[i]);
             int numDependencies = Integer.parseInt(inputs1[i]);
