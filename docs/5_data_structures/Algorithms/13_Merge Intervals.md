@@ -86,9 +86,10 @@ class Solution {
         
     //Driver code
     public static void main(String[] arg){
-        int[][][] inputs = {{{1, 3}, {2, 6}, {8, 10}, {15,18}},{{1, 4}, {4, 5}}};
+        int[][][] inputs = [[{1, 3}, {2, 6}, {8, 10}, {15,18}],[{1, 4}, {4, 5}]];
         for(int i = 0; i < inputs.length; i++) {
-            System.out.println("Merge intervals: "+  Arrays.deepToString(Solution.mergeInterval(inputs[i])));
+            System.out.println("Merge intervals: "+  Arrays.deepToString(
+            Solution.mergeInterval(inputs[i])));
         }
     }
 }

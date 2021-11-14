@@ -133,8 +133,8 @@ class Solution {
     //Driver code
     public static void main(String[] arg){
         int[] inputs = {10};
-        String[][] inputs1 = {{"LRUCache put put get put get put get 
-        get get","2","1,1","2,2","1","3,3","2","4,4","1","3","4"}};
+        String[][] inputs1 = [{"LRUCache put put get put get put get 
+        get get","2","1,1","2,2","1","3,3","2","4,4","1","3","4"}];
         for(int i = 0; i < inputs.length; i++) {
             int n = inputs[i];
             String[] operations = inputs1[i][0].split(" ");

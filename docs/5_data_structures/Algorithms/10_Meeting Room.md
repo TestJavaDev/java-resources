@@ -49,8 +49,8 @@ class Solution {
     }
     //Driver code
     public static void main(String[] arg){
-        int[][][] inputs = {{{0,30},{5, 10},{15,20}},{{7,10},
-        {2, 4}}};
+        int[][][] inputs = [[{0,30},{5, 10},{15,20}],[{7,10},
+        {2, 4}]];
         for(int i = 0; i < inputs.length; i++) {
             System.out.println("Merge interval :"+
             Solution.mergeInterval(inputs[i]));

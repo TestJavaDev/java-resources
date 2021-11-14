@@ -320,7 +320,7 @@ class Solution
     //Driver code
     public static void main(String[] arg){
         String[] inputs = {"3","2"};
-        String[][] inputs1 = {{"1 1","2 2","3 3"},{"1 3","-2 2"}};
+        String[][] inputs1 = [{"1 1","2 2","3 3"},{"1 3","-2 2"}];
         String[] inputs2 = {"1","1"};
         for(int i = 0; i < inputs.length; i++) {
             int n = Integer.parseInt(inputs[i]);

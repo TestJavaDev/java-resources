@@ -496,9 +496,9 @@ class Solution {
         String[] inputs = {"2 2","1 1"};
         String[] inputs1 = {"9", "9"};
         String[] inputs2 = {"5", "4"};
-        String[][] inputs3 = {{"0 1 3 4 1","3 8 8 3 3","6 7 8 8 3",
+        String[][] inputs3 = [{"0 1 3 4 1","3 8 8 3 3","6 7 8 8 3",
         "12 2 8 9 1","12 3 1 3 2"},
-                {"0 1 6 4","2 3 3 5","3 3 3 3","6 4 3 4"}};
+                {"0 1 6 4","2 3 3 5","3 3 3 3","6 4 3 4"}];
 
         for(int i = 0; i < inputs.length; i++) {
             String[] coord = inputs[i].split(" ");
