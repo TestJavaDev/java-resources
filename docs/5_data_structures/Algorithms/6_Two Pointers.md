@@ -1,9 +1,10 @@
 ---
 layout: default
-title: DFS
-parent: Data Structures
-# nav_order: 1
-permalink: /data_structures/bfs
+title: Two Pointers
+parent: Algorithms
+grand_parent: Data Structures and Algorithms
+nav_order: 6
+permalink: /data_structures/algorithms/two_pointers
 ---
 <div align="center" markdown="1">
 Two Pointers / Java resources / Tutorial

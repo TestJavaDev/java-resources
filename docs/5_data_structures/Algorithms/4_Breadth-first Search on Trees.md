@@ -1,12 +1,13 @@
 ---
 layout: default
-title: DFS
-parent: Data Structures
-# nav_order: 1
-permalink: /data_structures/bfs
+title: Breadth-first Search on Trees
+parent: Algorithms
+grand_parent: Data Structures and Algorithms
+nav_order: 4
+permalink: /data_structures/algorithms/breadth_first_search_on_trees
 ---
 <div align="center" markdown="1">
-Breadth-first Search / Java resources / Tutorial
+Breadth-first Search on Trees / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: DFS
-parent: Data Structures
-# nav_order: 1
-permalink: /data_structures/bfs
+title: Depth-first Search and Breadth-first Search on Graphs
+parent: Algorithms
+grand_parent: Data Structures and Algorithms
+nav_order: 5
+permalink: /data_structures/algorithms/search_on_graphs
 ---
 <div align="center" markdown="1">
 Depth-first Search and Breadth-first Search on Graphs / Java resources / Tutorial

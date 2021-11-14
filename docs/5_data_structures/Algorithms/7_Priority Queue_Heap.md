@@ -1,12 +1,13 @@
 ---
 layout: default
-title: DFS
-parent: Data Structures
-# nav_order: 1
-permalink: /data_structures/heap
+title: Priority Queue_Heap
+parent: Algorithms
+grand_parent: Data Structures and Algorithms
+nav_order: 7
+permalink: /data_structures/algorithms/priority_queue_heap
 ---
 <div align="center" markdown="1">
-Priority Queue and Heap / Java resources / Tutorial
+Priority Queue_Heap / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>

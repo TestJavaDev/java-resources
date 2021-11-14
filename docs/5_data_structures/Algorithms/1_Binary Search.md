@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Graph
-parent: Data Structures
-# nav_order: 1
-permalink: /data_structures/bynary_search
+title: Binary Search
+parent: Algorithms
+grand_parent: Data Structures and Algorithms
+nav_order: 1
+permalink: /data_structures/algorithms/binary_search
 ---
 <div align="center" markdown="1">
 Binary Search / Java resources / Tutorial
