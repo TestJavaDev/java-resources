@@ -1,13 +1,13 @@
 ---
 layout: default
-title: System Design Interviews: A step by step guide
+title: System Design Interviews
 parent: System Design Problems
 grand_parent: System design
 nav_order: 1
 permalink: /systemdesign/problems/interviews
 ---
 <div align="center" markdown="1">
-System Design Interviews: A step by step guide / Java resources / Tutorial
+System Design Interviews / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>
@@ -43,11 +43,11 @@ It is always a good idea to estimate the scale of the system we’re going to de
 * What network bandwidth usage are we expecting? This will be crucial in deciding how we will manage traffic and balance load between servers.
 ## Step 3: System interface definition
 Define what APIs are expected from the system. This will establish the exact contract expected from the system and ensure if we haven’t gotten any requirements wrong. Some examples of APIs for our Twitter-like service will be:
-{% highlight java %}
+
 postTweet(user_id, tweet_data, tweet_location, user_location, timestamp, …)  
 generateTimeline(user_id, current_time, user_location, …)  
 markTweetFavorite(user_id, tweet_id, timestamp, …)  
-{% endhighlight %}
+
 
 ## Step 4: Defining data model
 Defining the data model in the early part of the interview will clarify how data will flow between different system components. Later, it will guide for data partitioning and management. The candidate should identify various system entities, how they will interact with each other, and different aspects of data management like storage, transportation, encryption, etc. Here are some entities for our Twitter-like service:
