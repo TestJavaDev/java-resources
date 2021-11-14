@@ -4,7 +4,7 @@ title: Consistent Hashing
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 12
-permalink: /systemdesign/hashing
+permalink: /systemdesign/basics/hashing
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

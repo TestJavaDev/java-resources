@@ -4,7 +4,7 @@ title: Key Characteristics of Distributed Systems
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 2
-permalink: /systemdesign/key
+permalink: /systemdesign/basics/key
 ---
 <div align="center" markdown="1">
 Key Characteristics of Distributed Systems / Java resources / Tutorial

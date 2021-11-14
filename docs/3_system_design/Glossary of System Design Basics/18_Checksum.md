@@ -4,7 +4,7 @@ title: Checksum
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 18
-permalink: /systemdesign/checksum
+permalink: /systemdesign/basics/checksum
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

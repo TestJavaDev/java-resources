@@ -4,7 +4,7 @@ title: Leader and Follower
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 16
-permalink: /systemdesign/leader
+permalink: /systemdesign/basics/leader
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

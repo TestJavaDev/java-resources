@@ -4,7 +4,7 @@ title: Indexes
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 6
-permalink: /systemdesign/indexes
+permalink: /systemdesign/basicsindexes
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

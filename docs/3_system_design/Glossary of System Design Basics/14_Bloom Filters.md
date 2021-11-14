@@ -4,7 +4,7 @@ title: Bloom Filters
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 14
-permalink: /systemdesign/filters
+permalink: /systemdesign/basics/filters
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

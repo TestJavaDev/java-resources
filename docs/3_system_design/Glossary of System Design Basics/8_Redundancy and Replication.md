@@ -4,7 +4,7 @@ title: Redundancy and Replication
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 8
-permalink: /systemdesign/randr
+permalink: /systemdesign/basicsrandr
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

@@ -4,7 +4,7 @@ title: System Design Basics
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 1
-permalink: /systemdesign/basics
+permalink: /systemdesign/basics/design_basics
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

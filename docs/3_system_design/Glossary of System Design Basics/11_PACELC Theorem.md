@@ -4,7 +4,7 @@ title: PACELC Theorem
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 11
-permalink: /systemdesign/pacelc
+permalink: /systemdesign/basics/pacelc
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

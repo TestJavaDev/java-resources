@@ -4,7 +4,7 @@ title: CAP Theorem
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 10
-permalink: /systemdesign/cap
+permalink: /systemdesign/basics/cap
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

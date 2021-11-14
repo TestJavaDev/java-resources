@@ -4,7 +4,7 @@ title: SQL vs. NoSQL
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 9
-permalink: /systemdesign/sql
+permalink: /systemdesign/basics/sql
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

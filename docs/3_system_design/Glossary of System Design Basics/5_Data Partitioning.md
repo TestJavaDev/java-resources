@@ -4,7 +4,7 @@ title: Data Partitioning
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 5
-permalink: /systemdesign/datapartition
+permalink: /systemdesign/basics/datapartition
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

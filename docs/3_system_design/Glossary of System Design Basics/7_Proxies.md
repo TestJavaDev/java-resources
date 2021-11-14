@@ -4,7 +4,7 @@ title: Proxies
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 7
-permalink: /systemdesign/proxy
+permalink: /systemdesign/basics/proxy
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

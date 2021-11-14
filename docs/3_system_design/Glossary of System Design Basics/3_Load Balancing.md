@@ -4,7 +4,7 @@ title: Load Balancing
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 3
-permalink: /systemdesign/loadbalancer
+permalink: /systemdesign/basics/loadbalancer
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

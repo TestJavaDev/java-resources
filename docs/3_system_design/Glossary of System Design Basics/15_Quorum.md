@@ -4,7 +4,7 @@ title: Quorum
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 15
-permalink: /systemdesign/quorum
+permalink: /systemdesign/basics/quorum
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial

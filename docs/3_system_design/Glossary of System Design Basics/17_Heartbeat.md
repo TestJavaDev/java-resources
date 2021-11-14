@@ -4,7 +4,7 @@ title: Heartbeat
 parent: Glossary of System Design Basics
 grand_parent: System design
 # nav_order: 17
-permalink: /systemdesign/heartbeat
+permalink: /systemdesign/basics/heartbeat
 ---
 <div align="center" markdown="1">
 System Design Basics / Java resources / Tutorial
