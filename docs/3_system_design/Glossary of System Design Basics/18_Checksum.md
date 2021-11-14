@@ -3,7 +3,7 @@ layout: default
 title: Checksum
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 18
+nav_order: 18
 permalink: /systemdesign/basics/checksum
 ---
 <div align="center" markdown="1">

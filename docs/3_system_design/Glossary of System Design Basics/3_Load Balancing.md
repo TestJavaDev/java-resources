@@ -3,7 +3,7 @@ layout: default
 title: Load Balancing
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 3
+nav_order: 3
 permalink: /systemdesign/basics/loadbalancer
 ---
 <div align="center" markdown="1">

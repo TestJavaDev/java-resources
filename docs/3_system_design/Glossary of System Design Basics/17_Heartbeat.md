@@ -3,7 +3,7 @@ layout: default
 title: Heartbeat
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 17
+nav_order: 17
 permalink: /systemdesign/basics/heartbeat
 ---
 <div align="center" markdown="1">

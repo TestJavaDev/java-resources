@@ -3,7 +3,7 @@ layout: default
 title: Consistent Hashing
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 12
+nav_order: 12
 permalink: /systemdesign/basics/hashing
 ---
 <div align="center" markdown="1">

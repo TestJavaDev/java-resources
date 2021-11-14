@@ -2,7 +2,8 @@
 layout: default
 title: Glossary of System Design Basics
 parent: System design
-# nav_order: 2
+has_children: true
+nav_order: 2
 permalink: /systemdesign/basics
 ---
 <div align="center" markdown="1">

@@ -3,7 +3,7 @@ layout: default
 title: SQL vs. NoSQL
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 9
+nav_order: 9
 permalink: /systemdesign/basics/sql
 ---
 <div align="center" markdown="1">

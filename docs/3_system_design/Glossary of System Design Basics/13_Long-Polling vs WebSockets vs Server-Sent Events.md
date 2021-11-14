@@ -3,7 +3,7 @@ layout: default
 title: Long-Polling vs WebSockets vs Server-Sent Events
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 13
+nav_order: 13
 permalink: /systemdesign/basics/polling
 ---
 <div align="center" markdown="1">

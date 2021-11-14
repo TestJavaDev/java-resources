@@ -3,7 +3,7 @@ layout: default
 title: Bloom Filters
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 14
+nav_order: 14
 permalink: /systemdesign/basics/filters
 ---
 <div align="center" markdown="1">

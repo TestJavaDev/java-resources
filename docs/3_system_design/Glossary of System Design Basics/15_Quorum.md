@@ -3,7 +3,7 @@ layout: default
 title: Quorum
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 15
+nav_order: 15
 permalink: /systemdesign/basics/quorum
 ---
 <div align="center" markdown="1">

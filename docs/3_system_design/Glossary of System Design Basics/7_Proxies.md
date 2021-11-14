@@ -3,7 +3,7 @@ layout: default
 title: Proxies
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 7
+nav_order: 7
 permalink: /systemdesign/basics/proxy
 ---
 <div align="center" markdown="1">

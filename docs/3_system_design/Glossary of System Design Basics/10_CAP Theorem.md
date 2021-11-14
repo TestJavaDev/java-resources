@@ -3,7 +3,7 @@ layout: default
 title: CAP Theorem
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 10
+nav_order: 10
 permalink: /systemdesign/basics/cap
 ---
 <div align="center" markdown="1">

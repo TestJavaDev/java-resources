@@ -3,7 +3,7 @@ layout: default
 title: Redundancy and Replication
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 8
+nav_order: 8
 permalink: /systemdesign/basicsrandr
 ---
 <div align="center" markdown="1">

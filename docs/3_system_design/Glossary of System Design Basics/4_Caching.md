@@ -3,7 +3,7 @@ layout: default
 title: Caching
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 4
+nav_order: 4
 permalink: /systemdesign/basics/cachind
 ---
 <div align="center" markdown="1">

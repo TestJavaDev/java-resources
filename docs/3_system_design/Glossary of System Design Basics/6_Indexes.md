@@ -3,7 +3,7 @@ layout: default
 title: Indexes
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 6
+nav_order: 6
 permalink: /systemdesign/basicsindexes
 ---
 <div align="center" markdown="1">

@@ -3,7 +3,7 @@ layout: default
 title: PACELC Theorem
 parent: Glossary of System Design Basics
 grand_parent: System design
-# nav_order: 11
+nav_order: 11
 permalink: /systemdesign/basics/pacelc
 ---
 <div align="center" markdown="1">
