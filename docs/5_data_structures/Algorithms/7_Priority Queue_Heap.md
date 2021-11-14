@@ -13,100 +13,112 @@ Priority Queue_Heap / Java resources / Tutorial
 </div>
 
 ## Priority Queue/Heap
-What is the relationship between a priority queue and heap?#
+
+## What is the relationship between a priority queue and heap?
 A priority queue is an abstract data type while a heap is the concrete data structure we use to implement a priority queue.
 
-Priority queue#
-A priority queue is a data structure that consists of a collection of items and supports the following operations:
+## Priority queue
 
-insert: insert an item with a key
-delete_min/delete_max: remove the item with the smallest/largest key and return it
+A priority queue is a data structure that consists of a collection of items and supports the following operations:
+* insert: insert an item with a key
+* delete_min/delete_max: remove the item with the smallest/largest key and return it
+
 Note that we only allow getting and deleting the element with min/max key and NOT with any arbitrary key.
 
-Use cases#
+## Use cases
 The hospital triage process is a quintessential priority queue. Patients are sorted based on the severity of their condition. For example, a person with a cold comes in and he is placed near the end of the queue. Then a person who had a car accident comes in. He is placed before the person with the cold even though he came in later because his condition is more severe. Severity is the key in this case.
 
 Consider a problem like Merge K sorted lists. We need to keep track of the min value among k elements (smallest element in each sorted list), remove the min value, and insert new values at will while still having access to the min value at any point in time. Here are some other problems where the priority queue comes in handy:
+* K closest pointers to origin
+* Kth largest element
+* Kth largest element in a stream
+* Median of a data stream
 
-K closest pointers to origin
-Kth largest element
-Kth largest element in a stream
-Median of a data stream
-Implement priority queue using an array#
+## Implement priority queue using an array
+
 To do this, we could try using:
+* an unsorted array. Insert would be O(1)O(1) as we just have to put it at the end, but finding and deleting the min value would be O(N)O(N) since we would have to loop through the entire array to find it.
+* a sorted array. Finding min value would be easy O(1), but it would be O(N) to insert since we would have to loop through to find the correct position of the value and move elements after the position to make space and insert into the space.
 
-an unsorted array. Insert would be O(1)O(1) as we just have to put it at the end, but finding and deleting the min value would be O(N)O(N) since we would have to loop through the entire array to find it.
-a sorted array. Finding min value would be easy O(1)O(1), but it would be O(N)O(N) to insert since we would have to loop through to find the correct position of the value and move elements after the position to make space and insert into the space.
-Heap#
+## Heap
+
 There are two kinds of heaps: min heap and max heap. A min heap is a tree that has two properties:
+1. Almost complete, i.e. every level is filled except possibly the last(deepest) level. The filled items in the last level are left-justified.
+2. For any node, its key (priority) is greater than its parent’s key (Min Heap).
 
-Almost complete, i.e. every level is filled except possibly the last(deepest) level. The filled items in the last level are left-justified.
-For any node, its key (priority) is greater than its parent’s key (Min Heap).
 A max heap has the same property #1 and opposite property #2, i.e., for any node, its key is less than its parent’s key.
 
 Let’s play “is it a heap?” game:
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap1.png)
-Note that:
 
-The number in each node is the key, not value (remember a tree node has a value). Keys are used to sort the nodes/construct the tree, and values are the data we want heap to store.
-Unlike a binary search tree, there is no comparable relationship between children. For example, the third example in the first row, 17 and 8 are both larger than 2 but they are NOT sorted left to right. In fact, there is no comparable relationship across a level of a heap at all.
-Why are heaps useful?#
+Note that:
+* The number in each node is the key, not value (remember a tree node has a value). Keys are used to sort the nodes/construct the tree, and values are the data we want heap to store.
+* Unlike a binary search tree, there is no comparable relationship between children. For example, the third example in the first row, 17 and 8 are both larger than 2 but they are NOT sorted left to right. In fact, there is no comparable relationship across a level of a heap at all.
+
+## Why are heaps useful?
 At first look, the heap is an odd data structure –– it’s required to be a complete tree but unlike the binary search tree, it’s not sorted across a level.
 
 What makes it so useful is that:
+* Because a heap is a complete tree, the height of a heap is guaranteed to be O(log(N))O(log(N)). This makes operations that go from root to leaf guaranteed to be O(log(N))O(log(N)).
+* Because only nodes in a root-to-leaf path are sorted (nodes in the same level are not sorted), when we add/remove a node, we only have to fix the order in the vertical path the node is in. This makes inserting and deleting O(log(N))O(log(N)) too.
+* Being complete also makes an array a good choice to store a heap since data is continuous. As we will see later in this module, we can find the parent and children of a node simply by doing index arithmetic.
 
-Because a heap is a complete tree, the height of a heap is guaranteed to be O(log(N))O(log(N)). This makes operations that go from root to leaf guaranteed to be O(log(N))O(log(N)).
-Because only nodes in a root-to-leaf path are sorted (nodes in the same level are not sorted), when we add/remove a node, we only have to fix the order in the vertical path the node is in. This makes inserting and deleting O(log(N))O(log(N)) too.
-Being complete also makes an array a good choice to store a heap since data is continuous. As we will see later in this module, we can find the parent and children of a node simply by doing index arithmetic.
-Operations#
-Insert#
+## Operations
+
+## Insert
 To insert a key into a heap
+* Place the new key at the first free leaf.
+* If property #2 is violated, perform a bubble-up.
 
-Place the new key at the first free leaf.
-If property #2 is violated, perform a bubble-up.
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap2.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap3.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap4.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap5.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap6.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap7.png)
+
 As the name of the algorithm suggests, it “bubbles up” the new node by swapping it with its parent until the order is correct
 
-Since the height of a heap is O(log(N))O(log(N))`, the complexity of bubble-up is O(log(N))O(log(N)).
+Since the height of a heap is O(log(N)), the complexity of bubble-up is O(log(N)).
 
-delete_min#
+## delete_min
+
 This operation
+* Deletes a node with the min key and returns it.
+* Reorganizes the heap so the two properties still hold.
 
-Deletes a node with the min key and returns it.
-Reorganizes the heap so the two properties still hold.
 To do that, we
+* Remove and return the root since the node with the minimum key is always at the root.
+* Replace the root with the last node (the rightmost node at the bottom) of the heap.
+* If property #2 is violated, perform a bubble-down.
 
-Remove and return the root since the node with the minimum key is always at the root.
-Replace the root with the last node (the rightmost node at the bottom) of the heap.
-If property #2 is violated, perform a bubble-down.
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap8.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap9.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap10.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap11.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap12.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap13.png)
-What this says is we keep swapping between the current node and its smallest child until we get to the leaf, hence a “bubble down”. Again, the time complexity is O(log(N))O(log(N))` since the height of a heap is O(log(N))O(log(N)).
+
+What this says is we keep swapping between the current node and its smallest child until we get to the leaf, hence a “bubble down”. Again, the time complexity is O(log(N)) since the height of a heap is O(log(N)).
 ## Implementing Heap
 Being a complete tree makes an array a natural choice to implement a heap since it can be stored compactly and wastes no space. Pointers are not needed. The parent and children of each node can be calculated with index arithmetic.
+
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap14.png)
+
 For node i, its children are stored at 2i+1 and 2i+2, and its parent is at floor((i-1)/2). So, instead of node.left, we’d do 2*i+1.
 
 This is exactly how the Python language implements heaps.
 
-tldr#
-A heap
+## tldr
 
-Is a complete tree.
-Allows O(log(N)) to insert and remove an element with priority.
-is implemented with arrays.
+A heap
+* Is a complete tree.
+* Allows O(log(N)) to insert and remove an element with priority.
+* is implemented with arrays.
+
 Each node of a min heap is less than all of its children.
 
-Heap in Python#
+## Heap in Python
 Python comes with a built-in heapq that we can and it is a min heap, i.e. the element at the top is the smallest.
 
 heapq.heappush akes two arguments: the first is the heap (an array/list) we want to push the element into and the second argument can be anything as long as it can be used for comparison. Typically, we push a tuple since in Python tuples are compared in an item-by-item order. For example, (1, 10) is smaller than (2, 0) because the first element is smaller. (1, 10) is smaller than (1, 20) because when the first item is the same, we compare the next one and in this case 10 is smaller than 20. Typically, we set the first element of the tuple to be the key used for comparison and the last element to the value we want the heap to store.
@@ -123,7 +135,8 @@ heapq.heappush(h, (3, 'create tests'))
 print(heapq.heappop(h))
 print(h[0])
 {% endhighlight %}
-If the list is known beforehand, we can create a heap out of it by simply using heapify, which is actually an O(N)O(N) operation.
+
+If the list is known beforehand, we can create a heap out of it by simply using heapify, which is actually an O(N) operation.
 {% highlight java %}
 
 import heapq
@@ -132,7 +145,8 @@ heapq.heapify(arr)
 print(arr)
 {% endhighlight %}
 
-Heap in Java#
+## Heap in Java
+
 By default, the Java class java.util.PriorityQueue is a min heap. The elements are mostly sorted using their natural comparison methods, but when there isn’t one (for example, sorting points by distance), it can be provided by passing in a Comparator at construction time. A Comparator is required if the elements don’t implement the Comparable interface.
 
 To create a PriorityQueue of non-comparable objects, we can use lambda expressions or method reference introduced in Java 8 and provide an inline comparator to the constructor.
@@ -159,7 +173,8 @@ class Task {
 }
 {% endhighlight %}
 
-Heap in JavaScript#
+## Heap in JavaScript
+
 JavaScript does not support the heap data structure natively, so you might have to implement your own heap during an interview. Here is a common implementation of min-heap in JavaScript:
 {% highlight java %}
 class HeapItem {
@@ -246,16 +261,116 @@ class MinHeap {
  console.log(heap.pop().item)
 {% endhighlight %}
 
+## Implementing max heap
+
+The simplest way to implement a max heap is to reverse the sign of the number before we push it into the heap and reverse it again when you pop it out. For example, if we want to build a max heap out of [3, 1, 2], we can push [-3, -1, -2] into the heap. Because the default heap is a min-heap, when we pop, -3 will be popped out. Its reverse, 3, is the max of the three and thus we have a max heap.
+
+## K Closest Points
+
+## Problem statement
+Given a list of points on a 2D plane. Find k closest points to origin (0, 0).
+
+## Example:
+Input: [(1, 1), (2, 2), (3, 3)], 1
+
+Output: [(1, 1)]
+
+## Explanation
+
+## Intuition
+Let’s look at some elementary geometry if you don’t remember. Distance between two points (x1, y1) and (x2, y2) is sqrt((x1 - x2)^2, (y1 - y2)^2). For distance to origin, (x2, y2) is (0, 0) so distance becomes sqrt(x1^2, y1^2). Note that since we only care about the relative order of the points, we can skip the square root calculation as it doesn’t affect relative order.
+
+Having just learned the “art of the heap”, our first reaction when we see “Closest k” is to use a heap. The key for node comparison is a node’s distance to origin. We then pop the top 3 smallest off. It is so simple we don’t even have to draw a figure this time.
+
+The time complexity is O(Nlog(N)) since we push each element into the heap once and the heap push operation is log(N).
+
+## Alternative solution using max heap
+
+It might be counter-intuitive to think that a max heap can solve a problem that asks for minimum distances.
+
+Here’s how to think about it:
+* If we had the k closest points already and we had to decide whether a new point belongs to top k. The criterion is whether the new point is closer than the furthermost point within the current k points. If it is, we want to kick the current furthermost point out and add the new point.
+
+We can use a max heap to accomplish this. The root of the max heap is the point with the max distance to the origin. If the new point has a smaller distance, we pop the root of the max heap and push the new point in.
+
+## Implementation
+
+Using the “sign-reversing” technique we discussed in the intro module, we have the following solution:
+{% highlight java %}
+class Solution
+{
+    public static Point[] kClosestPoints(Point[] points, int k) {
+        PriorityQueue<Point> maxHeap = new PriorityQueue<>(k, 
+        Comparator.comparingDouble(Point::distanceToOrigin));
+        for (int i = 0; i < k; i++) {
+            maxHeap.add(points[i]);
+        }
+        for (int i = k; i < points.length; i++) {
+            Point point = points[i];
+            Point furthestPointInHeap = maxHeap.peek();
+            if (point.distanceToOrigin() > furthestPointInHeap
+            .distanceToOrigin()) {
+                maxHeap.poll();
+                maxHeap.add(point);
+            }
+        }
+        Point[] res = new Point[k];
+        return maxHeap.toArray(res);
+    }
+    //Driver code
+    public static void main(String[] arg){
+        String[] inputs = {"3","2"};
+        String[][] inputs1 = {{"1 1","2 2","3 3"},{"1 3","-2 2"}};
+        String[] inputs2 = {"1","1"};
+        for(int i = 0; i < inputs.length; i++) {
+            int n = Integer.parseInt(inputs[i]);
+            Point[] points = new Point[n];
+            for (int j = 0; j < n; j++) {
+                    String[] coords = inputs1[i][j].split(" ");
+                    points[j] = new Point(Integer.parseInt(coords[0]),
+                     Integer.parseInt(coords[1]));
+            }
+            int k = Integer.parseInt(inputs2[i]);
+            Point[] res = Solution.kClosestPoints(points, k);
+            String[] actual_output = new String[res.length];
+            for (int j = 0; j < res.length; j++) {
+                actual_output[j] = res[j].x + " " + res[j].y;
+            }
+            System.out.println("K Closest points : "+
+            Arrays.toString(actual_output));
+        }
+    }
+}
+
+class Point {
+    public int x;
+    public int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public double distanceToOrigin() {
+        // "-" for max heap
+        return -(Math.pow(x, 2) + Math.pow(y, 2));
+    }
+}
+{% endhighlight %}
+
 ## Merge K Sorted Lists
-Problem statement#
+
+## Problem statement
 Given k sorted lists of numbers, merge them into one sorted list.
 
-Example:#
+# Example:
 Input: [[1, 3, 5], [2, 4, 6], [7, 10]]
 
 Output: [1, 2, 3, 4, 5, 6, 7, 10]
-Explanation#
-Intuition#
+
+## Explanation
+
+## Intuition
 The first thing that comes to mind is that we can concatenate all the lists into one and then sort the list. This is O(N log(N))) because sorting is O(N log(N)) where N is the total length of all the lists.
 
 Next, we ask the question: “are there any conditions that we haven’t used?” We know that all the lists are sorted and we haven’t used that condition. For each list, the smallest number is the first number. We can take the first number of each list and put them into a “pool of top k smallest numbers”, where k is the number of lists. The smallest number in the pool is the smallest number of all the lists and should be added to the final merged list. We then take the next smallest number from the list and add it to the pool. Repeat until we have exhausted all the lists.
@@ -278,6 +393,7 @@ Now the question is, “how do we compare a stream of k numbers?”, which is a 
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap29.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap30.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap31.png)
+
 Note that we push a tuple (val, current_list, head_index) into the heap. val is used to compare in the heap. We need current_list and head_index because we want to know the next number to push.
 {% highlight java %}
 class Solution {
@@ -327,16 +443,20 @@ class Solution {
     }
 }
 {% endhighlight %}
-The time complexity is O(Nlog(K))O(Nlog(K)) where KK is the number of lists.
+The time complexity is O(Nlog(K)) where KK is the number of lists.
 
 ## Median of Data Stream
-Problem statement#
+
+## Problem statement
 Given a stream of numbers, find the median number at any given time (accurate to 1 decimal place). Do this in O(1) time complexity.
 
-Example:#
+## Example:
+
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap32.png)
-Explanation#
-Intuition#
+
+## Explanation
+
+## Intuition
 The brute force way is to sort the entire list every time we get a new number. This would be O(Nlog(N)) for each add_number operation.
 
 One step up is to notice that the list is sorted before we add any new number to it. So, every time we add a new number to the existing list we just have to find the spot to add it to. We can find the insert position using binary search in O(log(N)). Since inserting into a position also means shifting after the insert position by 1, the overall run time is O(N).
@@ -348,10 +468,11 @@ It’s useful to use the first principle and go back to the definition of median
 Half the numbers are smaller than the median and the other half are larger than the median.
 
 Let’s assume the total number of elements is even and we can divide the numbers into two piles of equal size based on their values: a smaller half small pile and the bigger half big pile. The median of both piles is the average of the largest number in the small pile and the smallest number of the big pile. When we add a new number, two things could happen:
+1. The new number is smaller than the largest of the small pile. In this case, we put it into the small pile, and the size of the small pile is now 1 greater than big pile. The median of both piles is the largest number of the small pile.
+2. The new number is bigger than the largest of the small pile. In this case, the number belongs to the big pile. And the median of both piles is the smallest number of the big pile.
 
-The new number is smaller than the largest of the small pile. In this case, we put it into the small pile, and the size of the small pile is now 1 greater than big pile. The median of both piles is the largest number of the small pile.
-The new number is bigger than the largest of the small pile. In this case, the number belongs to the big pile. And the median of both piles is the smallest number of the big pile.
 Now the problem boils down to how to keep a small pile where we can find max value easily and a big pile where we can find min value easily. min heap and max heap fit these requirements perfectly.
+
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap33.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap34.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap35.png)
@@ -365,6 +486,7 @@ Now the problem boils down to how to keep a small pile where we can find max val
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap44.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap45.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap46.png)
+
 {% highlight java %}
 class MedianOfStream {
     private Queue<Double> minHeap = new PriorityQueue<>(),
@@ -415,7 +537,7 @@ class MedianOfStream {
     }
 }
 {% endhighlight %}
-The time complexity to add an element is O(log(N))O(log(N)) since the heap push operation is O(log(N))O(log(N)). The time complexity to find the median is O(1)O(1) since inspecting the top of each heap is O(1)O(1).
+The time complexity to add an element is O(log(N)) since the heap push operation is O(log(N)). The time complexity to find the median is O(1) since inspecting the top of each heap is O(1).
 
 
 

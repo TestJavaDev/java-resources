@@ -43,15 +43,19 @@ class Solution {
         int left = 0;
         int right = arr.length - 1;
 
-        while (left <= right) { // <= here because left and right could point to the same element, < would miss it
-            int mid = left + (right - left) / 2; // use `(right - left) /2` to prevent `left + right` potential overflow
+        while (left <= right) { // <= here because left and right could point 
+        to the same element, < would miss it
+            int mid = left + (right - left) / 2; // use `(right - left) /2` 
+            to prevent `left + right` potential overflow
             // found target, return its index
             if (arr[mid] == target) return mid;
             if (arr[mid] < target) {
-                // middle less than target, discard left half by making left search boundary `mid + 1`
+                // middle less than target, discard left half by making 
+                left search boundary `mid + 1`
                 left = mid + 1;
             } else {
-                // middle greater than target, discard right half by making right search boundary `mid - 1`
+                // middle greater than target, discard right half by making 
+                right search boundary `mid - 1`
                 right = mid - 1;
             }
         }
@@ -60,9 +64,9 @@ class Solution {
     
     // Driver code
     public static void main(String[] args) {       
-        System.out.println("Binary search : " + Solution.binarySearch(new int[] {1, 3, 5, 7, 8}, 5));
-        System.out.println("Binary search : " + Solution.binarySearch(new int[] {1, 2, 3, 4, 5, 6, 7}, 0));
-        System.out.println("Binary search : " + Solution.binarySearch(new int[] {2, 8, 89, 120, 1000}, 120));
+        sout("Binary search : " + Solution.binarySearch(new int[] {1, 3, 5, 7, 8}, 5));
+        sout("Binary search : " + Solution.binarySearch(new int[] {1, 2, 3, 4, 5, 6, 7}, 0));
+        sout    ("Binary search : " + Solution.binarySearch(new int[] {2, 8, 89, 120, 1000}, 120));
     }
 }
 {% endhighlight %}
@@ -87,7 +91,7 @@ For vanilla binary search, we can discard the current element since it can’t b
 ## When to use binary search
 Interestingly, binary search works beyond sorted arrays. You can use binary search whenever you can make a binary decision to shrink the search range. We will learn about this in other modules.
 
-# Finding the Boundary
+## Finding the Boundary
 
 ## Problem statement
 An array of boolean values is divided into two sections: the left section consists of all false, and the right section consists of all true. Find the boundary of the right section, i.e. the index of the first true element. If there is no true element, return -1.
@@ -102,8 +106,9 @@ Explanation: first true's index is 2.
 ## Explanation
 The binary decisions we have to make when we look at an element are:
 
-If the element is false, we discard everything to the left and the current element itself.
-If the element is true, the current element could be the first that is true and there may be other true elements to the left. We discard everything to the right, but what about the current element?
+1. If the element is false, we discard everything to the left and the current element itself.
+2. If the element is true, the current element could be the first that is true and there may be other true elements to the left. We discard everything to the right, but what about the current element?
+
 We can either keep the current element in the range or record it somewhere and then discard it. Here we choose the latter. We’ll discuss the other approach in the alternative solution section.
 
 We keep a variable boundary_index that represents the leftmost true's index currently recorded. If the current element is true, we update boundary_index with its index and discard everything to the right including the current element itself since its index has been recorded by the variable.

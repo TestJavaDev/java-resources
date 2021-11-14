@@ -132,12 +132,13 @@ class Helper
 
 e mergeSort() function calls itself on the first and second halves of the given array, recursively. Once the base case is reached, i.e., when the condition that rightIndex > leftIndex becomes false, it returns. Then the merge function is called on the array. It works by dividing the given array into two subarrays and merging them by copying the greater element in one subarray back into the given array.
 
-Time complexity#
-The time complexity for this algorithm is O(n log n)O(nlogn).
+## Time complexity
+The time complexity for this algorithm is O(n log n).
 
 Here is an animation to clarify this:
 
-Merge: Animation#
+## Merge: Animation
+
 ![merge](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/merge/merge1.png)
 ![merge](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/merge/merge2.png)
 ![merge](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/merge/merge3.png)
@@ -153,7 +154,8 @@ Merge: Animation#
 ![merge](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/merge/merge13.png)
 ![merge](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/merge/merge14.png)
 
-Merge sort: Animation#
+## Merge sort: Animation
+
 Here’s how merge works in context:
 
 ![merge](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/merge/merge15.png)

@@ -14,13 +14,13 @@ Quicksort / Java resources / Tutorial
 
 ## Quicksort
 
-Introduction#
+## Introduction
+
 Quicksort is the fastest known comparison-based sorting algorithm for arrays in the average case.
 
 Caveat: Merge sort works better on linked lists, and there are other non-comparison based algorithms that outperform quicksort.
 
-
-Quick sort algorithm#
+## Quick sort algorithm
 Start with an array of n elements.
 
 Choose a pivot element from the array to be sorted.
@@ -35,7 +35,8 @@ Concatenate the two sorted subarrays and the pivot to yield one sorted array.
 
 ![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick.png)
 
-Median-of-three strategy#
+## Median-of-three strategy
+
 Pick three random elements from the array and find their median. This strategy ensures that the first element is not picked.
 
 ![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick1.png)
