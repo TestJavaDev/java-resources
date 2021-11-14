@@ -314,7 +314,7 @@ To make a choice when we visit the current node’s children, we don’t need an
 
 ## 2. Draw the space-state tree
 
-![back](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/back/back10back10.png)
+![back](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/back/back10.png)
 
 Note that in the above figure, there are two paths that lead to an empty string, i.e., completely matching target. When we DFS, we would reach the left one first without visiting the other one since we just need one successful path to return true.
 
@@ -359,10 +359,10 @@ class Solution {
 Everything looks great. When we finish typing that last bracket/semicolon, we can almost hear angels singing and all tests passing.
 
 Except there is one pesty test case:
-![back](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/back/back10back11.png)
+![back](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/back/back11.png)
 
 Why does this one time out? We have 10 branches to check each level of the tree. There are 140 as in the target and in the worst case, we’d be looking at 10^140 branches. Remember we talked about “combinatorial explosion” in the backtracking module. We have just been struck by it. The way to solve this is to use memoization to cache the branches we have already seen. We can even see duplicates in the above example.
-![back](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/back/back10back12.png)
+![back](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/back/back12.png)
 
 {% highlight java %}
 class Solution {
@@ -407,7 +407,7 @@ class Solution {
 ## Problem statement
 
 We have a message to decode. Letters are encoded to digits by their position in the alphabet:
-![back](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/back/back10back13.png)
+![back](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/back/back13.png)
 
 Given a non-empty string of digits, how many ways are there to decode it?
 
@@ -437,7 +437,7 @@ What state do we need to decide which child nodes of the state-space tree should
 Since there’s no constraint on which letters can be used for decoding, we don’t need any state here.
 
 ## 2. Draw the space-state tree
-![back](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/back/back10back14.png)
+![back](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/back/back14.png)
 
 ## 3. DFS
 Using the backtracking template as a basis, we add the state we identified in step 1:
@@ -481,7 +481,7 @@ class Solution {
 {% endhighlight %}
 
 Again, we see there are overlapping subproblems.
-![back](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/back/back10back15.png)
+![back](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/back/back15.png)
 
 {% highlight java %}
 class Solution {

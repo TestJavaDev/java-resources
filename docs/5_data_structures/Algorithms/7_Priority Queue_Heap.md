@@ -435,10 +435,12 @@ class Solution {
         int n = Integer.parseInt(inputs[i]);
         List<List<Integer>> lists = new ArrayList<>(n);
         for (int j = 0; j < n; j++) {
-            List<Integer> list = Arrays.stream(inputs1[i][j].split(" ")).map(Integer::parseInt).collect(Collectors.toList());
+            List<Integer> list = Arrays.stream(inputs1[i][j].split(" "))
+            .map(Integer::parseInt).collect(Collectors.toList());
             lists.add(list);
         }
-        System.out.println("Merge k sorted list : "+Solution.mergeKSortedLists(lists).stream().map(num -> Integer.toString(num)).collect(Collectors.joining(" ")));
+        System.out.println("Merge k sorted list : "+Solution.mergeKSortedLists(lists)
+        .stream().map(num -> Integer.toString(num)).collect(Collectors.joining(" ")));
       }
     }
 }

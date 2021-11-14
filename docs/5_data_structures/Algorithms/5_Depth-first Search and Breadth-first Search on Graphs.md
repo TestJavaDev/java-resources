@@ -324,12 +324,14 @@ class Node {
 Word Ladder is “a puzzle that begins with two words, and to solve the puzzle one must find a chain of other words to link the two, in which two adjacent words (that is, words in successive steps) differ by one letter.”
 
 For example: COLD → CORD → CARD → WARD → WARM
+
 ![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs42.png)
+
 iven a start word, an end word, and a list of dictionary words, determine the minimum number of steps to go from the start word to the end word using only words from the dictionary.
 
-# Example
-Input:
+## Example
 
+Input:
 start = "COLD"
 end = "WARM"
 word_list = ["COLD", "GOLD", "CORD", "SOLD", "CARD", "WARD", "WARM", "TARD"]
@@ -338,7 +340,8 @@ Output:
 
 Explanation: We can go from COLD to WARM by going through COLD → CORD → CARD → WARD → WARM
 
-Intuition#
+## Intuition
+
 We start from a word. In each step, we can only go from one word in the list to another, and we want to end up on some word. This suggests that we can represent each word with a node in a graph and each step that transforms a word to another as an edge between the corresponding nodes:
 ![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs43.png)
 
@@ -643,6 +646,7 @@ On an infinitely large chessboard, a knight is located on [0, 0].
 
 A knight can move in eight directions.
 ![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs33.png)
+
 Given a destination coordinate [x, y], determine the minimum number of moves from [0, 0] to [x, y].
 
 ## Explanation
