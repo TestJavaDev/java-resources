@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Dynamo How to Design a Key_value Store
+title: Dynamo
 parent: System design case studies
 grand_parent: System design
 nav_order: 1
 permalink: /systemdesign/case/dynamo
 ---
 <div align="center" markdown="1">
-Dynamo: How to Design a Key-value Store / Java resources / Tutorial
+Dynamo / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>

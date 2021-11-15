@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Kafka How to Design a Distributed Messaging System
+title: Kafka
 parent: System design case studies
 grand_parent: System design
-nav_order: 
+nav_order: 3
 permalink: /systemdesign/case/kafka
 ---
 <div align="center" markdown="1">
-Kafka: How to Design a Distributed Messaging System / Java resources / Tutorial
+Kafka / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>

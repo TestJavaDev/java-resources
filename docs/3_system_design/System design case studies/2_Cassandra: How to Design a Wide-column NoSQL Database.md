@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Cassandra How to Design a Wide-column NoSQL Database
+title: Cassandra
 parent: System design case studies
 grand_parent: System design
 nav_order: 2
 permalink: /systemdesign/case/cassandra
 ---
 <div align="center" markdown="1">
-Cassandra: How to Design a Wide-column NoSQL Database / Java resources / Tutorial
+Cassandra / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>
