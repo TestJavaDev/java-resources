@@ -28,4 +28,10 @@ Here is a Bloom filter with three elements P, Q, and R. It consists of 20 bits a
 
 ![bloom](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bloom.png)
 * The element X definitely is not in the set, since it hashes to a bit position containing 0.
-* For a fixed error rate, adding a new element and testing for membership are both constant time operations, and a filter with room for ‘n’ elements requires O(n)O(n) space.
+* For a fixed error rate, adding a new element and testing for membership are both constant time operations, and a filter with room for ‘n’ elements requires O(n) space.
+
+## Example: BigTable
+
+In BigTable (and Cassandra), any read operation has to read from all SSTables that make up a Tablet. If these SSTables are not in memory, the read operation may end up doing many disk accesses. To reduce the number of disk accesses, BigTable uses Bloom filters.
+
+Bloom filters are created for SSTables (particularly for the locality groups). They help reduce the number of disk accesses by predicting if an SSTable may contain data corresponding to a particular row or column pair. For certain applications, a small amount of Tablet server memory used for storing Bloom filters drastically reduces the number of disk-seeks, thereby improving read performance.

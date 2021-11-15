@@ -40,3 +40,9 @@ The following two things should be kept in mind before deciding read/write quoru
 
 * R=1 and W=N ⇒ full replication (write-all, read-one): undesirable when servers can be unavailable because writes are not guaranteed to complete.
 * Best performance (throughput/availability) when 1 < r < w < n1<r<w<n, because reads are more frequent than writes in most applications
+
+## Examples
+
+For leader election, Chubby uses Paxos, which use quorum to ensure strong consistency.
+As stated above, quorum is also used to ensure that at least one node receives the update in case of failures. For instance, in Cassandra, to ensure data consistency, each write request can be configured to be successful only if the data has been written to at least a quorum (or majority) of replica nodes.
+Dynamo replicates writes to a sloppy quorum of other nodes in the system, instead of a strict majority quorum like Paxos. All read/write operations are performed on the first NN healthy nodes from the preference list, which may not always be the first NN nodes encountered while walking the consistent hashing ring.

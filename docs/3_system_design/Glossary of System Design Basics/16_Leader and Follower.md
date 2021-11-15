@@ -23,3 +23,9 @@ At any time, one server is elected as the leader. This leader becomes responsibl
 
 Leader entertains requests from the client and is responsible for replicating and coordinating with followers
 ![Leader](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/leader.png)
+
+# Examples
+
+* In Kafka, each partition has a designated leader which is responsible for all reads and writes for that partition. Each follower’s responsibility is to replicate the leader’s data to serve as a “backup” partition. This provides redundancy of messages in a partition, so that a follower can take over the leadership if the leader goes down.
+* Within the Kafka cluster, one broker is elected as the Controller. This Controller is responsible for admin operations, such as creating/deleting a topic, adding partitions, assigning leaders to partitions, monitoring broker failures, etc. Furthermore, the Controller periodically checks the health of other brokers in the system.
+* To ensure strong consistency, Paxos (hence Chubby) performs leader election at startup. This leader is responsible for data replication and coordination.
