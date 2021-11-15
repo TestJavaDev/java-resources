@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Dynamo
-parent: System design case studies
+parent: Design case studies
 grand_parent: System design
 nav_order: 1
 permalink: /systemdesign/case/dynamo

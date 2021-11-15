@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Cassandra
-parent: System design case studies
+parent: Design case studies
 grand_parent: System design
 nav_order: 2
 permalink: /systemdesign/case/cassandra

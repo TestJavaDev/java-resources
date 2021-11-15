@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Kafka
-parent: System design case studies
+parent: Design case studies
 grand_parent: System design
 nav_order: 3
 permalink: /systemdesign/case/kafka
