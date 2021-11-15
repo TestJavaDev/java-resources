@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kafka: How to Design a Distributed Messaging System
+title: Kafka How to Design a Distributed Messaging System
 parent: System design case studies
 grand_parent: System design
 nav_order: 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dynamo: How to Design a Key-value Store
+title: Dynamo How to Design a Key_value Store
 parent: System design case studies
 grand_parent: System design
 nav_order: 1

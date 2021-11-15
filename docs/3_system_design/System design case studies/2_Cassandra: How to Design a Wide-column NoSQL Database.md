@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Cassandra: How to Design a Wide-column NoSQL Database
+title: Cassandra How to Design a Wide-column NoSQL Database
 parent: System design case studies
 grand_parent: System design
 nav_order: 2
