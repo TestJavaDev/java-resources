@@ -162,5 +162,3 @@ This implies that any memory operations which were visible to a thread before ex
 In our readerThread if we synchronize on the same lock object as the one we synchronize on in the writerThread then we would establish a happens-before relationship between the two threads. Don't confuse it to mean that one thread executes before the other. All it means is that when readerThread releases the monitor, up till that point, whatever shared variables it has manipulated will have their latest values visible to the writerThread as soon as it acquires the same monitor. If it acquires a different monitor then there's no happens-before relationship and it may or may not see the latest values for the shared variables
 
 ![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm27.png)
-
-}
