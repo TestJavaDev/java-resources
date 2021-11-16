@@ -697,7 +697,9 @@ Continuing our discussion from the previous section on locking and signaling mec
 Concisely, a monitor is a mutex and then some. Monitors are generally language level constructs whereas mutex and semaphore are lower-level or OS provided constructs.
 
 To understand monitors, let's first see the problem they solve. Usually, in multi-threaded applications, a thread needs to wait for some program predicate to be true before it can proceed forward. Think about a producer/consumer application. If the producer hasn't produced anything the consumer can't consume anything, so the consumer must wait on a predicate that lets the consumer know that something has indeed been produced. What could be a crude way of accomplishing this? The consumer could repeatedly check in a loop for the predicate to be set to true. The pattern would resemble the pseudocode below:
+
 ![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm10.png)
+
 Within the while loop we'll first release the mutex giving other threads a chance to acquire it and set the loop predicate to true. And before we check the loop predicate again, we make sure we have acquired the mutex again. This works but is an example of "spin waiting" which wastes a lot of CPU cycles. Next, let's see how condition variables solve the spin-waiting issue.
 
 ## Condition Variables
@@ -710,13 +712,16 @@ Now imagine a producer places an item in the buffer. The predicate, the size of 
 Lets see how this all translates into code.
 
 ![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm11.png)
+
 Let's dry run the above code. Say thread A executes efficientWaitingFunction() first and finds the loop predicate is false and enters the loop. Next thread A executes the statement condVar.wait() and is be placed in a wait queue. At the same time thread A gives up the mutex. Now thread B comes along and executes changePredicate() method. Since the mutex was given up by thread A, thread B is be able to acquire it and set the predicate to true. Next it signals the condition variable condVar.signal(). This step places thread A into the ready queue but thread A doesn't start executing until thread B has released the mutex.
 
 Note that the order of signaling the condition variable and releasing the mutex can be interchanged, but generally, the preference is to signal first and then release the mutex. However, the ordering might have ramifications on thread scheduling depending on the threading implementation.
 
 ## Why the while Loop
 The wary reader would have noticed us using a while loop to test for the predicate. After all, the pseudocode could have been written as follows
+
 ![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm12.png)
+
 If the snippet is re-written in the above manner using an if clause instead of a while then,, we need a guarantee that once the variable condVar is signaled, the predicate can't be changed by any other thread and that the signaled thread becomes the owner of the monitor. This may not be true. For one, a different thread could get scheduled and change the predicate back to false before the signaled thread gets a chance to execute, therefore the signaled thread must check the predicate again, once it acquires the monitor. Secondly, use of the loop is necessitated by design choices of monitors that we'll explore in the next section. Last but not the least, on POSIX systems, spurious or fake wakeups are possible (also discussed in later chapters) even though the condition variable has not been signaled and the predicate hasn't changed. The idiomatic and correct usage of a monitor dictates that the predicate always be tested for in a while loop.
 
 ## Monitor Explained
@@ -838,6 +843,7 @@ Gordon Moore, co-founder of Intel, observed the number of transistors that can b
 ![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm17.png)
 
 Initially, the clock speeds of processors also doubled along with the transistor count. This is because as transistors get smaller, their frequency increases and propagation delays decrease because now the transistors are packed closer together. However, the promise of exponential growth by Moore’s law came to an end more than a decade ago with respect to clock speeds. The increase in clock speeds of processors has slowed down much faster than the increase in number of transistors that can be placed on a microchip. If we plot clock speeds we find that the linear exponential growth stopped after 2003 and the trend line flattened out. The clock speed (proportional to difference between supply voltage and threshold voltage) cannot increase because the supply voltage is already down to an extent where it cannot be decreased to get dramatic gains in clock speed. In 10 years from 2000 to 2009, clock speed just increased from 1.3 GHz to 2.8 GHz merely doubling in a decade rather than increasing 32 times as expected by Moore's law. The following plot shows the clock speeds flattening out towards 2010.
+
 ![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm18.png)
 
 Since processors aren't getting faster as quickly as they use to, we need alternative measures to achieve performance gains. One of the ways to do that is to use multicore processors. Introduced in the early 2000s, multicore processors have more than one CPU on the same machine. To exploit this processing power, programs must be written as multi-threaded applications. A single-threaded application running on an octa-core processor will only use 1/8th of the total throughput of that machine, which is unacceptable in most scenarios.
