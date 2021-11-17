@@ -13,3 +13,7 @@ Stock Scraper / Java resources / Tutorial
 </div>
 
 ## Stock Scraper
+
+{% highlight java %}
+
+{% endhighlight %}

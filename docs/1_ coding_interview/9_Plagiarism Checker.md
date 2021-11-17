@@ -13,3 +13,7 @@ Plagiarism Checker / Java resources / Tutorial
 </div>
 
 ## Plagiarism Checker
+
+{% highlight java %}
+
+{% endhighlight %}

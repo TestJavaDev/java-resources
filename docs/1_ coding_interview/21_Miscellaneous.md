@@ -13,3 +13,7 @@ Miscellaneous / Java resources / Tutorial
 </div>
 
 ## Miscellaneous
+
+{% highlight java %}
+
+{% endhighlight %}

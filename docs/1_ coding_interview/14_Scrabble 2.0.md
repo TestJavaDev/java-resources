@@ -13,3 +13,7 @@ Scrabble 2.0 / Java resources / Tutorial
 </div>
 
 ## Scrabble 2.0
+
+{% highlight java %}
+
+{% endhighlight %}

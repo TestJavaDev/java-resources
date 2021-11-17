@@ -13,3 +13,7 @@ Network / Java resources / Tutorial
 </div>
 
 ## Network
+
+{% highlight java %}
+
+{% endhighlight %}

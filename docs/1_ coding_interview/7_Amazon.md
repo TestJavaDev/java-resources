@@ -13,3 +13,7 @@ Amazon / Java resources / Tutorial
 </div>
 
 ## Amazon
+
+{% highlight java %}
+
+{% endhighlight %}

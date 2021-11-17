@@ -13,3 +13,7 @@ Stocks / Java resources / Tutorial
 </div>
 
 ## Stocks
+
+{% highlight java %}
+
+{% endhighlight %}

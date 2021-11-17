@@ -13,3 +13,7 @@ Card Game / Java resources / Tutorial
 </div>
 
 ## Card Game
+
+{% highlight java %}
+
+{% endhighlight %}

@@ -13,3 +13,7 @@ Boggle / Java resources / Tutorial
 </div>
 
 ## Boggle
+
+{% highlight java %}
+
+{% endhighlight %}

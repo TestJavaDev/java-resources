@@ -13,3 +13,7 @@ Trees / Java resources / Tutorial
 </div>
 
 ## Trees
+
+{% highlight java %}
+
+{% endhighlight %}

@@ -13,3 +13,7 @@ Google Calendar / Java resources / Tutorial
 </div>
 
 ## Google Calendar
+
+{% highlight java %}
+
+{% endhighlight %}

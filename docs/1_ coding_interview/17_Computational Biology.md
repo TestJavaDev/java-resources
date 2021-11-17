@@ -13,3 +13,7 @@ Computational Biology / Java resources / Tutorial
 </div>
 
 ## Computational Biology
+
+{% highlight java %}
+
+{% endhighlight %}

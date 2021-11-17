@@ -13,3 +13,7 @@ Search Engine / Java resources / Tutorial
 </div>
 
 ## Search Engine
+
+{% highlight java %}
+
+{% endhighlight %}

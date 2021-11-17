@@ -13,3 +13,7 @@ Twitter / Java resources / Tutorial
 </div>
 
 ## Twitter
+
+{% highlight java %}
+
+{% endhighlight %}

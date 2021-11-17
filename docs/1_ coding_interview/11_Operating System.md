@@ -13,3 +13,7 @@ Operating System / Java resources / Tutorial
 </div>
 
 ## Operating System
+
+{% highlight java %}
+
+{% endhighlight %}

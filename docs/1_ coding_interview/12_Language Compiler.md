@@ -13,3 +13,7 @@ Language Compiler / Java resources / Tutorial
 </div>
 
 ## Language Compiler
+
+{% highlight java %}
+
+{% endhighlight %}
