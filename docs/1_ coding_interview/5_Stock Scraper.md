@@ -26,16 +26,13 @@ You are a developer on a trading company’s engineering team. The company wants
 
 Since websites are represented as a DOM tree of HTML tags, we’ll first have to find a way to traverse this structure. Identifying stock data in an arbitrary HTML will be challenging because every website has a different structure and stock price data can be anywhere on the page.
 
-Features#
+## Features
+
 We will need to introduce the following features to implement the functionalities discussed above:
-
-Feature #1: Develop a way to parse the DOM tree structure of different stock websites.
-
-Feature #2: Assign a confidence score to each HTML tag in the DOM to represent the likelihood that the tag contains stock price data. Then, filter the minimal subtree of the DOM that has stock price data.
-
-Feature #3: Stock price data at the same level of the DOM tree is closely related. Develop a new way to efficiently parse the DOM tree structure by introducing a next pointer in each tree node, pointing to the next node in the same level.
-
-Feature #4: Retrieve the stock increase and decrease percentages from the DOM tree and calculate the maximum profit we could obtain from it.
+* Feature #1: Develop a way to parse the DOM tree structure of different stock websites.
+* Feature #2: Assign a confidence score to each HTML tag in the DOM to represent the likelihood that the tag contains stock price data. Then, filter the minimal subtree of the DOM that has stock price data.
+* Feature #3: Stock price data at the same level of the DOM tree is closely related. Develop a new way to efficiently parse the DOM tree structure by introducing a next pointer in each tree node, pointing to the next node in the same level.
+* Feature #4: Retrieve the stock increase and decrease percentages from the DOM tree and calculate the maximum profit we could obtain from it.
 
 Understanding these feature requests and designing their solutions will help us implement the requested functionality into the scraper.
 
@@ -43,7 +40,7 @@ In the next few lessons, we’ll discuss the recommended implementations of thes
 
 ## Feature #1: Traversing DOM Tree
 
-Description#
+## Description
 First, we need to figure out a way to traverse the DOM structure that we obtain from a single web page. The HTML can be represented in a tree structure where the children of the HTML tag become the children of a node in the tree. Each level of the tree can have any number of nodes depending upon the number of nested HTML tags. We need to traverse the nodes in the tree level by level, starting at the root node.
 
 ![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale15.png)
@@ -54,20 +51,15 @@ Let’s try to understand this better with an illustration:
 
 ![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale16.png)
 
-Solution#
+## Solution
 Since we need to traverse all the nodes of each level before moving onto the next level, we can use the Breadth First Search (BFS) technique to solve this problem. We can use a queue to efficiently traverse in BFS fashion.
 
 Let’s see how we might implement this functionality:
-
-Start by enqueuing the root node to the queue.
-
-Iterate until the queue is empty.
-
-During each iteration, first count the elements in the queue (let’s call it queue_size). We will have this many nodes in the current level.
-
-Next, remove queue_size nodes from the queue and enqueue their value in a list to represent the current level.
-
-After removing each node from the queue, insert all of its children into the queue. If the queue is not empty, repeat from step 3 for the next level.
+1. Start by enqueuing the root node to the queue.
+2. Iterate until the queue is empty.
+3. During each iteration, first count the elements in the queue (let’s call it queue_size). We will have this many nodes in the current level.
+4. Next, remove queue_size nodes from the queue and enqueue their value in a list to represent the current level.
+5. After removing each node from the queue, insert all of its children into the queue. If the queue is not empty, repeat from step 3 for the next level.
 
 The following illustration might clarify this process.
 
@@ -150,30 +142,22 @@ class Solution {
 
 ## Feature #2: Locating Stock Data
 
-Description#
-Now, we need to identify which nodes of the website’s DOM tree contain the stock data. The data we are looking for is the dates on which a certain stock price went up or down. Identifying stock data in arbitrary HTML can be hard, so we’ll use the following technique.
+## Description
+ Now, we need to identify which nodes of the website’s DOM tree contain the stock data. The data we are looking for is the dates on which a certain stock price went up or down. Identifying stock data in arbitrary HTML can be hard, so we’ll use the following technique.
 
 Like the previous lesson we’ll traverse the DOM tree, assigning a score to nodes on how likely they are to be a date or a stock percentage based on the text inside of them. To make the process efficient, we also want to limit the DOM subtree that we are processing.
 
 Here’s the scoring criteria for how likely a node is a date:
-
-A node whose text starts with a capital letter
-
-A node whose text ends in a number
-
-A node whose text contains the # symbol
-
-A node whose text is under ten characters
+* A node whose text starts with a capital letter
+* A node whose text ends in a number
+* A node whose text contains the # symbol
+* A node whose text is under ten characters
 
 Here’s the scoring criteria for how likely a node is a stock percentage:
-
-A node whose text is short
-
-A node whose text contains a number
-
-A node whose text contains the + or - sign
-
-A node whose text contains the % sign
+* A node whose text is short
+* A node whose text contains a number
+* A node whose text contains the + or - sign
+* A node whose text contains the % sign
 
 After this step, we’ll find two nodes: one node with a high date score and one with a high stock percentage score. We’ll calculate the LCA(Lowest Common Ancestor) of these two nodes. In most cases, the subtree of the LCA node will have all the dates and their respective stock percentages. This saves us time for searching the rest of the DOM tree.
 
@@ -184,24 +168,18 @@ Let’s try to understand this better with an illustration:
 
 We’ll be provided with an n-ary tree in which each node will have a score associated with it. We’ll also be given two nodes representing the highest date and stock percentage scores. We have to find the LCA node of the provided two nodes inside the n-ary tree. Once the LCA node is found, we can easily extract the stock data from its sub-tree.
 
-Solution#
+## Solution
 Let’s say that our two identified nodes are a and b.
 
 We can save the parent nodes of each node while traversing the tree. Then, we can store the parents of one of the nodes, say a, into a set. As we go from the node b towards the root, the first ancestor of b that we find in the set is the LCA. We can store the parent pointers in a dictionary for retrieval in constant time. For backtracking, we can use the set data structure.
 
 Let’s see how we might implement this functionality:
-
-First, we’ll traverse the tree starting from the root node.
-
-Then, we’ll store the parent of each node in the dictionary until the nodes a and b are not found.
-
-If the nodes a and b are found:
-
-Traverse over the parents/ancestors of node a.
-
-For each parent node, add it to the ancestors set.
-
-Similarly, we will traverse through the ancestors of node b. If the ancestor is present in the ancestors set for a, this is the first ancestor common in between a and b (while traversing upwards), and this is the LCA node.
+1. First, we’ll traverse the tree starting from the root node.
+2. Then, we’ll store the parent of each node in the dictionary until the nodes a and b are not found.
+3. If the nodes a and b are found:
+   * Traverse over the parents/ancestors of node a.
+   * For each parent node, add it to the ancestors set.
+4. Similarly, we will traverse through the ancestors of node b. If the ancestor is present in the ancestors set for a, this is the first ancestor common in between a and b (while traversing upwards), and this is the LCA node.
 
 Let’s look at the code for the solution:
 
@@ -282,7 +260,7 @@ class Solution {
 
 ## Feature #3: Traversing DOM Tree II
 
-Description#
+## Description
 The technique we used previously to traverse through the web tree used too much space. The number of web pages can be enormous, and traversing all of them will consume a lot of unnecessary space. Therefore, we have come up with a better approach in which we create a shadow tree for the DOM where each node has a pointer to the next node to its right on the same level. We’ll introduce an additional attribute, next, to our TreeNode structure. The next node will point to its immediate right node on the same level. If there is no right node to point, next will point to null. This next pointer will allow us to avoid the queue data structure that we used previously to traverse the tree, resulting in a space-efficient approach.
 
 We’ll be provided with a root node of an n-ary tree. The root node in our case will again be the body tag. This root node will have the complete web page nested within its children. We have to go through each node and assign the next pointer to the node to its immediate right on the same level.
@@ -291,18 +269,16 @@ Let’s try to understand this better with an illustration:
 
 ![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale28.png)
 
-Solution#
+## Solution
 The tree structure that we get from the web is arbitrary, meaning a parent node can have any number of child nodes and the probability of a perfect tree is very low. So, we have no idea about the structure of the tree or its branches, and we want efficient access to all nodes that are on the same level.
 
 If we are on a node N at a level L, we have access to all of its children on level L + 1. This is the perfect time to establish the children’s next pointers. If we decide to establish the next pointers after getting on level L + 1, there will be issues connecting the children of different parents. Therefore, we’ll only move down a level from a parent node when all of the children nodes have their next pointers established.
 
 Let’s see how we might implement this functionality:
-
-We will start our traversal from the root node. There is only one node at the first level whose next automatically points to null. So, we’ll not yet move to the next level but will first establish the next pointers of the children of the root node.
-We now need to find the next level’s leftmost node to be the starting point for assigning the next pointers. The four candidate leftmost nodes for our varying tree structures are shown in the illustration to the right. After assigning the next pointers of each node for a level, the leftmost node will need to be updated for the next level.
-We’ll also maintain a curr pointer that will be used to traverse current level’s nodes. Since the next pointers of the current level L were established on level L - 1, we can simply traverse these nodes like a linked list. For each curr node we traverse, we’ll update its children’s next pointers.
-
-Now, we’ll use a prev pointer to establish the next pointers using the curr pointer. Initially, we’ll make it equal to the next level’s leftmost node. When the curr is updated, we assign prev.next to the first child of the curr if it exists. After this, the prev pointer is also updated to the same node, so the correct next pointer is assigned in the subsequent iterations.
+1. We will start our traversal from the root node. There is only one node at the first level whose next automatically points to null. So, we’ll not yet move to the next level but will first establish the next pointers of the children of the root node.
+2. We now need to find the next level’s leftmost node to be the starting point for assigning the next pointers. The four candidate leftmost nodes for our varying tree structures are shown in the illustration to the right. After assigning the next pointers of each node for a level, the leftmost node will need to be updated for the next level.
+3. We’ll also maintain a curr pointer that will be used to traverse current level’s nodes. Since the next pointers of the current level L were established on level L - 1, we can simply traverse these nodes like a linked list. For each curr node we traverse, we’ll update its children’s next pointers.
+4. Now, we’ll use a prev pointer to establish the next pointers using the curr pointer. Initially, we’ll make it equal to the next level’s leftmost node. When the curr is updated, we assign prev.next to the first child of the curr if it exists. After this, the prev pointer is also updated to the same node, so the correct next pointer is assigned in the subsequent iterations.
 
 ![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale29.png)
 
@@ -408,7 +384,7 @@ class Solution {
 
 ## Feature #4: Maximum Profit
 
-Description#
+## Description
 We have now extracted the stock increase and decrease percentages over a number of consecutive days. This will be represented as an array of numbers, one for each consecutive day, holding the increase or decrease in stock price on the given day. We can use this data to find the maximum profit that could have been made for the given time period. Sometimes, the maximum profit might be negative, indicating a period of minimum loss. For simplicity and to avoid fractional values, we are rounding the increase and decrease percentages to their nearest value.
 
 We’ll be provided with an array of positive and negative integers. The indexes will indicate the day number and the integer value will indicate the stock increase or decrease percentage on that day. We have to return the maximum value that can be obtained by adding the sub-array elements.
@@ -417,22 +393,16 @@ Let’s try to understand this better with an illustration:
 
 ![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale31.png)
 
-Solution#
+## Solution
 The basic idea is to scan the entire array and at each position find the maximum sum of the sub-array ending there. This is achieved by keeping a currentMax for the current array index and a globalMax.
 
 Let’s see how we might implement this functionality:
-
-Initialize a currentMax and a globalMax and assign them the first value of the array.
-
-Traverse the array starting with the second element.
-
-For each element, check whether currentMax is less than zero:
-
-If it is less than zero, assign it the current element as its value
-
-Otherwise, add the current element in the currentMax
-
-Similarly, for each element check if globalMax is less than currentMax then assign globalMax equal to the value of currentMax
+1. Initialize a currentMax and a globalMax and assign them the first value of the array.
+2. Traverse the array starting with the second element.
+3. For each element, check whether currentMax is less than zero:
+   * If it is less than zero, assign it the current element as its value
+   * Otherwise, add the current element in the currentMax
+4. Similarly, for each element check if globalMax is less than currentMax then assign globalMax equal to the value of currentMax
 
 The following illustration might clarify this process.
 
@@ -482,7 +452,3 @@ class Solution{
 {% endhighlight %}
 
 ![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale42.png)
-
-{% highlight java %}
-
-{% endhighlight %}
