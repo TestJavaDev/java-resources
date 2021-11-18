@@ -916,7 +916,7 @@ class Solution {
 
     public static void main( String args[] ) {
         // Driver Code
-        int[][] grid = {{1, 1, 0, 0, 1}, {0, 1, 0, 1, 1}, {1, 1, 2, 0, 1}, {1, 0, 1, 1, 1}, {1, 1, 0, 1, 1}};
+        int[][] grid = { {1, 1, 0, 0, 1}, {0, 1, 0, 1, 1}, {1, 1, 2, 0, 1}, {1, 0, 1, 1, 1}, {1, 1, 0, 1, 1} };
         System.out.println(updateConfiguration(grid));
     }
 }

@@ -109,7 +109,7 @@ class Solution {
 ## Description
 In this scenario, Amazon held a lucky draw contest and the customers who won, have been given a $200 shopping credit. The restriction placed by Amazon is that the customers can only buy up to three products. Now, we want to help the customer by suggesting a list of triplets that contain products worth $200. In other words, a triplet will be a package deal containing three products that sum up to $200, and we want to suggest as many triplets as possible. To implement this feature, you will have access to a list of products that the customer is likely to buy. These products will include products from the person’s wishlist and other products based on previous purchases.
 
-Let’s say we are given a list of numbers containing the prices of products that the customer is likely to buy: {100, 75, 150, 200, 50, 65, 40, 30, 15, 25, 60}. In this example, the following triplets sum up to 200: {25, 100, 75}, {40, 100, 60}, {60, 75, 65}. Therefore, these are the products we will suggest to the customer. Notice that a product can be part of multiple package deals. Your program should return the prices of these products in a list, such as: {{25, 100, 75}, {40, 100, 60}, {60, 75, 65}}. The order of product prices in the final output does not matte
+Let’s say we are given a list of numbers containing the prices of products that the customer is likely to buy: {100, 75, 150, 200, 50, 65, 40, 30, 15, 25, 60}. In this example, the following triplets sum up to 200: {25, 100, 75}, {40, 100, 60}, {60, 75, 65}. Therefore, these are the products we will suggest to the customer. Notice that a product can be part of multiple package deals. Your program should return the prices of these products in a list, such as: { {25, 100, 75}, {40, 100, 60}, {60, 75, 65} }. The order of product prices in the final output does not matte
 
 ![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon10.png)
 ![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon11.png)
@@ -624,10 +624,10 @@ class Solution {
 
     public static void main( String args[] ) {
         // Driver Code
-        String[][] accounts = {{"Sarah", "sarah22@email.com", "sarah@gmail.com", "sarahhoward@email.com"},
+        String[][] accounts = { {"Sarah", "sarah22@email.com", "sarah@gmail.com", "sarahhoward@email.com"},
             {"Alice", "alicexoxo@email.com", "alicia@email.com", "alicelee@gmail.com"},
             {"Sarah", "sarah@gmail.com", "sarah10101@gmail.com"},
-            {"Sarah", "sarah10101@gmail.com", "misshoward@gmail.com"}};
+            {"Sarah", "sarah10101@gmail.com", "misshoward@gmail.com"} };
         System.out.println(accountsMerge(accounts));
     }
 }
