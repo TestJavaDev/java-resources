@@ -52,7 +52,7 @@ Here is an illustration of this process:
 ![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code1.png)
 
 ## Solution
-From the above description, we see that all members of each set are characterized by the same frequency of each alphabet. This means that the frequency of each alphabet in words belonging to the same group is equal. In the set {{"speed", "spede"}}, the frequency of the characters s, p, e, and d are the same in each word.
+From the above description, we see that all members of each set are characterized by the same frequency of each alphabet. This means that the frequency of each alphabet in words belonging to the same group is equal. In the set { {"speed", "spede"} }, the frequency of the characters s, p, e, and d are the same in each word.
 Let’s see how we might implement this functionality:
 1. For each title, compute a 26-element vector. Each element in this vector represents the frequency of an English letter in the corresponding title. This frequency count will be represented as a string delimited with # characters. For example, abbccc will be represented as #1#2#3#0#0#0...#0. This mapping will generate identical vectors for strings that are anagrams.
 2. Use this vector as a key to insert the titles into a Hash Map. All anagrams will be mapped to the same entry in this Hash Map. When a user searches a word, compute the 26-element English letter frequency vector based on the word. Search in the Hash Map using this vector and return all the map entries.

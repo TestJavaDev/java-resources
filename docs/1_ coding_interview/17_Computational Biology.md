@@ -14,6 +14,9 @@ Computational Biology / Java resources / Tutorial
 
 ## Computational Biology
 
+
+![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com1.png)
+
 {% highlight java %}
 
 {% endhighlight %}

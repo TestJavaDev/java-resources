@@ -136,7 +136,7 @@ This feature will be used in the game’s difficult mode. For this feature, we w
 Words can be constructed from the letters in sequentially adjacent cells.
 These adjacent cells can be horizontal or vertical neighbors only. Diagonally opposite cells are not considered adjacent.
 A cell can only be part of one word on the Boggle board.
-The module will take in two inputs: the grid (in the form of a 2D list of characters) and a list of possible words. Your module should return a list containing the words from the input list that were also found in the Boggle grid. Suppose, the grid is {{'B', 'S', 'L', 'I', 'M'}, {'R', 'I', 'L', 'M', 'O'}, {'O', 'L', 'I', 'E', 'O'}, {'R', 'Y', 'I', 'L', 'N'}, {'B', 'U', 'N', 'E', 'C'}}, and the words to be searched are {"BUY", "SLICK", "SLIME", "ONLINE", "NOW"}. In this case, the feature will output: {"SLIME", "ONLINE", "BUY"}. A visual representation of this example is given below:
+The module will take in two inputs: the grid (in the form of a 2D list of characters) and a list of possible words. Your module should return a list containing the words from the input list that were also found in the Boggle grid. Suppose, the grid is { {'B', 'S', 'L', 'I', 'M'}, {'R', 'I', 'L', 'M', 'O'}, {'O', 'L', 'I', 'E', 'O'}, {'R', 'Y', 'I', 'L', 'N'}, {'B', 'U', 'N', 'E', 'C'} }, and the words to be searched are {"BUY", "SLICK", "SLIME", "ONLINE", "NOW"}. In this case, the feature will output: {"SLIME", "ONLINE", "BUY"}. A visual representation of this example is given below:
 
 ![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog10.png)
 
