@@ -42,7 +42,7 @@ Understanding these feature requests and designing their solutions will help us 
 ## Description
 To develop this project’s first feature, we are given a set of meeting times. Our job is to implement a solution that can identify the number of meeting rooms needed to schedule the required meetings. Each meeting time will contain a startTime and an endTime that are both positive integers.
 
-Our list of meetings times looks like the following: {{2, 8}, {3, 4}, {3, 9}, {5, 11}, {8, 20}, {11, 15}}. If we schedule each meeting in a separate room, that would require six rooms. However, we want to use the minimum number of rooms possible. In the example, we can see that the first three meetings, {2, 8}, {3, 4}, and {3, 9}, are overlapping. Therefore, each of them will require a separate meeting room.
+Our list of meetings times looks like the following: { {2, 8}, {3, 4}, {3, 9}, {5, 11}, {8, 20}, {11, 15} }. If we schedule each meeting in a separate room, that would require six rooms. However, we want to use the minimum number of rooms possible. In the example, we can see that the first three meetings, {2, 8}, {3, 4}, and {3, 9}, are overlapping. Therefore, each of them will require a separate meeting room.
 
 Take a look at the illustration below to see how we can schedule all the meetings in just three rooms:
 
@@ -94,7 +94,7 @@ class Solution {
 
     public static void main( String args[] ) {
         // Driver code
-        int[][] meetingTimes = {{2, 8}, {3, 4}, {3, 9}, {5, 11}, {8, 20}, {11, 15}};
+        int[][] meetingTimes = { {2, 8}, {3, 4}, {3, 9}, {5, 11}, {8, 20}, {11, 15} };
         System.out.print(minMeetingRooms(meetingTimes));
     }
 }
@@ -144,9 +144,9 @@ class Solution {
         return merged.toArray(new int[merged.size()][]);
     }
     public static void main( String args[] ) {
-        int[][] meetingTimes1 = {{1, 4}, {2, 5}, {6, 8}, {7, 9}, {10, 13}};
+        int[][] meetingTimes1 = { {1, 4}, {2, 5}, {6, 8}, {7, 9}, {10, 13} };
         System.out.println(Arrays.deepToString(mergeMeetings(meetingTimes1)));
-        int[][] meetingTimes2 = {{4, 7}, {1, 3}, {8, 10}, {2, 3}, {6, 8}};
+        int[][] meetingTimes2 = { {4, 7}, {1, 3}, {8, 10}, {2, 3}, {6, 8} };
         System.out.println(Arrays.deepToString(mergeMeetings(meetingTimes2)));
     }
 }
@@ -163,7 +163,7 @@ Note: We will assume that User A is already free during the time of the new meet
 
 You will be given a list of start and end times of User B’s scheduled meetings, which are non-overlapping. Additionally, you will be given the start and end times for the proposed meeting, which we need to verify is schedulable.
 
-Suppose that the list of timings is {{1, 3}, {4, 6}, {8, 10}, {10, 12}, {13, 15}}, and the new meeting is {7, 8}. In this example, you can see that the new meeting does not overlap with any existing meetings. Therefore, it can be scheduled, and the output will be True. Now, consider if the new meeting had been {9, 11}. It would have overlapped with {8, 10} and {10, 12}. Therefore, the output would have been false.
+Suppose that the list of timings is { {1, 3}, {4, 6}, {8, 10}, {10, 12}, {13, 15} }, and the new meeting is {7, 8}. In this example, you can see that the new meeting does not overlap with any existing meetings. Therefore, it can be scheduled, and the output will be True. Now, consider if the new meeting had been {9, 11}. It would have overlapped with {8, 10} and {10, 12}. Therefore, the output would have been false.
 
 ![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale5.png)
 
@@ -241,7 +241,7 @@ class Solution {
     }
 
     public static void main( String args[] ) {
-        int[][] meetingTimes = {{1, 3}, {4, 6}, {8, 10}, {10, 12}, {13, 15}};
+        int[][] meetingTimes = { {1, 3}, {4, 6}, {8, 10}, {10, 12}, {13, 15} };
         int[] newMeeting = {7, 8};
         System.out.println(checkMeeting(meetingTimes, newMeeting));
         newMeeting = new int[] {9, 11};
@@ -257,7 +257,7 @@ class Solution {
 ## Description
 For this feature, we have a user who wants to add a new meeting to their tentative meeting schedule. First, we need to add the new meeting to the user’s schedule. Then, we want to make refinements in the schedule to merge some of the meetings. The user’s initial schedule will have no conflicts; however, the new meeting might overlap with one or more of the older ones. Therefore, we can save time by merging some of the meetings that can be held together in the same venue (this can be done for the tasks that can run simultaneously). The meetings can only be merged if the new meeting time overlaps or is adjacent to an existing meeting. We merge these meetings to eliminate conflict.
 
-Suppose you are given a list of non-overlapping scheduled meetings, such as {{1, 3}, {4, 6}, {8, 10}, {10, 12}, {13, 15}, {16, 18}}. The new meeting, which we need to fit into this already busy schedule, is also given; it is {9, 13}. In this case, the new meeting overlaps with two meetings: {8, 10} and {10, 12}. After merging, the meeting is adjacent to the {13, 15} meeting, so {13, 15} will also be merged. Hence, the final schedule for the day will be: {{1, 3}, {4, 6}, {8, 15}, {16, 18}}.
+Suppose you are given a list of non-overlapping scheduled meetings, such as { {1, 3}, {4, 6}, {8, 10}, {10, 12}, {13, 15}, {16, 18} }. The new meeting, which we need to fit into this already busy schedule, is also given; it is {9, 13}. In this case, the new meeting overlaps with two meetings: {8, 10} and {10, 12}. After merging, the meeting is adjacent to the {13, 15} meeting, so {13, 15} will also be merged. Hence, the final schedule for the day will be: { {1, 3}, {4, 6}, {8, 15}, {16, 18} }.
 
 The illustration below shows a visual representation of the example.
 
@@ -313,7 +313,7 @@ class Solution {
     }
 
     public static void main( String args[] ) {
-        int[][] meetingTimes = {{1, 3}, {4, 6}, {8, 10}, {10, 12}, {13, 15}, {16, 18}};
+        int[][] meetingTimes = { {1, 3}, {4, 6}, {8, 10}, {10, 12}, {13, 15}, {16, 18} };
         int[] newMeeting = {9, 13};
         System.out.println(Arrays.deepToString(insertMeeting(meetingTimes, newMeeting)));
     }
@@ -329,7 +329,7 @@ For the final part of this project, we want to implement a feature that lets us 
 
 We will also assume that each user’s schedule is free of conflicting meetings, meaning their schedules are non-overlapping. Moreover, the meetings have been already sorted based on their starting time.
 
-Let’s say that we are given the following pairs of meeting schedules: {{1, 3}, {5, 6}, {7, 9}} and {{2, 3}, {5, 7}}. In this example, we can see that both of the users will be busy at the following times: {{2, 3}, {5, 6}}.
+Let’s say that we are given the following pairs of meeting schedules: { {1, 3}, {5, 6}, {7, 9} } and { {2, 3}, {5, 7} }. In this example, we can see that both of the users will be busy at the following times: { {2, 3}, {5, 6} }.
 
 Take a look at the illustration given below:
 
@@ -368,8 +368,8 @@ class Solution {
         return intersection.toArray(new int[intersection.size()][]);
     }
     public static void main( String args[] ) {
-        int[][] meetingsA = {{1, 3}, {5, 6}, {7, 9}};
-        int[][] meetingsB = {{2, 3}, {5, 7}};
+        int[][] meetingsA = { {1, 3}, {5, 6}, {7, 9} };
+        int[][] meetingsB = { {2, 3}, {5, 7} };
         System.out.println(Arrays.deepToString(meetingsIntersection(meetingsA, meetingsB)));
     }
 }
