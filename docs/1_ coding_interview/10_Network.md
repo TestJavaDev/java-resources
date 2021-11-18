@@ -879,7 +879,7 @@ class Solution {
         // Step 2). start the transmitting process via BFS
         int minutesElapsed = -1;
         // Four Neigbors, up, right, down and left
-        int[][] directions = { {-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+        int[][] directions = { {-1, 0}, {0, 1}, {1, 0}, {0, -1} };
 
         while (!queue.isEmpty()) {
             Pair p = queue.poll();
