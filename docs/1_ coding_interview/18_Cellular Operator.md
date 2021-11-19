@@ -93,7 +93,7 @@ class Solution {
     public static void main( String args[] ) {
         // Driver code
         
-        int[][] region = {{1,4,7,11,15},{2,5,8,12,19},{3,6,9,16,22},{10,13,14,17,24},{18,21,23,26,30}};
+        int[][] region = { {1,4,7,11,15},{2,5,8,12,19},{3,6,9,16,22},{10,13,14,17,24},{18,21,23,26,30} };
         int lossValue = 5;
 
         System.out.println("The coordinates of the loss value region are: " + Arrays.toString(determineLocation(region, lossValue)));

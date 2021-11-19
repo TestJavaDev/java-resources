@@ -243,7 +243,7 @@ In this feature, the company has decided that they want to show people “follow
 
 The “following” relationship graph is given in the form of an undirected graph. So, if UserA follows UserB, or the other way around, it does not matter. This graph will be given to you as an input in the form of a 2D array called graph. In this array, each graph[i] will contain a list of indices, j, for which the edge between nodes i and j exists. Each node in the graph will represent a person and will be denoted by an integer ID from 0 to graph.length-1.
 
-For example, the graph can be {{3}, {2, 4}, {1}, {0, 4}, {1, 3}}. This can be illustrated as:
+For example, the graph can be { {3}, {2, 4}, {1}, {0, 4}, {1, 3} }. This can be illustrated as:
 
 ![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das47.png)
 
@@ -289,7 +289,7 @@ class Solution {
         return true;
     }
     public static void main(String args[]) {
-        int[][] graph = {{3}, {2, 4}, {1}, {0, 4}, {1, 3}};
+        int[][] graph = { {3}, {2, 4}, {1}, {0, 4}, {1, 3} };
         System.out.println(isSplitPossible(graph));
     }
 }
