@@ -45,13 +45,13 @@ Stocks are being bought and sold every second in a trading company. It becomes c
 
 We’ll be provided with an input price in the form of a string. We have to validate this input so it can be either accepted or rejected. Some examples are mentioned below for reference:
 
-+40.325 is a valid price.
--1.1.1 is NOT a valid price.
--222 is a valid price.
-++22 is NOT a valid price.
-10.1 is NOT a valid price.
-+22.22 is a valid price.
-100. is NOT a valid price.
+* +40.325 is a valid price.
+* -1.1.1 is NOT a valid price.
+* -222 is a valid price.
+* ++22 is NOT a valid price.
+* 10.1 is NOT a valid price.
+* +22.22 is a valid price.
+* 100. is NOT a valid price.
 
 ## Solution
 We’ll use the state machine below to check if a price is valid or not. The initial state is Start. We’ll process each character to identify the next state. The input string is not a valid price if we reach an UNKNOWN state at any point or if it ends in a DECIMAL point.

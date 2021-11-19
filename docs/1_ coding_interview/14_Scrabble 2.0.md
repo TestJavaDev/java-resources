@@ -158,7 +158,7 @@ class Solution {
 
 ## Feature #2: Possible Results
 
-# Description
+## Description
 In the previous lesson, we built a feature that will calculate the minimum number of conversions from the initial to the final word. Now, we need to fetch and display each new word after each conversion until we reach our end result. We’ll traverse the array and return the complete sequence of words after each conversion from start to end.
 
 Here is an illustration of this process:

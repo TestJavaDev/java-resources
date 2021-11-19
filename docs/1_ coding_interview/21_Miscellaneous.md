@@ -21,7 +21,7 @@ We have an infinite chessboard with coordinates starting from -infinity to infin
 
 The knight has eight possible moves at a given time. It can move in an L-shape, meaning it can move two squares in any direction vertically and then one square horizontally or two squares in any direction horizontally and then one square vertically.
 
-You need to find the minimum moves the knight needs to get from the origin (0,0) to the coordinates (x,y). We will assume that the provided coordinates are always reachable and the constraint |x| + |y| <= 300 holds.
+You need to find the minimum moves the knight needs to get from the origin (0,0) to the coordinates (x,y). We will assume that the provided coordinates are always reachable and the constraint | x | + | y | <= 300 holds.
 
 For example, given the input coordinate, (5, 5) you have to find the minimum number of moves required for the knight to get from the origin to the coordinate. In this case, the program will output four because the knight needs four moves to get to the coordinate.
 
