@@ -17,7 +17,7 @@ Cassandra / Java resources / Tutorial
 ## Goal
 Design a distributed and scalable system that can store a huge amount of structured data, which is indexed by a row key where each row can have an unbounded number of columns.
 
-## Background#
+## Background
 Cassandra is an open-source Apache project. It was originally developed at Facebook in 2007 for their inbox search feature. The Apache Cassandra architecture is designed to provide scalability, availability, and reliability to store large amounts of data. Cassandra combines the distributed nature of Amazon’s Dynamo which is a key-value store and the data model of Google’s BigTable which is a column-based data store. With Cassandra’s decentralized architecture, there is no single point of failure in a cluster, and its performance can scale linearly with the addition of nodes.
 
 ## What is Cassandra?
