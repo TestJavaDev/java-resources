@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data Structures and Algorithms
-nav_order: 5
+nav_order: 4
 permalink: /data_structures
 has_children: true
 ---
