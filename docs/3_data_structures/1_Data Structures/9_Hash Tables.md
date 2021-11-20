@@ -11,3 +11,7 @@ Hash Tables / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>
+
+{% highlight java %}
+
+{% endhighlight %}
