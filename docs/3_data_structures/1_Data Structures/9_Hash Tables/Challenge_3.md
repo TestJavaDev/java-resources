@@ -93,7 +93,7 @@ class CheckSymmetric {
 
   public static void main(String args[]) {
 
-    int[][] arr = {{1, 2}, {3, 4}, {5, 9}, {4, 3}, {9, 5}};
+    int[][] arr = { {1, 2}, {3, 4}, {5, 9}, {4, 3}, {9, 5} };
     String symmetric = findSymmetric(arr);
     System.out.println(symmetric);
 
