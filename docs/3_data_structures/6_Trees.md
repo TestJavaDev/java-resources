@@ -2151,17 +2151,115 @@ Node R – node to be replaced with currentNode and linked with Node P (Node R i
 Deletion Cases #
 Now we will take a look at some of the deletion cases and see what steps should be performed in each of these cases to make the tree balanced again. Given below is the first case in which Node C or Node R is red. In this type of scenario, we make Node R black and link it to Node P.
 
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe1.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe2.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe3.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe4.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe5.png)
+
+The second case is if both Node C and Node R are black, then make Node R black. Now Node R is double black, i.e. it was already black, and when both Node C and Node R are black, then we make Node R black again. Remember that null is always considered to have a black color.
+
+Now we will convert Node R from double to single black.
+
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe6.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe7.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe8.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe9.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe10.png)
+
+We need to perform the following steps while Node R is double black and not the root of the Tree. Use the specifications that Node S (sibling of Node R) is black and one or both of Node S children are red:
+
+Left-Left: Node S is the leftChild of Node P, and Node SC (red) is the leftChild of S, or both children of S are red.
+
+Right-Right: Node S is the rightChild of Node P, and Node SC (red) is the rightChild of S, or both children of S are red.
+
+Left-Right: Node S is the leftChild of Node P and Node SC (red) is the rightChild of S.
+
+Right-Left: Node S is the rightChild of Node P and Node SC (red) is the leftChild of S.
 
 
+Case 1: Left-Left #
+In the case when Node S is the leftChild of Node P, and Node SC (red) is the leftChild of S or both children of S are red, we perform the following steps:
 
+Rotate Node P towards the right
+Make the right child of Node S the left child of Node P
+Look at the illustration below for a better understanding.
 
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe11.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe12.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe13.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe14.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe15.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe16.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe17.png)
 
+Case 2: Right-Right #
+In the case when Node S is the rightChild of Node P, and Node SC (red) is the rightChild of S or both children of S are red, we perform the following steps:
 
+Rotate Node P towards the left
+Make the left child of Node S the right child of Node P
+Look at the illustration below for a better understanding.
 
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe18.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe19.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe20.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe21.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe22.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe23.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe24.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe25.png)
 
+Case 3: Left-Right #
+In the case when Node S is the leftChild of Node P and Node SC (red) is the rightChild of S, we perform the following steps:
 
+Rotate Node S towards the left
+Rotate Node P towards the right
+Look at the illustration below for a better understanding.
 
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe26.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe27.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe28.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe29.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe30.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe31.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe32.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe33.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe34.png)
 
+Case 4: Right-Left #
+In the case when Node S is the rightChild of Node P and Node SC (red) is the leftChild of S, we perform the following steps:
+
+Rotate Node S towards the right
+Rotate Node P towards the left
+Look at the illustration below for a better understanding.
+
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe35.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe36.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe37.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe38.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe39.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe40.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe41.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe42.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe43.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe44.png)
+
+Till this point, we have studied a number of trees from Binary Trees to different types of Binary Trees like BST, and then even further types of BST like AVL and Red-Black Trees. We have covered both basic deletion and insertion operations of these trees along with Java Implementation of BST. We are now left with only one important tree data structure known as 2-3 Trees. So, in the next lesson, we will cover it in detail just like we did with the rest of the tree structures.
+
+## Overview of Trees
+
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe45.png)
+
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe46.png)
+
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe47.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe48.png)
+
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe49.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe50.png)
+
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe51.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe52.png)
 
 
 {% highlight java %}
