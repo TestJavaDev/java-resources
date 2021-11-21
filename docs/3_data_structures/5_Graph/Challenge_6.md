@@ -16,7 +16,7 @@ Challenge 6 / Java resources / Tutorial
 
 Given a graph and two vertices, can you write a code to check if a path exists between the two given vertices? Try it yourself!
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement checkPath() method to take a graph and two vertices as an input and find out if a path exists between them.
 
 If there is no repeated sequence of edges and vertices between the source and the destination vertex then the path exists between these two vertices.
@@ -762,11 +762,11 @@ class CheckPaths {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 This problem can be solved by both DFS and BFS. All we need is a simple traversal from source to see if we can reach destination. If the destination value is found, we return True.
 
 Note that we only use the values in the vertices, not the vertices or the linked list objects themselves. This makes syntax easier.
 
-Time Complexity #
+## Time Complexity 
 It has the same time complexity as the BFS or DFS algorithm: O(V + E).
 

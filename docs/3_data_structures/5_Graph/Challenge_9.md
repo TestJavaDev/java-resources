@@ -18,14 +18,15 @@ In this challenge, we will learn how to delete an edge between two vertices of a
 
 You must implement the remove_edge function which takes a source and a destination as arguments. If an edge exists between the two, it should be deleted.
 
-Input#
+## Input
 A directed graph, a source (integer), and a destination (integer).
 
-Output#
+## Output
 A directed graph with the edge between the source and the destination removed.
 
-Sample Input#
+## Sample Input
 remove_edge(graph, 1, 2)
+
 source: 1
 destination: 2
 
@@ -33,7 +34,7 @@ graph:
 
 ![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr19.png)
 
-Sample Output#
+## Sample Output
 graph:
 
 ![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr20.png)
@@ -707,10 +708,10 @@ class RemoveEdgeSolution {
 }
 {% endhighlight %}
 
-Explanation#
+## Explanation
 This is a fairly simple challenge. Since our vertices are stored in the adjacencyList, we access the linked list at source index. Then we call the deleteByValue function and pass the value of destination vertex.
 
-Time Complexity#
+## Time Complexity
 The time complexity of this solution is:
 
 O(E)

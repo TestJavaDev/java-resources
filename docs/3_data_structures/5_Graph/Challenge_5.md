@@ -16,7 +16,7 @@ Challenge 5 / Java resources / Tutorial
 
 Given a graph, can you write a code to find the number of edges in a graph? A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first.
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement the numEdges() method to take an undirected graph as an input and find the total number of edges in the graph. An illustration is also provided below for your understanding:
 
 ![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr7.png)
@@ -733,9 +733,9 @@ class CheckNumEdges {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 Nothing too tricky going on here. We simply traverse through the complete adjacency list and count the size of each linked list. In an undirected graph, the number of edges is always even because the edges are bidirectional. Hence, to get the number of unique edges, we halve the total sum.
 
-Time complexity #
+## Time complexity
 The time complexity of this algorithm is O(V + E)
 

@@ -16,7 +16,7 @@ Challenge 3 / Java resources / Tutorial
 
 If you are given a graph with all the information about its vertices and edges, can you write a code to detect a cycle? A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first.
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement the detectCycle() method to take a graph as input and detect a cycle in it. A cycle is formed when a few vertices are connected in such a way that they make a loop. An illustration is provided below for a better understanding:
 
 ![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr1.png)
@@ -739,12 +739,12 @@ class CheckCycle {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 The solution might look confusing at first, but the logic behind it is pretty straight forward.
 
 We start by using two boolean arrays, visited and stackFlag. visited keeps a record of all the nodes that have been traversed regardless of the recursive call. stackFlag keeps track of the nodes that have been traversed in the current recursion.
 
 Then we apply a variation of DFS on each node of the graph in a recursive manner. On each call of the method cyclic if we encounter any node which is already in the stack, then we return true. Because this means that we have found a path from that node back to itself!
 
-Time Complexity #
+## Time Complexity
 O(V+E), which we already know is the complexity of traversing the adjacency list that represents our graph.

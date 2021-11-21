@@ -16,19 +16,19 @@ Challenge 7 / Java resources / Tutorial
 
 Given a graph, can you write a code to check if it is a tree or not? A solution is placed in the "solution" section to help you, but we would suggest trying to solve it on your own first.
 
-Problem Statement#
+## Problem Statement
 In this problem, you have to implement isTree() method to take a directed graph as an input and find out if it is a tree. Remember, a graph could only be a tree under the conditions stated below:
+* Each node, except root, has exactly one parent
+* There are no cycles
+* Graph is connected
 
-Each node, except root, has exactly one parent
-There are no cycles
-Graph is connected
 A graph is connected when there is a path between every pair of vertices. In a connected graph, there are no unreachable vertices. Each vertex must be able to reach every other vertex through either a direct edge or through a graph traversal.
 
 ![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr13.png)
 
 ![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr14.png)
 
-Explanation#
+## Explanation
 A graph from the sample input is a tree because it doesn’t contain any loop, and if we start from any vertex as a source we can reach all the remaining vertices of the graph.
 
 An illustration is also provided for your understanding.
@@ -1266,12 +1266,12 @@ class CheckTree {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 This solution is simpler than the previous one but still manages to check for all the necessary conditions.
 
 We have used BFS traversal in this solution but, note that it can also be performed using DFS traversal. We have used the root node, i.e, 0 vertice, as the source node for the traversal. We maintain a count of the visited nodes in the variable numberOfVisited. During traversal, if an already visited vertex is encountered, we return false as it means that the graph fails the tree conditions. In fact, this condition also encompasses the check cyclic condition and check one parent condition from the solution given above. Hence, it removes redundancy. Finally, when the BFS loop ends, we check the numberOfVisited variable to see if all vertices were visited. This condition takes care of the graph is connected check that we performed previously. If the condition fails, false is returned. Otherwise, the function isTree returns true.
 
-Time Complexity #
+## Time Complexity 
 The time complexity of this solution is the same as the previous solution i.e. O(V + E). However, in terms of running time this solution is faster than the previous one as we eliminate unnecessary steps.
 
 

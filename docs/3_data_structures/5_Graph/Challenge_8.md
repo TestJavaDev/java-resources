@@ -16,7 +16,7 @@ Challenge 8 / Java resources / Tutorial
 
 Given a graph, find the shortest path between two vertices. A solution is placed in the "solution" section to help you, but we would suggest trying to solve it on your own first.
 
-Problem Statement#
+## Problem Statement
 In this problem, you have to implement the findShortestPathLength() method to take an undirected graph and two vertices (A and B) as inputs, and return the length of the shortest path between those vertices in Graph. Remember, the shortest path will contain the minimum number of edges. An illustration is provided below for your understanding:
 
 ![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr16.png)
@@ -735,16 +735,15 @@ class CheckMin {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 Once again, Breadth First Search comes to the rescue. The visited list must be familiar to you by now. The crux of this algorithm, however, lies in the distance list. For each node, the indexed value in the distance shows the node’s distance from the source in terms of the number of edges.
 
 The rest is a simple BFS traversal, where the distance is incremented by 1 each time.
 
 We are guaranteed to find the shortest distance to destination, once it has already been visited through the longer path and consequently marked because it won’t be visited the same way again.
 
-Time Complexity #
+## Time Complexity 
 The algorithm will have the same time complexity as BFS:
-
-O(V + E)O(V+E)
+O(V + E)
 
 

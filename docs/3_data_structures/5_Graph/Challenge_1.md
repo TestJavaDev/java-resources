@@ -16,25 +16,25 @@ Challenge 1 / Java resources / Tutorial
 
 In this lesson, you have to implement the Breadth First Search algorithm discussed in the previous lesson. A solution is placed in the "solution" section to help you, but we would suggest trying to solve it on your own first.
 
-Problem Statement#
+## Problem Statement
 In this exercise, you have to implement Breadth First Search traversal in Java. It is a level-by-level searching algorithm for the graph, so we are going to use our already-implemented class of Graph for this task (since we have already covered the implementation of Graph).
 
 Note: Your solution should work for both connected and unconnected graphs. For an unconnected graph, the order of output should depend upon indices in ascending order.
 
 To solve this problem, all the previously implemented data structures will be available to us.
 
-Input#
+## Input
 A graph in the form of an adjacency list
 
-Output#
+## Output
 A string containing the vertices of the graph listed in the correct order of traversal.
 
-Sample Input#
+## Sample Input
 Graph:
 
 ![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff1.png)
 
-Sample Output#
+## Sample Output
 "01234"
 
 ![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff2.png)
@@ -728,7 +728,7 @@ class CheckBFS {
 }
 {% endhighlight %}
 
-Explanation#
+## Explanation
 The bfs() function is a wrapper for the bfsVisit() function which actually performs the traversal on one source vertex at a time and outputs all vertices reachable from the source. The reason for using the wrapper function is to make sure we traverse all vertices even when they are not reachable from any other vertex in the graph.
 
 In the bfs() function, we insert the vertices into the queue, starting from the source vertex. To keep track of the nodes that have been traversed, every node inserted into the queue is marked visited in the visited array.
@@ -737,7 +737,7 @@ The result string is our output variable. The value of a node is appended to res
 
 The First In First Out (FIFO) structure of the queue ensures that the graph is traversed one level at a time
 
-Time Complexity#
+## Time Complexity
 Since this algorithm traverses the whole graph once, its time complexity is O(V + E).
 
 

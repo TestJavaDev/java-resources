@@ -16,27 +16,27 @@ Challenge 2 / Java resources / Tutorial
 
 In this lesson, you have to implement the Depth Frist Search algorithm discussed in the previous lesson. A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first.
 
-Problem Statement#
+## Problem Statement
 In this exercise, you have to implement Depth First Search traversal in Java. It is a searching algorithm for the graph which traverses down each branch depth-wise and backtracks after reaching a leaf node. We are going to use our already-implemented class of Graph for this task (since we have already covered the implementation of Graph).
 
 Note: Your solution should work for both connected and unconnected graphs. For an unconnected graph, the order of output should depend upon indices in ascending order.
 
 To solve this problem, all the previously implemented data structures will be available to us.
 
-Input#
+## Input
 A graph in the form of an adjacency list
 
-Output#
+## Output
 A string containing the vertices of the graph listed in the correct order of traversal.
 
-Sample Input#
+## Sample Input
 Graph:
 
 ![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff8.png)
 
 In the Input column of Test cases, this graph will be represented as: |V|=5, E:[(0,1)(0,2)(1,3)(1,4)], where, |V| represents the number of vertices while E represents the edges.
 
-Sample Output#
+## Sample Output
 "01342"
 
 ![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff9.png)
@@ -783,13 +783,13 @@ class CheckDFS {
 }
 {% endhighlight %}
 
-Explanation#
+## Explanation
 The dfs() function is a wrapper for the dfsVisit() function which actually performs the DFS traversal on one source vertex at a time and outputs all vertices reachable from it. The reason for using the wrapper function is to make sure we traverse all vertices even when they are not reachable from any other vertex in the graph.
 
 The approach is very similar to that of the BFS solution. However, instead of a queue, we use a stack since it follows the Last In First Out (LIFO) approach. We will see how that is useful below.
 
 In the dfs() function we start from the source vertex and then each node is pushed into the stack. Whenever a node is pushed into the stack, the nodes from its adjacency list are pushed into the stack as well. Then, it is marked visited in the visited list. Now we can understand why we need the stack because it keeps popping out the new adjacent nodes (giving you a node at a new level) instead of returning the previous nodes that we pushed in.
 
-Time Complexity#
+## Time Complexity
 Like the BFS, this algorithm traverses the whole list once. Hence, it’s time complexity is O(V + E)
 
