@@ -16,22 +16,23 @@ Challenge 6 / Java resources / Tutorial
 
 Given an array with positive and negative integers, can you extract a contiguous sub-array from it which adds up to zero? A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first.
 
-Problem Statement#
+## Problem Statement
 In this problem, you have to implement the findSubZero() function to check whether a given array has a contiguous subarray with a sum equal to zero. An illustration is also provided for your understanding.
 
-
-Function Prototype:#
+## Function Prototype:
 boolean findSubZero(int[] arr);
 Here, arr is an Integer array.
 
-Output:#
+## Output:
 It returns true if a contiguous subarray exists with a sum equal to 0, or else the function returns false.
 
-Sample Input#
+## Sample Input
 arr = {6, 4, -7, 3, 12, 9}
-Sample Output#
+
+## Sample Output
 true
-Explanation#
+
+## Explanation
 The SubArray from index 1 to 3 has sums equal to zero, i.e.
 
 arr[1] + arr[2] + arr[3] = 0

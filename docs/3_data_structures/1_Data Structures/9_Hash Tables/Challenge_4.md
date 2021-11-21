@@ -51,7 +51,7 @@ class CheckPath {
     return result; 
   }
 }
-{% endhighlight %
+{% endhighlight %}
 
 ## Solution Review: Trace the complete path of a journey
 
