@@ -13,17 +13,17 @@ Trees / Java resources / Tutorial
 
 ## What is a Tree?
 
-Introduction#
+## Introduction
 In this chapter, we will learn a hierarchical data structure known as a Tree. A tree consists of nodes (vertices) that are connected using pointers (edges). Trees are similar to Graphs; the key differentiating point is that a cycle cannot exist in a Tree.
 
 The basic structure of a tree consists of the following components:
+* Nodes: Hold data
+* Root: The uppermost node of a tree
+* Parent Node: A node which is connected to one or more nodes on the lower level (Child Nodes).
+* Child Node: A node which is linked to an upper node (Parent Node)
+* Sibling Node: Nodes that have the same Parent Node
+* Leaf Node – A node that doesn’t have any Child Node
 
-Nodes: Hold data
-Root: The uppermost node of a tree
-Parent Node: A node which is connected to one or more nodes on the lower level (Child Nodes).
-Child Node: A node which is linked to an upper node (Parent Node)
-Sibling Node: Nodes that have the same Parent Node
-Leaf Node – A node that doesn’t have any Child Node
 The figure below shows all the terminologies described above:
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a1.png)
@@ -48,29 +48,23 @@ The figure below shows all the terminologies described above:
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a20.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a21.png)
 
-Explanation:#
+## Explanation:
 In the figure above, 1 is the Root as well as the parent node to child nodes 2, 3 and 4. Node 3 is a parent node to child nodes 6 and 7. As nodes 2,3, and 4 share the same parent node 1 -they are sibling nodes. Similarly, 6 and 7 are sibling nodes because they both have 3 for their parent node.
 
-Terminology Used in Trees#
+## Terminology Used in Trees
 Here are some other common terminologies used in trees:
 
-Sub-tree:
+* Sub-tree:
 A subtree is a portion of a tree that can be viewed as a complete tree on its own. Any node in a tree, together with all the connected nodes below it, comprise a subtree of the original tree. Think of the sub-tree as an analogy for the term, proper subset.
-
-Degree:
+* Degree:
 The degree of a node refers to the total number of sub-trees of a node
-
-Depth:
+* Depth:
 The number of connections (edges) from the root to a node is known as the depth of that node.
-
-Level:
-
+* Level:
 (Depth Of Node) + 1
-
-Height of a Node:
+* Height of a Node:
 The maximum number of connections between the node and a leaf node in its path is known as the height of that node.
-
-Height of a Tree:
+* Height of a Tree:
 The height of a tree is simply the height of its root node.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b1.png)
@@ -89,21 +83,21 @@ There are a total of six sub-trees in the above tree, and each is marked with a 
 
 ## Types of Trees
 
-Introduction#
+## Introduction
 Trees being advanced data structures, offer a wide variety of types to provide an efficient solution, specific to a particular use. Trees are extensively used in Artificial Intelligence and complex algorithms to provide an efficient storage mechanism for problem-solving. Based on the structure, height, and other features like time/space complexity, there are different types of trees.
 
 The most commonly used types are listed below:
+* N-ary Tree
+* Balanced Tree
+* Binary Tree
+* BinarySearchTree
+* AVL Tree
+* Red-Black Tree
+* 2-3 Tree
 
-N-ary Tree
-Balanced Tree
-Binary Tree
-BinarySearchTree
-AVL Tree
-Red-Black Tree
-2-3 Tree
 Let’s take a look at N-ary and Balanced Trees in this lesson and the other types later in the chapter.
 
-N-ary Tree#
+## N-ary Tree
 In N-ary trees, each node can have child nodes anywhere from 0 to N. So if it’s a 2-ary tree, commonly known as a Binary Tree, it can have a max. of 0-2 child nodes. Can you guess the value of N in the figure shown below?
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b12.png)
@@ -118,21 +112,21 @@ In N-ary trees, each node can have child nodes anywhere from 0 to N. So if it’
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b16.png)
 
-Checking if a binary tree is balanced #
+## Checking if a binary tree is balanced 
 Try to guess if the following tree is balanced or not before looking at the answer!
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b17.png)
 
 his tree is height-balanced! How did we determine that? Let’s go through and break our thought process down into a series of steps to find out.
 
-Steps to Check if Tree is Balanced #
+## Steps to Check if Tree is Balanced 
 This is the list of steps to follow to find out if a tree is balanced or not:
+1. Start from the leaf nodes and move towards the root.
+2. Along with traversing the tree, compute the heights of the left-subtree and right-subtree of each node. The height of a leaf node is always 0.
+3. At each node, check if the difference in height between the left and right sub-tree is more than 1; if so, then it means that the tree is not balanced.
+4. If you have completely traversed the tree and haven’t caught the above condition, then it shows that the tree is balanced. (The height difference between the left and right sub-trees is NOT more than 1.)
 
-Start from the leaf nodes and move towards the root.
-Along with traversing the tree, compute the heights of the left-subtree and right-subtree of each node. The height of a leaf node is always 0.
-At each node, check if the difference in height between the left and right sub-tree is more than 1; if so, then it means that the tree is not balanced.
-If you have completely traversed the tree and haven’t caught the above condition, then it shows that the tree is balanced. (The height difference between the left and right sub-trees is NOT more than 1.)
-Example #
+## Example
 In the illustration below, we are implementing what we learned from the above four steps. Here, HLT means the height of the Left Tree and HRT means the height of the right tree:
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e1.png)
@@ -149,17 +143,17 @@ In the illustration below, we are implementing what we learned from the above fo
 
 ## What is a Binary Tree?
 
-Introduction#
+## Introduction
 The only characteristic which separates Binary Tree from N-ary trees is that any internal-node (non-leaf node) can only contain a maximum of two child nodes. Each node strictly has reference to a left and a right node; we call them its left and right child. The figure below shows what a Binary Tree looks like:
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e12.png)
 
-Types of Binary Trees#
+## Types of Binary Trees
 The following are further variations of binary trees, based on the structure and other features:
+* Complete Binary Tree
+* Full Binary Tree
+* Perfect Binary Tree
 
-Complete Binary Tree
-Full Binary Tree
-Perfect Binary Tree
 Starting with Complete Binary Tree, let’s discuss each one of them and look at their characteristics and structure.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e13.png)
@@ -175,11 +169,10 @@ Starting with Complete Binary Tree, let’s discuss each one of them and look at
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e18.png)
 
 There are many other advanced trees derived from the basic structure of binary trees. These types will be discussed in the upcoming lessons. Some of the most common ones are:
-
-Skewed Binary Tree
-Binary Search Tree
-AVL Tree
-Two-Three Tree
+* Skewed Binary Tree
+* Binary Search Tree
+* AVL Tree
+* Two-Three Tree
 
 ## More on Complete Binary Trees
 
@@ -189,12 +182,10 @@ Two-Three Tree
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e21.png)
 
-Insertion in Complete Binary Tree#
+## Insertion in Complete Binary Tree
 The following steps are involved in inserting a value in a Complete Binary Tree:
-
-Nodes are inserted level by level
-
-Fill in the left-subtree before moving to the right one
+* Nodes are inserted level by level
+* Fill in the left-subtree before moving to the right one
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e22.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e23.png)
@@ -207,25 +198,24 @@ Fill in the left-subtree before moving to the right one
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e30.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e31.png)
 
-Explanation#
+## Explanation
 As you can see in the above animation, Node 4 was inserted as a left child of Node 2 to fill the property of the Complete Binary Tree. In a Complete Binary Tree, nodes don’t exist with the right child only. The right child exists only when the left child is also present. So during Insertion, make sure to insert a node as a left child first (if it’s empty in the left sub-tree) before moving to right sub-tree.
 
 ## Skewed Binary Tree
 
-Introduction#
+## Introduction
 A Skewed Binary Tree is a type of Binary Tree where all nodes are shifted to either the left or right side. It can also be defined as a Binary Tree in which the number of children is firmly restricted to one at each node. Furthermore, the side at which that single child node is present, either left or right, is also fixed throughout the tree. This type of Binary Tree structure is avoided at all cost, as we will have to perform n number of comparisons to search for a node, where n is the total number of nodes in the tree.
 
-Types of Skewed Binary Tree#
+## Types of Skewed Binary Tree
 There are two types of Skewed Binary Trees based on which side is dominated:
-
-Left-Skewed Binary Tree
-Right-Skewed Binary Tree
+* Left-Skewed Binary Tree
+* Right-Skewed Binary Tree
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e32.png)
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e33.png)
 
-Note#
+## Note
 Try your best to avoid such tree structures, especially in the case of a Binary Search Tree, as it will kill efficient searching (the core purpose of a Binary Search Tree).
 
 ## What is a Binary Search Tree (BST)?
@@ -238,29 +228,25 @@ For example, in the above tree Node Y is a parent node having two child nodes, S
 
 Therefore, the value of Node Y will be less than X and the value of SubTree 3 is greater than Node X.
 
-Different b/w Binary Search Tree and Binary Tree#
+## Different b/w Binary Search Tree and Binary Tree
 Not every Binary Tree is a Binary Search Tree. BST is simply a type of Binary Tree. For a Binary Tree to qualify as a Binary Search Tree, it needs to follow the general rule which we covered earlier.
 
 Let’s see an example to understand why every Binary Tree is not always a Binary Search Tree?
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e36.png)
 
-Explanation#
+## Explanation
 As you can see in the above figure, the first one is a Binary Tree because each node has a maximum of two children. But why isn’t it a Binary Search Tree? Because it does not follow the BST rule that Node 2 cannot be a left child of Node 1, and we would need to make Node 1 a left child of Node 2 to convert it into a Binary Search Tree.
 
 Now that we have studied a Binary Search Tree and how it’s different from a simple Binary Tree, it is time to implement the basic operations –Insert(), Search() and Delete()–to see how efficient this BST is compared to a simple Binary Tree.
 
-Explanation#
-As you can see in the above figure, the first one is a Binary Tree because each node has a maximum of two children. But why isn’t it a Binary Search Tree? Because it does not follow the BST rule that Node 2 cannot be a left child of Node 1, and we would need to make Node 1 a left child of Node 2 to convert it into a Binary Search Tree.
+## Insertion in Binary Search Trees
 
-Now that we have studied a Binary Search Tree and how it’s different from a simple Binary Tree, it is time to implement the basic operations –Insert(), Search() and Delete()–to see how efficient this BST is compared to a simple Binary Tree.
-
-Implementing Insertion#
+## Implementing Insertion
 To implement the insertion operation of a Binary Search Tree, we first need to build a simple Binary Tree. A basic class of Binary Tree is where every node holds the following information:
-
-Data/Key-Value
-Pointer to its left child
-Pointer to its right child
+* Data/Key-Value
+* Pointer to its left child
+* Pointer to its right child
 
 {% highlight java %}
 class Node{
@@ -291,13 +277,12 @@ Since every tree has a root or a starting node, we can start from there to move 
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e37.png)
 
-Insert Function#
+## Insert Function
 The insertion functionality works according to the following steps. See the illustration below for better understanding.
-
-Start from the root node.
-Check if the value is greater than root/current node data.
-If yes, then traverse the right sub-tree. Otherwise, if the value is less than or equal to the current node value, traverse its left sub-tree.
-Repeat steps two and three until you find a leaf node, then insert the data and connect the new node with the leaf node, which will now become parent of that new node.
+1. Start from the root node.
+2. Check if the value is greater than root/current node data.
+3. If yes, then traverse the right sub-tree. Otherwise, if the value is less than or equal to the current node value, traverse its left sub-tree.
+4. Repeat steps two and three until you find a leaf node, then insert the data and connect the new node with the leaf node, which will now become parent of that new node.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w1.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w2.png)
@@ -311,16 +296,16 @@ Repeat steps two and three until you find a leaf node, then insert the data and 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w10.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w11.png)
 
-Explanation#
+## Explanation
 While inserting 17 into the tree, we first traverse the nodes from the root by comparing every node value with 17. This happens until we reach the right node, which is 15 in this case. Now we know 15 is smaller than 17 so we will add the new node at the right child node of 15. We will insert 12 by performing the same series of steps, starting from the root node.
 
 ## Insertion in BST (Complete Implementation)
 
-Introduction#
+## Introduction
 There are two techniques to code an Insertion Function:
+* Iterative
+* Recursive
 
-Iterative
-Recursive
 First, let’s see how Iterative methodology works. The following tree is what we will build once we successfully implement the insertion functionality in Binary Search Tree code.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w12.png)
@@ -458,7 +443,7 @@ class binarySearchTreeDemo {
 }
 {% endhighlight %}
 
-Explanation#
+## Explanation
 Add function takes an integer value and then traverses the BST tree for a valid position to insert a value. It starts from the root of the tree and traverses the leaf node. Traversing is based on the BST formula, i.e. if the current node’s value is less than key-value, then we will have to find an appropriate position in the right subtree of the current node before we try to find a position in the left subtree.
 
 When we reach the leaf node, we will create a new node, assign it a given value, and link it with the leaf node. If the leaf node’s value is less than the given value then make the new node rightChild of leafNode, or else make it leftChild.
@@ -579,12 +564,11 @@ class binarySearchTreeDemo {
 
 ## Search in Binary Search Trees (Implementation)
 
-Introduction#
+## Introduction
 In this lesson, we are going to implement the Search functionality by using the previously implemented BST class. The following are the steps which we perform to search for an element in BST.
-
-Start from Root.
-If the value is less than the current node value, then traverse the left sub-tree; if it is more, then traverse the right sub-tree.
-Keep on doing the above step until you either find a node with that value or reach a leaf node—in which case the value doesn’t exist in the Binary Search Tree.
+1. Start from Root.
+2. If the value is less than the current node value, then traverse the left sub-tree; if it is more, then traverse the right sub-tree.
+3. Keep on doing the above step until you either find a node with that value or reach a leaf node—in which case the value doesn’t exist in the Binary Search Tree.
 
 {% highlight java %}
 class binarySearchTree {
@@ -872,18 +856,18 @@ class binarySearchTreeDemo {
 
 ## Deletion in Binary Search Trees
 
-Introduction#
+## Introduction
 In this lesson, we are going to look at the three deletion cases and the steps required to perform deletion in each case.
 
 The three cases are given below:
+* Deletion at Leaf Node
+* Deletion at Parent Node
+   * Node has only one child
+   * Node has two children
 
-Deletion at Leaf Node
-Deletion at Parent Node
-Node has only one child
-Node has two children
 Now let’s look at all the case one by one.
 
-Deletion at Leaf Node#
+## Deletion at Leaf Node
 If the node we want to delete is present at the leaf node in a Binary Search Tree, we simply remove that leaf node. After deletion, its parent node will point to null. If the leaf node was the left child of Node X, then make leftChild of Node X null; if it was the right one, then make the rightChild pointer of node X point to null. See the following example for clarification:
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w18.png)
@@ -893,12 +877,12 @@ If the node we want to delete is present at the leaf node in a Binary Search Tre
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w22.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w23.png)
 
-Deletion at Parent Node#
+## Deletion at Parent Node
 Deletion at the Parent Node is further sub-divided into two cases:
+* Parent node with only one child
+* Parent node with two children
 
-Parent node with only one child
-Parent node with two children
-Parent Node with only one Child#
+## Parent Node with only one Child
 If the parent node that you want to delete has only one child, then delete the parent node first. After doing that, take the deleted parent-node’s child and link it with the parent node of the deleted node. Now the parent of the deleted node will become the parent of the child node.
 
 It will be easier to understand visually, so take a look at the following illustration:
@@ -911,14 +895,11 @@ It will be easier to understand visually, so take a look at the following illust
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w29.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w30.png)
 
-Parent Node has Two Children#
+## Parent Node has Two Children
 It is a little more complex than the first two cases. Here’s the list of steps you perform when deleting a parent node with two children in a BST:
-
-Start by traversing the right subtree of the soon-to-be deleted parent node in such a way that you reach the left-most value—the value that will appear to be the smallest value in the whole subtree.
-
-Replace the value of the node, found in the last step, with the parent’s node value.
-
-Finally, delete the leaf node.
+1. Start by traversing the right subtree of the soon-to-be deleted parent node in such a way that you reach the left-most value—the value that will appear to be the smallest value in the whole subtree.
+2. Replace the value of the node, found in the last step, with the parent’s node value.
+3. Finally, delete the leaf node.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q1.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q2.png)
@@ -935,13 +916,13 @@ Finally, delete the leaf node.
 
 We will cover the implementation of deletion, including all the cases that we discussed previously: Node as a Leaf, Parent Node with one child, and Parent Node with two children.
 
-Deletion Cases#
+## Deletion Cases
 As discussed in the last lesson, the following are the three cases of deletion in a Binary Search Tree:
+* Node is a leaf node
+* Node has a one child
+* Node has two children
 
-Node is a leaf node
-Node has a one child
-Node has two children
-Implementation in Java#
+## Implementation in Java
 Look at the code snippet below and try to understand the code. If you don’t understand at​​ any point, you can just read the explanation below.
 
 {% highlight java %}
@@ -1169,60 +1150,46 @@ class binarySearchTreeDemo {
 }
 {% endhighlight %}
 
-xplanation#
+## Explanation
 Let’s break the above code down into different sections:
-
-Main function – Creates BST and calls the delete function.
-
-Delete function – Takes the node value to be deleted and the root node. It returns a boolean for successful/unsuccessful deletion.
-
-findLeastNode – Takes in the root node of the right sub-tree on the node to be deleted, and returns the least value node in that sub-tree.
+* Main function – Creates BST and calls the delete function.
+* Delete function – Takes the node value to be deleted and the root node. It returns a boolean for successful/unsuccessful deletion.
+* findLeastNode – Takes in the root node of the right sub-tree on the node to be deleted, and returns the least value node in that sub-tree.
 
 Let’s take a look at these functions one by one.
 
-
-Main#
-We are creating an instance of a Binary Search Tree class.
-
-We will be handling these three cases in our code:
-
-Node at Leaf: Delete Node 15
-
-Node is a Parent Node with two children: Delete Node 6
-
-Node is a Parent Node with only one child: After deletion of first two nodes, deleting Node 1
+## Main
+1. We are creating an instance of a Binary Search Tree class.
+2. We will be handling these three cases in our code:
+   * Node at Leaf: Delete Node 15
+   * Node is a Parent Node with two children: Delete Node 6
+   * Node is a Parent Node with only one child: After deletion of first two nodes, deleting Node 1
 
 
-Delete (int value, Node start)#
+## Delete (int value, Node start)
 The delete function gets called whenever we want to delete a node from the tree. It searches from the start node, which is the root of the tree, looking for the node with the key value equal to the value variable given in the function argument. The function keeps traversing the nodes till it either finds the node to be deleted or reaches the end of the tree.
 
 While Traversing the tree, we will keep track of current node and its parent node. We will be using them in the third case to link parent node with the new child. When the node to be deleted is found in the tree, we will perform the following steps:
-
-If the node to be deleted is a leaf node, simply set its parent to null.
-
-If the node to be deleted has only one child, link that node’s parent with its child.
-
-If the node to be deleted has two children, then search for the node with least value in the right sub-tree. We will be using a helper function called findLeastNode (root_of_right_subtree) for this purpose. After finding the leastNode, replace the currentNode value with the least node value, and then call the delete function for that least node (which will now be a leaf node) so our first case will be called.
+* If the node to be deleted is a leaf node, simply set its parent to null.
+* If the node to be deleted has only one child, link that node’s parent with its child.
+* If the node to be deleted has two children, then search for the node with least value in the right sub-tree. We will be using a helper function called findLeastNode (root_of_right_subtree) for this purpose. After finding the leastNode, replace the currentNode value with the least node value, and then call the delete function for that least node (which will now be a leaf node) so our first case will be called.
 
 
-findLeastNode (Node start)#
+## findLeastNode (Node start)
 In this function, start will be the root of the right sub-tree on the node that we are planning to delete. We will iterate the left sub-tree of the start node recursively until we find the least value node.
 
-Time Complexity for Deletion#
+## Time Complexity for Deletion
 The worst case time complexity for the delete operation is O(h) where h is the height of the BST. In the worst case, we will have to traverse from the root to the deepest leaf node in the tree. If the height of the skewed tree becomes n then the time complexity will be O(n).
 
 ## Pre-Order Traversal in Binary Search Trees
 
-Pre-Order Traversal#
+## Pre-Order Traversal
 In this type, the elements are traversed in “root-left-right” order. We first visit the root/parent node and then the children; First the left child and then the right one.
 
 The following steps are required to perform Pre-Order Traversal, starting from the root node:
-
-Visit the current node and display its data.
-
-Traverse the left sub-tree of currentNode, recursively using the PreOrder() function.
-
-Traverse the right sub-tree of currentNode, recursively using the PreOrder() function.
+1. Visit the current node and display its data.
+2. Traverse the left sub-tree of currentNode, recursively using the PreOrder() function.
+3. Traverse the right sub-tree of currentNode, recursively using the PreOrder() function.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q11.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q12.png)
@@ -1234,7 +1201,7 @@ Traverse the right sub-tree of currentNode, recursively using the PreOrder() fun
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q18.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q19.png)
 
-Implementation in Java#
+## Implementation in Java
 Now we will try to implement the same example in the code below, so have a look:
 
 {% highlight java %}
@@ -1438,14 +1405,11 @@ class preOrderTraversal {
 
 ## In-Order Traversal in Binary Search Trees
 
-In-Order Traversal#
+## In-Order Traversal
 In this type, the elements are traversed in a “left-root-right” order: we first visit the left node, then comes the turn of the root, and finally the right child. The following steps are required to perform In-Order Traversal, starting from the root node:
-
-Traverse the left sub-tree of currentNode, recursively using the InOrder() function.
-
-Visit the ​​​current node and read.
-
-Traverse the right sub-tree of currentNode, recursively using the In-Order() function.
+1. Traverse the left sub-tree of currentNode, recursively using the InOrder() function.
+2. Visit the ​​​current node and read.
+3. Traverse the right sub-tree of currentNode, recursively using the In-Order() function.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r1.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r2.png)
@@ -1460,7 +1424,7 @@ Traverse the right sub-tree of currentNode, recursively using the In-Order() fun
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r11.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r12.png)
 
-Implementation in Java#
+## Implementation in Java
 Now we will try to implement the same example in the code below, so have a look:
 
 {% highlight java %}
@@ -1605,16 +1569,13 @@ class inOrderTraversal {
 
 ## Post-Order Traversal in Binary Search Tree
 
-Post-order Traversal#
+## Post-order Traversal
 In this type, the elements are traversed in a “left-right-root” order: We first visit the left child node, then the right child, and then comes the turn of root/parent node.
 
 Follow the steps below to perform Post-Order Traversal, starting from the root node:
-
-Traverse the left sub-tree of currentNode, recursively using PostOrder() function.
-
-Traverse the right sub-tree of currentNode, recursively using PostOrder() function.
-
-Visit current node and print its value.
+* Traverse the left sub-tree of currentNode, recursively using PostOrder() function.
+* Traverse the right sub-tree of currentNode, recursively using PostOrder() function.
+* Visit current node and print its value.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d1.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d2.png)
@@ -1632,7 +1593,7 @@ Visit current node and print its value.
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d14.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d15.png)
 
-Implementation in Java#
+## Implementation in Java
 Now we will try to implement the same example in the code below, so have a look:
 
 {% highlight java %}
@@ -1776,20 +1737,19 @@ class postOrderTraversal {
 
 ## What is an AVL Tree?
 
-Introduction#
+## Introduction
 AVL trees are a self-balanced special type of Binary Search Tree with just one exception:
 
 For each Node, the maximum height difference between the left and right sub-trees can only be one.
 
 If at any point their difference becomes more than one, then re-balancing is applied to make it a valid AVL tree.
 
-Time Complexity#
-As we studied earlier, in the case of BST, the Big(O) of all three basic operations (Insertion, Deletion, and Searching) takes O(h)O(h) time, where “h” is the height of a Binary Search Tree.
+## Time Complexity
+As we studied earlier, in the case of BST, the Big(O) of all three basic operations (Insertion, Deletion, and Searching) takes O(h) time, where “h” is the height of a Binary Search Tree.
 
-In the case of Skewed Trees, the complexity becomes O(n)O(n), where “n” is the number of nodes in the tree. Now to improve time complexity, We have to manage the height of the tree to improve time complexity, such that we can bring the time down to O(logn)O(logn) for performing these basic operations.
+In the case of Skewed Trees, the complexity becomes O(n), where “n” is the number of nodes in the tree. Now to improve time complexity, We have to manage the height of the tree to improve time complexity, such that we can bring the time down to O(logn) for performing these basic operations.
 
-
-When to use AVL Trees?#
+## When to use AVL Trees?
 As AVL are strictly balanced, AVL Trees are preferred in those applications where the lookup​ is the​ ​ most vital operation. The following is an example of a valid AVL Tree:
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d18.png)
@@ -1802,7 +1762,7 @@ Given below is an example of an invalid AVL tree as the height between the sibli
 
 ## AVL Insertion
 
-Insertion in AVL Tree#
+## Insertion in AVL Tree
 Insertion for an AVL tree follows the same steps that we covered in BST insertion.
 
 The main step comes after insertion when the tree gets unbalanced.
@@ -1810,26 +1770,22 @@ The main step comes after insertion when the tree gets unbalanced.
 To re-balance the tree, we need to perform some kind of rotation (left or right). But before getting into the deeper concepts that’ll be a mess for you to understand at this point, let’s slowly cover one case at a time.
 
 Let’s look at some of the terms which we will be using while re-balancing the tree.
+* Node U – an unbalanced node
+* Node C – child node of node U
+* Node G – grandchild node of node U
 
-Node U – an unbalanced node
-Node C – child node of node U
-Node G – grandchild node of node U
-Insertion Cases#
+## Insertion Cases
 To rebalance the tree, we will perform rotations on the subtree with Node U as being the root node.
 
 There are two types of rotations:
+* left
+* right
 
-left
-right
 We came across four different scenarios based on the arrangements of Nodes U, C and, G.
-
-Left-Left: Node C is the left-child of Node U, and Node G is the left-child of Node C.
-
-Left-Right: Node C is the left-child of Node U, and Node G is the right-child of Node C.
-
-Right-Right: Node C is the right-child of Node U, and Node G is the right-child of Node C.
-
-Right-Left: Node C is the right-child of Node U, and Node G is the left-child of Node C.
+* Left-Left: Node C is the left-child of Node U, and Node G is the left-child of Node C.
+* Left-Right: Node C is the left-child of Node U, and Node G is the right-child of Node C.
+* Right-Right: Node C is the right-child of Node U, and Node G is the right-child of Node C.
+* Right-Left: Node C is the right-child of Node U, and Node G is the left-child of Node C.
 
 ## Case 1: Left-Left
 
@@ -1840,7 +1796,7 @@ Right-Left: Node C is the right-child of Node U, and Node G is the left-child of
 
 As you can see in the left-left case, we only need to make a single rotation towards the right at Node U to balance the AVL tree. In the final balanced version, Node C becomes the parent node of Node G and U and its two subtrees become balanced.
 
-Case 2: Left-Right#
+## Case 2: Left-Right
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se5.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se6.png)
@@ -1851,12 +1807,12 @@ Case 2: Left-Right#
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se11.png)
 
 In the left-right case we need to make two rotations:
+* First is a left rotation at Node C.
+* Second is a right rotation at Node U.
 
-First is a left rotation at Node C.
-Second is a right rotation at Node U.
 These two rotations balance the AVL tree. In this case, Node G becomes the parent node of both Node C and U.
 
-Case 3: Right-Right#
+## Case 3: Right-Right
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw1.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw2.png)
@@ -1865,7 +1821,7 @@ Case 3: Right-Right#
 
 The right-right case is just like the left-left case. The only difference is that instead of rotating right, we ​need to make a ​single rotation towards the left at Node U to balance the AVL tree. In the final balanced version, Node C becomes the parent node of Node G and U and its two subtrees become balanced.
 
-Case 4: Right-Left#
+## Case 4: Right-Left
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw5.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw6.png)
@@ -1877,57 +1833,53 @@ Case 4: Right-Left#
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw12.png)
 
 The right-left case is similar to the left-right case. The only difference is that the two rotations performed are as follows:
+* First is a right rotation at Node C.
+* Second is a left rotation at Node U.
 
-First is a right rotation at Node C.
-Second is a left rotation at Node U.
 These two rotations balance the AVL tree. In this case, Node G becomes the parent node of both Node C and U.
 
-Time Complexity#
-Considering that it takes constant time to do left-right rotation operations and update the height to get a balanced tree, the time complexity of an AVL insert remains the same as BST insert: O(h)O(h) where h is the height of the tree. However, since the AVL tree is balanced, the height is O(Logn)O(Logn); so time complexity of an AVL insert is O(Logn)O(Logn).
+## Time Complexity
+Considering that it takes constant time to do left-right rotation operations and update the height to get a balanced tree, the time complexity of an AVL insert remains the same as BST insert: O(h) where h is the height of the tree. However, since the AVL tree is balanced, the height is O(Logn); so time complexity of an AVL insert is O(Logn).
 
 ## AVL Deletion
 
-Deletion in AVL Tree#
+## Deletion in AVL Tree
 Deletion is similar to AVL’s insertion operation with just one exception:
 
 The deletion operation adds an extra step after the insertion method’s rotation and balancing of the first unbalanced node.
 
 After fixing the first unbalanced node through rotations, start moving up and fix the next unbalanced node. Keep on fixing the unbalanced nodes until you reach the root.
 
-Steps for Deletion#
+## Steps for Deletion
 The following are the detailed steps for removing value from AVL Trees.
 
-Step 1: Delete currentNode#
+## Step 1: Delete currentNode
 Delete the currentNode in the same way as we did in BST deletion. At this point, the tree will become unbalanced, and we would need to perform some kind of rotation (left or right) to rebalance the tree.
 
-Step 2: Traverse Upwards#
+## Step 2: Traverse Upwards
 Start traversing from currentNode upwards till you find the first unbalanced node.
 
 Let’s look at some of the terms we will be using while re-balancing the tree.
+* Node U — an unbalanced node
+* Node C — child node of node U
+* Node G — grandchild node of node U
 
-Node U — an unbalanced node
-Node C — child node of node U
-Node G — grandchild node of node U
-Step 3: Rebalance the Tree#
+## Step 3: Rebalance the Tree
 To rebalance the tree, we will perform rotations on the subtree where U is the root node.
 
 There are two types of rotations:
+* left
+* right
 
-left
-right
 We came across four different scenarios based on the arrangements of Nodes U, C and, G.
-
-Left-Left: Node C is the left-child of Node U, and Node G is the left-child of Node C.
-
-Left-Right: Node C is the left-child of Node U, and Node G is the right-child of Node C.
-
-Right-Right: Node C is the right-child of Node U, and Node G is the right-child of Node C.
-
-Right-Left: Node C is the right-child of Node U, and Node G is the left-child of Node C.
+* Left-Left: Node C is the left-child of Node U, and Node G is the left-child of Node C.
+* Left-Right: Node C is the left-child of Node U, and Node G is the right-child of Node C.
+* Right-Right: Node C is the right-child of Node U, and Node G is the right-child of Node C.
+* Right-Left: Node C is the right-child of Node U, and Node G is the left-child of Node C.
 
 After performing a successful rotation for the first unbalanced Node U, traverse up and find the next unbalanced node and perform the same series of operations to balance. Keep on balancing the unbalanced nodes from first Node U to ancestors of Node U until we reach the root. After that point, we will have a fully balanced AVL Tree.
 
-Case 1: Left-Left#
+## Case 1: Left-Left
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw13.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw14.png)
@@ -1936,7 +1888,7 @@ Case 1: Left-Left#
 
 When a node in our AVL tree is deleted, ​and the tree becomes unbalanced, we traverse upwards from that node till we find the first unbalanced node. In the example above, the first unbalanced node is Node U. If it is the left-left case, we only need to make a single rotation towards the right at the Node U to balance the AVL tree. In the final balanced version, Node C becomes the parent node of Node G and U and its two subtrees become balanced.
 
-Case 2: Left-Right#
+## Case 2: Left-Right
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw17.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw18.png)
@@ -1949,12 +1901,12 @@ Case 2: Left-Right#
 Again, in the example above, the first unbalanced node after performing the deletion operation is denoted as Node U.
 
 It is the left-right case, so we need to make two rotations:
+* First is a left rotation at Node C.
+* Second is a right rotation at Node U.
 
-First is a left rotation at Node C.
-Second is a right rotation at Node U.
 These two rotations balance the AVL tree. In this case, Node G becomes the parent node of both Node C and U.
 
-Case 3: Right-Right
+## Case 3: Right-Right
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw24.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw25.png)
@@ -1963,7 +1915,7 @@ Case 3: Right-Right
 
 If the case after deletion is the right-right case, then we need to make a ​single rotation just like the left-left case. However​, in this case,​ it will be a left rotation at Node U to balance the AVL tree. In the final balanced version, Node C becomes the parent node of Node G and U and its two subtrees become balanced.
 
-Case 4: Right-Left#
+## Case 4: Right-Left
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/dd1.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/dd2.png)
@@ -1975,29 +1927,25 @@ Case 4: Right-Left#
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/dd8.png)
 
 If the case after deletion is a right-left case, then (similar to the left-right case) we need to make two rotations as follows:
+* First is a right rotation at Node C.
+* Second is a left rotation at Node U.
 
-First is a right rotation at Node C.
-Second is a left rotation at Node U.
 These two rotations balance the AVL tree. In this case, Node G becomes the parent node of both Node C and U.
 
-Time Complexity#
-Considering that it takes constant time to do left-right rotation operations and update the height to get a balanced tree, the time complexity of an AVL insert remains the same as a BST insert: O(h)O(h) where h is the height of the tree. However, since AVL tree is balanced, the height is O(Logn)O(Logn). Therefore, the time complexity of AVL delete is O(Logn)O(Logn).
+## Time Complexity
+Considering that it takes constant time to do left-right rotation operations and update the height to get a balanced tree, the time complexity of an AVL insert remains the same as a BST insert: O(h) where h is the height of the tree. However, since AVL tree is balanced, the height is O(Logn). Therefore, the time complexity of AVL delete is O(Logn).
 
 ## What is a Red-Black Tree?
 
-Introduction#
+## Introduction
 A Red-Black Tree is another type of self-balancing Binary Search Tree, just like the AVL Trees that we studied in the previous lesson, but with some additions. The nodes in a Red-Black Tree are colored to either red or black. Colored nodes help in re-balancing the tree after insertion or deletion. There are also some cases used to balance the Red-Black Trees. We will go through the insertion and deletion operations of the Red-Black Tree just like we did in the previous AVL Tree lessons.
 
-Properties of Red-Black Trees#
-Every node has either Red or Black color.
-
-The root is always colored black.
-
-Two red nodes cannot be adjacent, i.e. no red parent can have a red child and vice versa.
-
-Every path from the root to a leaf must contain the exact same number of black-colored nodes.
-
-Every null node is considered to be black in color.
+## Properties of Red-Black Trees
+* Every node has either Red or Black color.
+* The root is always colored black.
+* Two red nodes cannot be adjacent, i.e. no red parent can have a red child and vice versa.
+* Every path from the root to a leaf must contain the exact same number of black-colored nodes.
+* Every null node is considered to be black in color.
 
 From the perspective of implementation, our node class will contain a boolean variable in addition that will store the information about the color of a node.
 
@@ -2009,41 +1957,39 @@ The following is an example of a valid Red-Black Tree:
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa2.png)
 
-Time Complexity#
+## Time Complexity
 Balancing the tree doesn’t result in a tree being perfectly balanced, but it is good enough to get the time complexity close to O(log n)O(logn) for basic operations like searching, deletion, and insertion.
 
-AVL vs Red-Black Trees#
+## AVL vs Red-Black Trees
 Although AVL Trees are more balanced than Red-Black Trees, AVL Trees take more rotations during insertion and deletion operations than Red-Black Trees. So, if you have a search intensive application where insertion and deletion are not that frequent, then use AVL Trees. Otherwise, use Red-Black Trees for those applications involving more insertions and deletions.
 
 ## Red-Black Tree Insertion
 
-Insertion in Red-Black Tree #
+## Insertion in Red-Black Tree 
 The following are the steps involved in inserting value into a Red-Black Tree:
 
-Insert currentNode using the standard BST insertion technique that we studied earlier, and make currentNode red.
+1. Insert currentNode using the standard BST insertion technique that we studied earlier, and make currentNode red.
+2. If currentNode is the root, then change the color of currentNode to black.
+3. If currentNode is not the root, then we will have to perform some operations to make the tree follow the Red-Black property.
 
-If currentNode is the root, then change the color of currentNode to black.
-
-If currentNode is not the root, then we will have to perform some operations to make the tree follow the Red-Black property.
-
-Rebalancing the Tree #
+## Rebalancing the Tree 
 To balance an unbalanced tree, we have two techniques which are used depending on some conditions that we will discuss shortly. The two techniques are:
+* Recoloring Nodes.
+* Rotating Nodes (left or right).
 
-Recoloring Nodes.
-Rotating Nodes (left or right).
 But before going deeper into the concepts that’ll be a mess for you to understand at this point, let’s slow down and go step by step.
 
 First, we need to define the structure of the Red-Black Tree and some nodes relative to the currentNode, which is the node that we inserted in the Red-Black Tree.
+* Node C – newly inserted node (currentNode)
+* Node P – parent of currentNode
+* Node G – grandparent of currentNode
+* Node U – uncle of currentNode / sibling of Node P / child of Node G
 
-Node C – newly inserted node (currentNode)
-Node P – parent of currentNode
-Node G – grandparent of currentNode
-Node U – uncle of currentNode / sibling of Node P / child of Node G
 If currentNode is not a root, and the parent of currentNode is not black, first, we will check Node U (the uncle of currentNode). Based on Node U’s color, we will perform some steps to make the tree balanced. If Node U is red, then do the following:
+* Change the color of Node P and U to black
+* Change the color of Node G to red
+* Make Node G the currentNode and repeat the same process from step two
 
-Change the color of Node P and U to black
-Change the color of Node G to red
-Make Node G the currentNode and repeat the same process from step two
 Disclaimer: The illustrations given in this lesson are providing the visual representation of one case at a time. Therefore, you may notice that the tree gets unbalanced at the end of some of the illustrations. These trees have dummy values. However, in the case of an actual tree with real values, if one step ends up unbalancing the tree, then we keep moving in a bottom-up manner and applying the next possible case until the tree gets balanced again.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa3.png)
@@ -2054,20 +2000,16 @@ Disclaimer: The illustrations given in this lesson are providing the visual repr
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa8.png)
 
 If Node U (uncle) is black, then we come across four different scenarios based on the arrangements of Node P and G, just like we did in AVL trees. We will cover each of these scenarios and try to help you understand by using illustrations:
+* Left-Left: Node P is the leftChild of Node G, and currentNode is the leftChild of Node P
+* Left-Right: Node P is the leftChild of Node G, and currentNode is the rightChild of Node P
+* Right-Right: Node P is the rightChild of Node G, and currentNode is the rightChild of Node P
+* Right-Left: Node P is the rightChild of Node G, and currentNode is the leftChild of Node P
 
-Left-Left: Node P is the leftChild of Node G, and currentNode is the leftChild of Node P
-
-Left-Right: Node P is the leftChild of Node G, and currentNode is the rightChild of Node P
-
-Right-Right: Node P is the rightChild of Node G, and currentNode is the rightChild of Node P
-
-Right-Left: Node P is the rightChild of Node G, and currentNode is the leftChild of Node P
-
-Case 1: Left-Left #
+## Case 1: Left-Left
 When Node P is the leftChild of Node G, and currentNode is the leftChild of Node P, we perform the following steps:
+1. Rotate Node G towards the Right
+2. Swap the colors of Nodes G and P
 
-Rotate Node G towards the Right
-Swap the colors of Nodes G and P
 Look at the illustration below for a better understanding.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa9.png)
@@ -2076,11 +2018,11 @@ Look at the illustration below for a better understanding.
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa12.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa13.png)
 
-Case 2: Left-Right #
+## Case 2: Left-Right
 When Node P is the leftChild of Node G, and currentNode is the rightChild of Node P, we perform the following steps:
+1. Rotate Node P towards the Left
+2. After that, repeat the steps that we covered in Left-Left case
 
-Rotate Node P towards the Left
-After that, repeat the steps that we covered in Left-Left case
 Look at the illustration below for a better understanding.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa14.png)
@@ -2092,11 +2034,11 @@ Look at the illustration below for a better understanding.
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa20.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa21.png)
 
-Case 3: Right-Right #
+## Case 3: Right-Right
 When Node P is the rightChild of Node G, and currentNode is the rightChild of Node P, we perform the following steps:
+1. Rotate Node G towards the Left
+2. Swap the colors of Nodes G and P
 
-Rotate Node G towards the Left
-Swap the colors of Nodes G and P
 Look at the illustration below for a better understanding.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa22.png)
@@ -2105,11 +2047,11 @@ Look at the illustration below for a better understanding.
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa25.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa26.png)
 
-Case 4: Right-Left #
+## Case 4: Right-Left
 When Node P is the rightChild of Node G, and currentNode is the leftChild of Node P, we perform the following steps:
+1. Rotate Node P towards Right
+2. After that, repeat the steps that we covered in Right-Right case
 
-Rotate Node P towards Right
-After that, repeat the steps that we covered in Right-Right case
 Look at the illustration below for a better understanding.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa27.png)
@@ -2123,7 +2065,7 @@ Look at the illustration below for a better understanding.
 
 ## Red-Black Tree Deletion
 
-Deletion in Red-Black Tree #
+## Deletion in Red-Black Tree 
 Before we start discussing how deletion works in a Red-Black Tree, let’s see the main difference between insertion and deletion operations in Red-Black Trees.
 
 In insertion, we may violate the property of a red parent having a red child. At the same time, in a deletion operation, we may end up deleting a black node which could violate the property of, “the same number of black nodes from root to the null for every path”.
@@ -2132,23 +2074,23 @@ In insertion, we check the color of the uncle node (uncle to currentNode), and b
 
 Disclaimer: The illustrations given in this lesson are providing the visual representation of one case at a time. Therefore, you may notice that the tree gets unbalanced at the end of some of the illustrations. These trees have dummy values. However, in the case of an actual tree with real values, if one step ends up unbalancing the tree, then we keep moving in a bottom-up manner and applying the next possible case until the tree gets balanced again.
 
-Steps for Deletion #
+## Steps for Deletion
 Following are the steps involved to remove any value in a Red-Black Tree:
+1. Search for a node with the given value to remove. We will call it currentNode
+2. Remove currentNode using standard BST deletion operation that we studied earlier
 
-Search for a node with the given value to remove. We will call it currentNode
-Remove currentNode using standard BST deletion operation that we studied earlier
 We already know that for deletion in BST, we always end up deleting either a leaf node or a node with only one child.
+* In the case of leaf node deletion, it is easy to just delete the node and link the parent of the node to be deleted with null
+* In the case of a node with one child, deletion is relatively easy as we just link the parent of the node to be deleted with that one child
 
-In the case of leaf node deletion, it is easy to just delete the node and link the parent of the node to be deleted with null
-In the case of a node with one child, deletion is relatively easy as we just link the parent of the node to be deleted with that one child
 Let’s name some nodes relative to Node C, which is the node that we want to delete:
+* Node C – node to be deleted (currentNode)
+* Node P – parent node of currentNode
+* Node S – sibling node (once we rotate tree, Node R will have a sibling node which we name as Node S)
+* Node SC – child node of Node S
+* Node R – node to be replaced with currentNode and linked with Node P (Node R is the single child of Node C)
 
-Node C – node to be deleted (currentNode)
-Node P – parent node of currentNode
-Node S – sibling node (once we rotate tree, Node R will have a sibling node which we name as Node S)
-Node SC – child node of Node S
-Node R – node to be replaced with currentNode and linked with Node P (Node R is the single child of Node C)
-Deletion Cases #
+## Deletion Cases 
 Now we will take a look at some of the deletion cases and see what steps should be performed in each of these cases to make the tree balanced again. Given below is the first case in which Node C or Node R is red. In this type of scenario, we make Node R black and link it to Node P.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe1.png)
@@ -2168,21 +2110,16 @@ Now we will convert Node R from double to single black.
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe10.png)
 
 We need to perform the following steps while Node R is double black and not the root of the Tree. Use the specifications that Node S (sibling of Node R) is black and one or both of Node S children are red:
+* Left-Left: Node S is the leftChild of Node P, and Node SC (red) is the leftChild of S, or both children of S are red.
+* Right-Right: Node S is the rightChild of Node P, and Node SC (red) is the rightChild of S, or both children of S are red.
+* Left-Right: Node S is the leftChild of Node P and Node SC (red) is the rightChild of S.
+* Right-Left: Node S is the rightChild of Node P and Node SC (red) is the leftChild of S.
 
-Left-Left: Node S is the leftChild of Node P, and Node SC (red) is the leftChild of S, or both children of S are red.
-
-Right-Right: Node S is the rightChild of Node P, and Node SC (red) is the rightChild of S, or both children of S are red.
-
-Left-Right: Node S is the leftChild of Node P and Node SC (red) is the rightChild of S.
-
-Right-Left: Node S is the rightChild of Node P and Node SC (red) is the leftChild of S.
-
-
-Case 1: Left-Left #
+## Case 1: Left-Left 
 In the case when Node S is the leftChild of Node P, and Node SC (red) is the leftChild of S or both children of S are red, we perform the following steps:
+1. Rotate Node P towards the right
+2. Make the right child of Node S the left child of Node P
 
-Rotate Node P towards the right
-Make the right child of Node S the left child of Node P
 Look at the illustration below for a better understanding.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe11.png)
@@ -2193,11 +2130,11 @@ Look at the illustration below for a better understanding.
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe16.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe17.png)
 
-Case 2: Right-Right #
+## Case 2: Right-Right 
 In the case when Node S is the rightChild of Node P, and Node SC (red) is the rightChild of S or both children of S are red, we perform the following steps:
+1. Rotate Node P towards the left
+2. Make the left child of Node S the right child of Node P
 
-Rotate Node P towards the left
-Make the left child of Node S the right child of Node P
 Look at the illustration below for a better understanding.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe18.png)
@@ -2209,11 +2146,11 @@ Look at the illustration below for a better understanding.
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe24.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe25.png)
 
-Case 3: Left-Right #
+## Case 3: Left-Right 
 In the case when Node S is the leftChild of Node P and Node SC (red) is the rightChild of S, we perform the following steps:
+1. Rotate Node S towards the left
+2. Rotate Node P towards the right
 
-Rotate Node S towards the left
-Rotate Node P towards the right
 Look at the illustration below for a better understanding.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe26.png)
@@ -2226,11 +2163,11 @@ Look at the illustration below for a better understanding.
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe33.png)
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe34.png)
 
-Case 4: Right-Left #
+## Case 4: Right-Left
 In the case when Node S is the rightChild of Node P and Node SC (red) is the leftChild of S, we perform the following steps:
+1. Rotate Node S towards the right
+2. Rotate Node P towards the left
 
-Rotate Node S towards the right
-Rotate Node P towards the left
 Look at the illustration below for a better understanding.
 
 ![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe35.png)
