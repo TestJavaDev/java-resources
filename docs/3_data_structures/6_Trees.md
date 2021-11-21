@@ -4,6 +4,7 @@ title: Trees
 parent: Data Structures
 nav_order: 6
 permalink: /data_structures/trees
+has_children: true
 ---
 <div align="center" markdown="1">
 Trees / Java resources / Tutorial

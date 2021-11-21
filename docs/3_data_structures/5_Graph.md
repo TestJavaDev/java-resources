@@ -4,6 +4,7 @@ title: Graph
 parent: Data Structures
 nav_order: 5
 permalink: /data_structures/graph
+has_children: true
 ---
 <div align="center" markdown="1">
 Graph / Java resources / Tutorial
