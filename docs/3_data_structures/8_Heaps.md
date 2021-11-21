@@ -378,7 +378,7 @@ class Heap {
 		
 	}
 }
-{% endhighlight
+{% endhighlight %}
 
 ## Explanation:
 This code covers all the cases that we discussed in the previous chapter. Let’s look at each function one by one and see what’s going on:
