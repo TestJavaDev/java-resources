@@ -351,6 +351,46 @@ It first calls the constructor of the graph class: new Graph(x) where x is the n
 
 After that, it simply prints the graph by calling printGraph() function.
 
+## Complexities of Graph Operations
+
+Time Complexities#
+Below, you can find the time complexities for the 4 basic graph methods.
+
+Note that in this table, V means the total number of vertices, and E means the total number of edges in the Graph.
+
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war1.png)
+
+Adjacency List#
+The addition of edge in adjacency lists take constant time, as we only need to insert at the tail in the doubly-linked list with a tail pointer of the corresponding vertex.
+
+The addition of a vertex is not constant in the worst case. The adjacency list is an array of linked lists. So, we would need to allocate a bigger array, copy the contents from the previous array, which takes O(n). But this operation can be considered O(1) on average because we could do it smartly as follows. We start with a small array initially. Then, when there is a need to insert a vertex, instead of allocating one size bigger array, we allocate an array that is twice as big. That way, in the long run, the cost of re-allocation is averaged out over many other operations. So, O(1) is the average or amortized cost of add vertex in the adjacency list.
+
+Removing an edge takes O(E)O(E) time because–in the worst case–all the edges could be at a single vertex, and hence, we would have to traverse all E edges to reach the last one.
+
+Removing a vertex takes O(V + E) time because we have to delete all its edges, and then reindex the rest of the list one step back in order to fill the deleted spot.
+
+Adjacency Matrix#
+Edge operations are performed in constant time, as we only need to manipulate the value in the particular cell.
+
+Vertex operations are performed in O(V2) since we need to add rows and columns. We will also need to fill all the new cells.
+
+Comparison#
+Both representations are suitable for different situations. If your model frequently manipulates vertices, the adjacency list is a better choice.
+
+If you are dealing primarily with edges, the adjacency matrix is the more efficient approach.
+
+Keep these complexities in mind because they will give you a better idea about the time complexities of the several algorithms we’ll see in this section.
+
+
+
+
+
+
+
+
+{% highlight java %}
+
+{% endhighlight %}
 
 
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Challenge 2
-parent: Tree
+parent: Trees
 grand_parent: Data Structures
 nav_order: 2
 permalink: /data_structures/trees/ch2
@@ -16,11 +16,11 @@ Challenge 2 / Java resources / Tutorial
 
 Given the root to a binary search tree--a number "k"--write a function to find the kth maximum value in that tree. A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/aa6.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa6.png)
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/aa7.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa7.png)
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/aa8.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa8.png)
 
 ## Coding Exercise
 
@@ -291,7 +291,7 @@ class CheckKthMax {
 }
 {% endhighlight %}
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/aa9.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa9.png)
 
 ## Solution #2: Recursive Approach
 
@@ -448,4 +448,4 @@ class CheckKthMax {
 }
 {% endhighlight %}
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/aa10.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa10.png)

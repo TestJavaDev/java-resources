@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Challenge 5
-parent: Tree
+parent: Trees
 grand_parent: Data Structures
 nav_order: 5
 permalink: /data_structures/trees/ch5
@@ -16,11 +16,11 @@ Challenge 5 / Java resources / Tutorial
 
 Given the root to a Binary Search Tree and a value "k", write a function to find the nodes at "k" distance from the root. A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/aa19.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa19.png)
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/aa20.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa20.png)
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/aa21.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa21.png)
 
 ## Coding Exercise
 
@@ -294,4 +294,4 @@ class CheckKNodes {
 }
 {% endhighlight %}
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/aa22.png)
+![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa22.png)
