@@ -4,6 +4,7 @@ title: Hash Tables
 parent: Data Structures
 nav_order: 9
 permalink: /data_structures/hash_tables
+has_children: true
 ---
 <div align="center" markdown="1">
 Hash Tables / Java resources / Tutorial

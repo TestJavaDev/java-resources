@@ -4,6 +4,7 @@ title: Heaps
 parent: Data Structures
 nav_order: 8
 permalink: /data_structures/heaps
+has_children: true
 ---
 <div align="center" markdown="1">
 Heaps / Java resources / Tutorial
