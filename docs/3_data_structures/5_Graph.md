@@ -353,39 +353,124 @@ After that, it simply prints the graph by calling printGraph() function.
 
 ## Complexities of Graph Operations
 
-Time Complexities#
+## Time Complexities
 Below, you can find the time complexities for the 4 basic graph methods.
 
 Note that in this table, V means the total number of vertices, and E means the total number of edges in the Graph.
 
 ![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war1.png)
 
-Adjacency List#
-The addition of edge in adjacency lists take constant time, as we only need to insert at the tail in the doubly-linked list with a tail pointer of the corresponding vertex.
+## Adjacency List
+* The addition of edge in adjacency lists take constant time, as we only need to insert at the tail in the doubly-linked list with a tail pointer of the corresponding vertex.
+* The addition of a vertex is not constant in the worst case. The adjacency list is an array of linked lists. So, we would need to allocate a bigger array, copy the contents from the previous array, which takes O(n). But this operation can be considered O(1) on average because we could do it smartly as follows. We start with a small array initially. Then, when there is a need to insert a vertex, instead of allocating one size bigger array, we allocate an array that is twice as big. That way, in the long run, the cost of re-allocation is averaged out over many other operations. So, O(1) is the average or amortized cost of add vertex in the adjacency list.
+* Removing an edge takes O(E) time because–in the worst case–all the edges could be at a single vertex, and hence, we would have to traverse all E edges to reach the last one.
+* Removing a vertex takes O(V + E) time because we have to delete all its edges, and then reindex the rest of the list one step back in order to fill the deleted spot.
 
-The addition of a vertex is not constant in the worst case. The adjacency list is an array of linked lists. So, we would need to allocate a bigger array, copy the contents from the previous array, which takes O(n). But this operation can be considered O(1) on average because we could do it smartly as follows. We start with a small array initially. Then, when there is a need to insert a vertex, instead of allocating one size bigger array, we allocate an array that is twice as big. That way, in the long run, the cost of re-allocation is averaged out over many other operations. So, O(1) is the average or amortized cost of add vertex in the adjacency list.
+## Adjacency Matrix
+* Edge operations are performed in constant time, as we only need to manipulate the value in the particular cell.
+* Vertex operations are performed in O(V2) since we need to add rows and columns. We will also need to fill all the new cells.
 
-Removing an edge takes O(E)O(E) time because–in the worst case–all the edges could be at a single vertex, and hence, we would have to traverse all E edges to reach the last one.
-
-Removing a vertex takes O(V + E) time because we have to delete all its edges, and then reindex the rest of the list one step back in order to fill the deleted spot.
-
-Adjacency Matrix#
-Edge operations are performed in constant time, as we only need to manipulate the value in the particular cell.
-
-Vertex operations are performed in O(V2) since we need to add rows and columns. We will also need to fill all the new cells.
-
-Comparison#
+## Comparison
 Both representations are suitable for different situations. If your model frequently manipulates vertices, the adjacency list is a better choice.
 
 If you are dealing primarily with edges, the adjacency matrix is the more efficient approach.
 
 Keep these complexities in mind because they will give you a better idea about the time complexities of the several algorithms we’ll see in this section.
 
+## What is a Bipartite Graph?
 
+## Introduction 
+🔍 A Bipartite Graph is a special kind of Graph, in which the vertices can be divided into two disjoint sets U and V such that no vertex of U is adjacent to any other vertex in U and no vertex of V is adjacent to any other vertex in V. Vertices in U have edges that connect it to vertices in V.
 
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war2.png)
 
+connected in a closed chain, are bipartite.
 
+## Explanation
+The above graphs are Bipartite.
+* Yellow-colored vertices belong to a disjoint set U.
+* Green colored vertices belong to a disjoint set V.
 
+One can observe in the above graphs that no vertex of U is adjacent to any other vertex in U, and no vertex of V is adjacent to any other vertex in V.
+
+## Can a Cycle Graph be Bi-Partite with Even Vertices?
+The illustration below shows a cycle graph with an even number of vertices.
+
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war3.png)
+
+But is the above graph Bipartite? Yes!
+
+How? You can see that the graph on the left has an even number of nodes, which means that they can be divided into two disjoint sets, shown on the right side, with non-adjacent vertices.
+
+Note: A graph cannot be Bipartite if there are an odd number of vertices and has an odd cycle i.e., a cycle between the odd number of vertices.
+
+## Types of bipartite graphs 
+Some other types of Bipartite graphs are listed below:
+* Complete Bipartite Graphs: A complete Bipartite graph connects each vertex from set V1 to each vertex from set V2.
+* Star Graphs: A star graph is a complete bipartite graph if a single vertex belongs to one set, and all the remaining vertices belong to the other set.
+* Acyclic Graphs: A graph with no cycles is called an acyclic graph.
+
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war4.png)
+
+## Graph Traversal Algorithms
+
+## Introduction 
+There are many applications for graphs, such as the GPS navigation system, shortest path finding, peer to peer networks, crawlers in the search engine, garbage collection (java), and even social networking websites.
+
+Depending upon the problem under, the way we traverse a graph is important, since it can affect the time in which we reach the goal.
+
+## Types of Graph Traversals
+There are two basic techniques used for graph traversal:
+* Breadth First Search (BFS)
+* Depth First Search (DFS)
+
+In order to understand these algorithms, we will have to view graphs from a slightly different perspective.
+
+Any traversal needs a starting point, but a graph does not have a linear structure like lists or stacks. So how do we give the graph traversal a better sense of direction?
+
+This is where the concept of levels is introduced. Take any vertex as the starting point. This is the lowest level in your search. The next level consists of all the vertices adjacent to your vertex. Therefore, a level higher would consist of the vertices adjacent to these nodes.
+
+With this is in mind, let’s begin our discussion on the two Graph Traversal algorithms.
+
+## 1. Breadth First Search 
+The BFS algorithm earns its name because it grows breadth-wise. All the nodes at a certain level are traversed before moving on to the next level.
+
+The level-wise expansion ensures that you can reach every level of a starting vertex, one level at a time.
+
+Now, let’s look at the BFS algorithm in action.
+
+To build a graph based on BFS, start traversing from any vertex, call it currentVertex. If the adjacent vertices are yet already not visited, then print their values. Then, move on to children of the currentVertex.
+
+Let’s look at BFS traversal in action!
+
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war5.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war6.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war7.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war8.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war9.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war10.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war11.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war12.png)
+
+## 2. Depth First Traversal
+The DFS algorithm is the opposite of BFS in the sense that it grows depth-wise.
+
+Starting from any node, we keep moving to an adjacent node until we reach the farthest level. Then we move back to the starting point and pick another adjacent node. Once again, we probe till the farthest level and move back. This process continues until all nodes are visited.
+
+Let’s look at DFS traversal in action:
+
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war13.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war14.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war15.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war16.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war17.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war18.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war19.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war20.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war21.png)
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war22.png)
+
+![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/war23.png)
 
 
 {% highlight java %}
