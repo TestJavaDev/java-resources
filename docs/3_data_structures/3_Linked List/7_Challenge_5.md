@@ -14,17 +14,19 @@ Challenge 5 / Java resources / Tutorial
 
 ## Challenge 5: Reverse a Linked List
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement the public static <T> void reverse(SinglyLinkedList<T> list) method, which will take a linked list as input and reverse its content. An illustration is also provided for your help to see how the linked list will look after passing it to your function.
 
-Method Prototype: #
+## Method Prototype: 
 public static <T> void reverse(SinglyLinkedList<T> list)
-Output: #
+
+## Output: 
 A Singly linked list with all its content stored in reverse order.
 
-Sample Input #
+## Sample Input 
 linkedlist = 10->9->4->4-6
-Sample Output #
+
+## Sample Output 
 linkedlist = 6->4->4->9->10
 
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser35.png)
@@ -368,14 +370,14 @@ class CheckReverse {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 The brain of this solution lies in the loop, which iterates through the list. For any current node, its link with the previous node is reverse and the next stores next node in the list:
+* Store the current node’s nextNode in next
+* Set current node’s nextNode to previous (reversal)
+* Make the current node the new previous so that it can be used for the next iteration
+* Use next to move on to the next node
 
-Store the current node’s nextNode in next
-Set current node’s nextNode to previous (reversal)
-Make the current node the new previous so that it can be used for the next iteration
-Use next to move on to the next node
 In the end, we simply point the head to the last node in our loop.
 
-Time Complexity #
+## Time Complexity 
 The algorithm runs in O(n) since the list is traversed once.

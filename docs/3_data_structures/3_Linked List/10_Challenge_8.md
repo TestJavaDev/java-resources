@@ -14,17 +14,19 @@ Challenge 8 / Java resources / Tutorial
 
 ## Challenge 8: Remove Duplicates from a Linked List
 
-Problem Statement: #
+## Problem Statement: 
 In this problem, you have to implement public static <T> void removeDuplicates(SinglyLinkedList<T> list) method. This method will take a Singly linked list as input and remove all the elements that appear more than once in the list. An illustration is also provided for your understanding.
 
-Method Prototype: #
+## Method Prototype: 
 public static <T> void removeDuplicates(SinglyLinkedList<T> list)
-Output: #
+
+## Output: 
 The linked list with all the duplicates removed.
 
-Sample Input #
+## Sample Input 
 linkedlist = 7->14->21->14->22->null
-Sample Output #
+
+## Sample Output 
 linkedlist = 7->14->21->22->null
 
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser45.png)
@@ -390,12 +392,12 @@ class CheckDuplicates {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 This solution is simply a brute force solution. In this solution, we traverse the linked list using two loops. The pointer current keeps track of the outer loop, and the pointer compare is used for the inner loop. When both of these pointers point to the same value, then that node is deleted.
 
 This is not the most efficient approach to solve this problem. It can also be solved using a Hash Table.
 
-Time Complexity #
+## Time Complexity 
 This algorithm has two nested loops. Hence, the time complexity is O(n^2).
 
 Note: The solution provided above is not the optimal solution for this problem. A more efficient approach is to use hashing instead

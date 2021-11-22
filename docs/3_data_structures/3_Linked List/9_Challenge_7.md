@@ -14,17 +14,19 @@ Challenge 7 / Java resources / Tutorial
 
 ## Challenge 7: Find the Middle Node of a Linked List
 
-Problem Statement:#
+## Problem Statement:
 In this problem, you have to implement the public static <T> Object findMiddle(SinglyLinkedList<T> list) method, which will take a linked list as an input and return the value at the middle node of the list. An illustration is also provided for your understanding.
 
-Method Prototype:#
+## Method Prototype:
 public static <T> Object findMiddle(SinglyLinkedList<T> list)
-Output:#
+
+## Output:
 The value at the middle node in a linked list.
 
-Sample Input#
+## Sample Input
 linkedlist = 7->14->10->21
-Sample Output#
+
+## Sample Output
 mid = 14
 
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser37.png)
@@ -383,6 +385,9 @@ class CheckMid {
 }
 {% endhighlight %}
 
+## Explanation 
+The following figure illustrates how the mid of a non-empty linked list is calculated:
+
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser38.png)
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser39.png)
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser40.png)
@@ -395,10 +400,10 @@ class CheckMid {
 We are using two pointers, which will work simultaneously.
 
 Think of it this way:
+* The current pointer moves two steps at a time till the end of the list
+* The mid pointer moves one step at a time
+* When the current pointer reaches the end, the mid pointer will be at the middle
 
-The current pointer moves two steps at a time till the end of the list
-The mid pointer moves one step at a time
-When the current pointer reaches the end, the mid pointer will be at the middle
-Time Complexity #
+## Time Complexity 
 We are traversing the linked list at twice the speed, so it is certainly faster. However, the bottleneck complexity is still O(n)
 

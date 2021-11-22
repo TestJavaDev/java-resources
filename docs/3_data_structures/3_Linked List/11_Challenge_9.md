@@ -14,7 +14,7 @@ Challenge 9 / Java resources / Tutorial
 
 ## Challenge 9: Union & Intersection of Lists
 
-Problem Statement#
+## Problem Statement
 In this problem you have to implement two methods, i.e., SinglyLinkedList<T> union(SinglyLinkedList<T> list1, SinglyLinkedList<T> list2) and SinglyLinkedList<T> intersection(SinglyLinkedList<T> list1, SinglyLinkedList<T> list2).
 
 The first method will take two linked lists as input and return the union of the two lists. A Union of two sets can be expressed as, “Union of two sets A and B is a set which contains all the elements present in A or B”.
@@ -24,21 +24,25 @@ Similarly, the second method will return the Intersection of two lists. The Inte
 Note: Your solution should also work if there are duplicate values in the lists, e.g.,
 
 2->7->9->9->1
+
 In the given SinglyLinkedList class below, you are provided with the method called removeDuplicatedWithHashing() this is another, much better approach for solving the previous challenge (But, we will discuss it in detail in Hash Tables: Challenge 8). For now, you can use this function as a helper function to solve the current challenge. It can be used as:
 
 list.removeDuplicatesWithHashing();
-Method Prototypes#
+
+## Method Prototypes
 public static <T> SinglyLinkedList<T> union(SinglyLinkedList<T> list1, SinglyLinkedList<T> list2)
 public static <T> SinglyLinkedList<T> intersection(SinglyLinkedList<T> list1, SinglyLinkedList<T> list2)
-Output#
+
+## Output
 The union and intersection of two linked lists.
 
 Note: The order of elements in the output list does not matter!
 
-Sample Input#
+## Sample Input
 list1 = 15->22->8->null
 list2 = 7->14->22->null
-Sample Output#
+
+## Sample Output
 Union = 15->22->8->7->14->null
 Intersection = 22->null
 
@@ -536,13 +540,13 @@ class UnionIntersectionChallenge {
 }
 {% endhighlight %}
 
-Union #
+## Union 
 This is a straightforward algorithm. We traverse to the end of the first list and connect its last node to the first node of the second list. Then we call removeDuplicatesWithHashing() to remove any duplicate values in the combined linked list.
 
-Intersection #
+## Intersection 
 This problem is solved using a helper function contains(). This method returns true if the list contains the given value. All we did is traverse the first list and check if the second list contains that particular value. If it returns true, then we add that element to the result list.
 
-Time Complexity #
+## Time Complexity 
 For two linked lists of size m and n respectively, the total time complexity for union operations will be O(n + m) because we traversed that list to reach its end, this operation was O(n). After that, a new list is formed, having a length equal to n + mn+m. On this list, we call the function removeDuplicatesWithHasing(), which is a linear function. Hence, the total time complexity becomes O(n + m).
 
 On the other hand, the complexity for intersection will be O(n \times m)O(n×m) because we traverse list1 in a loop which is O(n) and in each iteration, we call contains() which runs in O(m).

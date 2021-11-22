@@ -14,17 +14,19 @@ Challenge 6 / Java resources / Tutorial
 
 ## Challenge 6: Detect Loop in a Linked List
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement the public static <T> boolean detectLoop(SinglyLinkedList<T> list) method, which will take a Singly linked list as input and find if there is a loop present in the list. A loop in a linked list occurs if any node contains a reference to any previous node, then a loop will be formed. An illustration is also provided for your understanding.
 
-Method Prototype #
+## Method Prototype 
 public static <T> boolean detectLoop(SinglyLinkedList<T> list)
-Output #
+
+## Output 
 It returns true if a loop exists in the linked list; otherwise, false.
 
-Sample Input #
+## Sample Input 
 linkedlist = 7->14->21->7
-Sample Output #
+
+## Sample Output 
 true
 
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser36.png)
@@ -372,8 +374,8 @@ class CheckLoop {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 This is the most optimized method to find out the loop in the LinkedList. We start traversing the LinkedList using two pointers called slow and fast. Move slow by one (line # 9) and fast by two (line # 10). If these pointers meet at the same node, then there is a loop. If these pointers do not meet, then LinkedList doesn’t have a loop.
 
-Time Complexity #
-The algorithm runs in Constant with O(n)O(n) with the Auxiliary Space complexity of O(1).O(1)
+## Time Complexity 
+The algorithm runs in Constant with O(n) with the Auxiliary Space complexity of O(1).

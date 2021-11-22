@@ -240,7 +240,7 @@ As we learned in the previous lesson, we need to traverse through the whole list
 
 Another concern that must be taken into account here is that linked lists are unidirectional: they can only move forward, not backward. Also, while adding or removing elements from the list, we need to keep track of the previous node as well, which makes it complicated. That is where the Doubly Linked List (DLL) comes to the rescue!
 
-Doubly Linked List (DLL) #
+## Doubly Linked List (DLL) 
 The difference between a Doubly and a Singly Linked List is that a DLL is bi-directional; this means any particular node stores both the previous and next pointers that point to the previous and next nodes, respectively.
 
 To implement the node class for DLL, we only need to add a new data member, a node called prevNode, in the already constructed Node class of the SLL that we created in the previous lesson.
@@ -257,7 +257,7 @@ Explanation: The data and nextNode fields are the same as in SLL. The Doubly Lin
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser7.png)
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser8.png)
 
-Impact on Deletion #
+## Impact on Deletion 
 This strategy considerably helps in deletion as you don’t need to keep track of the previous element while searching. To see how effective this strategy is, let’s re-write the deleteByValue() operation for Doubly Linked List. We will use the same code which we implemented in the previous lesson and make additions to it.
 
 {% highlight java %}
@@ -386,14 +386,13 @@ Next, we start traversing the elements. If the value to be deleted is present at
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser14.png)
 
 For the other case, where the value to be deleted is not the first element of the list, we will perform the following set of operations. Let’s name the nodes again:
+* currentNode: Node to be deleted
+* prevCurrentNode: prevNode of currentNode
+* nextCurrentNode: nextNode of currentNode
 
-currentNode: Node to be deleted
-prevCurrentNode: prevNode of currentNode
-nextCurrentNode: nextNode of currentNode
 To delete the currentNode successfuly, we will follow these steps:
-
-Set the nextNode of prevCurrentNode to be nextCurrentNode.
-Set the prevNode of nextCurrentNode to be prevCurrentNode. This is expressed in the code statement below. The figure below illustrates this process:
+1. Set the nextNode of prevCurrentNode to be nextCurrentNode.
+2. Set the prevNode of nextCurrentNode to be prevCurrentNode. This is expressed in the code statement below. The figure below illustrates this process:
 
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser15.png)
 
@@ -411,17 +410,17 @@ Set the prevNode of nextCurrentNode to be prevCurrentNode. This is expressed in 
 
 ## Linked List with Tail
 
-Introduction #
+## Introduction 
 Another variation of a basic linked list is a Linked List with a Tail. In this type of list, in addition to the head being the starting of the list, a tail is used as the pointer to the last node of the list. Both SLL and DLL can be implemented using a tail pointer.
 
-Comparison between SLL with Tail and DLL with Tail #
+## Comparison between SLL with Tail and DLL with Tail 
 The benefit of using a tail pointer is seen in the insertion and deletion operations at the end of the list. Let’s analyze the efficiency, in terms of time complexity, of both of these operations in SLL and DLL.
 
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser27.png)
 
 From this comparison, we can see that the real advantage of using a tail pointer comes in the deleteAtEnd scenario while dealing with Doubly Linked Lists as the tail provides a more efficient implementation of this function.
 
-Implementation of Doubly Linked List with Tail #
+## Implementation of Doubly Linked List with Tail 
 In the code below, we have used a member variable called tailNode, which will point to the last node of the list. Initially, it will be equal to null.
 
 {% highlight java %}
@@ -488,11 +487,10 @@ public class DoublyLinkedList<T> {
 }
 {% endhighlight %}
 
-Impact on Insertion #
-1) insertAtHead() #
+## Impact on Insertion 
+1. insertAtHead() 
 Insertion at head remains almost the same as in DLL without tail. The only difference is that if the element is inserted in an already empty linked list then, we have to update the tailNode as well.
-
-2) insertAtEnd() #
+2. insertAtEnd() 
 Insertion at the end is a linear operation in DLL without tail. However, in DLL with tail, it becomes a constant operation. We simply insert the new node as the nextNode of the tailNode and then update the tailNode to point to the new node, after insertion.
 
 Let us take a look at the code for the operations mentioned above.
@@ -607,11 +605,12 @@ class DLLWithTailDemo {
 }
 {% endhighlight %}
 
-Impact on Deletion #
-1) deleteAtHead() #
+## Impact on Deletion 
+
+1. deleteAtHead() 
 Deletion at head remains almost the same as in DLL without tail. The only difference is that if the element to be deleted is the only element in the linked list then, we have to update the tailNode as null after deletion.
 
-2) deleteAtTail() #
+2. deleteAtTail() 
 Deletion at the tail (i.e, the end) is a linear operation in DLL without tail. However, in DLL with tail, it becomes a constant operation. We can use the same approach as in deletion at the start. Firstly, we access the last element of the list by the tailNode. Then we make the prevNode of tailNode equal to new tailNode. If the element being deleted was the only element in the list, that means we also have to assign headNode to the null value.
 
 Let us take a look at the code for these operations.

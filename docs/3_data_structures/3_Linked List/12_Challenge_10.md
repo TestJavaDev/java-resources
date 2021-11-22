@@ -14,18 +14,21 @@ Challenge 10 / Java resources / Tutorial
 
 ## Challenge 10: Return the Nth node from End
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement Object nthElementFromEnd(SinglyLinkedList<T> list, int n) method, which will take a linked list as an input and returns the nth element of the list from the end. To solve this, you will have to come up with a formula by comparing multiple outputs and inputs and identifying a common pattern. An illustration is also provided for your understanding.
 
-Method Prototype #
+## Method Prototype 
 public static <T> Object nthElementFromEnd(SinglyLinkedList<T> list, int n)
-Output #
+
+## Output 
 It will return nth node from the end of the linked list.
 
-Sample Input #
+## Sample Input 
 linkedlist = 22->18->60->78->47->39->99 and n=3
-Sample Output #
+
+## Sample Output 
 47
+
 Consider the following example:
 
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser47.png)
@@ -427,7 +430,7 @@ class NthElementChallenge {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 In the above solution, we first use the getter function list.getSize() to access the length of the list. Then we find the node which is at x position from the start.
 
 We will now calculate the value of x. Suppose that the length of our list is 7, as shown in the following example:
@@ -460,5 +463,5 @@ We will now calculate the value of x. Suppose that the length of our list is 7, 
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex26.png)
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex27.png)
 
-Time Complexity #
+## Time Complexity 
 In the worst-case time complexity of this algorithm is O(n). Because we might have to access the 1st element from the end.

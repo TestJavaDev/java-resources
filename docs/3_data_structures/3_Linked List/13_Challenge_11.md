@@ -14,32 +14,36 @@ Challenge 11 / Java resources / Tutorial
 
 ## Challenge 11: Find if Doubly Linked-list is a Palindrome
 
-Problem Statement#
+## Problem Statement
 This challenge is easier to perform on a doubly linked-list with a tail pointer than on a singly linked-list. Let’s first see what a palindrome is. A palindrome is any string or sequence that reads the same from both ends. The following snippet shows examples of some palindromes.
 
 RACECAR
 MADAM
 WOW
 2002
+
 You can extend this example to a linked-list as well. For example, the following linked-lists are palindromes:
 
 List = 2<->0<->0<->2
 List = 1<->2<->3<->2<->1
 List = 1
+
 The following ones are not palindrome:
 
 List = 1<->2<->3
 List = 2<->3
-Method Prototype#
+
+## Method Prototype
 public static boolean isPalindrome(DoublyLinkedList<T> list)
-Output#
+
+## Output
 Your function will return a boolean variable; true when linked-list is a palindrome, false when it is not.
 
-Sample Input#
+## Sample Input
 A doubly linked list with tail pointer
-
 linkedlist = 1<->2<->3<->2<->1
-Sample Output#
+
+## Sample Output
 true
 
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex28.png)
@@ -394,8 +398,8 @@ class PalindromeChallenge {
 
 {% endhighlight %}
 
-Explanation#
+## Explanation
 We start by taking pointers to headNode and tailNode (lines 3-4). Next, we check for a corner-case, when linked-list is empty, an empty linked-list is a palindrome so we return true (lines 5-7). Then, we simply traverse the linked-list from both ends simultaneously and see if the traversals result in the same sequence of values (lines 8-14). If that is not the case, the linked-list is not a palindrome (line 9-11), otherwise, it is.
 
-Time Complexity#
-It is an O(n)O(n) solution since we traverse the whole linked list
+## Time Complexity
+It is an O(n) solution since we traverse the whole linked list

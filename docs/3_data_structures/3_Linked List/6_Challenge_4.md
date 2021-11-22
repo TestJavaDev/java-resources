@@ -14,18 +14,21 @@ Challenge 4 / Java resources / Tutorial
 
 ## Challenge 4: Find the Length of a Linked List
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement the method int length(), which will count the number of nodes in a linked list. An illustration is also provided for your understanding.
 
-Method Prototype #
+## Method Prototype 
 int length()
-Output #
+
+## Output 
 The length of the given linked list.
 
-Sample Input #
+## Sample Input 
 linkedlist = 0->1->2-3->4
-Sample Output #
+
+## Sample Output 
 length = 5 
+
 The figure below illustrates how length is calculated in a non-empty list:
 
 ![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser28.png)
@@ -247,8 +250,8 @@ class CheckLength {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 The logic behind it is very similar to that of the search function. The trick is to iterate through the list and keep count of how many nodes you’ve visited. This count is held in a variable that is returned when the end of the list is reached.
 
-Time Complexity #
+## Time Complexity 
 Since this is a linear algorithm, the time complexity will be O(n).
