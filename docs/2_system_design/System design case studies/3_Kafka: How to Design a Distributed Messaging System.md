@@ -91,6 +91,34 @@ Kafka can be used for collecting big data and real-time analysis. Here are some 
 5. Website activity tracking: One of Kafka’s original use cases was to build a user activity tracking pipeline. User activities like page clicks, searches, etc., are published to Kafka into separate topics. These topics are available for subscription for a range of use cases, including real-time processing, real-time monitoring, or loading into Hadoop or data warehousing systems for offline processing and reporting.
 6. Product suggestions: Imagine an online shopping site like amazon.com, which offers a feature of ‘similar products’ to suggest lookalike products that a customer could be interested in buying. To make this work, we can track every consumer action, like search queries, product clicks, time spent on any product, etc., and record these activities in Kafka. Then, a consumer application can read these messages to find correlated products that can be shown to the customer in real-time. Alternatively, since all data is persistent in Kafka, a batch job can run overnight on the ‘similar product’ information gathered by the system, generating an email for the customer with product suggestions.
 
+## Transactions, Storage Layout, and other Guarantees
+
+## Transactional client
+Kafka provides a transactional client that allows producers to produce messages to multiple partitions of a topic atomically.
+
+A transactional client also makes it possible to commit consumer offsets from a source topic in Kafka and produces messages to a destination topic in Kafka atomically. This makes it possible to provide exactly-once guarantees for an end-to-end pipeline. This is achieved through the use of a two-phase commit protocol, where the brokers of the cluster play the role of the transaction coordinator in a highly available manner using the same underlying mechanisms for partitioning, leader election, and fault-tolerant replication.
+
+The coordinator stores the status of a transaction in a separate log. The messages contained in a transaction are stored in their own partitions as usual.
+
+When a transaction is committed, the coordinator is responsible for writing a commit marker to the partitions containing messages of the transactions and the partitions storing the consumer offsets.
+
+Consumers can also specify the isolation level they want to read under, read_committed or read_uncommitted. In the former case, messages that are part of a transaction will be readable from a partition only after a commit marker has been produced for the associated transaction. This interaction is summarised in the following illustration:
+
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa1.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa2.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa3.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa4.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa5.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa6.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa7.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa8.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa9.png)
+
+## Physical storage of Kafka
+The physical storage layout of Kafka is simple and it is shown in the following illustration. Every log partition is implemented as a set of segment files of approximately the same size (e.g., 1 GB).
+
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa10.png)
+
 ## High-level Architecture
 
 ## Kafka common terms

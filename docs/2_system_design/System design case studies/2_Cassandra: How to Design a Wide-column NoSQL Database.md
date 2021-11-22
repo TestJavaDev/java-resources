@@ -177,6 +177,65 @@ While discussing Cassandra’s write path, we saw that the nodes could become ou
 
 Read Repair Chance: When the read consistency level is less than ‘All,’ Cassandra performs a read repair probabilistically. By default, Cassandra tries to read repair 10% of all requests with DC local read repair. In this case, Cassandra immediately sends a response when the consistency level is met and performs the read repair asynchronously in the background.
 
+## Without read repair
+In this scenario, we assume that read repair is not used. The system consists of three different replicas with a single row that contains a single column owner with the value none.
+
+Client A initially performs a write operation to set owner = A. While this operation is in progress, two clients B and C perform a read operation for the owner in sequence. The majority quorum of client B contains one replica that has already received the write operation, while client C contacts a quorum with nodes that haven’t received it yet. As a result, client B reads owner = A, while client C reads owner = none even though the operation from the latter started after the operation from the former had been completed, which violates linearizability.
+
+The following illustration shows this phenomenon
+
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq1.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq2.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq3.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq4.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq5.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq6.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq7.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq8.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq9.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq10.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq11.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq12.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq13.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq14.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq15.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq16.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq17.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq18.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq19.png)
+
+## With read repair
+The violation of linearizability in the previous example would be eliminated if read repair was used since the read from client B would propagate the value to replica 2, and client C would also read owner = A.
+
+So, let’s assume that read repair is used and examine a different scenario. Client A performs a write operation again to set owner = A. The write succeeds in one replica and fails in the other replica. As a result, the write is considered unsuccessful, and the coordinator returns a failure response back to the client. Afterward, client B performs a read operation that uses a quorum that contains the replica where the previous write succeeded.
+
+Cassandra performs a read repair using the LWW strategy, thus propagating the value to replica 2. Consequently, a write operation that failed has affected the state of the database, thus violating linearizability. This example is shown in the following illustration:
+
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq1.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq2.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq3.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq4.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq5.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq6.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq7.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq8.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq9.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq10.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq11.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq12.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq13.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq14.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq15.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq16.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq17.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq18.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq19.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq20.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq21.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq22.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq23.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq24.png)
+
 ## Snitch
 Snitch keeps track of the network topology of Cassandra nodes. It determines which data-centers and racks nodes belong to. Cassandra uses this information to route requests efficiently. Here are the two main functions of a snitch in Cassandra:
 

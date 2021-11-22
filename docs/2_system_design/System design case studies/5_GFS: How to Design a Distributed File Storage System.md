@@ -58,6 +58,78 @@ In addition, GFS supports two special operations:
 
 ## High-level Architecture
 
+## GFS architecture
+
+The following illustration gives an overview of the GFS architecture:
+
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big91.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big92.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big93.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big94.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big95.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big96.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big97.png)
+
+## Read operation
+The following illustration displays the workflow for a read operation
+
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big81.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big82.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big83.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big84.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big85.png)
+
+## Responsibilities of master
+The master stores:
+* the file and chunk namespaces
+* the mapping from files to chunks
+* the chunk locations
+
+All metadata is stored in the master’s memory. The namespaces and the mappings are also kept persistent by logging mutating operations (e.g. file creation, renaming etc.) to an operation log that is stored on the master’s local disk and replicated on remote machines. This is shown in the following illustration:
+
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big71.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big72.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big73.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big74.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big75.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big76.png)
+
+## Concurrency support
+GFS supports multiple concurrent writers for a single file. The following illustration illustrates how this works:
+
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big61.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big62.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big63.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big64.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big65.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big66.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big67.png)
+![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big68.png)
+
+1. Identifying chunk servers
+
+The client communicates with the master node to identify the chunk servers that contain the relevant chunks.
+
+2. Pushing data to all replicas
+
+The client starts pushing the data to all the replicas using some form of chain replication.
+
+The chunk servers are put in a chain depending on the network topology and data is pushed linearly along the chain.
+
+For instance, the client pushes the data to the first chunk server in the chain, which pushes the data to the second chunk server. It helps fully utilize each machine’s network bandwidth avoiding bottlenecks in a single node.
+
+The master grants a lease for each chunk to one of the chunk servers, which is nominated as the primary replica, responsible for serializing all the mutations on this chunk.
+
+3. Writing data to all replicas
+
+After all the data is pushed to the chunk servers, the client sends a write request to the primary replica, identifying the data pushed earlier.
+
+The primary assigns consecutive serial numbers to all the mutations, applies them locally, and then forwards the write request to all secondary replicas, which apply the mutations within the same serial number imposed by the primary.
+
+4. Acknowledge the write to the client
+
+After the secondary replicas have acknowledged the write to the primary replica, then the primary replica can acknowledge the write to the client.
+
 A GFS cluster consists of a single master and multiple ChunkServers and is accessed by multiple clients.
 
 ## Chunks
