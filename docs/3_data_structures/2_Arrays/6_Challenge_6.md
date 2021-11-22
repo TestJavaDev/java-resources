@@ -14,17 +14,19 @@ Challenge 6 / Java resources / Tutorial
 
 ## Challenge 6: First Non-Repeating Integer in an Array
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement the int findFirstUnique(int[] arr) method that will look for a first unique integer, which appears only once in the whole array. The function returns -1 if no unique number is found.
 
-Method Prototype #
+## Method Prototype 
 int findFirstUnique(int[] arr)
-Output #
+
+## Output 
 The first unique element in the array.
 
-Sample Input #
+## Sample Input 
 arr = {9, 2, 3, 2, 6, 6}
-Sample Output #
+
+## Sample Output 
 9
 
 ![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr86.png)
@@ -99,10 +101,7 @@ class CheckFirstUnique {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 We start from the first element and traverse through the whole array, comparing it with all the other elements to see if any element is equal to it. If so, we skip to the next element and repeat the above-mentioned steps. If not, then this is the first unique element in the array.
-
-Time Complexity #
-The time complexity of this solution is O(n^2)O(n
-​2
-​​ ) since the entire list is iterated for each element \rightarrow n \times n→n×n.
+## Time Complexity 
+The time complexity of this solution is O(n^2) since the entire list is iterated for each element \rightarrow n \times n→n×n.

@@ -1,34 +1,35 @@
 ---
 layout: default
-title: Challenge 1
+title: Challenge 10
 parent: Arrays
 grand_parent: Data Structures
-nav_order: 1
-permalink: /data_structures/arrays/ch1
+nav_order: 10
+permalink: /data_structures/arrays/ch10
 ---
 <div align="center" markdown="1">
-Challenge 1 / Java resources / Tutorial
+Challenge 10 / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>
 
 ## Challenge 10: Rearrange Sorted Array in Max/Min Form
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement the void maxMin(int[] arr) method. This will re-arrange the elements of a sorted array in such a way that the first position will have the largest number, the second will have the smallest, the third will have the second-largest, and so on.
 
 Note: The given array is sorted in ascending order.
-
 Note: The range of integers in the array can be from 0 to 10000.
 
-Method Prototype #
+## Method Prototype 
 void maxMin(int[] arr)
-Output #
+
+## Output 
 An array in which elements are stored in a max/min form.
 
-Sample Input #
+## Sample Input 
 arr = {1, 2, 3, 4, 5}
-Sample Output #
+
+## Sample Output 
 arr = {5, 1, 4, 2, 3}
 
 ![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr90.png)
@@ -94,11 +95,11 @@ class CheckMaxMin {
 }
 {% endhighlight %}
 
-Explanation#
+## Explanation
 In this solution, we first create an empty array whose size is equal to the size of the original array, then we start iterating over the array and store the maximum number in the start of the array and then the minimum number next to it and so on. In the end, store the result array to the original array.
 
-Time Complexity#
-The time complexity of this problem is O(n)O(n) as the array is iterated over once
+## Time Complexity
+The time complexity of this problem is O(n) as the array is iterated over once
 
 ## Solution #2: Using O(1) Extra Space
 
@@ -144,15 +145,16 @@ class CheckMaxMin {
 }
 {% endhighlight %}
 
-Explanation#
+## Explanation
 This solution is very smart. We actually store two elements at one index mathematically. The original element is stored as the remainder, while the max/min element is stored as the multiplier. The following line achieves this;
 
 arr[i] += (arr[maxIdx] % maxElem ) * maxElem;
+
 Here, arr[maxId] is stored as the multiplier. Whereas, arr[i] is stored as the remainder. For example in the array, [1, 2, 3, 4, 5, 6, 7, 8, 9], the maxElem which is any element greater than the maximum element in the array, in this case, is 10 and 91 is stored at index 0. With 91, we can get the original element, 1, using the expression 91%10 as well as the new element, 9, using the expression 91/10.
 
 This allows us to swap the numbers in place without losing any data or using any extra space. To get the final array, we simply divide each element by maxElem as done in the last for loop.
 
 It should be noted that very large or very small values such as Integer.MAX_VALUE or Integer.MIN_VALUE can potentially cause issues with the mathematical formula we are using in this solution. This would result in loss of data.
 
-Time Complexity#
-The time complexity of this solution is in O(n)O(n). The space complexity is constant
+## Time Complexity
+The time complexity of this solution is in O(n). The space complexity is constant

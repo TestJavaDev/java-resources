@@ -14,17 +14,19 @@ Challenge 5 / Java resources / Tutorial
 
 ## Challenge 5: Find Minimum Value in Array
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement the int findMinimum(int[] arr) method, which will traverse the whole array and find the smallest number in the array.
 
-Method Prototype #
+## Method Prototype 
 int findMinimum(int[] arr)
-Output #
+
+## Output 
 The smallest number in the array.
 
-Sample Input #
+## Sample Input 
 arr = {9, 2, 3, 6}
-Sample Output #
+
+## Sample Output 
 2
 
 ![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr85.png)
@@ -79,8 +81,8 @@ class CheckMinimum
 } 
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 Start with the first element, which is 9 in this example, and save it in minimum as the smallest value. Then, iterate over the rest of the array and compare the minimum to each element. If any element is smaller than the minimum, then set the minimum to that element. By the end of the array, the number stored in the minimum will be the smallest integer in the whole array.
 
-Time Complexity #
-Since the entire list is iterated over once, this algorithm is in linear time, O(n)O(n).
+## Time Complexity 
+Since the entire list is iterated over once, this algorithm is in linear time, O(n).

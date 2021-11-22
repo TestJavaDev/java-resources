@@ -20,21 +20,23 @@ Here is a short guide to these challenge lessons.
 The method definition is always given in the problem statement with the expected arguments and method name to be used as is in the solution. If you change it, your code will not compile
 When you do get compile-time errors, they will sometimes refer to line numbers and code, which you did not write. That is fine; that is just our evaluation code. Although, rest assured that our code compiles. When in doubt, refer to the solution given and paste that in.
 Sometimes you are going to have to return from methods in a form that aligns with the test cases. Your solution may not be incorrect, but your form of returning might not be what the evaluation code expects. For example, you might return a number, but our test cases might expect an array. Watch out for that. Good luck! 🍀
-Problem Statement #
+
+## Problem Statement 
 In this problem, you have to implement the int [] removeEven(int[] arr) method, which removes all the even elements from the array and returns back updated array.
 
-
-Method Prototype #
+## Method Prototype 
 int[] removeEven(int[] arr);
-Input #
+
+## Input 
 An array with integers.
 
-Output #
+## Output 
 An array with only odd integers.
 
-Sample Input #
+## Sample Input 
 arr = {1, 2, 4, 5, 10, 6, 3}
-Sample Output #
+
+## Sample Output 
 arr = {1, 5, 3}
 
 ## Coding Exercise
@@ -101,10 +103,10 @@ class CheckRemoveEven {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 This solution first finds the number of odd elements in the given array by iterating over it and incrementing a count variable if an element is odd.
 
 Next, we initialize an array with a size oddElements, and store all the odd numbers in it.
 
-Time Complexity #
-Since the entire array has to be iterated over, this solution is in O(n)O(n)​​.
+## Time Complexity 
+Since the entire array has to be iterated over, this solution is in O(n).

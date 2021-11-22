@@ -1,32 +1,34 @@
 ---
 layout: default
-title: Challenge 1
+title: Challenge 7
 parent: Arrays
 grand_parent: Data Structures
-nav_order: 1
-permalink: /data_structures/arrays/ch1
+nav_order: 7
+permalink: /data_structures/arrays/ch7
 ---
 <div align="center" markdown="1">
-Challenge 1 / Java resources / Tutorial
+Challenge 7 / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>
 
 ## Challenge 7: Find Second Maximum Value in an Array
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement the int findSecondMaximum(int[] arr) method, which will traverse the whole array and return the second largest element present in the array.
 
 Assumption: Array should contain at least two unique elements.
 
-Method Prototype #
+## Method Prototype 
 int findSecondMaximum(int[] arr)
-Output #
+
+## Output 
 Second largest element present in the array.
 
-Sample Input #
+## Sample Input 
 arr = {9,2,3,6}
-Sample Output #
+
+## Sample Output 
 6
 
 ![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr87.png)
@@ -106,11 +108,11 @@ class CheckSecondMax
 
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 We traverse the array twice. In the first traversal, we find the maximum element. In the second traversal, find the greatest element less than the element obtained in the first traversal.
 
-Time Complexity #
-The time complexity of the solution is in O(n)O(n) since the array is traversed twice but in separate loops. Which means O(n + n) \Rightarrow O(n)O(n+n)⇒O(n)
+## Time Complexity 
+The time complexity of the solution is in O(n) since the array is traversed twice but in separate loops. Which means O(n + n) \Rightarrow O(n)O(n+n)⇒O(n)
 
 ## Solution #2: Traversing the Array Only Once
 
@@ -165,8 +167,8 @@ The time complexity of the solution is in O(n)O(n) since the array is traversed 
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 We initialize two variables max and secondmax to Integer.MIN_VALUE having value -2147483648, which is the maximum integer negative value range. We then traverse the array, and if the current element in the array is greater than the maximum value, then set secondmax to max and max to the current element. If the current element is greater than the secondmax but less than max, then update secondmax to store the value of the current element. Finally, return the value stored in secondmax.
 
-Time Complexity #
-This solution is in O(n)O(n) since the list is traversed once only.
+## Time Complexity 
+This solution is in O(n) since the list is traversed once only.

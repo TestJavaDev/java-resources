@@ -1,33 +1,36 @@
 ---
 layout: default
-title: Challenge 1
+title: Challenge 9
 parent: Arrays
 grand_parent: Data Structures
-nav_order: 1
-permalink: /data_structures/arrays/ch1
+nav_order: 9
+permalink: /data_structures/arrays/ch9
 ---
 <div align="center" markdown="1">
-Challenge 1 / Java resources / Tutorial
+Challenge 9 / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>
 
 ## Challenge 9: Re-arrange Positive & Negative Values
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement the void reArrange(int[] arr) method, which will sort the elements, such that all the negative elements appear at the left and positive elements appear at the right.
 
 Note: Consider 0 as a positive number.
 
-Method Prototype #
+## Method Prototype 
 void reArrange(int[] arr)
-Output #
+
+## Output 
 A sorted array with negative elements at the left and positive elements at the right.
 
-Sample Input #
+## Sample Input 
 arr = {10, -1, 20, 4, 5, -9, -6}
-Sample Output #
+
+## Sample Output 
 arr = {-1, -9, -6, 10, 20, 4, 5}
+
 Note: Order of the numbers doesn’t matter.
 
 {-1, -9, -6, 10, 20, 4, 5} = {-9, -1, -6, 10, 4, 20, 5}
@@ -96,11 +99,11 @@ class CheckReArrange {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 In this solution, we iterate over the entire given array and copy all negative numbers to a newly created array and then positive ones to this array. In the end, copy them into the original array.
 
-Time Complexity #
-Since the given array is iterated over thrice in non-nested loops, the time complexity of this solution is O(n)O(n). Space complexity increased in this case as the new array is created.
+## Time Complexity 
+Since the given array is iterated over thrice in non-nested loops, the time complexity of this solution is O(n). Space complexity increased in this case as the new array is created.
 
 ## Solution# 2: Re-arranging in Place
 
@@ -141,5 +144,5 @@ class CheckReArrange
 }
 {% endhighlight %}
 
-Explanation#
+## Explanation
 In this solution, we keep two variables i and j. Both of them are 0 initially. i iterates over the array while j keeps track of the position where next encountered negative number should be placed. When we come across a negative number, the values at i and j indexes are swapped, and j is incremented. This continues until the end of the array is reached.

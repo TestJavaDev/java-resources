@@ -14,18 +14,20 @@ Challenge 3 / Java resources / Tutorial
 
 ## Challenge 3: Find Two Numbers that Add up to "n"
 
-Problem Statement#
+## Problem Statement
 In this problem, you have to implement the int[] findSum(int[] arr, int n) method, which will take a number n, and an array arr as input and returns an array of two integers that add up to n in an array. You are required to return only one such pair. If no such pair is found then simply return the array.
 
-Method Prototype#
+## Method Prototype
 int[] findSum(int[] arr, int n)
-Output#
+
+## Output
 An array with two integers a and b that add up to a given number or the original array in case a pair is not found.
 
-Sample Input#
+## Sample Input
 arr = {1, 21, 3, 14, 5, 60, 7, 6}
 value = 27
-Sample Output#
+
+## Sample Output
 arr = {21, 6} or {6, 21}
 
 ![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr82.png)
@@ -91,10 +93,10 @@ class CheckSum{
 }
 {% endhighlight %}
 
-Explanation#
+## Explanation
 This is the most time-intensive but intuitive solution. Traverse the whole array of the given size. For each element in the array, check if it can add up with any element after it to give the number n. Use a nested for-loop for this purpose and iterate over the entire array for each element.
 
-Time Complexity#
+## Time Complexity
 Since we iterate over the entire array in a nested loop, the time complexity is O(n^2)
 
 ## Solution #2: Sorting the array
@@ -186,8 +188,8 @@ class CheckSum{
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 While solution #1 is very intuitive, it is not very time efficient. A better way to solve this is by first sorting the array. Here,QuickSort is used to sort the array first. Then using two variables, one starting from the first index of the array and second from size-1size−1 index of the array. If the sum of the elements on these indexes of the array is smaller than given value n, then increment index from the start else decrement index from the end until the given value n is equal to the sum. Store the elements on these indexes in result array and return it.
 
-Time Complexity #
-Since the sorting function used in this code takes O(nlogn)O(nlogn) and the algorithm to find two numbers takes O(n) time, the overall time complexity of this code is O(nlognO(nlogn).
+## Time Complexity 
+Since the sorting function used in this code takes O(nlogn) and the algorithm to find two numbers takes O(n) time, the overall time complexity of this code is O(nlognO.

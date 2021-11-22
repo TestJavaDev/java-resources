@@ -1,30 +1,32 @@
 ---
 layout: default
-title: Challenge 1
+title: Challenge 8
 parent: Arrays
 grand_parent: Data Structures
-nav_order: 1
-permalink: /data_structures/arrays/ch1
+nav_order: 8
+permalink: /data_structures/arrays/ch8
 ---
 <div align="center" markdown="1">
-Challenge 1 / Java resources / Tutorial
+Challenge 8 / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>
 
 ## Challenge 8: Right Rotate the Array by One Index
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement the void rotateArray(int[] arr) method, which takes an arr and rotate it right by 1. This means that the right-most elements will appear at the left-most position in the array.
 
-Method Prototype #
+## Method Prototype 
 void rotateArray(int[] arr)
-Output #
+
+## Output 
 Array rotated by one element from right to left
 
-Sample Input #
+## Sample Input 
 arr = {1, 2, 3, 4, 5}
-Sample Output #
+
+## Sample Output 
 arr = {5, 1, 2, 3, 4}
 
 ![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr88.png)
@@ -83,8 +85,8 @@ class CheckRotateArray
 } 
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 To rotate the array towards the right, we have to move the array elements towards the right by one index. This means every element stored at index i will be moved to i + 1 position. However, if we start shifting elements from the first element of the array, then the element at last index arr[arr.length - 1] is overwritten. Hence first, we save the last element in the variable lastElement. Then we start shifting elements from index i - 1 to i, where the initial value of i will be arr.length - 1, and we will keep shifting the elements until i is greater than 0. When the loop ends, we store the value of lastElement in arr[0].
 
-Time Complexity #
-Since the entire array is iterated over once, the time complexity of this solution is O(n)O(n).
+## Time Complexity 
+Since the entire array is iterated over once, the time complexity of this solution is O(n).

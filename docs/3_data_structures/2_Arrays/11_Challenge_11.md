@@ -1,20 +1,20 @@
 ---
 layout: default
-title: Challenge 1
+title: Challenge 11
 parent: Arrays
 grand_parent: Data Structures
-nav_order: 1
-permalink: /data_structures/arrays/ch1
+nav_order: 11
+permalink: /data_structures/arrays/ch11
 ---
 <div align="center" markdown="1">
-Challenge 1 / Java resources / Tutorial
+Challenge 11 / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>
 
 ## Challenge 11: Find the Sum of Maximum Sum Subarray
 
-Maximum Sum Subarray#
+## Maximum Sum Subarray
 Given an unsorted array AA, the maximum sum sub-array is the sub-array (contiguous elements) from AA for which the sum of the elements is maximum. In this challenge, we want to find the sum of the maximum sum sub-array. This problem is a tricky one because the array might have negative integers in any position, so we have to cater to those negative integers while choosing the contiguous subarray with the largest positive values.
 
 Here is an example:
@@ -28,17 +28,19 @@ Here is an example:
 ![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr97.png)
 ![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr98.png)
 
-Problem statement#
+## Problem statement
 Given an integer array, return the maximum subarray sum. The array may contain both positive and negative integers and is unsorted.
 
-Method Prototype#
+## Method Prototype
 int findMaxSumSubArray(int[] arr)
-Output#
+
+## Output
 An integer value equal to the maximum sum of subarray found in arr.
 
-Sample Input#
+## Sample Input
 arr = {1, 7, -2, -5, 10, -1}
-Sample Output#
+
+## Sample Output
 11
 
 ## Coding Exercise

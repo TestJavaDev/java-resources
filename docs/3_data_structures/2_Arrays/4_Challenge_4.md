@@ -16,20 +16,22 @@ Challenge 4 / Java resources / Tutorial
 
 Given an array, return an array where each index stores the product of all numbers except the number on the index itself. Implement your solution in Java and see if your output matches the expected output!
 
-Problem Statement#
+## Problem Statement
 In this problem, you have to implement the int[] findProduct(int[] arr) method which will modify arr in such a way that in the output, each index i will contain the product of all elements present in arr except the element stored on that index i.
 
-Method Prototype#
+## Method Prototype
 int[] findProduct(int[] arr)
-Input#
+
+## Input
 An array of integers. This array can be of any (valid) size and elements can be repeated.
 
-Output#
+## Output
 An array with products stored at each position.
 
-Sample Input#
+## Sample Input
 arr = {1,2,3,4}
-Sample Output#
+
+## Sample Output
 arr = {24,12,8,6}
 
 ![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr83.png)
@@ -108,7 +110,7 @@ class ProductArray
 } 
 {% endhighlight %}
 
-Explanation#
+## Explanation
 The algorithm for this solution is to first create a new array result with products of all elements to the left of each element, as done on lines 12-16. With temp initially set to 1, in each iteration, the code:
 
 sets the value of temp to the current index of the result array.
