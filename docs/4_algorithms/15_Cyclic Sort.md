@@ -2,7 +2,7 @@
 layout: default
 title: Cyclic Sort
 parent: Algorithms
-nav_order: 1
+nav_order: 15
 permalink: /algorithms/sort
 ---
 <div align="center" markdown="1">

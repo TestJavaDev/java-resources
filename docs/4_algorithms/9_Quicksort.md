@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quicksort
-parent: Algorithm
+parent: Algorithms
 nav_order: 9
 permalink: /algorithms/quicksort
 ---
