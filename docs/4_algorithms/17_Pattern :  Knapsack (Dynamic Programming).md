@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Cyclic Sort
+title: Knapsack 
 parent: Algorithms
-nav_order: 15
-permalink: /algorithms/sort
+nav_order: 17
+permalink: /algorithms/knapsack 
 ---
 <div align="center" markdown="1">
-Cyclic Sort / Java resources / Tutorial
+Knapsack  / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>

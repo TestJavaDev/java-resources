@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Cyclic Sort
+title: Topological Sort
 parent: Algorithms
-nav_order: 15
-permalink: /algorithms/sort
+nav_order: 16
+permalink: /algorithms/topological_ort
 ---
 <div align="center" markdown="1">
-Cyclic Sort / Java resources / Tutorial
+Topological Sort / Java resources / Tutorial
 
 {: .fs-8 .fw-400 }
 </div>
