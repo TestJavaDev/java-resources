@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Merge Intervals
+title: Sliding Window
 parent: Algorithms
 nav_order: 14
 permalink: /algorithms/sliding
