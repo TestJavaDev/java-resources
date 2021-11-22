@@ -4,7 +4,7 @@ title: Challenge 10
 parent: Stack_Queues
 grand_parent: Data Structures
 nav_order: 10
-permalink: /data_structures/stack_queues/ch1
+permalink: /data_structures/stack_queues/ch10
 ---
 <div align="center" markdown="1">
 Challenge 10 / Java resources / Tutorial
