@@ -13,10 +13,10 @@ Cyclic Sort / Java resources / Tutorial
 
 ## Cyclic Sort
 
-Problem Statement#
+## Problem Statement
 We are given an array containing n objects. Each object, when created, was assigned a unique number from the range 1 to n based on their creation sequence. This means that the object with sequence number 3 was created just before the object with sequence number 4.
 
-Write a function to sort the objects in-place on their creation sequence number in O(n)O(n) and without using any extra space. For simplicity, let’s assume we are passed an integer array containing only the sequence numbers, though each number is actually an object.
+Write a function to sort the objects in-place on their creation sequence number in O(n) and without using any extra space. For simplicity, let’s assume we are passed an integer array containing only the sequence numbers, though each number is actually an object.
 
 Example 1:
 
@@ -31,7 +31,7 @@ Example 3:
 Input: [1, 5, 6, 4, 3, 2]
 Output: [1, 2, 3, 4, 5, 6]
 
-Solution#
+## Solution
 As we know, the input array contains numbers from the range 1 to n. We can use this fact to devise an efficient way to sort the numbers. Since all numbers are unique, we can try placing each number at its correct place, i.e., placing 1 at index ‘0’, placing 2 at index ‘1’, and so on.
 
 To place a number (or an object in general) at its correct index, we first need to find that number. If we first find a number and then place it at its correct place, it will take us O(N^2), which is not acceptable.
@@ -103,16 +103,16 @@ Example 2:
 Input: [8, 3, 5, 2, 4, 6, 0, 1]
 Output: 7
 
-Solution#
+## Solution
 This problem follows the Cyclic Sort pattern. Since the input array contains unique numbers from the range 0 to ‘n’, we can use a similar strategy as discussed in Cyclic Sort to place the numbers on their correct index. Once we have every number in its correct place, we can iterate the array to find the index which does not have the correct number, and that index will be our missing number.
 
 However, there are two differences with Cyclic Sort:
+* In this problem, the numbers are ranged from ‘0’ to ‘n’, compared to ‘1’ to ‘n’ in the Cyclic Sort. This will make two changes in our algorithm:
+* In this problem, each number should be equal to its index, compared to index - 1 in the Cyclic Sort. Therefore => nums[i] == nums[nums[i]]
+* Since the array will have ‘n’ numbers, which means array indices will range from 0 to ‘n-1’. Therefore, we will ignore the number ‘n’ as we can’t place it in the array, so => nums[i] < nums.length
+* Say we are at index i. If we swap the number at index i to place it at the correct index, we can still have the wrong number at index i. This was true in Cyclic Sort too. It didn’t cause any problems in Cyclic Sort as over there, we made sure to place one number at its correct place in each step, but that wouldn’t be enough in this problem as we have one extra number due to the larger range. Therefore, we will not move to the next number after the swap until we have a correct number at the index i.
 
-In this problem, the numbers are ranged from ‘0’ to ‘n’, compared to ‘1’ to ‘n’ in the Cyclic Sort. This will make two changes in our algorithm:
-In this problem, each number should be equal to its index, compared to index - 1 in the Cyclic Sort. Therefore => nums[i] == nums[nums[i]]
-Since the array will have ‘n’ numbers, which means array indices will range from 0 to ‘n-1’. Therefore, we will ignore the number ‘n’ as we can’t place it in the array, so => nums[i] < nums.length
-Say we are at index i. If we swap the number at index i to place it at the correct index, we can still have the wrong number at index i. This was true in Cyclic Sort too. It didn’t cause any problems in Cyclic Sort as over there, we made sure to place one number at its correct place in each step, but that wouldn’t be enough in this problem as we have one extra number due to the larger range. Therefore, we will not move to the next number after the swap until we have a correct number at the index i.
-Code#
+## Code
 
 {% highlight java %}
 class MissingNumber {
@@ -148,15 +148,15 @@ class MissingNumber {
 
 {% endhighlight %}
 
-Time complexity#
-The time complexity of the above algorithm is O(n)O(n). In the while loop, although we are not incrementing the index i when swapping the numbers, this will result in more than n iterations of the loop, but in the worst-case scenario, the while loop will swap a total of n-1 numbers and once a number is at its correct index, we will move on to the next number by incrementing i. In the end, we iterate the input array again to find the first number missing from its index, so overall, our algorithm will take O(n) + O(n-1) + O(n)O(n)+O(n−1)+O(n) which is asymptotically equivalent to O(n)O(n).
+## Time complexity
+The time complexity of the above algorithm is O(n). In the while loop, although we are not incrementing the index i when swapping the numbers, this will result in more than n iterations of the loop, but in the worst-case scenario, the while loop will swap a total of n-1 numbers and once a number is at its correct index, we will move on to the next number by incrementing i. In the end, we iterate the input array again to find the first number missing from its index, so overall, our algorithm will take O(n) + O(n-1)  which is asymptotically equivalent to O(n).
 
-Space complexity#
-The algorithm runs in constant space O(1)O(1).
+## Space complexity
+The algorithm runs in constant space O(1).
 
 ## Find all Missing Numbers
 
-Problem Statement#
+## Problem Statement
 We are given an unsorted array containing numbers taken from the range 1 to ‘n’. The array can have duplicates, which means some numbers will be missing. Find all those missing numbers.
 
 Example 1:
@@ -173,12 +173,12 @@ Example 3:
 Input: [2, 3, 2, 1]
 Output: 4
 
-olution#
+## Solution
 This problem follows the Cyclic Sort pattern and shares similarities with Find the Missing Number with one difference. In this problem, there can be many duplicates whereas in ‘Find the Missing Number’ there were no duplicates and the range was greater than the length of the array.
 
 However, we will follow a similar approach though as discussed in Find the Missing Number to place the numbers on their correct indices. Once we are done with the cyclic sort we will iterate the array to find all indices that are missing the correct numbers.
 
-Code
+## Code
 
 {% highlight java %}
 import java.util.*;
@@ -222,15 +222,15 @@ class AllMissingNumbers {
 
 {% endhighlight %}
 
-Time complexity#
-The time complexity of the above algorithm is O(n)O(n).
+## Time complexity
+The time complexity of the above algorithm is O(n).
 
-Space complexity#
-Ignoring the space required for the output array, the algorithm runs in constant space O(1)O(1).
+## Space complexity
+Ignoring the space required for the output array, the algorithm runs in constant space O(1).
 
 ## Find the Duplicate Number
 
-Problem Statement#
+## Problem Statement
 We are given an unsorted array containing ‘n+1’ numbers taken from the range 1 to ‘n’. The array has only one duplicate but it can be repeated multiple times. Find that duplicate number without using any extra space. You are, however, allowed to modify the input array.
 
 Example 1:
@@ -246,10 +246,10 @@ Example 3:
 Input: [2, 4, 1, 4, 4]
 Output: 4
 
-Solution#
+## Solution
 This problem follows the Cyclic Sort pattern and shares similarities with Find the Missing Number. Following a similar approach, we will try to place each number on its correct index. Since there is only one duplicate, if while swapping the number with its index both the numbers being swapped are same, we have found our duplicate!
 
-Code
+## Code
 
 {% highlight java %}
 class FindDuplicate {
@@ -285,14 +285,14 @@ class FindDuplicate {
 
 {% endhighlight %}
 
-Time complexity#
-The time complexity of the above algorithm is O(n)O(n).
+## Time complexity
+The time complexity of the above algorithm is O(n).
 
-Space complexity#
-The algorithm runs in constant space O(1)O(1) but modifies the input array.
+## Space complexity
+The algorithm runs in constant space O(1) but modifies the input array.
 
-Similar Problems#
-Problem 1: Can we solve the above problem in O(1)O(1) space and without modifying the input array?
+## Similar Problems
+Problem 1: Can we solve the above problem in O(1) space and without modifying the input array?
 
 Solution: While doing the cyclic sort, we realized that the array will have a cycle due to the duplicate number and that the start of the cycle will always point to the duplicate number. This means that we can use the fast & the slow pointer method to find the duplicate number or the start of the cycle similar to Start of LinkedList Cycle.
 
@@ -345,7 +345,7 @@ class DuplicateNumber {
 
 ## Find all Duplicate Numbers
 
-Problem Statement#
+## Problem Statement
 We are given an unsorted array containing ‘n’ numbers taken from the range 1 to ‘n’. The array has some numbers appearing twice, find all these duplicate numbers without using any extra space.
 
 Example 1:
@@ -357,10 +357,10 @@ Example 2:
 Input: [5, 4, 7, 2, 3, 5, 3]
 Output: [3, 5]
 
-Solution#
+## Solution
 This problem follows the Cyclic Sort pattern and shares similarities with Find the Duplicate Number. Following a similar approach, we will place each number at its correct index. After that, we will iterate through the array to find all numbers that are not at the correct indices. All these numbers are duplicates.
 
-Code
+## Code
 
 {% highlight java %}
 import java.util.*;
@@ -399,13 +399,5 @@ class FindAllDuplicate {
     System.out.println("Duplicates are: " + duplicates);
   }
 }
-
-{% endhighlight %}
-
-
-
-
-
-{% highlight java %}
 
 {% endhighlight %}

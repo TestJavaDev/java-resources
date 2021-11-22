@@ -21,7 +21,7 @@ Input: [0, 0, 1, 1, 1, 2, 2]
 
 Your function should modify the list in-place so the first 3 elements become [0, 1, 2].
 
-Example#
+## Example
 Input: [0, 0, 1, 1, 1, 2, 2]
 
 Output: 3
@@ -156,7 +156,7 @@ The time complexity is O(N) since we traverse the linked list once.
 ## Problem statement
 Given an array of integers sorted in ascending order, find two numbers that add up to a given target. Return the indices of the two numbers in ascending order. You can assume elements in the array are unique and that there is only one solution. Do this in O(n) time and with constant auxiliary space.
 
-Example#
+## Example
 Input: [2, 3, 4, 5, 8, 11, 18], 8
 
 Output: 1 3

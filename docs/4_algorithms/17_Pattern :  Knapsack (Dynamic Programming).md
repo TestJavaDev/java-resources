@@ -13,7 +13,7 @@ Cyclic Sort / Java resources / Tutorial
 
 ## Pattern : 0/1 Knapsack (Dynamic Programming)
 
-Introduction
+## Introduction
 0/1 Knapsack pattern is based on the famous problem with the same name which is efficiently solved using Dynamic Programming (DP).
 
 In this pattern, we will go through a set of problems to develop an understanding of DP. We will always start with a brute-force recursive solution to see the overlapping subproblems, i.e., realizing that we are solving the same problems repeatedly.
@@ -22,7 +22,7 @@ After the recursive solution, we will modify our algorithm to apply advanced tec
 
 Let’s jump onto our first problem.
 
-Introduction#
+## Introduction
 Given the weights and profits of ‘N’ items, we are asked to put these items in a knapsack with a capacity ‘C.’ The goal is to get the maximum profit out of the knapsack items. Each item can only be selected once, as we don’t have multiple quantities of any item.
 
 Let’s take Merry’s example, who wants to carry some fruits in the knapsack to get maximum profit. Here are the weights and profits of the fruits:
@@ -41,10 +41,10 @@ Banana + Melon (total weight 5) => 10 profit
 
 This shows that Banana + Melon is the best combination as it gives us the maximum profit, and the total weight does not exceed the capacity.
 
-Problem Statement#
+## Problem Statement
 Given two integer arrays to represent weights and profits of ‘N’ items, we need to find a subset of these items which will give us maximum profit such that their cumulative weight is not more than a given number ‘C.’ Each item can only be selected once, which means either we put an item in the knapsack or we skip it.
 
-Basic Solution#
+## Basic Solution
 A basic brute-force solution could be to try all combinations of the given items (as we did above), allowing us to choose the one with maximum profit and a weight that doesn’t exceed ‘C’. Take the example of four items (A, B, C, and D), as shown in the diagram below. To try all the combinations, our algorithm will look like:
 
 ![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg10.png)
@@ -55,7 +55,8 @@ Here is a visual representation of our algorithm:
 
 All green boxes have a total weight that is less than or equal to the capacity (7), and all the red ones have a weight that is more than 7. The best solution we have is with items [B, D] having a total profit of 22 and a total weight of 7.
 
-Code#
+## Code
+
 Here is the code for the brute-force solution:
 
 {% highlight java %}
@@ -102,12 +103,12 @@ class Knapsack {
 
 We can clearly see that ‘c:4, i=3’ has been called twice. Hence we have an overlapping sub-problems pattern. We can use Memoization to solve overlapping sub-problems efficiently.
 
-Top-down Dynamic Programming with Memoization#
+## Top-down Dynamic Programming with Memoization
 Memoization is when we store the results of all the previously solved sub-problems and return the results from memory if we encounter a problem that has already been solved.
 
 Since we have two changing values (capacity and currentIndex) in our recursive function knapsackRecursive(), we can use a two-dimensional array to store the results of all the solved sub-problems. As mentioned above, we need to store results for every sub-array (i.e., for every possible index ‘i’) and every possible capacity ‘c.’
 
-Code#
+## Code
 Here is the code with memoization (see changes in the highlighted lines):
 
 {% highlight java %}
@@ -188,7 +189,8 @@ Let’s draw this visually and start with our base case of zero capacity:
 ![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg38.png)
 ![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg39.png)
 
-Code#
+## Code
+
 Here is the code for our bottom-up dynamic programming approach:
 
 {% highlight java %}
@@ -244,7 +246,7 @@ class Knapsack {
 
 ![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg40.png)
 
-How can we find the selected items?#
+## How can we find the selected items?
 As we know, the final profit is at the bottom-right corner. Therefore, we will start from there to find the items that will be going into the knapsack.
 
 As you remember, at every step, we had two options: include an item or skip it. If we skip an item, we take the profit from the remaining items (i.e., from the cell right above it); if we include the item, then we jump to the remaining profit to find more items.
@@ -253,13 +255,14 @@ Let’s understand this from the above example:
 
 ![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg41.png)
 
-‘22’ did not come from the top cell (which is 17); hence we must include the item at index ‘3’ (which is item ‘D’).
-Subtract the profit of item ‘D’ from ‘22’ to get the remaining profit ‘6’. We then jump to profit ‘6’ on the same row.
-‘6’ came from the top cell, so we jump to row ‘2’.
-Again, ‘6’ came from the top cell, so we jump to row ‘1’.
-‘6’ is different from the top cell, so we must include this item (which is item ‘B’).
-Subtract the profit of ‘B’ from ‘6’ to get profit ‘0’. We then jump to profit ‘0’ on the same row. As soon as we hit zero remaining profit, we can finish our item search.
-Thus, the items going into the knapsack are {B, D}.
+1. ‘22’ did not come from the top cell (which is 17); hence we must include the item at index ‘3’ (which is item ‘D’).
+2. Subtract the profit of item ‘D’ from ‘22’ to get the remaining profit ‘6’. We then jump to profit ‘6’ on the same row.
+3. ‘6’ came from the top cell, so we jump to row ‘2’.
+4. Again, ‘6’ came from the top cell, so we jump to row ‘1’.
+5. ‘6’ is different from the top cell, so we must include this item (which is item ‘B’).
+6. Subtract the profit of ‘B’ from ‘6’ to get profit ‘0’. We then jump to profit ‘0’ on the same row. As soon as we hit zero remaining profit, we can finish our item search.
+7. Thus, the items going into the knapsack are {B, D}.
+
 Let’s write a function to print the set of items included in the knapsack.
 
 {% highlight java %}
@@ -330,8 +333,4 @@ class Knapsack {
     System.out.println("Total knapsack profit ---> " + maxProfit);
   }
 }
-{% endhighlight %}
-
-{% highlight java %}
-
 {% endhighlight %}

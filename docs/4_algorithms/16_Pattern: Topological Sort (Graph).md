@@ -13,7 +13,7 @@ Cyclic Sort / Java resources / Tutorial
 
 ## Pattern: Topological Sort (Graph)
 
-Introduction
+## Introduction
 Topological Sort is used to find a linear ordering of elements that have dependencies on each other. For example, if event ‘B’ is dependent on event ‘A’, ‘A’ comes before ‘B’ in topological ordering.
 
 This pattern defines an easy way to understand the technique for performing topological sorting of a set of elements and then solves a few problems using it.
@@ -22,7 +22,7 @@ Let’s see this pattern in action.
 
 ## Topological Sort
 
-Problem Statement#
+## Problem Statement
 Topological Sort of a directed graph (a graph with unidirectional edges) is a linear ordering of its vertices such that for every directed edge (U, V) from vertex U to vertex V, U comes before V in the ordering.
 
 Given a directed graph, find the topological ordering of its vertices.
@@ -41,16 +41,12 @@ Example 1:
 
 ![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg6.png)
 
-Solution#
+## Solution
 The basic idea behind the topological sort is to provide a partial ordering among the vertices of the graph such that if there is an edge from U to V then U≤V i.e., U comes before V in the ordering. Here are a few fundamental concepts related to topological sort:
-
-Source: Any node that has no incoming edge and has only outgoing edges is called a source.
-
-Sink: Any node that has only incoming edges and no outgoing edge is called a sink.
-
-So, we can say that a topological ordering starts with one of the sources and ends at one of the sinks.
-
-A topological ordering is possible only when the graph has no directed cycles, i.e. if the graph is a Directed Acyclic Graph (DAG). If the graph has a cycle, some vertices will have cyclic dependencies which makes it impossible to find a linear ordering among vertices.
+1. Source: Any node that has no incoming edge and has only outgoing edges is called a source.
+2. Sink: Any node that has only incoming edges and no outgoing edge is called a sink.
+3. So, we can say that a topological ordering starts with one of the sources and ends at one of the sinks.
+4. A topological ordering is possible only when the graph has no directed cycles, i.e. if the graph is a Directed Acyclic Graph (DAG). If the graph has a cycle, some vertices will have cyclic dependencies which makes it impossible to find a linear ordering among vertices.
 
 To find the topological sort of a graph we can traverse the graph in a Breadth First Search (BFS) way. We will start with all the sources, and in a stepwise fashion, save all sources to a sorted list. We will then remove all sources and their edges from the graph. After the removal of the edges, we will have new sources, so we will repeat the above process until all vertices are visited.
 
@@ -60,25 +56,22 @@ Here is the visual representation of this algorithm for Example-3:
 
 This is how we can implement this algorithm:
 
-a. Initialization
+1. a. Initialization
+   * We will store the graph in Adjacency Lists, which means each parent vertex will have a list containing all of its children. We will do this using a HashMap where the ‘key’ will be the parent vertex number and the value will be a List containing children vertices.
+   * To find the sources, we will keep a HashMap to count the in-degrees i.e., count of incoming edges of each vertex. Any vertex with ‘0’ in-degree will be a source.
+2. b. Build the graph and find in-degrees of all vertices
+   * We will build the graph from the input and populate the in-degrees HashMap.
+3. c. Find all sources
+   * All vertices with ‘0’ in-degrees will be our sources and we will store them in a Queue.
+4. d. Sort
+   * For each source, do the following things:
+      * Add it to the sorted list.
+      * Get all of its children from the graph.
+      * Decrement the in-degree of each child by 1.
+      * If a child’s in-degree becomes ‘0’, add it to the sources Queue.
+   * Repeat step 1, until the source Queue is empty.
 
-We will store the graph in Adjacency Lists, which means each parent vertex will have a list containing all of its children. We will do this using a HashMap where the ‘key’ will be the parent vertex number and the value will be a List containing children vertices.
-To find the sources, we will keep a HashMap to count the in-degrees i.e., count of incoming edges of each vertex. Any vertex with ‘0’ in-degree will be a source.
-b. Build the graph and find in-degrees of all vertices
-
-We will build the graph from the input and populate the in-degrees HashMap.
-c. Find all sources
-
-All vertices with ‘0’ in-degrees will be our sources and we will store them in a Queue.
-d. Sort
-
-For each source, do the following things:
-Add it to the sorted list.
-Get all of its children from the graph.
-Decrement the in-degree of each child by 1.
-If a child’s in-degree becomes ‘0’, add it to the sources Queue.
-Repeat step 1, until the source Queue is empty.
-Code
+## Code
 
 {% highlight java %}
 import java.util.*;

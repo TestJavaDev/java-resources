@@ -25,6 +25,7 @@ These questions are often asked by FANNG. They are quite simple to explain but t
 First let’s think in the opposite direction, how would the intervals look like if they do NOT overlap?
 
 End time of the first interval has to be earlier than the start time of the second interval.
+
 ![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/interval/interval1.png)
 
 i.e. x2 < y1 or y2 < x1

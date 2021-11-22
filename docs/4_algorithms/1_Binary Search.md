@@ -223,6 +223,7 @@ Let’s draw a figure and see if there’s any pattern. If we plot the numbers a
 Notice the numbers are divided into two sections: numbers larger than the last element of the array and numbers smaller than it. The minimum element is at the boundary between the two sections.
 
 We can apply a filter of < the last element and get the boolean array that characterizes the two sections.
+
 ![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/binary_min2.png)
 
 Now the problem is yet again reduced to finding the first true element in a boolean array. We already know how to do this from the “Finding the Boundary” module.

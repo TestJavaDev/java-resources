@@ -123,6 +123,7 @@ Python comes with a built-in heapq that we can and it is a min heap, i.e. the el
 heapq.heappush akes two arguments: the first is the heap (an array/list) we want to push the element into and the second argument can be anything as long as it can be used for comparison. Typically, we push a tuple since in Python tuples are compared in an item-by-item order. For example, (1, 10) is smaller than (2, 0) because the first element is smaller. (1, 10) is smaller than (1, 20) because when the first item is the same, we compare the next one and in this case 10 is smaller than 20. Typically, we set the first element of the tuple to be the key used for comparison and the last element to the value we want the heap to store.
 
 heapq.heappop takes a single argument, a heap, and returns the smallest element in that heap.
+
 {% highlight java %}
 
 import heapq
@@ -136,6 +137,7 @@ print(h[0])
 {% endhighlight %}
 
 If the list is known beforehand, we can create a heap out of it by simply using heapify, which is actually an O(N) operation.
+
 {% highlight java %}
 
 import heapq
@@ -149,6 +151,7 @@ print(arr)
 By default, the Java class java.util.PriorityQueue is a min heap. The elements are mostly sorted using their natural comparison methods, but when there isn’t one (for example, sorting points by distance), it can be provided by passing in a Comparator at construction time. A Comparator is required if the elements don’t implement the Comparable interface.
 
 To create a PriorityQueue of non-comparable objects, we can use lambda expressions or method reference introduced in Java 8 and provide an inline comparator to the constructor.
+
 {% highlight java %}
 
 class Task {
@@ -175,6 +178,7 @@ class Task {
 ## Heap in JavaScript
 
 JavaScript does not support the heap data structure natively, so you might have to implement your own heap during an interview. Here is a common implementation of min-heap in JavaScript:
+
 {% highlight java %}
 class HeapItem {
     constructor(item, priority = item) {
@@ -295,6 +299,7 @@ We can use a max heap to accomplish this. The root of the max heap is the point 
 ## Implementation
 
 Using the “sign-reversing” technique we discussed in the intro module, we have the following solution:
+
 {% highlight java %}
 class Solution
 {
@@ -375,6 +380,7 @@ The first thing that comes to mind is that we can concatenate all the lists into
 Next, we ask the question: “are there any conditions that we haven’t used?” We know that all the lists are sorted and we haven’t used that condition. For each list, the smallest number is the first number. We can take the first number of each list and put them into a “pool of top k smallest numbers”, where k is the number of lists. The smallest number in the pool is the smallest number of all the lists and should be added to the final merged list. We then take the next smallest number from the list and add it to the pool. Repeat until we have exhausted all the lists.
 
 Now the question is, “how do we compare a stream of k numbers?”, which is a perfect use case for a min heap.
+
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap15.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap16.png)
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap17.png)
@@ -394,6 +400,7 @@ Now the question is, “how do we compare a stream of k numbers?”, which is a 
 ![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap31.png)
 
 Note that we push a tuple (val, current_list, head_index) into the heap. val is used to compare in the heap. We need current_list and head_index because we want to know the next number to push.
+
 {% highlight java %}
 class Solution {
 
@@ -538,6 +545,7 @@ class MedianOfStream {
     }
 }
 {% endhighlight %}
+
 The time complexity to add an element is O(log(N)) since the heap push operation is O(log(N)). The time complexity to find the median is O(1) since inspecting the top of each heap is O(1).
 
 
