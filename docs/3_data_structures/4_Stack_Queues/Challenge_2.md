@@ -14,29 +14,26 @@ Challenge 2 / Java resources / Tutorial
 
 ## Challenge 2: Implement Two Stacks using one Array
 
-Problem Statement #
+## Problem Statement 
 In this problem, using a single array to store elements, you have to implement the class TwoStacks<V>, having the following methods to generate two stacks. An illustration is also provided for your understanding.
 
-Method Prototypes #
-void push1(V value)
-void push2(V value)
-public V pop1()
-public V pop2()
-Input/Output #
-push1(input)
+## Method Prototypes 
+* void push1(V value)
+* void push2(V value)
+* public V pop1()
+* public V pop2()
 
-Input: an integer
-Output: inserts the given value in the first stack i.e. stack1
-push2(input)
-
-Input: an integer
-Output: inserts the given value in the second stack i.e stack2
-pop1()
-
-Output: returns and remove the top value of stack1
-pop2()
-
-Output: returns and remove the top value of stack2
+## Input/Output 
+* push1(input)
+   * Input: an integer
+   * Output: inserts the given value in the first stack i.e. stack1
+* push2(input)
+   * Input: an integer
+   * Output: inserts the given value in the second stack i.e stack2
+* pop1()
+   * Output: returns and remove the top value of stack1
+* pop2()
+   * Output: returns and remove the top value of stack2
 
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt2.png)
 
@@ -146,10 +143,10 @@ class CheckTwoStacks {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 This implementation is space-efficient as it utilizes all of the available space. It doesn’t cause an overflow if there is any space available in the array. The tops of the two stacks are the two extreme ends of the array. The first stack starts from the first element at index 0, and the second starts from the last element. The first element in stack2 is pushed at index (maxSize-1). Both stacks grow (or shrink) in the opposite direction. To check for overflow, all we need do is check for space between the top elements of both stacks, as reflected in the code.
 
-Time Complexity #
+## Time Complexity 
 All the operations take constant time, i.e., O(1) because the array is being indexed and not resized.
 
 

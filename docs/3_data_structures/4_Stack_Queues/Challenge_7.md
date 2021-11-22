@@ -14,26 +14,27 @@ Challenge 7 / Java resources / Tutorial
 
 ## Challenge 7: Next Greater Element using Stack
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement int[] nextGreaterElement(int[] arr) method. For each element in an array, it finds the next greater element in that array.
 
 Note: The next greater element is the first element towards the right, which is greater than the current element. For example, in the array [1, 3, 8, 4, 10, 5], the next greater element of 3 is 8, and the next greater element for 8 is 10. To keep it simple, the next greater element for the last or maximum value in the array is -1.
 
 In each iteration, we only check the array elements appearing after the current element.
 
-Method Prototype #
+## Method Prototype 
 int[] nextGreaterElement(int[] arr);
 where arr is an Integer array
 
-Input #
+## Input 
 The input is an integer array
 
-Output #
+## Output 
 An array containing the next greater element of each element from the input array. For the maximum value in the array, the next greater value is -1.
 
-Sample Input #
+## Sample Input 
 arr = {4,6,3,2,8,1}
-Sample Output #
+
+## Sample Output 
 result = {6,8,8,8,-1,-1}
 
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt11.png)
@@ -219,12 +220,12 @@ class NextGreaterChallenge {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 Although this method can be solved by brute force using nested loops, a stack can do it much more efficiently.
 
 Using the for-loop on line 7, we iterate the array from the last element to the first one. This is because, at every index, we will have access to the next greater element in the array, which will be present in the stack. Therefore, we just pop from the stack until we get the greater element on top of the stack on lines 8-12. After we have the next greater element on top of the stack, we simply update the value of the current index in the result array to the value of the top of the stack (line 17). In case the stack gets empty, we update the value of the current index in the result array to be -1. Finally, we return the result array from the function on line 20.
 
-Time Complexity #
+## Time Complexity 
 In the above algorithm, it is observed that every element is pushed on the stack exactly once. Furthermore, since once an element is removed from the stack, it is never re-inserted, every element is removed exactly once, too. That means we perform one push and one pop operation per element, exactly. Therefore, the time complexity of this algorithm will be O(n). This is a significant improvement over the brute force method’s runtime complexity of O(n2).
 
 

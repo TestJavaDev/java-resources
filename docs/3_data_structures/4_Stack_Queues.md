@@ -14,7 +14,7 @@ Stack_Queues / Java resources / Tutorial
 
 ## What is a Stack?
 
-Introduction #
+## Introduction 
 We are all familiar with the famous Undo option, which is present in almost every application. Have you ever wondered how it works? The idea is that you store the previous states of your work (which are limited to a specific number), in the memory in such an order that the last one appears first. This can’t be done just by using arrays, which is why the Stack comes in handy.
 
 You can think of the Stack as a container, in which we can add items and remove them. Only the top of this container is open, so the item we put in first will be taken out last, and the items we put in last will be taken out first. This is called the last in first out (LIFO) ordering.
@@ -23,16 +23,14 @@ A real-life example of a Stack can be a pile of books placed in a vertical order
 
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st1.png)
 
-What are Stacks Used for? #
+## What are Stacks Used for? 
 A stack is one of the most fundamental data structures. Its implementation is very simple, yet it can be used to solve complex problems!
 
 There are many computer algorithms like Depth First Search and Expression Evaluation Algorithm, etc., which are dependent on stacks to run perfectly. Stacks are used for the below actions:
+* To backtrack to the previous task/state, e.g., in a recursive code
+* To store a partially completed task, e.g., when you are exploring two different paths on a Graph from a point while calculating the smallest path to the target.
 
-To backtrack to the previous task/state, e.g., in a recursive code
-
-To store a partially completed task, e.g., when you are exploring two different paths on a Graph from a point while calculating the smallest path to the target.
-
-How do stacks work? #
+## How do stacks work? 
 A Stack can be implemented in many ways, but a typical Stack must offer the following functionalities:
 
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st2.png)
@@ -50,28 +48,28 @@ The entire functionality of a stack depends on the push and pop methods listed i
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st11.png)
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st12.png)
 
-Explanation #
+## Explanation 
 When you insert an element into the stack, the variable that stores the position of the top element would be pointing to the number below it. So, you will have to update its value every time you insert a new element into the stack. Similarly, the value of the top variable will also change when you delete an element from the stack. It’s a good practice to update the top variable first, and then perform the operation; otherwise, the variable would be pointing to nothing or a wrong value in case of insertion.
 
 ## Stack (Implementation)
 
-Introduction #
+## Introduction 
 Every programming language comes with the basic functionality of Stack. In Java, you can use the pre-built class of Stack by importing it to your program. However, you can manually implement a stack and extend its functionality for your use.
 
 Stacks can either be implemented using arrays or linked lists. It has yet to be concluded which implementation is more efficient, as both data structures offer different variations of Stack. However, stacks are generally implemented using arrays because it takes less space; we don’t need to store an additional pointer like in a linked list.
 
-Implementation #
+## Implementation 
 As we discussed in the previous lesson, a typical Stack must contain the following standard methods:
+* push (datatype V)
+* datatype pop()
+* boolean isEmpty()
+* datatype top()
 
-push (datatype V)
-datatype pop()
-boolean isEmpty()
-datatype top()
 Before we take a look at these methods one by one, let’s construct a class of Stack, and create an instance. This class has the following three data members:
+* the array that will hold all the elements
+* the size of this array
+* a variable for the top element of Stack.
 
-the array that will hold all the elements
-the size of this array
-a variable for the top element of Stack.
 The following code shows how to construct the Stack class:
 
 {% highlight java %}
@@ -107,10 +105,10 @@ class StackDemo {
 {% endhighlight %}
 
 Now before adding the push and pop methods into this code, we need to implement some helper methods to keep the code simple and reusable. Here’s a list of the helper methods that we will implement in the code below:
+* isEmpty()
+* isFull()
+* top()
 
-isEmpty()
-isFull()
-top()
 Here is the code for stacks with the new helper methods. Try experimenting with them!
 
 {% highlight java %}
@@ -259,14 +257,14 @@ class StackDemo {
 
 If you look at the output of the code, you can see that the elements popped out of the stack in the exact reverse order as they were pushed in. That means our Stack works perfectly.
 
-Complexities of Stack Operations #
+## Complexities of Stack Operations 
 Let’s look at the time complexity of each stack operation.
 
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st13.png)
 
 ## What is a Queue?
 
-Introduction #
+## Introduction 
 Similar to Stack, Queue is another linear data structure that stores the elements in a sequential manner. The only significant difference between Stack and Queue is that instead of using the LIFO principle, Queue implements the FIFO method, which is short for First in First Out.
 
 According to FIFO, the first element inserted is the one that comes out first. You can think of a queue as a pipe with both ends open. Elements enter from one end (back) and leave from the other (front). The following animation illustrates the structure of a queue.
@@ -294,19 +292,19 @@ Queues are slightly trickier to implement compared to stacks, as we have to keep
 
 A perfect real-life example of Queue is a line of people waiting to get a ticket from the booth. If a new person comes, he will join the line from the end; meanwhile, the person standing at the front will be the first to get the ticket and leave the line.
 
-What are Queues used for? #
+## What are Queues used for? 
 Most operating systems also perform operations based on a Priority Queue—a kind of queue that allows operating systems to switch between appropriate processes. They are also used to store packets on routers in a certain order when a network is congested. Implementing a cache also heavily relies on queues. We generally use queues in the following situations:
+* We want to prioritize something over another
+* A resource is shared between multiple devices (e.g., Web Servers and Control Units)
 
-We want to prioritize something over another
-A resource is shared between multiple devices (e.g., Web Servers and Control Units)
-How does a Queue work? #
+## How does a Queue work?
 A typical queue contains the following set of methods to work perfectly:
 
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st32.png)
 
 The entire functionality of Queue depends on the enqueue and dequeue methods; the rest are just helper methods to produce simple, understandable code.
 
-Example #
+## Example 
 Take a look at the animation below to understand the working of a Queue. The variables that store the positions of front and back of the array will have to be updated accordingly whenever you will enqueue or dequeue an element from the queue.
 
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t1.png)
@@ -329,19 +327,19 @@ Take a look at the animation below to understand the working of a Queue. The var
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t18.png)
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t19.png)
 
-Types of Queues #
+## Types of Queues 
 There are three common types of queues which cover a wide range of problems:
+* Linear Queue
+* Circular Queue
+* Priority Queue
 
-Linear Queue
-Circular Queue
-Priority Queue
 The queue that we have discussed so far was Linear Queue. Let’s look at the last two types and see how they are different from the Linear Queue.
 
-Circular Queue: #
+## Circular Queue: 
 Circular Queues are almost similar to Linear Queues with only one exception. As the name itself suggests, circular queues are circular in the structure; this means that both ends are connected to form a circle. Initially, the front and rear parts of the queue point to the same location and eventually move apart as more elements are inserted into the queue. Circular queues are generally used in the following ways:
+* Simulation of objects
+* Event handling (do something when a particular event occurs)
 
-Simulation of objects
-Event handling (do something when a particular event occurs)
 The following illustration shows how circular queues work.
 
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t20.png)
@@ -354,27 +352,26 @@ The following illustration shows how circular queues work.
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t27.png)
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t28.png)
 
-Priority Queue #
+## Priority Queue 
 In Priority Queues, elements are sorted in a specific order. Based on that order, the most prioritized object appears at the front of the queue, the least prioritized object appears at the end, and so on. These queues are widely used in an operating system to determine which programs should be given more priority.
 
 ## Queue (Implementation)
 
-Implementation of Queues #
+## Implementation of Queues 
 Queues are implemented in many ways. They can be represented by using an array, a linked list, or even a stack. That being said, an array is most commonly used because it’s the easiest way to implement Queues. As discussed in the previous lesson, a typical Queue must contain the following standard methods:
+* enqueue (datatype V)
+* datatype dequeue()
+* boolean isEmpty()
+* boolean isFull()
+* datatype top()
 
-enqueue (datatype V)
-datatype dequeue()
-boolean isEmpty()
-boolean isFull()
-datatype top()
 Before we take a look at these methods one by one, let’s construct a Queue class with an integer data type and create an instance. We will make a class with 5 data members to hold the following information:
-
-The array that will contain all the elements
-The maxSize is the size of this array
-The front element of the Queue
-The back element of the Queue
-The currentSize of elements in the Queue
-The code given below shows how to construct the Queue class:
+* The array that will contain all the elements
+* The maxSize is the size of this array
+* The front element of the Queue
+* The back element of the Queue
+* The currentSize of elements in the Queue
+* The code given below shows how to construct the Queue class:
 
 {% highlight java %}
 public class Queue<V> {
@@ -418,12 +415,12 @@ class QueueDemo {
 }
 {% endhighlight %}
 
-Adding Helper Functions #
+## Adding Helper Functions
 Now before adding the enqueue and dequeue methods into this class, we need to implement some helper methods to keep the code simple and understandable. Here’s the list of helper functions that we will implement in the code below:
+* isEmpty()
+* isFull()
+* top()
 
-isEmpty()
-isFull()
-top()
 Now run the following code and see if the helper function outputs correctly.
 
 {% highlight java %}

@@ -14,24 +14,20 @@ Challenge 4 / Java resources / Tutorial
 
 ## Challenge 4: Implement Queue using Stack
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement enqueue() and dequeue(), and use a built-in Stack to insert or remove value to and from the queue. An illustration is also provided for your understanding.
 
-Method Prototype #
+## Method Prototype 
 void enqueue(int value)
 int dequeue() 
-Input/Output #
-enqueue()
 
-Input: an integer
-
-Output: returns true after inserting value in the queue
-
-dequeue()
-
-Input: an integer
-
-Output: returns true after removing value from the queue
+## Input/Output 
+* enqueue()
+   * Input: an integer
+   * Output: returns true after inserting value in the queue
+* dequeue()
+   * Input: an integer
+   * Output: returns true after removing value from the queue
 
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt4.png)
 
@@ -248,7 +244,7 @@ class CheckQueueWithStack {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 In this approach, we use two stacks. The stack1 stores the queue elements while the stack2 acts as a temporary buffer to provide queue functionality.
 
 The enqueue operation simply pushes the element at the top of stack1. This is the first element in the stack.
@@ -257,7 +253,7 @@ We make sure that whenever a dequeue operation takes place, we first put all the
 
 We can observe that the meat of the implementation lies in dequeue, making it the costlier operation.
 
-Time Complexity #
+## Time Complexity 
 Whenever a value is dequeued, all the elements are transferred to stack2 and then back to stack1. Hence, for n elements in our queue, the runtime complexity of the dequeue operation is O(n)O(n).
 
 The enqueue operation takes constant time, i.e, O(1).
@@ -395,7 +391,7 @@ class CheckQueueWithStack {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 The solution above follows a simple algorithm. We make use of two stacks, i.e., stack1 and stack2.
 
 For the enqueue operation, value is pushed on to the stack1 on line 15. Hence, the enqueue operation takes a constant amount of time to execute.
@@ -404,7 +400,7 @@ On the other hand, in the dequeue operation, we check if both the stacks are emp
 
 If the conditions on line 19 and line 22 evaluate to false, the top value is popped from the stack2 and returned.
 
-Time Complexity #
+## Time Complexity 
 This solution is more optimized than the previous one, as the transfer of elements between stacks takes place only if stack2 is empty. Most of the time, we will be doing stack2.pop() from the else clause, which is O(1). Occasionally, we will find stack2 empty and pop elements over from stack1 onto stack2. But once we’ve done that, stack2 is no longer empty, and we’d be going to the else clause again with the O(1)O(1) time complexity. Therefore, the amortized complexity of the dequeue operation becomes O(1). While the time complexity for the enqueue operation is O(1) as well.
 
 Note: We use amortized complexity analysis with data structures that have a state which persists between operations. So, a costly operation will change the state such that it will take a long time for the worst-case to happen again, which amortizes its cost.

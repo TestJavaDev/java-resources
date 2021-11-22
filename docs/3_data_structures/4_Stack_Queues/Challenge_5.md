@@ -14,17 +14,19 @@ Challenge 5 / Java resources / Tutorial
 
 ## Challenge 5: Sort the Values in a Stack
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement the void sortStack(Stack<Integer> stack) method, which will take an Integer type stack and sort all its elements in ascending order. An illustration is also provided for your understanding.
 
-Method Prototype #
+## Method Prototype 
 void sortStack(Stack<Integer> stack)
-Output #
+
+## Output 
 It returns an Integer type Stack with all its elements sorted in ascending order
 
-Sample Input #
+## Sample Input 
 stack = {23,60,12,42,4,97,2}
-Sample Output #
+
+## Sample Output 
 result = {2,4,12,23,42,60,97}
 
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt5.png)
@@ -215,7 +217,7 @@ class CheckSort {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 This solution takes an iterative approach towards the problem. We create a helper stack call newStack. Its job is to hold the elements of the stack in descending order.
 
 The main functionality of the algorithm lies in the nested while loops. In the outer loop, we pop elements out of stack until it is empty. As long as the popped value is larger than the top value in tempStack, we can push it in.
@@ -224,7 +226,7 @@ The inner loop begins when stack.pop() gives us a value that is smaller than the
 
 When stack becomes empty, all the elements are in newStack in descending order. Now we simply push them back into the stack, resulting in the whole stack being sorted in ascending fashion.
 
-Time Complexity #
+## Time Complexity 
 The outer and inner loops both traverse all the n elements of the stack. Hence, the time complexity is O(n2).
 
 ## Solution #2: Recursive Sort
@@ -335,7 +337,7 @@ class CheckSort {
 }//end of class
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 The idea is to pop out all the elements from the stack in one recursive call. Once the stack is empty, we will push back values in a sorted order using the insert function.
 
 At each call, we receive a partially sorted stack in which we insert the value being popped out at that recursive call. If the value is smaller than the top element of the stack, we simply push it to the top.
@@ -344,7 +346,7 @@ Otherwise, we call insert again until we can find the appropriate place for the 
 
 As we are passing the reference of the stack in all the recursive calls, therefore; we are to pointing to the same stack throughout our recursive calls!
 
-Time Complexity #
+## Time Complexity
 The sortStack function is recursively called on all n elements. In the worst case, there are n calls to insert for each element. This pushes the time complexity up to O(n2). However, unlike the first solution, we do not need to create another stack.
 
 

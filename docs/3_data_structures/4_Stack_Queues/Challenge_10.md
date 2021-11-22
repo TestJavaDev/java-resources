@@ -14,14 +14,15 @@ Challenge 10 / Java resources / Tutorial
 
 ## Challenge 10: Create Stack where min() gives minimum in O(1)
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement a new kind of stack called MinStack, which can get the minimum value in O(1) time. An illustration is also provided for your understanding.
 
 Note: MinStack only deals with integer type values.
 
-Method Prototype: #
+## Method Prototype: 
 int min()
-Output: #
+
+## Output: 
 It returns the minimum number in O(1) time
 
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt28.png)
@@ -261,7 +262,7 @@ How does it do this? The answer is in the push function. Whenever push is called
 
 Due to all these safeguards we’ve put in place, the min function only needs to return the value at the top of minStack.
 
-Time Complexity #
+## Time Complexity 
 Our goal was to create a stack that returns the minimum value in constant time. As we can see in the algorithm above, the min function truly works in O(1).
 
 

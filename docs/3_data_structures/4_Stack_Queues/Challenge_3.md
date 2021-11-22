@@ -14,18 +14,20 @@ Challenge 3 / Java resources / Tutorial
 
 ## Challenge 3: Reversing the First k Elements of a Queue
 
-Problem Statement #
+## Problem Statement 
 In this problem, you have to implement the void reverseK(Queue<V> queue, int k) method; this will take a queue and any number (k) as input, and reverse the first k elements of the queue. An illustration is also provided for your understanding.
 
-Method Prototype #
+## Method Prototype 
 void reverseK(Queue<V> queue, int k) 
-Output #
+
+## Output 
 An array with the first “k” elements reversed.
 
-Sample Input #
+## Sample Input 
 Queue = {1,2,3,4,5,6,7,8,9,10}
 k = 5
-Sample Output #
+
+## Sample Output 
 result = {5,4,3,2,1,6,7,8,9,10}
 
 ![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt3.png)
@@ -347,7 +349,7 @@ class CheckReverse {
 
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 reverseK(queue, k) takes queue as an input parameter, where k represents the number of elements we want to reverse.
 
 Now, moving on to the actual logic of the method. First, check if the queue is empty or if k is a valid non-zero positive number. If either of them is false, then do nothing, just return.
@@ -358,7 +360,7 @@ Once all the k values have been pushed to the stack, start popping them and enqu
 
 Now we need to move these reversed elements to the front of the queue. To do this, we used queue.enqueue(queue.dequeue()). Each element is first dequeued from the back.
 
-Time Complexity #
+## Time Complexity 
 Overall, kk elements are dequeued, pushed to the stack, popped from it, and then enqueued. Additionally, n-kn−k elements are dequeued and enqueued to the queue. Each push, pop, enqueue, or dequeue operation takes constant time; the time complexity of this method is O(n) as all nn elements have to be processed with constant-time​ operations.
 
 

@@ -207,7 +207,7 @@ class CheckBalancedChallenge {
 }
 {% endhighlight %}
 
-Explanation #
+## Explanation 
 This is a simple algorithm. We iterate over the string, one character at a time. Whenever we find a closing parenthesis, we can deduce that the string is unbalance based on two conditions:
 
 The stack is empty.
@@ -218,8 +218,8 @@ If the parenthesis in the string is an opening parenthesis, it is simply pushed 
 
 If it is not empty, we return false.
 
-Time Complexity #
-We traverse the string exp once. So, the time complexity is O(n)O(n), where n is the length of the string. Similarly, the space complexity of this algorithm is also O(n)O(n) because we have initialized the stack with the size equal to the length of string exp.
+## Time Complexity 
+We traverse the string exp once. So, the time complexity is O(n), where n is the length of the string. Similarly, the space complexity of this algorithm is also O(n) because we have initialized the stack with the size equal to the length of string exp.
 
 
 
