@@ -45,6 +45,8 @@ In the array declaration, reference of an array is created. To declare an array,
 
 ![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr2.png)
 
+![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arra6.png)
+
 ![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr3.png)
 
 ## Two Dimensional Arrays

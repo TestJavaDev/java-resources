@@ -14,6 +14,8 @@ Challenge 7 / Java resources / Tutorial
 
 ## Challenge 7: Next Greater Element using Stack
 
+Can you implement a method to find the next greater element after any given element from the stack? A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first.
+
 ## Problem Statement 
 In this problem, you have to implement int[] nextGreaterElement(int[] arr) method. For each element in an array, it finds the next greater element in that array.
 

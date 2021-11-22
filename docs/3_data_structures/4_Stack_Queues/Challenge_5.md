@@ -14,6 +14,8 @@ Challenge 5 / Java resources / Tutorial
 
 ## Challenge 5: Sort the Values in a Stack
 
+Given a stack, can you sort all its values in an ascending way? A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first.
+
 ## Problem Statement 
 In this problem, you have to implement the void sortStack(Stack<Integer> stack) method, which will take an Integer type stack and sort all its elements in ascending order. An illustration is also provided for your understanding.
 

@@ -14,6 +14,8 @@ Challenge 3 / Java resources / Tutorial
 
 ## Challenge 3: Reversing the First k Elements of a Queue
 
+Can you reverse the first "k" elements in a given queue? A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first.
+
 ## Problem Statement 
 In this problem, you have to implement the void reverseK(Queue<V> queue, int k) method; this will take a queue and any number (k) as input, and reverse the first k elements of the queue. An illustration is also provided for your understanding.
 

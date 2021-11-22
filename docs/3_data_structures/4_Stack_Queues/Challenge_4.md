@@ -14,6 +14,8 @@ Challenge 4 / Java resources / Tutorial
 
 ## Challenge 4: Implement Queue using Stack
 
+Can you implement a queue using a built-in stack? A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first.
+
 ## Problem Statement 
 In this problem, you have to implement enqueue() and dequeue(), and use a built-in Stack to insert or remove value to and from the queue. An illustration is also provided for your understanding.
 

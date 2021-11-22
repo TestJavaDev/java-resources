@@ -14,6 +14,8 @@ Challenge 2 / Java resources / Tutorial
 
 ## Challenge 2: Implement Two Stacks using one Array
 
+Can you implement two stacks using a single array? A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first
+
 ## Problem Statement 
 In this problem, using a single array to store elements, you have to implement the class TwoStacks<V>, having the following methods to generate two stacks. An illustration is also provided for your understanding.
 

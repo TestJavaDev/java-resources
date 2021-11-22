@@ -14,6 +14,8 @@ Challenge 1 / Java resources / Tutorial
 
 ## Challenge 1: Generate Binary Numbers from 1 to n using a Queue
 
+Can you generate binary numbers from 1 to any given number "n"? A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first.
+
 ## Problem Statement 
 In this problem, using a queue, you have to implement the String[] findBin(int number) method to generate binary numbers from 1 to any given number (n). An illustration is also provided for your understanding.
 

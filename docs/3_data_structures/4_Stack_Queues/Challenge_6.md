@@ -14,6 +14,8 @@ Challenge 6 / Java resources / Tutorial
 
 ## Challenge 6: Evaluate Postfix Expressions using Stacks
 
+Let's try to compute postfix mathematical expressions using stacks!
+
 ## Infix and Postfix Expressions 
 In the infix expression (the usual convention followed in mathematics), operators like + and * appear between the operands involved in the calculation:
 
