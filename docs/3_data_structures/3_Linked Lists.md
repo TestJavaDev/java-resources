@@ -4,6 +4,7 @@ title: Linked Lists
 parent: Data Structures
 nav_order: 3
 permalink: /data_structures/linked_lists
+has_children: true
 ---
 <div align="center" markdown="1">
 Linked Lists / Java resources / Tutorial

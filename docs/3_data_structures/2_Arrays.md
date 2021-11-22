@@ -4,6 +4,7 @@ title: Arrays
 parent: Data Structures
 nav_order: 2
 permalink: /data_structures/arrays
+has_children: true
 ---
 <div align="center" markdown="1">
 Arrays / Java resources / Tutorial

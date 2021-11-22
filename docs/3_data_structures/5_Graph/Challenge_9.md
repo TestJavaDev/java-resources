@@ -4,7 +4,7 @@ title: Challenge 9
 parent: Graph
 grand_parent: Data Structures
 nav_order: 9
-permalink: /data_structures/graph/ch1
+permalink: /data_structures/graph/ch9
 ---
 <div align="center" markdown="1">
 Challenge 9 / Java resources / Tutorial
