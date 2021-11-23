@@ -11,6 +11,22 @@ Spring / Java resources / Grokking the interview
 {: .fs-6 .fw-300 }
 </div>
 
+Архитектура - 1 - The Basics of Spring Framework
+Внедрение зависимостей - 2 - The Basics of Spring Framework
+Именование бинов и старт контекста - 3 - The Basics of Spring Framework
+Scopes and Inner Beans - 4 - The Basics of Spring Framework
+Initialize & Destroy - 5 - The Basics of Spring Framework
+Возможности контекста - 6 - The Basics of Spring Framework
+Внедрение через property - 7 - The Basics of Spring Framework
+Больше возможностей контекста - 8 - The Basics of Spring Framework
+Конфигурация с помощью аннотаций - 9 - The Basics of Spring Framework
+Язык выражений - 10 - The Basics of Spring Framework
+AOP - 11 - The Basics of Spring Framework
+Простые аспекты - 12 - The Basics of Spring Framework
+Простой доступ к БД - 13 - The Basics of Spring Framework
+
+
+
 - <a href="https://habr.com/ru/post/350682/">Spring interview questions</a>
 - <a href="https://www.baeldung.com/spring-boot-interview-questions">Spring Boot Interview Questions</a>
 - <a href="https://stackoverflow.com/questions/1061717/what-exactly-is-spring-framework-for">What exactly is Spring framework for</a>
