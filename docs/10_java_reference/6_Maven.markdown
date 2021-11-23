@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Maven
-nav_order: 13
-permalink: /maven
+nav_order: 6
+parent: References
+permalink: /references/maven
 has_children: true
 ---
 <div align="center" markdown="1">

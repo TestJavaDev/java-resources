@@ -1,8 +1,9 @@
 ---
 layout: default
 title: OOP
-nav_order: 11
-permalink: /oop
+nav_order: 2
+parent: References
+permalink: /references/oop
 has_children: true
 ---
 <div align="center" markdown="1">

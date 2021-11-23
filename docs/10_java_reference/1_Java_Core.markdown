@@ -1,12 +1,13 @@
 ---
 layout: default
 title: JavaCore
-nav_order: 10
-permalink: /javacore
+nav_order: 1
+parent: References
+permalink: /references/javacore
 has_children: true
 ---
 <div align="center" markdown="1">
-JavaCore / Java resources / Grokking the interview
+Java Core / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

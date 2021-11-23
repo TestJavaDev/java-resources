@@ -1,8 +1,9 @@
 ---
 layout: default
 title: JDBC, ORM
-nav_order: 10
-permalink: /db_jdbc_orm
+nav_order: 4
+parent: References
+permalink: /references/orm
 has_children: true
 ---
 <div align="center" markdown="1">
