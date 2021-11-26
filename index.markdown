@@ -6,13 +6,6 @@ description: "Java Resources"
 permalink: /
 ---
 
-# Java Developer Roadmap
-
-# Color scheme
-```yaml
-# Color scheme supports "light" (default) and "dark"
-color_scheme: dark
-```
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>
@@ -29,7 +22,9 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 });
 </script>
 
-## Roadmap
+#  Interview preparation websites
 
-![Roadmap](https://1.bp.blogspot.com/-cp6qvxsK2XI/XYcbm9Sn2uI/AAAAAAAAahA/Fc7FXjs-TTc60Sj0c_Wr0Ofwzc60ys9wwCLcBGAsYHQ/s1600/The%2B2019%2BJava%2BDeveloper%2BRoadMap.jpg)
+- <a href="https://leetcode.com/explore/">LeetCode</a>
+- <a href="https://www.interviewbit.com/practice/">InterviewBit</a>
+- <a href="https://www.hackerrank.com/">HackerRank</a>
 
