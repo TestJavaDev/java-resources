@@ -185,6 +185,7 @@ SERIALIZABLE
 
 Вторая часть
 
+
 Local Tx-Manager: by-hands
 Base realization: ThreadLocal Tx-context
 @Transactional annotation
