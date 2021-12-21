@@ -50,6 +50,7 @@ Java Core / Java resources / Grokking the interview
 - <a href="https://julio-falbo.medium.com/understand-jvm-and-jit-compiler-part-3-556d3f21df9f">Understand JVM and JIT Compiler — Part 3</a>
 - <a href="https://julio-falbo.medium.com/understand-jvm-and-jit-compiler-part-4-9738194ad06e">Understand JVM and JIT Compiler — Part 4</a>
 - [The JVM Architecture (&C) Shipilev blog](https://shipilev.net/)
+- [Память Java процесса по полочкам](https://youtu.be/kKigibHrV5I)
 - <a href="https://medium.com/runtimeerror/java-jit-compiler-c538e5e06a2">Java JIT Compiler</a>. 
 - <a href="http://cr.openjdk.java.net/~vlivanov/talks/2015_JIT_Overview.pdf">JVM JIT-compiler overview</a>
 - <a href="https://habr.com/ru/company/billing/blog/351682/">Graal: как использовать новый JIT-компилятор JVM в реальной жизни</a>. 

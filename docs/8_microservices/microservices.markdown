@@ -19,6 +19,7 @@ Microservices / Java resources / Grokking the interview
 
 ## Microservices
 
+- [What do you mean by Microservice?](https://www.interviewbit.com/microservices-interview-questions/)
  - <a href="http://ru.wikipedia.org/wiki/Сервис-ориентированная_архитектура">Сервис-ориентированная архитектура</a> как повышение абстракции производства ПО </a>
  - <a href="http://www.javaworld.com/article/2071889/soa/what-is-service-oriented-architecture.html">What is service-oriented architecture?</a>
  - <a href="https://ru.wikipedia.org/wiki/Микросервисы">Современное представление (SOA): Микросервисы</a>
