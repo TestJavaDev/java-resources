@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Database
-nav_order: 9
-permalink: /db
+title: Maven
+nav_order: 6
+parent: References
+permalink: /references/db
 has_children: true
 ---
 <div align="center" markdown="1">
-Database / Java resources / Grokking the interview
+DataBase / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>

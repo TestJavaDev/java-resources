@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Spring
+title: Maven
 nav_order: 7
-permalink: /spring
+parent: References
+permalink: /references/spring
 has_children: true
 ---
 <div align="center" markdown="1">
@@ -11,20 +12,8 @@ Spring / Java resources / Grokking the interview
 {: .fs-6 .fw-300 }
 </div>
 
-Архитектура - 1 - The Basics of Spring Framework
-Внедрение зависимостей - 2 - The Basics of Spring Framework
-Именование бинов и старт контекста - 3 - The Basics of Spring Framework
-Scopes and Inner Beans - 4 - The Basics of Spring Framework
-Initialize & Destroy - 5 - The Basics of Spring Framework
-Возможности контекста - 6 - The Basics of Spring Framework
-Внедрение через property - 7 - The Basics of Spring Framework
-Больше возможностей контекста - 8 - The Basics of Spring Framework
-Конфигурация с помощью аннотаций - 9 - The Basics of Spring Framework
-Язык выражений - 10 - The Basics of Spring Framework
-AOP - 11 - The Basics of Spring Framework
-Простые аспекты - 12 - The Basics of Spring Framework
-Простой доступ к БД - 13 - The Basics of Spring Framework
-
+- [Что такое Spring Framework? От внедрения зависимостей до Web MVC](https://habr.com/ru/post/490586/)
+- [Модульный дизайн или «что такое DIP, SRP, IoC, DI ](http://www.skipy.ru/architecture/module_design.html)
 
 
 - <a href="https://habr.com/ru/post/350682/">Spring interview questions</a>
@@ -34,6 +23,11 @@ AOP - 11 - The Basics of Spring Framework
 
 - <a href="https://martinfowler.com/articles/injection.html">Inversion of Control Containers and the Dependency Injection pattern</a>
 - <a href="https://martinfowler.com/bliki/InversionOfControl.html">InversionOfControl</a>
+
+### Spring Transactional
+
+-[Эффективное управление транзакциями в Spring](https://habr.com/ru/company/otus/blog/431508/)
+-[How Does Spring @Transactional Really Work?](https://dzone.com/articles/how-does-spring-transactional)
 
 ### Spring Core
 

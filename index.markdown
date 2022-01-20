@@ -22,7 +22,9 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 });
 </script>
 
-#  Interview preparation websites
+#  Interview preparation resources
+
+- [Coding Interview University](https://github.com/jwasham/coding-interview-university#why-use-it)
 
 - <a href="https://leetcode.com/explore/">LeetCode</a>
 - <a href="https://www.interviewbit.com/practice/">InterviewBit</a>

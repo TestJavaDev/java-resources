@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Microservices
-nav_order: 7
-permalink: /microservices
+title: Maven
+nav_order: 8
+parent: References
+permalink: /references/microservices
 has_children: true
 ---
 <div align="center" markdown="1">
