@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven
+title: DataBase
 nav_order: 6
 parent: References
 permalink: /references/db

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven
+title: Microservices
 nav_order: 8
 parent: References
 permalink: /references/microservices

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven
+title: Spring
 nav_order: 7
 parent: References
 permalink: /references/spring
