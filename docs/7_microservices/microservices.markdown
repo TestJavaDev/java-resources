@@ -13,20 +13,26 @@ Microservices / Java resources / Grokking the interview
 
 # Microservices
 
-* -[Martin Fowler: Microservices](https://habr.com/ru/post/249183/)
-* -[Simple example to demonstrate the Microservice Architecture Pattern using Spring Boot, Spring Cloud and Docker](https://habr.com/ru/post/280786/)
+* [gRPC vs. REST: How Does gRPC Compare with Traditional REST APIs? | DreamFactory Software- Blog](https://blog.dreamfactory.com/grpc-vs-rest-how-does-grpc-compare-with-traditional-rest-apis/)
+* [gRPC for microservices communication - Techdozo](https://techdozo.dev/grpc-for-microservices-communication/)
+* [How To Design Great APIs With API-First Design | ProgrammableWeb](https://www.programmableweb.com/news/how-to-design-great-apis-api-first-design-and-raml/how-to/2015/07/10)
+* [Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
+* [Messaging](https://microservices.io/patterns/communication-style/messaging.html)
+
+* [Martin Fowler: Microservices](https://habr.com/ru/post/249183/)
+* [Simple example to demonstrate the Microservice Architecture Pattern using Spring Boot, Spring Cloud and Docker](https://habr.com/ru/post/280786/)
 
 ## Application architecture patterns
 
-* -[Monolithic architecture](https://microservices.io/patterns/monolithic.html)
-* -[Microservice architecture](https://microservices.io/patterns/microservices.html)
+* [Monolithic architecture](https://microservices.io/patterns/monolithic.html)
+* [Microservice architecture](https://microservices.io/patterns/microservices.html)
 
 ## Decomposition
 
-* -[Decompose by business capability](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html)
-* -[Decompose by subdomain](https://microservices.io/patterns/decomposition/decompose-by-subdomain.html)
-* -[Self-contained Servicenew](https://microservices.io/patterns/decomposition/self-contained-service.html)
-* -[Service per teamnew](https://microservices.io/patterns/decomposition/service-per-team.html)
+* [Decompose by business capability](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html)
+* [Decompose by subdomain](https://microservices.io/patterns/decomposition/decompose-by-subdomain.html)
+* [Self-contained Servicenew](https://microservices.io/patterns/decomposition/self-contained-service.html)
+* chrome export[Service per teamnew](https://microservices.io/patterns/decomposition/service-per-team.html)
 
 -[God classes are the bloated classes that are used throughout an application](http://wiki.c2.com/?GodClass)
 The remaining nine principles are used when designing classes and packages. For more information about SRP,CCP, and the other OOD principles, see the article:
