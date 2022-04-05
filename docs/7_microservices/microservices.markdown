@@ -32,7 +32,7 @@ Microservices / Java resources / Grokking the interview
 * [Decompose by business capability](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html)
 * [Decompose by subdomain](https://microservices.io/patterns/decomposition/decompose-by-subdomain.html)
 * [Self-contained Servicenew](https://microservices.io/patterns/decomposition/self-contained-service.html)
-* chrome export[Service per teamnew](https://microservices.io/patterns/decomposition/service-per-team.html)
+* [Service per teamnew](https://microservices.io/patterns/decomposition/service-per-team.html)
 
 -[God classes are the bloated classes that are used throughout an application](http://wiki.c2.com/?GodClass)
 The remaining nine principles are used when designing classes and packages. For more information about SRP,CCP, and the other OOD principles, see the article:

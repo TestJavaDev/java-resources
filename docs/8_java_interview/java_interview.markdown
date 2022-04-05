@@ -14,7 +14,7 @@ Java interview / Java resources / Grokking the interview
 ## Spring
 
 * [Spring изнутри. Этапы инициализации контекста / Хабр](https://habr.com/ru/post/222579/)
-* [Injecting Spring Prototype bean into Singleton bean | Dev in Web](http://dolszewski.com/spring/accessing-prototype-bean-in-singleton)
+* [Injecting Spring Prototype bean into Singleton bean](http://dolszewski.com/spring/accessing-prototype-bean-in-singleton)
 * [How Does Spring @Transactional Really Work? - DZone Integration](https://dzone.com/articles/how-does-spring-transactional)
 * [java - Spring @Transactional - isolation, propagation - Stack Overflow](https://stackoverflow.com/questions/8490852/spring-transactional-isolation-propagation)
 * [Микросервисная архитектура, Spring Cloud и Docker / Хабр](https://habr.com/ru/post/280786/)
@@ -22,7 +22,7 @@ Java interview / Java resources / Grokking the interview
 * [Spring AOP. Маленький вопросик с собеседования / Хабр](https://habr.com/ru/post/347752/)
 * [Алексей Нестеров — Spring Cloud в эру Kubernetes - YouTube](https://www.youtube.com/watch?v=vUo3cTE3Y0g&t=2260s)
 * [Spring Boot Starter](https://www.youtube.com/watch?v=2_iE7jZWl3U&list=WL&index=4&t=2465s)
-* [Стратегии обработки ошибок: Circuit Breaker pattern | by Kirill Sereda | Medium](https://medium.com/@kirill.sereda/%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8-%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA-circuit-breaker-pattern-650232944e37)
+* [Стратегии обработки ошибок: Circuit Breaker pattern](https://medium.com/@kirill.sereda/%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8-%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA-circuit-breaker-pattern-650232944e37)
 
 ## Message communication
 * [point-to-point](www.enterpriseintegrationpatterns.com/PointToPointChannel.html) 
@@ -56,7 +56,7 @@ Hibernate save object - strategies, hibernate events, dirty checking, intercepto
 
 ## Elasticsearch
 
-* [Строим продвинутый поиск с ElasticSearch | DOU](https://dou.ua/lenta/columns/building-advanced-search-with-elasticsearch/)
+* [Строим продвинутый поиск с ElasticSearch DOU](https://dou.ua/lenta/columns/building-advanced-search-with-elasticsearch/)
 * [С чего начинается Elasticsearch / Хабр](https://habr.com/ru/post/489924/)
 
 ## Multithreading
@@ -87,11 +87,11 @@ Hibernate save object - strategies, hibernate events, dirty checking, intercepto
 Metaspace, JVM tuning flags, memory leaks, GC algorithms
 * [JVM: краткий курс общей анатомии](https://www.youtube.com/watch?v=-fcj6EL9rc4&list=WL&index=5&t=369s)
 * [JVM Tutorial - Java Virtual Machine Architecture Explained for Beginners](https://www.freecodecamp.org/news/jvm-tutorial-java-virtual-machine-architecture-explained-for-beginners/)
-* [Understanding JVM Architecture. Understanding JVM architecture and how… | by Thilina Ashen Gamage | Platform Engineer | Medium](https://medium.com/platform-engineer/understanding-jvm-architecture-22c0ddf09722)
+* [Understanding JVM Architecture. Understanding JVM architecture Medium](https://medium.com/platform-engineer/understanding-jvm-architecture-22c0ddf09722)
 * [Разрешение конфликтов в транзитивных зависимостях — Хороший, Плохой, Злой / Хабр](https://habr.com/ru/company/jugru/blog/191246/)
 * [Java собеседование. Коллекции / Хабр](https://habr.com/ru/post/162017/)
 * [Разбираемся с hashCode() и equals() / Хабр](https://habr.com/ru/post/168195/)
-* [Java Memory Model вкратце | Java Specialist](http://www.javaspecialist.ru/2011/06/java-memory-model.html)
+* [Java Memory Model вкратце](http://www.javaspecialist.ru/2011/06/java-memory-model.html)
 * [Overriding vs Overloading](https://java-course.ru/begin/override-overload/)
 * [Java Pass-by-reference or Pass-by-value](https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value)
 * [Serialization in Java](https://stackoverflow.com/questions/2232759/what-is-the-purpose-of-serialization-in-java)
