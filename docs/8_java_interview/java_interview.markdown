@@ -11,6 +11,37 @@ Java interview / Java resources / Grokking the interview
 {: .fs-6 .fw-300 }
 </div>
 
+Java Core
+Serialization, 
+Impl HTTP cashing on the server/client side
+Method signature, all references are the same size, static variable, ( numeric promotion rules )
+Method declaration, passing data among methods, 
+THis mean that a copy of the variable is made and the method receives that copy
+pass by value   pass by reference
+overriding a method
+overloaded method will use a differente signature than an overriden method
+hiding static method
+final methods cannot be ovveriden
+default methods - backward compatibility
+checked unchecked expetions
+has a relationship
+
+( Blocked queue)
+composition, aggregation, is-a, has-a
+Zookeeper
+Metaspace, JVM tuning flags, memory leaks, GC algorithms
+JDBC statement - prepared statement- callable statement
+Hibernate save object - strategies, hibernate events, dirty checking, interceptors, N+1, entity lifecycle
+Cronjoba Bintime (Spy Mock) proxy-transactional денормалізація 2 методи транзакція Select N+1 RDS
+Синхронна і Асинхроннна комунікація Stage по CI/CD
+плюси і мінуси асинхронної комунікації
+Retention annotations 
+Proxy Маршрутизація JWT Cookfiles
+Statefull OWASP Життєвий цикл бінів  скоуп бінів рівні ізоляції  PostProces | Inject prototype в Singleton 
+Proxy Pattern Strategy  
+
+
+
 * [xpinjection/java8-misuses: Common misuses of new Java 8 features and other mistakes](https://github.com/xpinjection/java8-misuses)
 * [Николай Алименков — Java 8: Хороший, плохой, злой - YouTube](https://www.youtube.com/watch?v=7Iy1hVEXxsU)
 * [Тагир Валеев — Stream API: рекомендации лучших собаководов - YouTube](https://www.youtube.com/watch?v=vxikpWnnnCU)
