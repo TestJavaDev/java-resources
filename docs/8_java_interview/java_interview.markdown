@@ -33,6 +33,7 @@ often sent over a point-to-point channel.(AWS SQS)
 * [Семантика exactly-once в Apache Kafka / Хабр](https://habr.com/ru/company/badoo/blog/333046/)
 * [Handling duplicate SNS deliveries : aws](https://www.reddit.com/r/aws/comments/8u1b1v/handling_duplicate_sns_deliveries/)
 * [Николай Алименков — Нужен ли нам JMS в мире современных Java-технологий? - YouTube](https://www.youtube.com/watch?v=ExjPxDxkmFo)
+* [Producer Consumer Solution](https://www.geeksforgeeks.org/producer-consumer-solution-using-blockingqueue-in-java-thread/)
 
 ## DB
 
