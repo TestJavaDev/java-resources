@@ -1,137 +1,257 @@
 ---
 layout: default
-title: Microservices
-nav_order: 7
-permalink: /microservices
-has_children: true
+title: Core Microservices
+parent: Microservices
+nav_order: 1
+permalink: /microservices/core
 ---
 <div align="center" markdown="1">
-Microservices / Java resources / Grokking the interview
+Core Microservices / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>
 
-# Microservices
+## Microservices core 
 
-* [gRPC vs. REST: How Does gRPC Compare with Traditional REST APIs? | DreamFactory Software- Blog](https://blog.dreamfactory.com/grpc-vs-rest-how-does-grpc-compare-with-traditional-rest-apis/)
-* [gRPC for microservices communication - Techdozo](https://techdozo.dev/grpc-for-microservices-communication/)
-* [How To Design Great APIs With API-First Design | ProgrammableWeb](https://www.programmableweb.com/news/how-to-design-great-apis-api-first-design-and-raml/how-to/2015/07/10)
-* [Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
-* [Messaging](https://microservices.io/patterns/communication-style/messaging.html)
+## Cloud
 
-* [Martin Fowler: Microservices](https://habr.com/ru/post/249183/)
-* [Simple example to demonstrate the Microservice Architecture Pattern using Spring Boot, Spring Cloud and Docker](https://habr.com/ru/post/280786/)
+What exactly is the cloud?
+Cloud computing is the delivery of computing and virtualized IT services—databases, networking, software, servers, analytics, and more—through the internet to provide a
+flexible, secure, and easy-to-use environment. Cloud computing offers significant advantages in the internal management of a company, such as low initial investment,
+ease of use and maintenance, and scalability, among others. The cloud computing models let the user choose the level of control over the
+information and services that these provide. These models are known by their acronyms, and are generically referred to as XaaS—an acronym that means anything as a
+service. The following lists the most common cloud computing models. 
+Differences between these models:
+* Infrastructure as a Service (IaaS)—The vendor provides the infrastructure that lets
+you access computing resources such as servers, storage, and networks. In this
+model, the user is responsible for everything related to the maintenance of the
+infrastructure and the scalability of the application.
+IaaS platforms include AWS (EC2), Azure Virtual Machines, Google Compute Engine, and Kubernetes.
+* Container as a Service (CaaS)—An intermediate model between the IaaS and the
+PaaS, it refers to a form of container-based virtualization. Unlike an IaaS model,
+where a developer manages the virtual machine to which the service is
+deployed, with CaaS, you deploy your microservices in a lightweight, portable
+virtual container (such as Docker) to a cloud provider. The cloud provider runs
+the virtual server the container is running on, as well as the provider’s comprehensive tools for building, deploying, monitoring, and scaling containers.
+CaaS platforms include Google Container Engine (GKE) and Amazon’s Elastic Container Service (ECS).
+* Platform as a Service (PaaS)—This model provides a platform and an environment that allow users to focus on the development, execution, and maintenance of the application. The applications can be created with tools that are
+provided by the vendor (for example, operating system, database management
+systems, technical support, storage, hosting, network, and more). Users do not
+need to invest in a physical infrastructure, nor spend time managing it, allowing
+them to concentrate exclusively on the development of applications.
+PaaS platforms include Google App Engine, Cloud Foundry, Heroku, and
+AWS Elastic Beanstalk.
+* Function as a Service (FaaS)—Also known as serverless architecture, despite the
+name, this architecture doesn’t mean running specific code without a server.
+What it means is a way of executing functionalities in the cloud in which the
+vendor provides all the required servers. Serverless architecture allows us to
+focus only on the development of services without having to worry about scaling
+provisioning, and server administration. Instead, we can solely concentrate on
+uploading our functions without handling any administration infrastructure.
+FaaS platforms include AWS (Lambda), Google Cloud Function, and Azure
+functions.
+* Software as a Service (SaaS)—Also known as software on demand, this model allows
+users to use a specific application without having to deploy or to maintain it. In
+most cases, the access is through a web browser. Everything is managed by the service provider: application, data, operating system, virtualization, servers, storage,
+and network. The user just hires the service and uses the software.
+SaaS platforms include Salesforce, SAP, and Google Business.
+![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro1.png)
 
-## Application architecture patterns
+###  Microservices are more than writing the code
 
-* [Monolithic architecture](https://microservices.io/patterns/monolithic.html)
-* [Microservice architecture](https://microservices.io/patterns/microservices.html)
+![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro2.png)
 
-## Decomposition
+Writing a robust service includes considering several topics. Let’s walk through the
+items show in more detail:
+* Right-sized—How you ensure that your microservices are properly sized so that
+you don’t have a microservice take on too much responsibility. Remember,
+properly sized, a service allows you to make changes to an application quickly
+and reduces the overall risk of an outage to the entire application.
+* Location transparent—How you manage the physical details of service invocation.
+When in a microservice application, multiple service instances can quickly start
+and shut down.
+* Resilient—How you protect your microservice consumers and the overall integrity of your application by routing around failing services and ensuring that you
+take a “fail-fast” approach.
+* Repeatable—How you ensure that every new instance of your service brought up
+is guaranteed to have the same configuration and codebase as all the other service instances in production.
+* Scalable—How you establish a communication that minimizes the direct dependencies between your services and ensures that you can gracefully scale your
+microservices. 
 
-* [Decompose by business capability](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html)
-* [Decompose by subdomain](https://microservices.io/patterns/decomposition/decompose-by-subdomain.html)
-* [Self-contained Servicenew](https://microservices.io/patterns/decomposition/self-contained-service.html)
-* [Service per teamnew](https://microservices.io/patterns/decomposition/service-per-team.html)
+### Core microservice development pattern
+![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro3.png)
 
--[God classes are the bloated classes that are used throughout an application](http://wiki.c2.com/?GodClass)
-The remaining nine principles are used when designing classes and packages. For more information about SRP,CCP, and the other OOD principles, see the article:
- -[“The Principles of Object Oriented Design” on Bob Martin’s website](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
- 
-## Interprocess communication in a microservice architecture
+The following patterns show the basics of building a microservice:
+* Service granularity—How do you approach decomposing a business domain
+down into microservices so that each microservice has the right level of responsibility? Making a service too coarse-grained with responsibilities that overlap
+into different business-problems domains makes the service difficult to maintain and change over time. Making the service too fine-grained increases the
+overall complexity of the application and turns the service into a “dumb” data
+abstraction layer with no logic except for that needed to access the data store.
+* Communication protocols—How will developers communicate with your service?
+The first step is to define whether you want a synchronous or asynchronous protocol. For synchronous, the most common communication is HTTP-based REST
+using XML (Extensible Markup Language), JSON (JavaScript Object Notation),
+or a binary protocol such as Thrift to send data back and forth to your microservices. For asynchronous, the most popular protocol is AMQP (Advanced Message
+Queuing Protocol) using a one-to-one (queue) or a one-to-many (topic) with
+message brokers such as RabbitMQ, Apache Kafka, and Amazon Simple Queue
+Service (SQS).
+* Interface design—What’s the best way to design the actual service interfaces that
+developers are going to use to call your service? How do you structure your services? What are the best practices? Best practices and interface design are covered in the next chapters.
+* Configuration management of service—How do you manage the configuration of
+your microservice so that it moves between different environments in the
+cloud?
+* Event processing between services—How do you decouple your microservice using
+events so that you minimize hardcoded dependencies between your services
+and increase the resiliency of your application
 
-### Communicating using the synchronous Remote procedure invocation pattern:
-The business logic in the client invokes a proxy interface , implemented by an RPI proxy adapter class. The RPI proxy makes a request to
-the service. The request is handled by an RPI server adapter class, which invokes the service’s business logic via an interface. It then sends back a reply to the RPI proxy,
-which returns the result to the client’s business logic. The proxy interface usually encapsulates the underlying communication protocol.
-Pattern: Remote procedure invocation
--[A client invokes a service using a synchronous, remote procedure invocation-based protocol, such as REST](http://microservices.io/patterns/communication-style/messaging.html).
+## Microservice routing patterns
 
-#### Using REST
-A key concept in REST is a resource, which typically represents a single business object, such as a Customer or Product, or a collection of business objects. REST
-uses the HTTP verbs for manipulating resources, which are referenced using a URL. For example, a GET request returns the representation of a resource, which is
-often in the form of an XML document or JSON object, although other formats such as binary can be used
--[REST maturity model](http://martinfowler.com/articles/richardsonMaturityModel.html) 
+The microservice routing patterns deal with how a client application that wants to consume a microservice discovers the location of the service and is routed over to it.
+In a cloud-based application, it is possible to have hundreds of microservice instances running. To enforce security and content policies, it is required to abstract the physical IP address of those services and have a single point of entry for the service calls.
+How?  The following patterns are going to answer that question:
+* Service discovery—With service discovery and its key feature, service registry, you
+can make your microservice discoverable so client applications can find them
+without having the location of the service hardcoded into their application.
+How?. Remember the service discovery is an internal service, not a client-facing service.
+Note that in this book, we use Netflix Eureka Service Discovery, but there are
+other service registries such as etcd, Consul, and Apache Zookeeper. Also, some
+systems do not have an explicit service registry. Instead these use an interservice
+communication infrastructure known as a service mesh.
+* Service routing—With an API Gateway, you can provide a single entry point for
+all of your services so that security policies and routing rules are applied uniformly to multiple services and service instances in your microservices applications. How? With the Spring Cloud API Gateway
 
-#### Using gRPC
-gRPC is a binary message-based protocol, and this means—as mentioned earlier in the discussion of binary message formats—you’re forced to take an API-first approach to service design. You define your gRPC APIs using a Protocol Buffers-based
-IDL, which is Google’s language-neutral mechanism for serializing structured data. You use the Protocol Buffer compiler to generate client-side stubs and server-side skeletons. The compiler can generate code for a variety of languages, including Java, C#,
-NodeJS, and GoLang. Clients and servers exchange binary messages in the Protocol Buffers format using HTTP/2.
-A gRPC API consists of one or more services and request/response message definitions. A service definition is analogous to a Java interface and is a collection of strongly
-typed methods. As well as supporting simple request/response RPC, gRPC support streaming RPC. A server can reply with a stream of messages to the client. Alternatively, a client can send a stream of messages to the server.
- gRPC uses Protocol Buffers as the message format. Protocol Buffers is, as mentioned earlier, an efficient, compact, binary format. It’s a tagged format. Each field of
-a Protocol Buffers message is numbered and has a type code. A message recipient can extract the fields that it needs and skip over the fields that it doesn’t recognize. As a result, gRPC enables APIs to evolve while remaining backward-compatible.
+![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro4.png)
 
-### Communicating using the Asynchronous messaging pattern
-Pattern: [Messaging.A client invokes a service using asynchronous messaging.](http://microservices.io/patterns/communication-style/messaging.html.)
+## Microservice client resiliency
 
- There are several different kinds of messages:
-* Document—A generic message that contains only data. The receiver decides how
-to interpret it. The reply to a command is an example of a document message.
-* Command—A message that’s the equivalent of an RPC request. It specifies the
-operation to invoke and its parameters.
-* Event—A message indicating that something notable has occurred in the sender.
-An event is often a domain event, which represents a state change of a domain
-object such as an Order, or a Customer.
+Because microservice architectures are highly distributed, you have to be extremely sensitive in how you prevent a problem in a single service (or service instance) from
+cascading up and out to the consumers of the service. To this end, we’ll cover four client resiliency patterns:
+* Client-side load balancing—How you cache the location of your service instances
+on the service so that calls to multiple instances of a microservice are load balanced to all the health instances of that microservice.
+* Circuit breaker pattern—How you prevent a client from continuing to call a service that’s failing or suffering performance problems. When a service is running slowly, it consumes resources on the client calling it. You want these
+microservice calls to fail fast so that the calling client can quickly respond and
+take appropriate action.
+* Fallback pattern—When a service call fails, how you provide a “plug-in” mechanism that allows the service client to try to carry out its work through alternative
+means other than the microservice being called.
+* Bulkhead pattern—Microservice applications use multiple distributed resources
+to carry out their work. This pattern refers to how you compartmentalize these
+calls so that the misbehavior of one service call doesn’t negatively impact the
+rest of the application.
 
-The business logic in the sender invokes a sending port interface, which encapsulates the underlying communication mechanism.
-The sending port is implemented by a message sender adapter class, which sends a message to a receiver via a message channel. A message channel is an abstraction of the
-messaging infrastructure. A message handler adapter class in the receiver is invoked to
-handle the message
+![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro5.png)
 
-There are two kinds of channels: 
-* - [point-to-point](www.enterpriseintegrationpatterns.com/PointToPointChannel.html) 
-A point-to-point channel delivers a message to exactly one of the consumers that
-is reading from the channel. Services use point-to-point channels for the oneto-one interaction styles described earlier. For example, a command message is
-often sent over a point-to-point channel.(AWS SQS)
-* - [publish-subscribe](www.enterpriseintegrationpatterns.com/PublishSubscribeChannel.html)
-A publish-subscribe channel delivers each message to all of the attached consumers. Services use publish-subscribe channels for the one-to-many interaction
-styles described earlier. For example, an event message is usually sent over a
-publish-subscribe channel.(AWS SNS AWS SQS)
+## Microservice security patterns
 
-There are some downsides to using messaging:
-* Potential performance bottleneck—There is a risk that the message broker could be
-a performance bottleneck. Fortunately, many modern message brokers are
-designed to be highly scalable.
-* Potential single point of failure—It’s essential that the message broker is highly
-available—otherwise, system reliability will be impacted. Fortunately, most modern brokers have been designed to be highly available.
-* Additional operational complexity—The messaging system is yet another system
-component that must be installed, configured, and operated.
+To ensure that the microservices are not open to the public, it is important to apply the following security patterns to the architecture in order to ensure that only granted
+requests with proper credentials can invoke the services.We can implement these three patterns to build an authentication service that can protect your microservices:
+* Authentication—How you determine the service client calling the service is who
+they say they are.
+* Authorization—How you determine whether the service client calling a microservice is allowed to undertake the action they’re trying to take.
+* Credential management and propagation—How you prevent a service client from
+constantly having to present their credentials for service calls involved in a transaction. To achieve this, we’ll look at how you can use token-based security standards such as OAuth2 and JSON Web Tokens (JWT) to obtain a token that can
+be passed from service call to service call to authenticate and authorize the user
 
-Handling duplicate messages
-There are a couple of different ways to handle duplicate messages:
-* Write idempotent message handlers.
- Track messages and discard duplicates
-WRITING IDEMPOTENT MESSAGE HANDLERS
-If the application logic that processes messages is idempotent, then duplicate messages are harmless. Application logic is idempotent if calling it multiple times with the
-same input values has no additional effect. For instance, cancelling an already-cancelled
-order is an idempotent operation. So is creating an order with a client-supplied ID.
-An idempotent message handler can be safely executed multiple times, provided that
-the message broker preserves ordering when redelivering messages.
- Unfortunately, application logic is often not idempotent. Or you may be using a
-message broker that doesn’t preserve ordering when redelivering messages. Duplicate
-or out-of-order messages can cause bugs. In this situation, you must write message
-handlers that track messages and discard duplicate messages.
-TRACKING MESSAGES AND DISCARDING DUPLICATES
-Consider, for example, a message handler that authorizes a consumer credit card. It
-must authorize the card exactly once for each order. This example of application logic
-has a different effect each time it’s invoked. If duplicate messages caused the message
-handler to execute this logic multiple times, the application would behave incorrectly.
-The message handler that executes this kind of application logic must become idempotent by detecting and discarding duplicate messages.
- A simple solution is for a message consumer to track the messages that it has processed using the message id and discard any duplicates. It could, for example, store
-the message id of each message that it consumed in a database table.
+![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro6.png)
 
-The OUTBOX table acts a temporary message queue. The MessageRelay is a component that reads the OUTBOX table and publishes the messages to a message broker.
-Pattern: Transactional outbox
-Publish an event or message as part of a database transaction by saving it in an OUTBOX in the database. See http://microservices.io/patterns/data/transactional-outbox.html.
+## Microservice logging and tracing patterns
 
-PUBLISHING EVENTS BY USING THE POLLING PUBLISHER PATTERN
-Pattern: Polling publisher
-Publish messages by polling the outbox in the database. See http://microservices.io/patterns/data/polling-publisher.html.
+The downside of a microservice architecture is that it’s much more difficult to debug, trace, and monitor the issues because one simple action can trigger numerous microservice calls within your application. 
+Distributed tracing with Spring Cloud Sleuth, Zipkin, and the ELK Stack. For this reason, we’ll look at the following three core logging and tracing patterns to achieve distributed tracing:
+* Log correlation—How you tie together all the logs produced between services for a
+single user transaction. With this pattern, we’ll look at how to implement a correlation ID, which is a unique identifier that’s carried across all service calls in a transaction and that can be used to tie together log entries produced from each service.
+* Log aggregation—With this pattern, we’ll look at how to pull together all of the
+logs produced by your microservices (and their individual instances) into a single queryable database across all the services involved and understand the performance characteristics of the services in the transaction.
+* Microservice tracing—We’ll explore how to visualize the flow of a client transaction across all the services involved and understand the performance characteristics of the transaction’s services.
+![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro7.png)
 
-PUBLISHING EVENTS BY APPLYING THE TRANSACTION LOG TAILING PATTERN
-Pattern: Transaction log tailing
-Publish changes made to the database by tailing the transaction log. See http://microservices.io/patterns/data/transaction-log-tailing.html.
+## Application metrics pattern
+
+The application metrics pattern deals with how the application is going to monitor metrics and warn of possible causes of failure within our applications. This pattern
+shows how the metrics service is responsible for getting (scraping), storing, and querying business-related data in order to prevent potential performance issues in our services. This pattern contains the following three main components:
+* Metrics—How you create critical information about the health of your application and how to expose those metrics
+* Metrics service—Where you can store and query the application metrics
+* Metrics visualization suite—Where you can visualize business-related time data for the application and infrastructure
+Picture shows how the metrics generated by the microservices are highly dependent on the metrics service and the visualization suite. It would be useless to have metrics that
+generate and show infinite information if there is no way to understand and analyze that information. The metrics service can obtain the metrics using the pull or push style:
+* With the push style, the service instance invokes a service API exposed by the
+metrics service in order to send the application data.
+* With the pull style, the metrics service asks or queries a function to fetch the
+application data.
+
+![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro8.png)
+
+## Microservice build/deployment patterns
+
+One of the core parts of a microservice architecture is that each instance of a microservice should be identical to all its other instances. You can’t allow configuration drift
+(something changes on a server after it’s been deployed) to occur because this can
+introduce instability in your applications.
+ The goal with this pattern is to integrate the configuration of your infrastructure
+right into your build/deployment process so that you no longer deploy software artifacts such as Java WAR or EAR files to an already running piece of infrastructure.
+Instead, you want to build and compile your microservice and the virtual server image
+it’s running on as part of the build process. Then, when your microservice gets
+deployed, the entire machine image with the server running on it gets deployed. Figure
+1.17 illustrates this process. At the end of the book, we’ll look at how to create your
+build/deployment pipeline. Following patterns and topics:
+* Build and deployment pipelines—How you create a repeatable build and deployment process that emphasizes one-button builds and deployment to any environment in your organization.
+* Infrastructure as code—How you treat the provisioning of your services as code
+that can be executed and managed under source control.
+* Immutable servers—Once a microservice image is created, how you ensure that
+it’s never changed after it has been deployed.
+* Phoenix servers—How you ensure that servers that run individual containers get
+torn down on a regular basis and re-created from an immutable image. The
+longer a server is running, the more opportunity there is for configuration
+drift. A configuration drift can occur when ad hoc changes to a system configuration are unrecorded.
+Our goal with these patterns and topics is to ruthlessly expose and stamp out configuration drift as quickly as possible before it can hit your upper environments (stage or
+production).
+
+![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro9.png)
+
+## Give it a REST
+
+* Use HTTP/HTTPS as the invocation protocol for the service —An HTTP endpoint
+exposes the service, and the HTTP protocol carries data to and from the
+service.
+* Map the behavior of the service to standard HTTP verbs —REST emphasizes
+having services that map their behavior to the HTTP verbs POST, GET, PUT,
+and DELETE. These verbs map to the CRUD functions found in most services.
+* Use JSON as the serialization format for all data going to and from the
+service —This isn’t a hard-and-fast principle for REST-based microservices,
+but JSON has become “lingua franca” for serializing data that’s submitted
+and returned by a microservice. You can use XML, but many REST-based
+applications make use of JavaScript and JSON. JSON is the native format for
+serializing and deserializing data consumed by JavaScript-based web front
+ends and services.
+* Use HTTP status codes to communicate the status of a service call —The HTTP
+protocol uses a rich set of status codes to indicate the success or failure of a
+service. REST-based services take advantage of these HTTP status codes
+and other web-based infrastructures, such as reverse proxies and caches.
+These can be integrated with your microservices with relative ease.
+HTTP is the language of the web. Using HTTP as the philosophical framework for building your service is key to building services in the cloud.
+
+## Why JSON for microservices?
+We can use multiple protocols to send data back and forth between HTTP-based
+microservices. But JSON has emerged as the de facto standard for several reasons:
+* Compared to other protocols like XML-based SOAP (Simple Object Access Protocol), JSON is extremely lightweight. You can express your data without having
+much textual overhead.
+* JSON is easily read and consumed by a human being. This is an underrated
+quality for choosing a serialization protocol. When a problem arises, it’s critical for developers to look at a chunk of JSON and to quickly process what’s in
+it. The simplicity of the protocol makes this incredibly easy to do.
+* JSON is the default serialization protocol used in JavaScript. Since the dramatic rise of JavaScript as a programming language and the equally dramatic
+rise of Single Page Internet Applications (SPIA) that rely heavily on JavaScript,
+JSON has become a natural fit for building REST-based applications, which is
+what the front-end web clients use to call services.
+* Other mechanisms and protocols, however, are more efficient than JSON for
+communicating between services. The Apache Thrift (http://thrift.apache.org)
+framework allows you to build multilanguage services that can communicate
+with one another using a binary protocol. The Apache Avro protocol
+(http://avro.apache.org) is a data serialization protocol that converts data
+back and forth to a binary format between client and server calls. If you need
+to minimize the size of the data you’re sending across the wire, we recommend you look at these protocols. But it has been our experience that using
+straight-up JSON in your microservices works effectively and doesn’t interject
+another layer of communication to debug between your service consumers
+and service clients.
+
+
+
+
 
 ### Deploying your microservices
 
@@ -307,12 +427,11 @@ transaction.
 Client-side resiliency software patterns focus on protecting a client of a remote resource (another microservice call or database lookup) from crashing when the
 remote resource fails because of errors or poor performance. These patterns allow the client to fail fast and not consume valuable resources, such as database
 connections and thread pools. They also prevent the problem of the poorly. performing remote service from spreading “upstream” to consumers of the client.
- In this chapter, we’ll look at four client resiliency patterns
  
 ![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro18.png)
 
 #### Client-side load balancing
-We introduced the client-side load balancing pattern in the last chapter when we
+We introduced the client-side load balancing pattern when we
 talked about service discovery. Client-side load balancing involves having the client
 look up all of a service’s individual instances from a service discovery agent (like Netflix Eureka) and then caching the physical location of said service instances.
  When a service consumer needs to call a service instance, the client-side load balancer returns a location from the pool of service locations it maintains. Because the
@@ -323,8 +442,7 @@ look up all of a service’s individual instances from a service discovery agent
  that service instance.
   This is precisely the behavior that the Spring Cloud Load Balancer libraries
  provide out of the box (with no extra configuration). Because we’ve already covered
- client-side load balancing with Spring Cloud Load Balancer in chapter 6, we won’t go
- into any more detail on that in this chapter.
+ client-side load balancing with Spring Cloud Load Balancer.
 #### Circuit breaker
  The circuit breaker pattern is modeled after an electrical circuit breaker. In an electrical system, a circuit breaker detects if there’s too much current flowing through the
  wire. If the circuit breaker detects a problem, it breaks the connection with the rest of
@@ -407,7 +525,7 @@ that can sit independently and act as a filter and router for all the microservi
 our architecture. We call this service a gateway. Our service clients no longer directly
 call a microservice. Instead, all calls are routed through the service gateway, which acts
 as a single Policy Enforcement Point (PEP), and are then routed to a final destination.
- In this chapter, we’ll see how to use Spring Cloud Gateway to implement a service
+  We’ll see how to use Spring Cloud Gateway to implement a service
 gateway. Specifically, we’ll look at how to use Spring Cloud Gateway to
 * Put all service calls behind a single URL and map those calls using service discovery to their actual service instances
 * Inject correlation IDs into every service call flowing through the service gateway
