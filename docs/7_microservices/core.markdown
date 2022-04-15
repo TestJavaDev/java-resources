@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Core Microservices
+title: Microservices Core
 parent: Microservices
 nav_order: 1
 permalink: /microservices/core
 ---
 <div align="center" markdown="1">
-Core Microservices / Java resources / Grokking the interview
+Microservices Core / Java resources / Grokking the interview
 
 {: .fs-6 .fw-300 }
 </div>
