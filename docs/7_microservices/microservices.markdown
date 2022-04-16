@@ -13,6 +13,81 @@ Microservices / Java resources / Grokking the interview
 
 # Microservices
 
+## Application architecture patterns
+Monolithic architecture
+Microservice architecture
+
+## Decomposition patterns
+Decompose by business capability
+Decompose by subdomain 
+## Messaging style patterns
+Messaging
+Remote procedure invocation
+
+## Reliable communications patterns
+Circuit breaker
+
+## Service discovery patterns
+3rd party registration
+Client-side discovery
+Self-registration
+Server-side discovery
+
+## Transactional messaging patterns
+Polling publisher
+Transaction log tailing
+Transactional outbox
+
+## Data consistency patterns
+Saga
+
+## Business logic design patterns
+Aggregate
+Domain event
+Domain model
+Event sourcing
+Transaction script
+
+## Querying patterns
+API composition
+Command query responsibility segregation
+
+## External API patterns
+API gateway
+Backends for frontends
+
+## Testing patterns
+Consumer-driven contract test
+Consumer-side contract test
+Service component test
+
+## Security patterns
+Access token
+
+## Cross-cutting concerns patterns
+Externalized configuration
+Microservice chassis
+
+## Observability patterns
+Application metrics
+Audit logging
+Distributed tracing
+Exception tracking
+Health check API
+Log aggregation
+
+## Deployment patterns
+Deploy a service as a container
+Deploy a service as a VM
+Language-specific packaging format
+Service mesh
+Serverless deployment
+Sidecar
+
+## Refactoring to microservices patterns
+Anti-corruption layer
+Strangler application
+
 * [gRPC vs. REST: How Does gRPC Compare with Traditional REST APIs? | DreamFactory Software- Blog](https://blog.dreamfactory.com/grpc-vs-rest-how-does-grpc-compare-with-traditional-rest-apis/)
 * [gRPC for microservices communication - Techdozo](https://techdozo.dev/grpc-for-microservices-communication/)
 * [How To Design Great APIs With API-First Design | ProgrammableWeb](https://www.programmableweb.com/news/how-to-design-great-apis-api-first-design-and-raml/how-to/2015/07/10)
@@ -1253,207 +1328,3 @@ run the risk of underprovisioning or overprovisioning VMs or containers.
  Usage-based pricing—Unlike a typical IaaS cloud, which charges by the minute or
 hour for a VM or container even when it’s idle, AWS Lambda only charges you
 for the resources that are consumed while processing each request. 
-
-
-
-## The DevOps story: Building for the rigors of runtime
-
-While DevOps is a rich and emerging IT field, for the DevOps engineer, the design of
-the microservice is all about managing the service after it goes into production. Writing the code is often the easy part. Keeping it running is the hard part. We’ll start our
-microservice development effort with four principles and build on these later in the
-book:
- A microservice should be self-contained. It should also be independently deployable
-with multiple instances of the service being started up and torn down with a single software artifact.
- A microservice should be configurable. When a service instance starts up, it should
-read the data it needs to configure itself from a central location or have its configuration information passed on as environment variables. No human intervention should be required to configure the service.
- A microservice instance needs to be transparent to the client. The client should never
-know the exact location of a service. Instead, a microservice client should talk
-to a service discovery agent. That allows the application to locate an instance of
-a microservice without having to know its physical location.
- A microservice should communicate its health. This is a critical part of your cloud
-architecture. Microservice instances will fail, and discovery agents need to route
-around bad service instances. In this book, we’ll use Spring Boot Actuator to
-display the health of each microservice.
-These four principles expose the paradox that can exist with microservice development. Microservices are smaller in size and scope, but their use introduces more moving parts in an application because microservices are distributed and run
-independently of each other in their own containers. This introduces a high degree of
-coordination and more opportunities for failure points in the application.
- From a DevOps perspective, you must address the operational needs of a microservice up front and translate these four principles into a standard set of lifecycle events
-that occur every time a microservice is built and deployed to an environment. The
-four principles can be mapped to the following operational lifecycles. Figure 3.9
-shows how these four steps fit together.
- Service assembly—How you package and deploy your service to guarantee repeatability and consistency so that the same service code and run time are deployed
-exactly the same way.
- Service bootstrapping—How you separate your application and environmentspecific configuration code from the run-time code so that you can start and
-deploy a microservice instance quickly in any environment without human
-intervention.
- Service registration/discovery—When a new microservice instance is deployed,
-how you make the new service instance discoverable by other application
-clients.
- Service monitoring—In a microservice environment, it’s common for multiple
-instances of the same service to be running due to high availability needs. From
-a DevOps perspective, you need to monitor microservice instances and ensure
-that any faults are routed around failing service instances, and that these are
-taken down. 
-
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro10.png)
-
-#### Service assembly: Packaging and deploying your microservices
-
-From a DevOps perspective, one of the key concepts behind a microservice architecture is that multiple instances of a microservice can be deployed quickly in response
-to a changed application environment (for example, a sudden influx of user requests,
-problems within the infrastructure, and so on). To accomplish this, a microservice
-needs to be packaged and installable as a single artifact with all of its dependencies
-defined within it. These dependencies must also include the run-time engine (for
-example, an HTTP server or application container) that hosts the microservice.
- The process of consistently building, packaging, and deploying is the service
-assembly (step 1 in figure 3.9). Figure 3.10 shows additional details about this step.
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro11.png)
-
-#### Service bootstrapping: Managing configuration of your microservices
-
-Service bootstrapping (step 2 in figure 3.9) occurs when the microservice first starts
-and needs to load its application configuration information. Figure 3.11 provides
-more context for the bootstrapping process.
-
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro12.png)
-
-As any application developer knows, there will be times when you need to make the
-run-time behavior of the application configurable. Usually this involves reading your
-application configuration data from a property file deployed with the application or
-reading the data out of a data store like a relational database.
- Microservices often run into the same type of configuration requirements. The difference is that in a microservice application running in the cloud, you might have
-hundreds or even thousands of microservice instances running. Further complicating
-this is that the services might be spread across the globe. With a high number of geographically dispersed services, it becomes unfeasible to redeploy your services to pick
-up new configuration data. Storing the data in a data store external to the service
-solves this problem. But microservices in the cloud offer a set of unique challenges:
- Configuration data tends to be simple in structure and is usually read frequently and written infrequently. Relational databases are overkill in this situation because they’re designed to manage much more complicated data models
-than a simple set of key-value pairs.
- Because the data is accessed on a regular basis but changes infrequently, the
-data must be readable with a low level of latency.
- The data store has to be highly available and close to the services reading the
-data. A configuration data store can’t go down completely because it would
-become a single point of failure for your application.
-In chapter 5, we’ll show how to manage your microservice application configuration
-data using things like a simple key-value data store. 
-
-#### Service registration and discovery: How clients communicate with your microservices
-From a microservice consumer perspective, a microservice should be location-transparent
-because in a cloud-based environment, servers are ephemeral. Ephemeral means that the
-servers that a service is hosted on usually have shorter lives than a service running in a corporate data center. Cloud-based services can be started and torn down quickly with an
-entirely new IP address assigned to the server on which the services are running.
- By insisting that services are treated as short-lived disposable objects, microservice
-architectures can achieve a high degree of scalability and availability by having multiple instances of a service running. Service demand and resiliency can be managed as
-quickly as the situation warrants. Each service has a unique and impermanent IP
-address assigned to it. The downside to ephemeral services is that with services constantly coming up and down, managing a large pool of these services manually or by
-hand is an invitation to an outage.
- A microservice instance needs to register itself with a third-party agent. This registration process is called service discovery (see step 3 in figure 3.9, then see figure 3.12
-for details on this process). When a microservice instance registers with a service discovery agent, it tells the discovery agent two things: the physical IP address (or domain
-address of the service instance) and a logical name that an application can use to look
-up the service. Certain service discovery agents also require a URL sent back to the
-registering service, which can be used by the service discovery agent to perform health
-checks. The service client then communicates with the discovery agent to look up the
-service’s location.
-
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro13.png)
-
-#### Communicating a microservice’s health
-
-A service discovery agent doesn’t act only as a traffic cop that guides the client to the
-location of the service. In a cloud-based microservice application, you’ll often have
-multiple instances of a running service. Sooner or later, one of those service instances
-will fail. The service discovery agent monitors the health of each service instance registered with it and removes any failing service instances from its routing tables to ensure
-that clients aren’t sent a service instance that has failed.
- After a microservice comes up, the service discovery agent will continue to monitor
-and ping the health check interface to ensure that that service is available. This is step
-4 in figure 3.9; figure 3.13 provides context for this step. 
-
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro14.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-List of Patterns
-Application architecture patterns
-Monolithic architecture (40)
-Microservice architecture (40)
-Decomposition patterns
-Decompose by business capability (51)
-Decompose by subdomain (54)
-Messaging style patterns
-Messaging (85)
-Remote procedure invocation (72)
-Reliable communications patterns
-Circuit breaker (78)
-Service discovery patterns
-3rd party registration (85)
-Client-side discovery (83)
-Self-registration (82)
-Server-side discovery (85)
-Transactional messaging patterns
-Polling publisher (98)
-Transaction log tailing (99)
-Transactional outbox (98)
-Data consistency patterns
-Saga (114)
-Business logic design patterns
-Aggregate (150)
-Domain event (160)
-Domain model (150)
-Event sourcing (184)
-Transaction script (149)
-Querying patterns
-API composition (223)
-Command query responsibility segregation
-(228)
-External API patterns
-API gateway (259)
-Backends for frontends (265)
-Testing patterns
-Consumer-driven contract test (302)
-Consumer-side contract test (303)
-Service component test (335)
-Security patterns
-Access token (354)
-Cross-cutting concerns patterns
-Externalized configuration (361)
-Microservice chassis (379)
-Observability patterns
-Application metrics (373)
-Audit logging (377)
-Distributed tracing (370)
-Exception tracking (376)
-Health check API (366)
-Log aggregation (368)
-Deployment patterns
-Deploy a service as a container (393)
-Deploy a service as a VM (390)
-Language-specific packaging format (387)
-Service mesh (380)
-Serverless deployment (416)
-Sidecar (410)
-Refactoring to microservices patterns
-Anti-corruption layer (447)
-Strangler application (432)
-
-
-
-
-
-
-
-
-
-
-
-
-
