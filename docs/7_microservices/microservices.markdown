@@ -13,6 +13,7 @@ Microservices / Java resources / Grokking the interview
 
 # Microservices
 
+* [Service discovery vs load balancing](https://stackoverflow.com/questions/33125508/service-discovery-vs-load-balancing)
 * [gRPC vs. REST: How Does gRPC Compare with Traditional REST APIs? DreamFactory Software- Blog](https://blog.dreamfactory.com/grpc-vs-rest-how-does-grpc-compare-with-traditional-rest-apis/)
 * [gRPC for microservices communication - Techdozo](https://techdozo.dev/grpc-for-microservices-communication/)
 * [How To Design Great APIs With API-First Design ProgrammableWeb](https://www.programmableweb.com/news/how-to-design-great-apis-api-first-design-and-raml/how-to/2015/07/10)
