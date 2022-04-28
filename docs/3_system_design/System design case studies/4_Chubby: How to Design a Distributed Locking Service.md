@@ -36,25 +36,25 @@ Let’s look into these use cases in detail.
 
 Any lock service can be seen as a consensus service, as it converts the problem of reaching consensus to handing out locks. Basically, a set of distributed applications compete to acquire a lock, and whoever gets the lock first gets the resource. Similarly, an application can have multiple replicas running and wants one of them to be chosen as the leader. Chubby can be used for leader election among a set of replicas, e.g., the leader/master for GFS and BigTable.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced55.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced55.png)
 
 ## Naming service (like DNS)
 
 It is hard to make faster updates to DNS due to its time-based caching nature, which means there is generally a potential delay before the latest DNS mapping is effective. As a result, chubby has replaced DNS inside Google as the main way to discover servers.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced56.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced56.png)
 
 ## Storage (small objects that rarely change)
 
 Chubby provides a Unix-style interface to reliably store small files that do not change frequently (complementing the service offered by GFS). Applications can then use these files for any usage like DNS, configs, etc. GFS and Bigtable store their metadata in Chubby. Some services use Chubby to store ACL files.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced57.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced57.png)
 
 ## Distributed locking mechanism
 
 Chubby provides a developer-friendly interface for coarse-grained distributed locks (as opposed to fine-grained locks) to synchronize distributed activities in a distributed environment. All an application needs is a few code lines, and Chubby service takes care of all the lock management so that developers can focus on application business logic. In other words, we can say that Chubby provides mechanisms like semaphores and mutexes for a distributed environment.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced58.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced58.png)
 
 All these use cases are discussed in detail later.
 
@@ -76,7 +76,7 @@ Chubby is neither really a research effort, nor does it claim to introduce any n
 
 Paxos plays a major role inside Chubby. Readers familiar with Distributed Computing recognize that getting all nodes in a distributed system to agree on anything (e.g., election of primary among peers) is basically a kind of distributed consensus problem. Distributed consensus using Asynchronous Communication is already solved by Paxos protocol, and Chubby actually uses Paxos underneath to manage the state of the Chubby system at any point in time.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced59.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced59.png)
 
 ## High-level Architecture
 
@@ -98,7 +98,7 @@ A Chubby Cell basically refers to a Chubby cluster. Most Chubby cells are confin
 
 Client applications use a Chubby library to communicate with the replicas in the chubby cell using RPC.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced60.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced60.png)
 
 ## Chubby APIs
 
@@ -189,7 +189,7 @@ File format: /ls/cell/remainder-path
 
 The main reason why Chubby’s naming structure resembles a file system to make it available to applications both with its own specialized API, and via interfaces used by our other file systems, such as the Google File System. This significantly reduced the effort needed to write basic browsing and namespace manipulation tools, and reduced the need to educate casual Chubby users. However, only a very limited number of operations can be performed on these files, e.g., Create, Delete, etc.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced61.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced61.png)
 
 ## Chubby in terms of CAP theorem
 
@@ -215,7 +215,7 @@ Upon initialization, a Chubby client performs the following steps:
 * If that replica is not the master, it will return the address of the current master.
 * Once the master is located, the client maintains a session with it and sends all requests to it until it indicates that it is not the master anymore or stops responding.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced62.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced62.png)
 
 ## Leader election example using Chubby
 
@@ -223,19 +223,19 @@ Let’s take an example of an application that uses Chubby to elect a single mas
 
 Once the master election starts, all candidates attempt to acquire a Chubby lock on a file associated with the election. Whoever acquires the lock first becomes the master. The master writes its identity on the file, so that other processes know who the is current master.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced63.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced63.png)
 
 ## Sample pseudocode for leader election
 
 The pseudocode below shows how easy it is to add leader election logic to existing applications with just a few additional code lines.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced64.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced64.png)
 
 ## File, Directories, and Handles
 
 Chubby file system interface is basically a tree of files and directories, where each directory contains a list of child files and directories. Each file or directory is called a node.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced65.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced65.png)
 
 ## Nodes
 * Any node can act as an advisory reader/writer lock.
@@ -285,7 +285,7 @@ Sequencer = Name of the lock + Lock mode (exclusive or shared) + Lock generation
 
 An application’s master server can generate a sequencer and send it with any internal order to other servers. Application servers that receive orders from a primary can check with Chubby if the sequencer is still good and does not belong to a stale primary (to handle the ‘Brain split’ scenario).
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced66.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced66.png)
 
 ## Lock-delay
 
@@ -322,7 +322,7 @@ KeepAlive is basically a way for a client to maintain a constant session with Ch
 
 In the diagram below, thick arrows represent lease sessions, upward arrows are KeepAlive requests, and downward arrows are KeepAlive responses. We will discuss this diagram in detail in the next two sections.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big1.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big1.png)
 
 ## Session optimization
 
@@ -344,7 +344,7 @@ The failover scenario happens when a master fails or otherwise loses membership.
 
 Let’s look at an example of failover in detail.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big2.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big2.png)
 
 1. Client has lease M1 (& local lease C1) with master and pending KeepAlive request.
 2. Master starts lease M2 and replies to the KeepAlive request.
@@ -404,7 +404,7 @@ Below is the protocol for invalidating the cache when file data or metadata is c
 * Once acknowledgments are received from each active client, the master proceeds with the modification. The master updates its local database and sends an update request to the replicas.
 * After receiving acknowledgments from the majority of replicas in the cell, the master sends an acknowledgment to the client who initiated the write.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big3.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big3.png)
 
 Question: While the master is waiting for acknowledgments, are other clients allowed to read the file?
 
@@ -458,7 +458,7 @@ Chubby’s clients are individual processes, so Chubby handles more clients than
 
 A proxy is an additional server that can act on behalf of the actual server.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big4.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big4.png)
 
 A Chubby proxy can handle KeepAlives and read requests. If a proxy handles ‘NN’ clients, KeepAlive traffic is reduced by a factor of ‘NN.’ All writes and first-time reads pass through the cache to reach the master. This means that proxy adds an additional RPC for writes and first-time reads. This is acceptable as Chubby is a read-heavy service.
 

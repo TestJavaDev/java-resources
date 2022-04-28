@@ -26,7 +26,7 @@ A replica can contain a lot of data. Naively splitting up the entire range to ca
 
 A Merkle tree is a binary tree of hashes, where each internal node is the hash of its two children, and each leaf node is a hash of a portion of the original data.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big41.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big41.png)
 
 Comparing Merkle trees is conceptually simple:
 1. Compare the root hashes of both trees.

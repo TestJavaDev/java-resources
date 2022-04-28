@@ -38,7 +38,7 @@ helloworld can be formed by combining hello and world from the “dictionary”,
 
 Here’s an illustration of the given challenge:
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der39.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der39.png)
 
 ## Coding Exercise
 
@@ -419,4 +419,4 @@ class DictWord {
 }
 {% endhighlight %}
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der40.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der40.png)

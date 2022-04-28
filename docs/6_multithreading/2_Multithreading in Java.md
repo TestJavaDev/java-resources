@@ -61,11 +61,11 @@ Note carefully:
 
 You may think of "synchronized" as the mutex portion of a monitor.
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm19.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm19.png)
 
 As an example look at the employee class above. All the three methods are synchronized on the "this" object. If we created an object and three different threads attempted to execute each method of the object, only one will get access, and the other two will block. If we synchronized on a different object other than the this object, which is only possible for the getName method given the way we have written the code, then the 'critical sections' of the program become protected by two different locks. In that scenario, since setName and resetName would have been synchronized on the this object only one of the two methods could be executed concurrently. However getName would be synchronized independently of the other two methods and can be executed alongside one of them. The change would look like as follows:
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm20.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm20.png)
 
 All the sections of code that you guard with synchronized blocks on the same object can have at most one thread executing inside of them at any given point in time. These sections of code may belong to different methods, classes or be spread across the code base.
 
@@ -208,7 +208,7 @@ If a variable is declared volatile then whenever a thread writes or reads to the
 ## Example
 Consider the program below:
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm21.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm21.png)
 
 In the above program, we would expect that threadA would exit the while loop once threadB sets the variable flag to true but threadA may unfortunately find itself spinning forever if it has cached the variable flag's value. In this scenario, marking flag as volatile will fix the problem. Note that volatile presents a consistent view of the memory to all the threads. However, remember that volatile doesn’t imply or mean thread-safety. Consider the program below where we declare the variable count volatile and several threads increment the variable a 1000 times each. If you run the program several times you’ll see count summing up to values other than the expected 10,000.
 
@@ -505,7 +505,7 @@ class CorrectSemaphoreExample {
 
 Spurious mean fake or false. A spurious wakeup means a thread is woken up even though no signal has been received. Spurious wakeups are a reality and are one of the reasons why the pattern for waiting on a condition variable happens in a while loop as discussed in earlier chapters. There are technical reasons beyond our current scope as to why spurious wakeups happen, but for the curious on POSIX based operating systems when a process is signaled, all its waiting threads are woken up. Below comment is a directly lifted from Java's documentation for the wait(long timeout) method.
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm22.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm22.png)
 
 ## Atomic Classes
 

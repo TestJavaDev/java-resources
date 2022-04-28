@@ -26,7 +26,7 @@ First let’s think in the opposite direction, how would the intervals look like
 
 End time of the first interval has to be earlier than the start time of the second interval.
 
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/interval/interval1.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/interval/interval1.png)
 
 i.e. x2 < y1 or y2 < x1
 
@@ -38,7 +38,7 @@ Not (x2 < y1 or y2 < x1)
 
 The key formula here is the overlap of two interval is given by [max(x1, y1), min(x2, y2)].
 
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/interval/interval2.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/interval/interval2.png)
 
 Note that we can also answer question query #1 by comparing max(x1, y1) <= min(x2, y2).
 

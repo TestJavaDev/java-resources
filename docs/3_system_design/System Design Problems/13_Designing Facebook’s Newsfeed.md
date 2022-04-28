@@ -67,7 +67,7 @@ There are three primary objects: User, Entity (e.g. page, group, etc.), and Feed
 * Each FeedItem can optionally have an EntityID pointing to the page or the group where that post was created.
 
 If we are using a relational database, we would need to model two relations: User-Entity relation and FeedItem-Media relation. Since each user can be friends with many people and follow a lot of entities, we can store this relation in a separate table. The “Type” column in “UserFollow” identifies if the entity being followed is a User or Entity. Similarly, we can have a table for FeedMedia relation.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design71.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design71.png)
 
 ## 6. High Level System Design
 At a high level this problem can be divided into two parts:
@@ -93,14 +93,14 @@ At a high level, we will need following components in our Newsfeed service:
 7. Feed notification service: To notify the user that there are newer items available for their newsfeed.
 
 Following is the high-level architecture diagram of our system. User B and C are following User A.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design72.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design72.png)
 
 ## 7. Detailed Component Design
 Let’s discuss different components of our system in detail.
 
 a. Feed generation
 Let’s take the simple case of the newsfeed generation service fetching most recent posts from all the users and entities that Jane follows; the query would look like this:
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design73.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design73.png)
 Here are issues with this design for the feed generation service:
 1. Crazy slow for users with a lot of friends/follows as we have to perform sorting/merging/ranking of a huge number of posts.
 2. We generate the timeline when a user loads their page. This would be quite slow and have a high latency.
@@ -109,7 +109,7 @@ Here are issues with this design for the feed generation service:
 
 Offline generation for newsfeed: We can have dedicated servers that are continuously generating users’ newsfeed and storing them in memory. So, whenever a user requests for the new posts for their feed, we can simply serve it from the pre-generated, stored location. Using this scheme, user’s newsfeed is not compiled on load, but rather on a regular basis and returned to users whenever they request for it.
 Whenever these servers need to generate the feed for a user, they will first query to see what was the last time the feed was generated for that user. Then, new feed data would be generated from that time onwards. We can store this data in a hash table where the “key” would be UserID and “value” would be a STRUCT like this:
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design74.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design74.png)
 We can store FeedItemIDs in a data structure similar to Linked HashMap or TreeMap, which can allow us to not only jump to any feed item but also iterate through the map easily. Whenever users want to fetch more feed items, they can send the last FeedItemID they currently see in their newsfeed, we can then jump to that FeedItemID in our hash-map and return next batch/page of feed items from there.
 
 How many feed items should we store in memory for a user’s feed? Initially, we can decide to store 500 feed items per user, but this number can be adjusted later based on the usage pattern. For example, if we assume that one page of a user’s feed has 20 posts and most of the users never browse more than ten pages of their feed, we can decide to store only 200 posts per user. For any user who wants to see more posts (more than what is stored in memory), we can always query backend servers.

@@ -41,7 +41,7 @@ arr = {1, 5, 3}
 
 ## Coding Exercise
 
-![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr80.png)
+![arr](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/arr/arr80.png)
 
 {% highlight java %}
 class CheckRemoveEven {

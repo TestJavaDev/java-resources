@@ -32,7 +32,7 @@ The constructor accepts an integer parameter defining the number of permits avai
 
 The skeleton for our Semaphore class looks something like this so far.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter20.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter20.png)
 
 Note we have added the synchronized keyword to both the class methods. Adding the synchronized keyword causes only a single thread to execute either of the methods. If a thread is currently executing acquire() then another thread can't execute release() on the same semaphore object.
 
@@ -44,7 +44,7 @@ Now let us fill in the implementation for our acquire method. When can a thread 
 
 The implementation of the acquire method appears below. Note that we are also notify()-ing at the end of the method. We'll talk shortly, about why we need it.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter21.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter21.png)
 
 Implementing the release method should require a simple decrement of the usedPermits variable. However when should we block a thread from proceeding forward like we did in acquire() method? If usedPermits == 0 then it won't make sense to decrement usedPermits and we should block at this condition.
 
@@ -52,7 +52,7 @@ This might seem counter-intuitive, you might ask why would someone call release(
 
 This also means that whenever we decrement or increment the usedPermits variable we need to call notify() so that any waiting thread in the other method is able to move forward. The full implementation appears below
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter22.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter22.png)
 
 As a follow-up, notice that we increment/decrement the usedPermits variable on line 16 and 25 respectively and then call notify(). Does it matter if we switch the order of the two statements, i.e. call notify() first and then manipulate usedPermits ? The answer is no.
 

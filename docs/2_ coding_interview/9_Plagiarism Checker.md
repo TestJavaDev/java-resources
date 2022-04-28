@@ -61,13 +61,13 @@ We will keep track of all the code tokens in the students array simultaneously. 
 
 The following illustration will clarify this process further.
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon50.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon51.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon52.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon53.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon54.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon55.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon56.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon50.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon51.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon52.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon53.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon54.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon55.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon56.png)
 
 {% highlight java %}
 import java.util.*;
@@ -101,7 +101,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon57.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon57.png)
 
 ## Feature #2: Return Match
 
@@ -115,15 +115,15 @@ Initially, we can search for the first occurrence of the subsequence. Then, we c
 
 The following illustration might clarify this process.
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon58.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon59.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon60.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon61.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon62.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon63.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon64.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon65.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon66.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon58.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon59.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon60.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon61.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon62.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon63.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon64.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon65.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon66.png)
 
 Let’s see how we might implement this functionality:
 1. Traverse the cheater string, and for each letter, check if it’s equal to the current letter in student.
@@ -175,4 +175,4 @@ class Solution {
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon67.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon67.png)

@@ -53,7 +53,7 @@ A JSON containing information about a list of tweets matching the search query. 
 
 ## 5. High Level Design
 At the high level, we need to store all the tweets in a database and also build an index that can keep track of which word appears in which tweet. This index will help us quickly find tweets that the users are trying to search for.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design67.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design67.png)
 
 ## 6. Detailed Component Design
 1. Storage: We need to store 120GB of new data every day. Given this huge amount of data, we need to come up with a data partitioning scheme that will be efficiently distributing the data onto multiple servers. If we plan for next five years, we will need the following storage:
@@ -90,7 +90,7 @@ We have a couple of issues with this approach:
 To recover from these situations we either have to repartition our data or use Consistent Hashing.
 
 Sharding based on the tweet object: While storing, we will pass the TweetID to our hash function to find the server and index all the words of the tweet on that server. While querying for a particular word, we have to query all the servers, and each server will return a set of TweetIDs. A centralized server will aggregate these results to return them to the user.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design68.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design68.png)
 
 ## 7. Fault Tolerance
 What will happen when an index server dies? We can have a secondary replica of each server and if the primary server dies it can take control after the failover. Both primary and secondary servers will have the same copy of the index.

@@ -41,7 +41,7 @@ Using a base station located in the top left corner, a cellular operator serves 
 
 We’ll be provided with a 2D matrix consisting of signal strength loss values and a threshold loss value. We need to determine the furthest location beyond which the handset will not work.
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das1.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das1.png)
 
 ## Solution
 We can take advantage of the fact that the value of our matrix increases as we move right in the row and down the column, and we can perform a kind of binary search on this. We can observe that from a current value, cVal, in a column, all values above it will be smaller. So, if our cVal is already smaller than the target loss value, we know that all values above cVal in the current column will also be smaller than this loss value. Taking this observation into account, we can skip the current column and move one column to the right. A similar analysis can be done for rows as well.
@@ -56,16 +56,16 @@ Let’s see how we might implement this functionality:
 
 The following illustration might clarify this process.
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das2.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das3.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das4.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das5.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das6.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das7.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das8.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das9.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das10.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das11.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das2.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das3.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das4.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das5.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das6.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das7.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das8.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das9.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das10.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das11.png)
 
 Let’s look at the code for the solution:
 
@@ -101,7 +101,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das12.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das12.png)
 
 ## Feature #2: Low Coverage Area
 
@@ -110,7 +110,7 @@ In a busy city center, our cellular operator has surveyed a mall, which happens 
 
 We’ll be provided with an m x n matrix of 0s and 1s. We have to find the area of the largest rectangle containing only 1s since that will represent the largest, low coverage, rectangular part of the mall.
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das13.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das13.png)
 
 ## Solution
 We will attempt to solve the smallest portion of the input in the original problem and gradually build to larger chunks of the input until we find the answer to the problem using the original input. To this end, we will first determine the area of the largest rectangle of 1s considering only the first row of the input. Then, we will find the area of the largest rectangle ending at the second row of input and including the first one. We will repeat this process on increasing subproblem sizes. As we keep increasing the subproblem size while maintaining the maximum area, we will find the area of the largest group of contiguous 1s in the original input.
@@ -119,7 +119,7 @@ To determine the maximum area rectangle within a subset of consecutive rows from
 
 As we process one column from dp, we determine the maximum area of consecutive 1s that that column is part of. For instance, if we consider the first column of dp, what’s the largest area of consecutive 1s? Since dp is [0 1 1], the answer is 0 because the first column has no 1s. How about the second column? If it were part of a rectangle of 1s, it would span the second and third column - with a width of 2, height of 1, and with an area(height * width) of 2. The same goes for the third column of dp as well. The maximum area we’ve seen so far is 2.
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das14.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das14.png)
 
 Now, we process dp one column at a time as before. If the first column is part of a rectangle of consecutive 1s, its area will be 3 - with a height of 1 and spanning a width of 3. Now, let’s consider the second column of dp. If it were part of a maximally sized rectangle, it would have a height of 2 and span the second and third columns with an area of 4. This is greater than the previously-known maximum area of 3. So, we update our maximum sized rectangle area across the first two rows at 4. As we process the third row, the streak of 1s gets discontinued in the first and third column, while it continues to grow in the second column. So, we get dp =[0 3 0]. Again, we’ll process this one column at a time. The first and third columns have no contribution, and the second column can only contribute a rectangle of area 3. This is less than the maximum area seen so far, which is 4. Therefore, our answer remains 4.
 
@@ -135,14 +135,14 @@ We can use a stack-based solution in which we keep pushing the list’s indexes 
 
 The following illustration might further clarify this process:
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das15.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das16.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das17.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das18.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das19.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das20.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das21.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das22.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das15.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das16.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das17.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das18.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das19.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das20.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das21.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das22.png)
 
 Let’s look at the code for the solution:
 
@@ -211,10 +211,10 @@ Let’s see how we might implement this functionality:
 
 The following illustration might further clarify this process:
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das23.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das24.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das25.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das26.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das23.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das24.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das25.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das26.png)
 
 Let’s look at the code for the solution:
 
@@ -299,7 +299,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das27.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das27.png)
 
 ## Feature #3: Power Up the Station
 
@@ -319,7 +319,7 @@ The eight states will be generated by moving each of the four digits forward and
 
 We can explicitly check for the condition: if we are subtracting from 0, 9 should be returned. Similarly, if we are adding to 9, 0 should be returned.
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das28.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das28.png)
 
 Let’s look at the code for the solution:
 
@@ -373,4 +373,4 @@ class Solution {
 }
 {% endhighlight %}
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das29.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das29.png)

@@ -47,11 +47,11 @@ Given two integer arrays to represent weights and profits of ‘N’ items, we n
 ## Basic Solution
 A basic brute-force solution could be to try all combinations of the given items (as we did above), allowing us to choose the one with maximum profit and a weight that doesn’t exceed ‘C’. Take the example of four items (A, B, C, and D), as shown in the diagram below. To try all the combinations, our algorithm will look like:
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg10.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg10.png)
 
 Here is a visual representation of our algorithm:
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg11.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg11.png)
 
 All green boxes have a total weight that is less than or equal to the capacity (7), and all the red ones have a weight that is more than 7. The best solution we have is with items [B, D] having a total profit of 22 and a total weight of 7.
 
@@ -97,9 +97,9 @@ class Knapsack {
 
 {% endhighlight %}
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg12.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg12.png)
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg13.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg13.png)
 
 We can clearly see that ‘c:4, i=3’ has been called twice. Hence we have an overlapping sub-problems pattern. We can use Memoization to solve overlapping sub-problems efficiently.
 
@@ -157,37 +157,37 @@ class Knapsack {
 
 {% endhighlight %}
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg14.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg14.png)
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg15.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg15.png)
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg16.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg16.png)
 
 Let’s draw this visually and start with our base case of zero capacity:
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg17.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg18.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg19.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg20.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg21.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg22.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg23.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg24.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg25.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg26.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg27.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg28.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg29.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg30.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg31.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg32.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg33.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg34.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg35.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg36.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg37.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg38.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg39.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg17.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg18.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg19.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg20.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg21.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg22.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg23.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg24.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg25.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg26.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg27.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg28.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg29.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg30.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg31.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg32.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg33.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg34.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg35.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg36.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg37.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg38.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg39.png)
 
 ## Code
 
@@ -244,7 +244,7 @@ class Knapsack {
 }
 {% endhighlight %}
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg40.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg40.png)
 
 ## How can we find the selected items?
 As we know, the final profit is at the bottom-right corner. Therefore, we will start from there to find the items that will be going into the knapsack.
@@ -253,7 +253,7 @@ As you remember, at every step, we had two options: include an item or skip it. 
 
 Let’s understand this from the above example:
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg41.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg41.png)
 
 1. ‘22’ did not come from the top cell (which is 17); hence we must include the item at index ‘3’ (which is item ‘D’).
 2. Subtract the profit of item ‘D’ from ‘22’ to get the remaining profit ‘6’. We then jump to profit ‘6’ on the same row.

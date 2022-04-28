@@ -29,7 +29,7 @@ arr = {9, 2, 3, 6}
 ## Sample Output 
 2
 
-![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr85.png)
+![arr](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/arr/arr85.png)
 
 ## Coding Exercise
 

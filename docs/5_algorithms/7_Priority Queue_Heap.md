@@ -48,7 +48,7 @@ There are two kinds of heaps: min heap and max heap. A min heap is a tree that h
 A max heap has the same property #1 and opposite property #2, i.e., for any node, its key is less than its parent’s key.
 
 Let’s play “is it a heap?” game:
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap1.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap1.png)
 
 Note that:
 * The number in each node is the key, not value (remember a tree node has a value). Keys are used to sort the nodes/construct the tree, and values are the data we want heap to store.
@@ -69,12 +69,12 @@ To insert a key into a heap
 * Place the new key at the first free leaf.
 * If property #2 is violated, perform a bubble-up.
 
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap2.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap3.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap4.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap5.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap6.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap7.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap2.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap3.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap4.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap5.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap6.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap7.png)
 
 As the name of the algorithm suggests, it “bubbles up” the new node by swapping it with its parent until the order is correct
 
@@ -91,18 +91,18 @@ To do that, we
 * Replace the root with the last node (the rightmost node at the bottom) of the heap.
 * If property #2 is violated, perform a bubble-down.
 
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap8.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap9.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap10.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap11.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap12.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap13.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap8.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap9.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap10.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap11.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap12.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap13.png)
 
 What this says is we keep swapping between the current node and its smallest child until we get to the leaf, hence a “bubble down”. Again, the time complexity is O(log(N)) since the height of a heap is O(log(N)).
 ## Implementing Heap
 Being a complete tree makes an array a natural choice to implement a heap since it can be stored compactly and wastes no space. Pointers are not needed. The parent and children of each node can be calculated with index arithmetic.
 
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap14.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap14.png)
 
 For node i, its children are stored at 2i+1 and 2i+2, and its parent is at floor((i-1)/2). So, instead of node.left, we’d do 2*i+1.
 
@@ -381,23 +381,23 @@ Next, we ask the question: “are there any conditions that we haven’t used?�
 
 Now the question is, “how do we compare a stream of k numbers?”, which is a perfect use case for a min heap.
 
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap15.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap16.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap17.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap18.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap19.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap20.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap21.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap22.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap23.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap24.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap25.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap26.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap27.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap28.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap29.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap30.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap31.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap15.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap16.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap17.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap18.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap19.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap20.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap21.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap22.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap23.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap24.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap25.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap26.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap27.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap28.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap29.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap30.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap31.png)
 
 Note that we push a tuple (val, current_list, head_index) into the heap. val is used to compare in the heap. We need current_list and head_index because we want to know the next number to push.
 
@@ -460,7 +460,7 @@ Given a stream of numbers, find the median number at any given time (accurate to
 
 ## Example:
 
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap32.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap32.png)
 
 ## Explanation
 
@@ -481,19 +481,19 @@ Let’s assume the total number of elements is even and we can divide the number
 
 Now the problem boils down to how to keep a small pile where we can find max value easily and a big pile where we can find min value easily. min heap and max heap fit these requirements perfectly.
 
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap33.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap34.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap35.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap36.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap37.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap38.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap40.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap41.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap42.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap43.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap44.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap45.png)
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/heap46.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap33.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap34.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap35.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap36.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap37.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap38.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap40.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap41.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap42.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap43.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap44.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap45.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/heap46.png)
 
 {% highlight java %}
 class MedianOfStream {

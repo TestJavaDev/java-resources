@@ -23,7 +23,7 @@ This is a slightly advanced question that requires knowledge about atomic classe
 
 Usually, we want to atomically execute steps that require checking a value and then taking action based on the observed value. This is usually expressed as an if-clause. For instance, in the stack problem we would have a variable top that points to the top of the stack. Initially, this variable is null and in a single-threaded environment we would perform the following check when pushing the first element in the stack.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter66.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter66.png)
 
 As you can see, the above snippet is a check-then-act scenario - We check if top is already null, if so we initialize it to an object of StackNode. The above code fails in a multi-threaded environment because the check-then-act sequence can’t be performed atomically. The straightforward path to make the code thread-safe is to either use locks or simply mark the methods synchronized. The code for a thread-safe stack using synchronized is presented below for context and before we delve into a solution without locking.
 
@@ -216,13 +216,13 @@ The above program shows 7 threads attempting to change the value of a shared int
 
 The SimulatedCompareAndSwap is a generic class and an instance of the class stores value for the type argument, which is an integer in the above widget. Consider the following snippet:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter67.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter67.png)
 
 The act of checking the current value of the typed parameter stored in the instance of SimulatedCompareAndSwap and then updating it to a new value is executed atomically using the method compareAndSet(). If the execution is successful a true boolean value is returned. However, it is possible that another thread reads and updates the stored value before the main thread has a chance to execute compareAndSet(). In that instance, the expected value parameter passed in by the main thread will not match the currently stored value and the attempt to change the stored value will be rejected, indicated by a false boolean return value.
 
 When implementing a stack using SimulatedCompareAndSwap we’ll store the current value of the top of the stack in the SimulatedCompareAndSwap instance. The trick is to let a thread read the current value of the top of stack and then attempt to change it using compareAndSet(). If the attempt is unsuccessful we simply re-read the top value again, since the value we previously had didn’t match the expected value and try again in a loop until the operation succeeds. Let’s see how the push operation for the stack will be implemented using this strategy.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter68.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter68.png)
 
 Note, that these loops run a finite number of times. The unluckiest of threads will eventually have its expected value match the current value and the compareAndSet() method will succeed. The complete code for the stack class CASBasedStack appears below:
 
@@ -388,7 +388,7 @@ We discuss the AtomicReference class in detail here and suggest the reader to go
 
 The solution using the AtomicReference class will resemble the solution we implemented using the SimulatedCompareAndSwap class. The trick is to be able to atomically update the top of the stack and for that we’ll store the current top of the stack, which is of type StackNode, in an instance of AtomicReference. The push() method’s core loop looks like the following:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter69.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter69.png)
 
 The complete code for the non-blocking stack using AtomicReference is shown below:
 

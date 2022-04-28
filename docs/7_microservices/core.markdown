@@ -55,11 +55,11 @@ users to use a specific application without having to deploy or to maintain it. 
 most cases, the access is through a web browser. Everything is managed by the service provider: application, data, operating system, virtualization, servers, storage,
 and network. The user just hires the service and uses the software.
 SaaS platforms include Salesforce, SAP, and Google Business.
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro1.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro1.png)
 
 ###  Microservices are more than writing the code
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro2.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro2.png)
 
 Writing a robust service includes considering several topics. Let’s walk through the
 items show in more detail:
@@ -78,7 +78,7 @@ is guaranteed to have the same configuration and codebase as all the other servi
 microservices. 
 
 ### Core microservice development pattern
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro3.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro3.png)
 
 The following patterns show the basics of building a microservice:
 * Service granularity—How do you approach decomposing a business domain
@@ -118,7 +118,7 @@ communication infrastructure known as a service mesh.
 * Service routing—With an API Gateway, you can provide a single entry point for
 all of your services so that security policies and routing rules are applied uniformly to multiple services and service instances in your microservices applications. How? With the Spring Cloud API Gateway
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro4.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro4.png)
 
 ## Microservice client resiliency
 
@@ -136,7 +136,7 @@ to carry out their work. This pattern refers to how you compartmentalize these
 calls so that the misbehavior of one service call doesn’t negatively impact the
 rest of the application.
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro5.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro5.png)
 
 ## Microservice security patterns
 
@@ -149,7 +149,7 @@ they say they are.
 constantly having to present their credentials for service calls involved in a transaction. To achieve this, we’ll look at how you can use token-based security standards such as OAuth2 and JSON Web Tokens (JWT) to obtain a token that can
 be passed from service call to service call to authenticate and authorize the user
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro6.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro6.png)
 
 ## Microservice logging and tracing patterns
 
@@ -160,7 +160,7 @@ single user transaction. With this pattern, we’ll look at how to implement a c
 * Log aggregation—With this pattern, we’ll look at how to pull together all of the
 logs produced by your microservices (and their individual instances) into a single queryable database across all the services involved and understand the performance characteristics of the services in the transaction.
 * Microservice tracing—We’ll explore how to visualize the flow of a client transaction across all the services involved and understand the performance characteristics of the transaction’s services.
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro7.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro7.png)
 
 ## Application metrics pattern
 
@@ -176,7 +176,7 @@ metrics service in order to send the application data.
 * With the pull style, the metrics service asks or queries a function to fetch the
 application data.
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro8.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro8.png)
 
 ## Microservice build/deployment patterns
 
@@ -202,7 +202,7 @@ drift. A configuration drift can occur when ad hoc changes to a system configura
 Our goal with these patterns and topics is to ruthlessly expose and stamp out configuration drift as quickly as possible before it can hit your upper environments (stage or
 production).
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro9.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro9.png)
 
 ## Give it a REST
 
@@ -284,7 +284,7 @@ The principal objective of service discovery is to have an architecture where ou
 and how they update the service discovery agent and become available to process user
 requests.
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro15.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro15.png)
 
 Client-side load balancing caches the location of the services so that the service client doesn’t
 need to contact service discovery on every call.
@@ -297,9 +297,9 @@ removed from the registry. Once that is done, the client-side load balancer upda
 itself without manual intervention by establishing constant communication with the
 registry service
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro16.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro16.png)
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro17.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro17.png)
 
 ## Applying the platform-provided service discovery patterns 
 
@@ -352,7 +352,7 @@ Client-side resiliency software patterns focus on protecting a client of a remot
 remote resource fails because of errors or poor performance. These patterns allow the client to fail fast and not consume valuable resources, such as database
 connections and thread pools. They also prevent the problem of the poorly. performing remote service from spreading “upstream” to consumers of the client.
  
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro18.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro18.png)
 
 ## Client-side load balancing
 
@@ -402,8 +402,8 @@ look up all of a service’s individual instances from a service discovery agent
  ship where the puncture occurred and prevents the entire ship from filling with water
  and sinking
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro19.png)
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro20.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro19.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro20.png)
 
 ## Implementing the bulkhead pattern
 
@@ -429,8 +429,8 @@ accessed within an application, and the call volumes for the individual services
 volumes or longer completion times than other services, we can end up introducing
 thread exhaustion into our thread pools because one service ends up dominating all
 of the threads in the default thread pool.
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro21.png)
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro22.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro21.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro22.png)
 
 # Service routing
 
@@ -464,7 +464,7 @@ gateway. Specifically, we’ll look at how to use Spring Cloud Gateway to
 * Inject the correlation ID returned from the HTTP response and send it back to
 the client
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro23.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro23.png)
 
 The service gateway sits as the gatekeeper for all inbound traffic to microservice calls
 within our application. With a service gateway in place, our service clients never
@@ -507,7 +507,7 @@ the “chokepoint” for your service invocation. Complex code with multiple
 database calls can be the source of difficult-to-track performance problems in
 the service gateway
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro24.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro24.png)
 
 ## Custom filters
 
@@ -530,7 +530,7 @@ information.
 
 ## Securing your microservices
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro25.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro25.png)
 
 [Decode JWT access token](https://jwt.io/introduction)
 
@@ -544,7 +544,7 @@ the organization service. If you followed the examples we built in the previous 
 an authenticated user’s token will flow through the gateway, the licensing service, and
 then down to the organization service.
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro26.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro26.png)
 
 ##  Some closing thoughts on microservice security
 
@@ -557,7 +557,7 @@ also build your microservice security around the following practices:
 * Limit the attack surface of your microservices by locking down unneeded network ports.
 Figure 9.28 shows how these different pieces fit together.
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro27.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro27.png)
 
 ## Event-driven architecture
 
@@ -584,7 +584,7 @@ organization and evict it from the cache.
 
 ### Using a synchronous request-response approach to communicate state change
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro28.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro28.png)
 
 ### Downsides of a messaging architecture
 
@@ -650,13 +650,13 @@ indexed in Elasticsearch.
 – Kibana is the visualization and data management tool for Elasticsearch. It
 provides charts, maps, and real-time histograms. 
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro33.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro33.png)
 
 ## Deploying your microservices
 
 ### The architecture of a build/deployment pipeline
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro34.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro34.png)
 Figure 12.1 should look somewhat familiar because it’s based on the general build/
 deployment pattern used for implementing continuous integration (CI):
 1 A developer commits their code to the source code repository.
@@ -754,7 +754,7 @@ a DevOps perspective, you need to monitor microservice instances and ensure
 that any faults are routed around failing service instances, and that these are
 taken down. 
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro10.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro10.png)
 
 ## Service assembly: Packaging and deploying your microservices
 
@@ -766,7 +766,7 @@ defined within it. These dependencies must also include the run-time engine (for
 example, an HTTP server or application container) that hosts the microservice.
  The process of consistently building, packaging, and deploying is the service
 assembly (step 1 in figure 3.9). Figure 3.10 shows additional details about this step.
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro11.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro11.png)
 
 ## Service bootstrapping: Managing configuration of your microservices
 
@@ -774,7 +774,7 @@ Service bootstrapping (step 2 in figure 3.9) occurs when the microservice first 
 and needs to load its application configuration information. Figure 3.11 provides
 more context for the bootstrapping process.
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro12.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro12.png)
 
 As any application developer knows, there will be times when you need to make the
 run-time behavior of the application configurable. Usually this involves reading your
@@ -812,7 +812,7 @@ registering service, which can be used by the service discovery agent to perform
 checks. The service client then communicates with the discovery agent to look up the
 service’s location.
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro13.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro13.png)
 
 ## Communicating a microservice’s health
 
@@ -825,4 +825,4 @@ that clients aren’t sent a service instance that has failed.
 and ping the health check interface to ensure that that service is available. This is step
 4 in figure 3.9; figure 3.13 provides context for this step. 
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro14.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro14.png)

@@ -43,7 +43,7 @@ Before digging deep into Cassandra’s architecture, let’s first go through so
    * Column value: Stores one value or a collection of values.
 2. Row: A row is a container for columns referenced by primary key. Cassandra does not store a column that has a null value; this saves a lot of space.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced16.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced16.png)
 
 Table: A table is a container of rows.
 
@@ -66,7 +66,7 @@ Let’s look into mechanisms that Cassandra applies to uniquely identify rows.
 Cassandra keys#
 The Primary key uniquely identifies each row of a table. In Cassandra primary key has two parts:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced17.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced17.png)
 
 The partition key decides which node stores the data, and the clustering key decides how the data is stored within a node. Let’s take the example of a table with PRIMARY KEY (city_id, employee_id). This primary key has two parts represented by the two columns:
 * city_id is the partition key. This means that the data will be partitioned by the city_id field, that is, all rows with the same city_id will reside on the same node.
@@ -75,12 +75,12 @@ The partition key decides which node stores the data, and the clustering key dec
 ## Clustering keys
 As described above, clustering keys define how the data is stored within a node. We can have multiple clustering keys; all columns listed after the partition key are called clustering columns. Clustering columns specify the order that the data is arranged on a node.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced18.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced18.png)
 
 ## Partitioner
 Partitioner is the component responsible for determining how data is distributed on the Consistent Hash ring. When Cassandra inserts some data into a cluster, the partitioner performs the first step, which is to apply a hashing algorithm to the partition key. The output of this hashing algorithm determines within which range the data lies and hence, on which node the data will be stored.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced19.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced19.png)
 
 By default, Cassandra uses the Murmur3 hashing function. Murmur3 will always produce the same hash for a given partition key. This means that we can always find the node where a specific row is stored. Cassandra does allow custom hashing functions, however, once a cluster is initialized with a particular partitioner, it cannot be changed later. In Cassandra’s default configuration, a token is a 64-bit integer. This gives a possible range for tokens from -2^{63} to 2^{63}-1
 
@@ -89,7 +89,7 @@ All Cassandra nodes learn about the token assignments of other nodes through gos
 ## Coordinator node
 A client may connect to any node in the cluster to initiate a read or write query. This node is known as the coordinator node. The coordinator identifies the nodes responsible for the data that is being written or read and forwards the queries to them.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced20.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced20.png)
 
 As of now, we discussed the core concepts of Cassandra. Let’s dig deeper into some of its advanced distributed concepts.
 
@@ -99,7 +99,7 @@ Each node in Cassandra serves as a replica for a different range of data. Cassan
 * Replication factor
 * Replication strategy
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced21.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced21.png)
 
 ## Replication factor
 The replication factor is the number of nodes that will receive the copy of the same data. This means, if a cluster has a replication factor of 3, each row will be stored on three different nodes. Each keyspace in Cassandra can have a different replication factor.
@@ -110,14 +110,14 @@ The node that owns the range in which the hash of the partition key falls will b
 ## Simple replication strategy
 This strategy is used only for a single data center cluster. Under this strategy, Cassandra places the first replica on a node determined by the partitioner and the subsequent replicas on the next node in a clockwise manner.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced22.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced22.png)
 
 ## Network topology strategy
 This strategy is used for multiple data-centers. Under this strategy, we can specify different replication factors for different data-centers. This enables us to specify how many replicas will be placed in each data center.
 
 Additional replicas, in the same data-center, are placed by walking the ring clockwise until reaching the first node in another rack. This is done to guard against a complete rack failure, as nodes in the same rack (or similar physical grouping) tend to fail together due to power, cooling, or network issues.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced23.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced23.png)
 
 ## Cassandra Consistency Levels
 
@@ -141,7 +141,7 @@ How does Cassandra perform a write operation? For a write, the coordinator node 
 ## Hinted handoff
 Depending upon the consistency level, Cassandra can still serve write requests even when nodes are down. For example, if we have the replication factor of three and the client is writing with a quorum consistency level. This means that if one of the nodes is down, Cassandra can still write on the remaining two nodes to fulfill the consistency level, hence, making the write successful.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced24.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced24.png)
 
 Now when the node which was down comes online again, how should we write data to it? Cassandra accomplishes this through hinted handoff.
 
@@ -165,13 +165,13 @@ To achieve strong consistency in Cassandra: R + W > RFR+W>RF gives us strong con
 
 Snitch: The Snitch is an application that determines the proximity of nodes within the ring and also tells which nodes are faster. Cassandra nodes use this information to route read/write requests efficiently. We will discuss this in detail later.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced25.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced25.png)
 
 How does Cassandra perform a read operation? The coordinator always sends the read request to the fastest node. For example, for Quorum=2, the coordinator sends the request to the fastest node and the digest of the data from the second-fastest node. The digest is a checksum of the data and is used to save network bandwidth.
 
 If the digest does not match, it means some replicas do not have the latest version of the data. In this case, the coordinator reads the data from all the replicas to determine the latest data. The coordinator then returns the latest data to the client and initiates a read repair request. The read repair operation pushes the newer version of data to nodes with the older version.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced26.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced26.png)
 
 While discussing Cassandra’s write path, we saw that the nodes could become out of sync due to network issues, node failures, corrupted disks, etc. The read repair operation helps nodes to resync with the latest data. Read operation is used as an opportunity to repair inconsistent data across replicas. The latest write-timestamp is used as a marker for the correct version of data. The read repair operation is performed only in a portion of the total reads to avoid performance degradation. Read repairs are opportunistic operations and not a primary operation for anti-entropy.
 
@@ -184,25 +184,25 @@ Client A initially performs a write operation to set owner = A. While this opera
 
 The following illustration shows this phenomenon
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq1.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq2.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq3.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq4.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq5.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq6.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq7.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq8.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq9.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq10.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq11.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq12.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq13.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq14.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq15.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq16.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq17.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq18.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/qq19.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq1.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq2.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq3.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq4.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq5.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq6.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq7.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq8.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq9.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq10.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq11.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq12.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq13.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq14.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq15.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq16.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq17.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq18.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/qq19.png)
 
 ## With read repair
 The violation of linearizability in the previous example would be eliminated if read repair was used since the read from client B would propagate the value to replica 2, and client C would also read owner = A.
@@ -211,30 +211,30 @@ So, let’s assume that read repair is used and examine a different scenario. Cl
 
 Cassandra performs a read repair using the LWW strategy, thus propagating the value to replica 2. Consequently, a write operation that failed has affected the state of the database, thus violating linearizability. This example is shown in the following illustration:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq1.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq2.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq3.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq4.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq5.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq6.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq7.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq8.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq9.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq10.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq11.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq12.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq13.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq14.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq15.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq16.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq17.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq18.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq19.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq20.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq21.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq22.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq23.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/aqq24.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq1.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq2.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq3.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq4.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq5.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq6.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq7.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq8.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq9.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq10.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq11.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq12.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq13.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq14.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq15.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq16.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq17.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq18.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq19.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq20.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq21.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq22.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq23.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/aqq24.png)
 
 ## Snitch
 Snitch keeps track of the network topology of Cassandra nodes. It determines which data-centers and racks nodes belong to. Cassandra uses this information to route requests efficiently. Here are the two main functions of a snitch in Cassandra:
@@ -255,7 +255,7 @@ Generation number: In Cassandra, each node stores a generation number which is i
 
 Seed nodes: To prevent problems in gossip communications, Cassandra designates a list of nodes as the seeds in a cluster. This is critical for a node starting up for the first time. By default, a node remembers other nodes it has gossiped with between subsequent restarts. The seed node designation has no purpose other than bootstrapping the gossip process for new nodes joining the cluster. Thus, seed nodes are not a single point of failure, nor do they have any other special purpose in cluster operations other than the bootstrapping of nodes.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced27.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced27.png)
 
 ## Node failure detection
 
@@ -279,7 +279,7 @@ Let’s dig deeper into these parts.
 
 When a node receives a write request, it immediately writes the data to a commit log. The commit log is a write-ahead log and is stored on disk. It is used as a crash-recovery mechanism to support Cassandra’s durability goals. A write will not be considered successful on the node until it’s written to the commit log; this ensures that if a write operation does not make it to the in-memory store (the MemTable, discussed in a moment), it will still be possible to recover the data. If we shut down the node or it crashes unexpectedly, the commit log can ensure that data is not lost. That’s because if the node restarts, the commit log gets replayed.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced28.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced28.png)
 
 ## MemTable
 
@@ -290,7 +290,7 @@ After it is written to the commit log, the data is written to a memory-resident 
 * Commit log stores all the writes in sequential order, with each new write appended to the end, whereas MemTable stores data in the sorted order of partition key and clustering columns.
 * After writing data to the Commit Log and MemTable, the node sends an acknowledgment to the coordinator that the data has been successfully written.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced29.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced29.png)
 
 ## SStable
 When the number of objects stored in the MemTable reaches a threshold, the contents of the MemTable are flushed to disk in a file called SSTable. At this point, a new MemTable is created to store subsequent data. This flushing is a non-blocking operation; multiple MemTables may exist for a single table, one current, and the rest waiting to be flushed. Each SStable contains data for a specific table.
@@ -305,7 +305,7 @@ The current data state of a Cassandra table consists of its MemTables in memory 
 
 Generation number is an index number that is incremented every time a new SSTable is created for a table and is used to uniquely identify SSTables. Here is the summary of Cassandra’s write path:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced30.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced30.png)
 
 ## Anatomy of Cassandra's Read Operation
 
@@ -321,11 +321,11 @@ Chunk cache: Chunk cache is used to store uncompressed chunks of data read from 
 ## Reading from MemTable
 As we know, data is sorted by the partition key and the clustering columns. Let’s take an example. Here we have two partitions of a table with partition keys ‘2’ and ‘5’. The clustering columns are the state and city names. When a read request comes in, the node performs a binary search on the partition key to find the required partition and then return the row.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced31.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced31.png)
 
 Here is the summary of Cassandra’s read path:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced32.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced32.png)
 
 ## Reading from SSTable
 
@@ -341,25 +341,25 @@ Each SSTable consists of two files:
 * Data File: Actual data is stored in a data file. It has partitions and rows associated with those partitions. The partitions are in sorted order.
 * Partition Index file: Stored on disk, partition index file stores the sorted partition keys mapped to their SSTable offsets. It enables locating a partition exactly in an SSTable rather than scanning data.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced33.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced33.png)
 
 ## Partition index summary file
 Stored in memory, the Partition Index Summary file stores the summary of the Partition Index file. This is done for performance improvement.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced34.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced34.png)
 
 If we want to read data for key=12, here are the steps we need to follow (also shown in the figure below):
 1. In the Partition Index Summary file, find the key range in which the key=12 lies. This will give us offset (=32) into the Partition Index file.
 2. Jump to offset 32 in the Partition Index file to search for the offset of key=12. This will give us offset (=3914) into the SSTable file.
 3. Jump to SSTable at offset 3914 to read the data for key=12
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced35.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced35.png)
 
 ## Reading SSTable through key cache
 
 As the Key Cache stores a map of recently read partition keys to their SSTable offsets, it is the fastest way to find the required row in the SSTable.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced36.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced36.png)
 
 If data is not present in MemTable, we have to look it up in SSTables or other data structures like partition index, etc. Here is the summary of Cassandra’s read operation:
 * First, Cassandra checks if the row is present in the Row Cache. If present, the data is returned, and the request ends.
@@ -367,7 +367,7 @@ If data is not present in MemTable, we have to look it up in SSTables or other d
 * The key cache is checked for the partition key presence. A cache hit provides an offset for the partition in SSTable. This offset is then used to retrieve the partition, and the request completes.
 * Cassandra continues to seek the partition in the partition summary and partition index. These structures also provide the partition offset in an SSTable which is then used to retrieve the partition and return. The caches are updated if present with the latest data read.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced37.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced37.png)
 
 ## Compaction
 
@@ -376,7 +376,7 @@ As we have already discussed, SSTables are immutable, which helps Cassandra achi
 
 On compaction, the merged data is sorted, a new index is created over the sorted data, and this freshly merged, sorted, and indexed data is written to a single new SSTable.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced38.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced38.png)
 
 * Compaction will reduce the number of SSTables to consult and therefore improve read performance.
 * Compaction will also reclaim space taken by obsolete data in SSTable.

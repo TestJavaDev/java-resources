@@ -52,11 +52,11 @@ You can assume that the list contains at least one pair of products to suggest. 
 
 The following illustration shows how products are mapped to prices for the example we are discussing. The prices have been rounded off for simplicity.
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon1.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon1.png)
 
 The illustration given below shows how we obtained the result from the list of prices.
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon2.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon2.png)
 
 ## Solution
 This feature can be easily implemented using hashing, meaning dictionaries in python. For every item price, p_i, we will look for p_i - n in the hashmap. Then, we will check whether each product’s complement exists in the hashmap or not. This will continue until a product’s complement is found, and the indices of these products will be returned.
@@ -69,12 +69,12 @@ The algorithm’s complete steps are given below:
 
 The illustration below shows this process step by step:
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon3.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon4.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon5.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon6.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon7.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon8.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon3.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon4.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon5.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon6.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon7.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon8.png)
 
 The implementation of this algorithm is given below:
 
@@ -102,7 +102,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon9.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon9.png)
 
 ## Feature #2: Suggest Items for Special Offer
 
@@ -111,11 +111,11 @@ In this scenario, Amazon held a lucky draw contest and the customers who won, ha
 
 Let’s say we are given a list of numbers containing the prices of products that the customer is likely to buy: {100, 75, 150, 200, 50, 65, 40, 30, 15, 25, 60}. In this example, the following triplets sum up to 200: {25, 100, 75}, {40, 100, 60}, {60, 75, 65}. Therefore, these are the products we will suggest to the customer. Notice that a product can be part of multiple package deals. Your program should return the prices of these products in a list, such as: { {25, 100, 75}, {40, 100, 60}, {60, 75, 65} }. The order of product prices in the final output does not matte
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon10.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon11.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon12.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon13.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon14.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon10.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon11.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon12.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon13.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon14.png)
 
 ## Solution
 This feature can also be implemented by using a dictionary. For every item with price, p_i, we need to find a pair of elements at list indices i + 1 to n that add up to 200 - p_i. To find the pair, we use the hashing technique mentioned in the previous lesson.
@@ -167,7 +167,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon15.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon15.png)
 
 ## Feature #3: Upselling Products
 
@@ -176,7 +176,7 @@ Amazon wants to upsell related products to the customer during checkout. Amazon 
 
 For this feature, we will keep track of the products by only using their IDs. The insertion, deletion, and retrieval will use the ID of the product. The following illustration shows how products are mapped to IDs:
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon16.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon16.png)
 
 ## Solution
 This data structure’s most important feature is recommending products at random in O(1) time. So, let’s consider the data structures with constant time lookup, including arrays and Hashtables.
@@ -190,7 +190,7 @@ Both of these data structures have their own advantages. To benefit from both, w
 * Deletion: Using the HashMap, find the index at which the product exists. Swap the last product in the list, with the one to be removed. Then, change the key-value pair in the HashMap accordingly. Lastly, pop out the last element from the list.
 * Get random: For this operation, we can choose a random index using the Random object in Java. Then, the product at this index will be returned using the list.
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon17.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon17.png)
 
 {% highlight java %}
 class UpsellProducts{
@@ -247,7 +247,7 @@ class Solution{
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon18.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon18.png)
 
 ## Feature #4: Copy Product Data
 
@@ -261,11 +261,11 @@ Now, you have been assigned the task of taking this linked list and making a dee
 
 The following illustration shows how products are mapped to IDs for the example we will be discussing below:
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon19.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon19.png)
 
 The following illustration shows an example of the list of products:
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon20.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon20.png)
 
 ## Solution
 To make a deep copy of the list, we will iterate over the original list and create new nodes via the related pointer or the next pointer. We can also use a Hashtable/dictionary to track whether the copy of a particular node is already present or not.
@@ -362,7 +362,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon21.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon21.png)
 
 ## Feature #5: Order Processing Milestones
 
@@ -416,7 +416,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon22.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon22.png)
 
 ## Feature #6: Products Frequently Viewed Together
 
@@ -429,11 +429,11 @@ For example, let’s say the dataset of product IDs you are given is:{3, 2, 1, 5
 
 The following illustration shows how products are mapped to IDs:
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon23.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon23.png)
 
 The illustration given below represents the example discussed above.
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon24.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon24.png)
 
 ## Solution
 
@@ -499,7 +499,7 @@ class HelloWorld {
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon25.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon25.png)
 
 ## Feature #7: Optimize Delivery Cost
 
@@ -548,7 +548,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon26.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon26.png)
 
 ## Feature #8: Merge Recommendations
 
@@ -559,7 +559,7 @@ You will be given a 2D array of accounts. Each element, accounts[i], is an array
 
 The output should be the merged accounts in which the first element of each account is the name and the rest of the elements are emails in sorted order.
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon27.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon27.png)
 
 ## Solution
 This feature can be mapped to a graph problem. We draw an edge between two emails, in case they occur in the same account. From here, the problem comes down to finding the connected components of this graph.
@@ -633,7 +633,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon28.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon28.png)
 
 ## Feature #9: Products in Price Range
 
@@ -642,11 +642,11 @@ In this feature of the Amazon website, we want to implement a search filter that
 
 For example, let’s consider the following list of products that are mapped to their prices. The prices have been rounded off for simplicity.
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon29.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon29.png)
 
 These products have been stored in the binary search tree based on their prices as such:
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon30.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon30.png)
 
 Now, let’s assume that the price range selected by the user is low = 7 and high = 20. In this case, your function should return {9, 8, 14, 20, 17}. The order of products in the output does not matter.
 
@@ -736,5 +736,5 @@ class Solution {
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon31.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon31.png)
 

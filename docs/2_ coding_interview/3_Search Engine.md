@@ -55,23 +55,23 @@ To implement the WordDictionary class, we will do the following:
 * Constructor: We will initialize the root node of the tree in the constructor. This node will be of type Node. The Node class contains a dictionary of nodes and the Boolean isWord, which determines if the character is at the end of a word or not.
 * insertWord() function: In this function, we will take in a word as input. Starting from the root node, we will add the word’s characters to the children dictionary of each character as nested dictionaries. We will check if the child node with the character is present or not at each step. If it’s not present, a new node is initialized. For the last character of the word, we also set the isWord to True for the corresponding node.
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear1.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear2.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear3.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear4.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear5.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear6.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear7.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear1.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear2.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear3.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear4.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear5.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear6.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear7.png)
 
 * searchWord() function: In this function, we begin checking from the root node to see if the first character exists in children. If it exists, we move on to that node and check its children for the next character. If at any point the node corresponding to a character is not found, we return False. If the whole word is found but isWord is not set to True for the last node, we return False as well. True is only returned if all the characters match and the word also ends at that point.
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear8.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear9.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear10.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear11.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear12.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear13.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear14.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear8.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear9.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear10.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear11.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear12.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear13.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear14.png)
 
 * startsWith() function: This function is mostly the same as the searchWord function. The only exception is that we do not check if isWord is also set to True in the last-found node because we are not looking for a complete word, a prefix is enough. In the above trie, for instance, startsWith("th") should return true.
 
@@ -132,7 +132,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear15.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear15.png)
 
 ## Feature #2: Design Search Autocomplete System
 
@@ -145,12 +145,12 @@ The system should consider the inputs of the autoComplete() function as a contin
 
 Suppose, the current user has typed "be" in the search bar; this will be the input for the autoComplete() function, meaning autoComplete("be") will be called. It will return {'beautiful', 'best friend', 'best quotes'} because these queries match the prefix and are the most popular. The order of queries in the output list is determined by popularity. Then, the user adds "st" to the query, making the string "best", and the autoComplete("st") will be called. Now, the output should be {'best friend', 'best quotes', 'best birthday wishes'}. Lastly, the user finishes the query, so the autoComplete("#") will be called. It will output [] and "best" will be added in the record to be used in future suggestions.
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear16.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear17.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear18.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear19.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear20.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear21.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear16.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear17.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear18.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear19.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear20.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear21.png)
 
 ## Solution
 To design this system, we will again use the trie data structure. Instead of simply storing the words in the prefix tree, as we did in the WordDictionary, we will now store the query strings. The AutocompleteSystem class will act as a trie that keeps a record of the previous queries and assigns them a rank based on their number of occurrences.
@@ -274,7 +274,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear22.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear22.png)
 
 ## Feature #3: Add White Spaces to Create Words
 
@@ -288,7 +288,7 @@ This problem can be solved using the dynamic programming technique. The idea beh
 
 The complete algorithm is given below:
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear23.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear23.png)
 
 {% highlight java %}
 class Solution {
@@ -316,7 +316,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear24.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear24.png)
 
 ## Feature #4: Suggest Possible Queries After Adding White Spaces
 
@@ -328,9 +328,9 @@ Let’s suppose the user searches "vegancookbook". This query didn’t get any w
 ## Solution
 This problem can also be solved using a dynamic programming (DP) technique. We will be using top-down dynamic programming, which is more efficient, even though other variations of DP can also be used. Let’s take a look at the intuition behind this solution.
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear25.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear25.png)
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear26.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear26.png)
 
 Here is the complete algorithm for the implementation:
 * The breakQuery() function takes in the query string and the list of words called dict. This function then calls a recursive helper function.
@@ -381,7 +381,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear27.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear27.png)
 
 ## Feature #5: Calculate the Search Ranking Factor
 
@@ -390,7 +390,7 @@ Consider that your company has decided to experiment with a different search ran
 
 To implement this feature, you will be provided with an array containing the page scores of web pages that reference each other. A page’s rank is calculated as the product of the scores of all the pages that link to it. For example, you are given the following scores of five web pages that link to each other: {1, 4, 6, 9}. The ranking factor found by the algorithm mentioned above will be: {216, 54, 36, 24}.
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear28.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear28.png)
 
 ## Solution
 The optimal approach for solving this problem is that for every index, i, we will evaluate the product of all the numbers to the left and all the numbers to the right of i. Then, we will multiply those two individual products. This will give us the product of all the numbers except the one at the index, i.
@@ -404,20 +404,20 @@ The complete algorithm is given below:
 * We will multiply right with ranking[i] to find the final ranking for the page at i. The right variable will also get updated at each iteration by multiplying it with pageScores[i].
 * Finally, we can find the required page ranking factors in the resultant ranking list.
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear29.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear30.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear31.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear32.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear33.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear34.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear35.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear36.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear37.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear38.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear39.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear40.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear41.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear42.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear29.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear30.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear31.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear32.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear33.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear34.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear35.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear36.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear37.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear38.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear39.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear40.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear41.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear42.png)
 
 {% highlight java %}
 class Solution {
@@ -444,14 +444,14 @@ class Solution {
 }
 {% endhighlight %}
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear43.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear43.png)
 
 ## Feature #6: Reorganizing Search Results
 
 ## Description
 For this search engine feature, we are given all the search results to display on one page. Each page shows a maximum of twenty-five search results at a time. Multiple pages in the search results can belong to the same domain. However, the team has decided that we do not want adjacent results to be from the same domain because they are likely to be similar and might favor only one site. To give our users a wide range of results, we want to rearrange the results such that two results from the same domain are not consecutive.
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear44.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear44.png)
 
 Suppose, we denote each domain with a character. There can only be twenty-five results on a page, so the maximum number of simultaneous domains in the search results will also be 25. Thus, denoting them with a character will be simple. Now, you are given a string that represents the initial order of the search results. Your job is to reorganize this string so adjacent characters are not identical. For example, if the input string is bbnnc then the output should be bnbnc or any other reordering of characters such that it fulfills the conditions. If this is not possible, we will just show the original order of results.
 
@@ -512,7 +512,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear45.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear45.png)
 
 ## Feature #7: Find Searching Time
 
@@ -525,7 +525,7 @@ To find the time spent by each service, we will use log messages. Each service i
 
 Below is an illustration of this format:
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear46.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear46.png)
 
 ## Solution
 Once we encounter a particular function’s start message, we will calculate the time spent in all the subsequent nested calls until we encounter the end message for the first function. This can be done using the stack data structure. We can also subtract the difference of the end time and the nested function execution time from the start time to determine the running time of the first function.
@@ -538,14 +538,14 @@ Here is how the implementation will take place:
 5. Repeat steps 2 and 3 until all the services in the list have been executed.
 6. Return the sum of the servTimes list.
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear47.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear48.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear49.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear50.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear51.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear52.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear53.png)
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear54.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear47.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear48.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear49.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear50.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear51.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear52.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear53.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear54.png)
 
 Let’s look at the code for the solution below:
 
@@ -585,5 +585,5 @@ class Solution {
 }
 {% endhighlight %}
 
-![sear](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/sear/sear55.png)
+![sear](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/sear/sear55.png)
 

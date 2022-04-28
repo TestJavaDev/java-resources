@@ -36,7 +36,7 @@ true
 ## Explanation
 arr1 and arr2 have no common elements, so both of them are disjoint arrays.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has25.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has25.png)
 
 ## Coding Exercise
 
@@ -91,4 +91,4 @@ class CheckDisjoint {
 }
 {% endhighlight %}
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has26.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has26.png)

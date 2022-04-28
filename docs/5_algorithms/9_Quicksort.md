@@ -32,26 +32,26 @@ Sort each subarray recursively to yield two sorted subarrays.
 
 Concatenate the two sorted subarrays and the pivot to yield one sorted array.
 
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick.png)
 
 ## Median-of-three strategy
 
 Pick three random elements from the array and find their median. This strategy ensures that the first element is not picked.
 
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick1.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick2.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick3.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick4.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick5.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick6.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick7.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick8.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick9.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick10.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick11.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick12.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick1.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick2.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick3.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick4.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick5.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick6.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick7.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick8.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick9.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick10.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick11.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick12.png)
 
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick13.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick13.png)
 
 {% highlight java %}
 class QuickSort {
@@ -139,9 +139,9 @@ class Helper {
 }
 {% endhighlight %}
 
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick14.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick14.png)
 
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/quick/quick15.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/quick/quick15.png)
 
 
 

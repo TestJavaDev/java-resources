@@ -18,7 +18,7 @@ Implementing a Barrier / Java resources / Tutorial
 ## Problem Statment
 A barrier can be thought of as a point in the program code, which all or some of the threads need to reach at before any one of them is allowed to proceed further.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter31.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter31.png)
 
 ## Solution
 A barrier allows multiple threads to congregate at a point in code before any one of the threads is allowed to move forward. Java and most other languages provide libraries which make barrier construct available for developer use. Even though we are re-inventing the wheel but this makes for a good interview question.
@@ -27,7 +27,7 @@ We can immediately realize that our solution will need a count variable to track
 
 Below is the code:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter32.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter32.png)
 
 Notice how we are resetting the count to zero in line 19. This is done so that we are able to re-use the barrier.
 
@@ -134,11 +134,11 @@ The previous code would have been hunky dory if we were guaranteed that no spuri
 
 The condition the while loop can check for is simply how many threads have incremented the count variable so far. A thread that wakes up spuriously should go back to sleep if the count is less than the total number of threads. We can check for this condition as follows:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter33.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter33.png)
 
 The while loop introduces another problem. When the last thread does a notifyAll() it also resets the count to 0, which means the threads that are legitimately woken up will always be stuck in the while loop because count is immediately set to zero. What we really want is not to reset the count variable to zero until all the threads escape the while condition when count becomes totalThreads. Below is the improved version:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter34.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter34.png)
 
 The above code introduces a new variable released that keeps tracks of how many threads exit the barrier and when the last thread exits the barrier it resets count to zero, so that the barrier object can be reused in the future.
 
@@ -156,7 +156,7 @@ To understand why the above code is broken, consider three threads t1, t2, and t
 
 The fix requires us to block any new threads from proceeding until all the threads that have reached the previous barrier are released. The code with the fix appears below:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter35.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter35.png)
 
 {% highlight java %}
 class Demonstration {

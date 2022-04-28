@@ -34,7 +34,7 @@ n = 3
 ## Sample Output 
 result = {"1","10","11"}
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt1.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt1.png)
 
 ## Coding Exercise
 

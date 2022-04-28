@@ -24,7 +24,7 @@ The arrangement of the philosophers and the forks are shown in the diagram.
 
 Design a solution where each philosopher gets a chance to eat his food without causing a deadlock
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter39.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter39.png)
 
 ## Solution
 For no deadlock to occur at all and have all the philosopher be able to eat, we would need ten forks, two for each philosopher. With five forks available, at most, only two philosophers will be able to eat while letting a third hungry philosopher to hold onto the fifth fork and wait for another one to become available before he can eat.
@@ -33,7 +33,7 @@ Think of each fork as a resource that needs to be owned by one of the philosophe
 
 Let's try to model the problem in code before we even attempt to find a solution. Each fork represents a resource that two of the philosophers on either side can attempt to acquire. This intuitively suggests using a semaphore with a permit value of 1 to represent a fork. Each philosopher can then be thought of as a thread that tries to acquire the forks to the left and right of it. Given this, let's see how our class would look like.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter40.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter40.png)
 
 That was easy enough. Now think about the eat method, when a philosopher wants to eat, he needs the fork to the left and right of him. So:
 * Philosopher A(0) needs forks 4 and 0
@@ -50,14 +50,14 @@ We can programmatically express the requirement for each philosopher to hold the
 
 So far we haven't discussed deadlocks and without them the naive solution would look like the following:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter41.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter41.png)
 
 If you run the above code eventually, it'll at some point end up in a deadlock. Realize if all the philosophers simultaneously grab their left fork, none would be able to eat. Below we discuss a couple of ways to avoid this deadlock and arrive at the final solution.
 
 ## Limiting philosophers about to eat
 A very simple fix is to allow only four philosophers at any given point in time to even try to acquire forks. Convince yourself that with five forks and four philosophers deadlock is impossible, since at any point in time, even if each philosopher grabs one fork, there will still be one fork left that can be acquired by one of the philosophers to eat. Implementing this solution requires us to introduce another semaphore with a permit of 4 which guards the logic for lifting/grabbing of the forks by the philosophers. The code appears below.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter42.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter42.png)
 
 ## Ordering of fork pick-up
 Another solution is to make any one of the philosophers pick-up the left fork first instead of the right one. If this gentleman successfully acquires the left fork then, it implies:
@@ -66,7 +66,7 @@ Another solution is to make any one of the philosophers pick-up the left fork fi
 
 It doesn't matter which philosopher is chosen to be left-handed and made to pick up his left fork first instead of the right one since its a circle. In our solution, we select the philosopher with id=3 as the left-handed philosopher
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter43.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter43.png)
 
 ## Complete Code 1st Solution
 Below is the code for the first solution we discussed, along with a test. The philosopher threads are perpetual so the widget execution times out. For the limited time the test runs, one can see all philosopher's take turns to eat food without any deadlock.

@@ -55,22 +55,22 @@ class Solution {
 }
 {% endhighlight %}
 
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs1.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs2.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs3.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs4.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs5.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs6.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs7.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs8.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs9.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs10.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs11.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs12.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs13.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs14.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs15.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs16.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs1.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs2.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs3.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs4.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs5.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs6.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs7.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs8.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs9.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs10.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs11.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs12.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs13.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs14.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs15.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs16.png)
 
 Being able to visualize recursion and call stack of a DFS function in your mind is extremely important. Please take a minute to make sure you internalize it and come back to this page anytime you need to look at it.
 
@@ -134,7 +134,7 @@ The max depth of a binary tree is the longest root-to-leaf path. Given a binary 
 
 ## Example
 
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs17.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs17.png)
 
 ##  Explanation
 ## 1. Decide on the return value
@@ -198,7 +198,7 @@ In a binary tree, a node is considered “visible” if no node on the root-to-i
 
 ## Example
 
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs18.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs18.png)
 
 ## Explanation
 We can perform DFS on the tree and keep track of the max value as we go.
@@ -279,8 +279,8 @@ Given two nodes of a binary tree, find their lowest common ancestor.
 ## Intuition
 When we think as a node, there could be five scenarios of how we are relative to the LCA and two target nodes.
 
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs19.png)
-![dfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dfs/dfs20.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs19.png)
+![dfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dfs/dfs20.png)
 
 Current node is the LCA:
 1. One target node is on the left subtree and the other target node is on the right subtree, so the current node itself is the LCA.

@@ -51,7 +51,7 @@ The server is at the root of the spanning tree, and the clients are at the leave
 
 Let’s try to understand this better with an illustration:
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net1.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net1.png)
 
 We’ll be provided with two arrays: parents and delays. Each index of the parents array will be the device_id, and the value for that index will be the id for the device from which it receives the message. The delays array will contain the delays for each device corresponding to their id’s in the parents array.
 
@@ -74,15 +74,15 @@ Let’s see how we might implement this functionality:
 
 The following illustration might clarify this process.
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net2.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net3.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net4.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net5.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net6.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net7.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net8.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net9.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net10.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net2.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net3.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net4.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net5.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net6.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net7.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net8.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net9.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net10.png)
 
 Let’s look at the code for the solution:
 
@@ -143,7 +143,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net11.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net11.png)
 
 ## Feature #2: TTL Expiry
 
@@ -154,7 +154,7 @@ We’ll be provided with an n-ary tree network structure, the server device from
 
 Let’s try to understand this better with an illustration:
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net12.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net12.png)
 
 We are using small TTL values for demonstration purposes. Actual TTL values are usually high.
 
@@ -254,7 +254,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net13.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net13.png)
 
 ## Feature #3: Minimum Hops
 
@@ -265,7 +265,7 @@ We’ll be provided with an array containing the TTL values of each router. The 
 
 Let’s try to understand this better with an illustration:
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net14.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net14.png)
 
 We are using small TTL values for demonstration purposes. Actual TTL values are usually high.
 
@@ -274,10 +274,10 @@ At each index of our array, we can choose to cover the longest possible distance
 
 Start from the initial index i and hop to the furthest position i + value[i]. Keep track of this position using a currReach variable. Next, we’ll iterate the array until currReach, after which we’ll need to hop again. We won’t just hop from our current index because there can be indexes before our current position that can provide a bigger hop. Therefore, as we iterate until currReach, we’ll store the maximum reachable index (if exists) as maxReach from the positions that are less than currReach. The maxReach from a given index is the furthest that a packet can be sent by a router at or before its current position. Finally, we’ll make the hop to the stored maximum position and repeat until we reach the end of the array.
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net15.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net16.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net17.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net18.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net15.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net16.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net17.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net18.png)
 
 Let’s see how we might implement this functionality:
 1. Initialize the maximum position that one could reach and the maximum position reachable during the first hop as maxReach = nums[0] and currRreach = nums[0] respectively.
@@ -289,14 +289,14 @@ Let’s see how we might implement this functionality:
 
 The following illustration might clarify this process.
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net19.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net20.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net21.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net22.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net23.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net24.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net25.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net26.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net19.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net20.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net21.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net22.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net23.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net24.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net25.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net26.png)
 
 Let’s look at the code for the solution:
 
@@ -332,7 +332,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net27.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net27.png)
 
 ## Feature #4: Maximum Routers
 
@@ -343,7 +343,7 @@ We’ll be provided with an m x n matrix containing the IDs for each router. Our
 
 Let’s try to understand this better with an illustration:
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net28.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net28.png)
 
 If the packet is inserted into the router with ID 1, then it is transmitted through the maximum number of routers according to the above-defined criteria. In our case, this is 4.
 
@@ -362,19 +362,19 @@ Let’s see how we might implement this functionality:
 
 The following illustration might clarify this process.
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net29.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net30.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net31.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net32.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net33.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net34.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net35.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net36.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net37.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net38.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net39.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net40.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net41.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net29.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net30.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net31.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net32.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net33.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net34.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net35.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net36.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net37.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net38.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net39.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net40.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net41.png)
 
 Let’s look at the code for the solution:
 
@@ -444,7 +444,7 @@ class Solution {
 
 {% endhighlight %}
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net42.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net42.png)
 
 ## Feature #5: Update VLAN ID
 
@@ -455,8 +455,8 @@ We’ll be provided with a 2D matrix of integers representing the VLAN IDs of sw
 
 Let’s try to understand this better with an illustration:
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net43.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net44.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net43.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net44.png)
 
 ## Solution
 Just like the previous feature, we can move in at most four directions from each cell, i.e., up, down, left, and right. To move to another cell, the neighboring cell must have a VLAN ID equal to the current cell’s ID. In this case, we’ll simply call DFS on the provided cell, and it will recursively assign the new ID to its neighbors. We also need to make sure that we don’t process a cell whose ID has already been changed.
@@ -512,7 +512,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net45.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net45.png)
 
 ## Feature #6: Transmission Error
 
@@ -523,9 +523,9 @@ We’ll be provided with an array of integers representing the router IDs. The r
 
 The following illustration might clarify this behavior:
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net46.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net47.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net48.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net46.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net47.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net48.png)
 
 ## Solution
 From the above examples, we can see that if we move towards the middle from each end of the array, the elements at each of those ends are the same. This is the definition of a palindromic sequence. Since our topology allows one diversion router, we can check for the first position of a mismatch as we move towards the middle from both ends. If we ignore the mismatched value once, the original array should still form a palindromic sequence.
@@ -550,12 +550,12 @@ Let’s see how we might implement this functionality:
 
 The following illustration might clarify this process.
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net49.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net50.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net51.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net52.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net53.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net54.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net49.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net50.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net51.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net52.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net53.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net54.png)
 
 Let’s look at the code for the solution:
 
@@ -614,14 +614,14 @@ class Solution {
 }
 {% endhighlight %}
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net55.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net55.png)
 
 ## Feature #7: Divide Files Over the Network
 
 ## Description
 We need to perform multiple operations on a large number of files over our network. Each file is represented by a lowercase English letter. The complete file list will be provided to us in the form of a string like "abacdc". The position of each letter tells us the sequence in which the files need to be processed. If multiple instances of a file are present, it means that multiple operations will be performed on that file. The file name mapping to characters is shown below:
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net56.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net56.png)
 
 The number of files is so large that we deployed a high-performing cluster on the server to handle it. The cluster is supposed to divide the files among its worker nodes so more work can be done in less time. Each node must be assigned a set of contiguous file operations from the input string. In order to minimize the communication overhead, the files will be divided so that they utilize the maximum number of worker nodes and no two nodes process the same file. This will help us remove the dependency of files resulting in communication overhead between nodes. For example, the string "abacdc" will be divided into two worker nodes as "aba" and "cdc".
 
@@ -629,7 +629,7 @@ We’ll be provided with a string of characters representing the number of files
 
 The following illustration might also clarify this:
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net57.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net57.png)
 
 ## Solution
 We can only have one particular letter in one particular part of our split. From the example, we can see that whenever there is a letter at index i, we split our string after the last occurrence of that letter. The letters between the first and last occurrence of our letter at index i can’t be in any other split, so we have to split after their last occurrence as well.
@@ -647,14 +647,14 @@ Let’s see how we might implement this functionality:
 
 The following illustration might clarify this process:
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net58.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net59.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net60.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net61.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net62.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net63.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net64.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net65.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net58.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net59.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net60.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net61.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net62.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net63.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net64.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net65.png)
 
 Let’s look at the code for the solution:
 
@@ -692,7 +692,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net66.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net66.png)
 
 ## Feature #8: Maximum Clock Skew
 
@@ -703,7 +703,7 @@ It is established that these time values cannot be the same, and clock skew is u
 
 Let’s understand this better with an illustration:
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net67.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net67.png)
 
 ## Solution
 For a given node n, all of the nodes above it, upto the root node, are considered ancestors of node n. Since any two nodes can be the most synced out nodes, we have to process the complete tree from top to bottom. We need to traverse the tree height-wise; so we will use a DFS algorithm.
@@ -792,7 +792,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net68.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net68.png)
 
 ## Feature #9: Update Configuration
 
@@ -812,13 +812,13 @@ We can assume that there are no isolated\ routersisolated routers (all the route
 
 Let’s try to understand this better with an illustration:
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net69.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net70.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net71.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net72.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net73.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net74.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net75.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net69.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net70.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net71.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net72.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net73.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net74.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net75.png)
 
 ## Solution
 Since the updated routers can only transmit to their neighbors, we can map this 2D traversal problem to a tree or graph traversal problem. In a tree or graph, we reach out to the child or parent nodes, and these nodes, in turn, reach out to their parents and children.
@@ -829,10 +829,10 @@ The most intuitive approach for our problem is BFS because the updated routers t
 
 Let’s try to visualize the transmission process with a graph below:
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net76.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net77.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net78.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net79.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net76.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net77.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net78.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net79.png)
 
 The graph nodes in the above illustration contain the (i, j) index of the corresponding grid cells, and the edges represent the neighbors.
 
@@ -922,7 +922,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net80.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net80.png)
 
 ## Feature #10: Minimum Variation
 
@@ -933,8 +933,8 @@ We’ll be provided with an array of integers representing the traffic while the
 
 The following illustration might clarify this behavior:
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net81.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net82.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net81.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net82.png)
 
 ## Solution
 Since we need to compute a sub-array, we can use two pointers, start and end, to maintain the subarrays as we traverse over the array. Using these two pointers, we’ll keep track of the maximum and minimum elements in the sub-array currently being traversed. For each sub-array that comes under the range of the start and end pointers (inclusive), we’ll compute the maximum and minimum values for that sub-array. Now that we have the maximum and minimum values, we can compute the variation. If this max-min difference is greater than the limit, increment the start pointer. If this max-min difference is smaller or equal to the limit, increment the end pointer and update the current max sub-array size because another element was selected for our sub-array.
@@ -952,14 +952,14 @@ Let’s see how we might implement this functionality:
 
 The following illustration might clarify this process. We’ll use array values instead of indexes to clearly visualize the algorithm.
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net83.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net84.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net85.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net86.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net87.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net88.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net89.png)
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net90.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net83.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net84.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net85.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net86.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net87.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net88.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net89.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net90.png)
 
 Let’s look at the code for the solution:
 
@@ -1013,4 +1013,4 @@ class Solution {
 }
 {% endhighlight %}
 
-![net](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/net/net91.png)
+![net](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/net/net91.png)

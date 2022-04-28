@@ -26,7 +26,7 @@ Each node keeps track of state information about other nodes in the cluster and 
 
 Gossip protocol is a peer-to-peer communication mechanism in which nodes periodically exchange state information about themselves and about other nodes they know about. Each node initiates a gossip round every second to exchange state information about themselves and other nodes with one other random node. This means that any state change will eventually propagate through the system, and all nodes quickly learn about all other nodes in a cluster.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big40.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big40.png)
 
 ## Examples
 

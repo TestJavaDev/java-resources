@@ -39,7 +39,7 @@ arr = {3, 4, 7, 1, 12, 9}
 ## Explanation
 4,12,7 and 9 follow the above condition, as 4+12 = 7+9. There are so many other possible pairs in the sample input that satisfy the above condition, but for this problem, we only have to find one of them.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has32.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has32.png)
 
 ## Coding Exercise
 
@@ -115,4 +115,4 @@ class CheckPair {
 }
 {% endhighlight %}
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has33.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has33.png)

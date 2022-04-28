@@ -52,25 +52,25 @@ Bandwidth Estimation: If our service is getting 2TB of data every day, this will
 
 2 TB / 86400 sec ~= 25 MB/s
 Since each incoming message needs to go out to another user, we will need the same amount of bandwidth 25MB/s for both upload and download.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design38.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design38.png)
 
 ## 4. High Level Design
 At a high level, we will need a chat server that will be the central piece orchestrating all the communications between users. For example, when a user wants to send a message to another user, they will connect to the chat server and send the message to the server; the server then passes that message to the other user and also stores it in the database.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design39.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design39.png)
 The detailed workflow would look like this:
 1. User-A sends a message to User-B through the chat server.
 2. The server receives the message and sends an acknowledgment to User-A.
 3. The server stores the message in its database and sends the message to User-B.
 4. User-B receives the message and sends the acknowledgment to the server.
 5. The server notifies User-A that the message has been delivered successfully to User-B.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design40.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design41.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design42.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design43.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design44.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design45.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design46.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design47.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design40.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design41.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design42.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design43.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design44.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design45.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design46.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design47.png)
 
 ## 5. Detailed Component Design
 Let’s try to build a simple solution first where everything runs on one server.
@@ -138,7 +138,7 @@ We need to keep track of user’s online/offline status and notify all the relev
 3. Whenever a user comes online, the server can always broadcast that status with a delay of a few seconds to see if the user does not go offline immediately.
 4. Clients can pull the status from the server about those users that are being shown on the user’s viewport. This should not be a frequent operation, as the server is broadcasting the online status of users and we can live with the stale offline status of users for a while.
 5. Whenever the client starts a new chat with another user, we can pull the status at that time.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design48.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design48.png)
 Design Summary: Clients will open a connection to the chat server to send a message; the server will then pass it to the requested user. All the active users will keep a connection open with the server to receive messages. Whenever a new message arrives, the chat server will push it to the receiving user on the long poll request. Messages can be stored in HBase, which supports quick small updates and range-based searches. The servers can broadcast the online status of a user to other relevant users. Clients can pull status updates for users who are visible in the client’s viewport on a less frequent basis.
 
 ## 6. Data partitioning

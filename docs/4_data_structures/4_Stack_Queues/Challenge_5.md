@@ -31,7 +31,7 @@ stack = {23,60,12,42,4,97,2}
 ## Sample Output 
 result = {2,4,12,23,42,60,97}
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt5.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt5.png)
 
 ## Coding Exercise
 

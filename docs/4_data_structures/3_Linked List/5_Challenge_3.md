@@ -23,14 +23,14 @@ This operation deletes the required node, e.g., n, from any position in a Singly
 F
 Here’s an illustration of how this type of deletion works in a linked list:
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/kk1.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/kk2.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/kk3.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/kk4.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/kk5.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/kk6.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/kk7.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/kk8.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/kk1.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/kk2.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/kk3.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/kk4.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/kk5.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/kk6.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/kk7.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/kk8.png)
 
 ## Problem Statement
 In the code snippet given below, you have to implement the void deleteByValue(T data) method. In this method, we will pass a particular value that we want to delete from the list. The node containing this value could be anywhere on the list. It is also possible that such a node may not exist at all.
@@ -104,17 +104,17 @@ If the list is empty, then we have nothing to do; just return the control to cal
 
 If there is more than one element in the list, then we simply start traversing from the headNode and keep on checking until that node found and delete it. The following figure illustrates this process:
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/add1.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/add2.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/add3.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/add4.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/add5.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/add6.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/add7.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/add8.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/add9.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/add10.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/add11.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/add1.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/add2.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/add3.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/add4.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/add5.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/add6.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/add7.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/add8.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/add9.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/add10.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/add11.png)
 
 Let’s have a look at the code for deleteByValue() which is implemented in lines 122 to 145 of the SinglyLinkedList class.
 

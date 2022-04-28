@@ -29,28 +29,28 @@ To efficiently manage such scenarios, distributed systems depend upon a messagin
 ## What is a messaging system?
 A messaging system is responsible for transferring data among services, applications, processes, or servers. Such a system helps decouple different parts of a distributed system by providing an asynchronous way of transferring messaging between the sender and the receiver. Hence, all senders (or producers) and receivers (or consumers) focus on the data/message without worrying about the mechanism used to share the data.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced39.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced39.png)
 
 There are two common ways to handle messages: Queuing and Publish-Subscribe.
 
 ## Queue
 In the queuing model, messages are stored sequentially in a queue. Producers push messages to the rear of the queue, and consumers extract the messages from the front of the queue.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced40.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced40.png)
 
 A particular message can be consumed by a maximum of one consumer only. Once a consumer grabs a message, it is removed from the queue such that the next consumer will get the next message. This is a great model for distributing message-processing among multiple consumers. But this also limits the system as multiple consumers cannot read the same message from the queue.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced41.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced41.png)
 
 ## Publish-subscribe messaging system
 
 In the pub-sub (short for publish-subscribe) model, messages are divided into topics. A publisher (or a producer) sends a message to a topic that gets stored in the messaging system under that topic. Subscribers (or the consumer) subscribe to a topic to receive every message published to that topic. Unlike the Queuing model, the pub-sub model allows multiple consumers to get the same message; if two consumers subscribe to the same topic, they will receive all messages published to that topic.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced42.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced42.png)
 
 The messaging system that stores and maintains the messages is commonly known as the message broker. It provides a loose coupling between publishers and subscribers, or producers and consumers of data.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced43.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced43.png)
 
 The message broker stores published messages in a queue, and subscribers read them from the queue. Hence, subscribers and publishers do not have to be synchronized. This loose coupling enables subscribers and publishers to read and write messages at different rates.
 
@@ -67,7 +67,7 @@ To summarize, a message system is deployed in an application stack for the follo
 ## What is Kafka?
 Apache Kafka is an open-source publish-subscribe-based messaging system (Kafka can work as a message queue too, more on this later). It is distributed, durable, fault-tolerant, and highly scalable by design. Fundamentally, it is a system that takes streams of messages from applications known as producers, stores them reliably on a central cluster (containing a set of brokers), and allows those messages to be received by applications (known as consumers) that process the messages.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced44.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced44.png)
 
 ## Background
 
@@ -78,7 +78,7 @@ Kafka was created at LinkedIn around 2010 to track various events, such as page 
 
 At a high level, we can call Kafka a distributed Commit Log. A Commit Log (also known as a Write-Ahead log or a Transactions log) is an append-only data structure that can persistently store a sequence of records. Records are always appended to the end of the log, and once added, records cannot be deleted or modified. Reading from a commit log always happens from left to right (or old to new).
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced45.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced45.png)
 
 Kafka stores all of its messages on disk. Since all reads and writes happen in sequence, Kafka takes advantage of sequential disk reads (more on this later).
 
@@ -105,20 +105,20 @@ When a transaction is committed, the coordinator is responsible for writing a co
 
 Consumers can also specify the isolation level they want to read under, read_committed or read_uncommitted. In the former case, messages that are part of a transaction will be readable from a partition only after a commit marker has been produced for the associated transaction. This interaction is summarised in the following illustration:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa1.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa2.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa3.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa4.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa5.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa6.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa7.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa8.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa9.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/sa1.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/sa2.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/sa3.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/sa4.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/sa5.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/sa6.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/sa7.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/sa8.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/sa9.png)
 
 ## Physical storage of Kafka
 The physical storage layout of Kafka is simple and it is shown in the following illustration. Every log partition is implemented as a set of segment files of approximately the same size (e.g., 1 GB).
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/sa10.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/sa10.png)
 
 ## High-level Architecture
 
@@ -134,7 +134,7 @@ A Kafka server is also called a broker. Brokers are responsible for reliably sto
 
 A record is a message or an event that gets stored in Kafka. Essentially, it is the data that travels from producer to consumer through Kafka. A record contains a key, a value, a timestamp, and optional metadata headers.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced46.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced46.png)
 
 ## Topics
 
@@ -146,7 +146,7 @@ Kafka divides its messages into categories called Topics. In simple terms, a top
 
 Messages in a topic can be read as often as needed — unlike traditional messaging systems, messages are not deleted after consumption. Instead, Kafka retains messages for a configurable amount of time or until a storage size is exceeded. Kafka’s performance is effectively constant with respect to data size, so storing data for a long time is perfectly fine.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced47.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced47.png)
 
 ## Producers
 
@@ -170,7 +170,7 @@ Kafka is deployed as a cluster of one or more servers, where each server is resp
 
 ZooKeeper is a distributed key-value store and is used for coordination and storing configurations. It is highly optimized for reads. Kafka uses ZooKeeper to coordinate between Kafka brokers; ZooKeeper maintains metadata information about the Kafka cluster. We will be looking into this in detail later.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced48.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced48.png)
 
 ## Kafka: Deep Dive
 
@@ -182,7 +182,7 @@ Kafka topics are partitioned, meaning a topic is spread over a number of ‘frag
 
 Essentially, a partition is an ordered sequence of messages. Producers continually append new messages to partitions. Kafka guarantees that all messages inside a partition are stored in the sequence they came in. Ordering of messages is maintained at the partition level, not across the topic.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced49.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced49.png)
 
 * A unique sequence ID called an offset gets assigned to every message that enters a partition. These numerical offsets are used to identify every message’s sequential position within a topic’s partition.
 * Offset sequences are unique only to each partition. This means, to locate a specific message, we need to know the Topic, Partition, and Offset number.
@@ -207,7 +207,7 @@ To handle single point of failure, Kafka can replicate partitions and distribute
 
 In the following diagram, we have two partitions and four brokers. Broker 1 is the leader of Partition 1 and follower of Partition 2. Consumers work together in groups to process messages efficiently. More details on consumer groups later.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced50.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced50.png)
 
 Kafka stores the location of the leader of each partition in ZooKeeper. As all writes/reads happen at/from the leader, producers and consumers directly talk to ZooKeeper to find a partition leader.
 
@@ -221,7 +221,7 @@ To ensure data consistency, the leader broker never returns (or exposes) message
 
 In the figure below, the leader does not return messages greater than offset ‘4’, as it is the highest offset message that has been replicated to all follower brokers.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced51.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced51.png)
 
 If a consumer reads the record with offset ‘7’ from the leader (Broker 1), and later, if the current leader fails, and one of the followers becomes the leader before the record is replicated to the followers, the consumer will not be able to find that message on the new leader. The client, in this case, will experience a non-repeatable read. Because of this possibility, Kafka brokers only return records up to the high-water mark.
 
@@ -235,7 +235,7 @@ A consumer group is basically a set of one or more consumers working together in
 
 Kafka ensures that only a single consumer reads messages from any partition within a consumer group. In other words, topic partitions are a unit of parallelism – only one consumer can work on a partition in a consumer group at a time. If a consumer stops, Kafka spreads partitions across the remaining consumers in the same consumer group. Similarly, every time a consumer is added to or removed from a group, the consumption is rebalanced within the group.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced52.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced52.png)
 
 Consumers pull messages from topic partitions. Different consumers can be responsible for different partitions. Kafka can support a large number of consumers and retain large amounts of data with very little overhead. By using consumer groups, consumers can be parallelized so that multiple consumers can read from multiple partitions on a topic, allowing a very high message processing throughput. The number of partitions impacts consumers’ maximum parallelism, as there cannot be more consumers than partitions.
 
@@ -284,7 +284,7 @@ Instead of a single consumer, a group of consumers from one consumer group subsc
 
 A critical dependency of Apache Kafka is Apache ZooKeeper, which is a distributed configuration and synchronization service. ZooKeeper serves as the coordination interface between the Kafka brokers, producers, and consumers. Kafka stores basic metadata in ZooKeeper, such as information about brokers, topics, partitions, partition leader/followers, consumer offsets, etc.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced53.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced53.png)
 
 ## ZooKeeper as the central coordinator
 
@@ -302,7 +302,7 @@ In the older versions of Kafka, all clients (i.e., producers and consumers) used
 2. The broker responds with the identification of the leader broker responsible for ‘Partition 1’.
 3. The producer connects to the leader broker to publish the message.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced54.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced54.png)
 
 All the critical information is stored in the ZooKeeper and ZooKeeper replicates this data across its cluster, therefore, failure of Kafka broker (or ZooKeeper itself) does not affect the state of the Kafka cluster. Upon ZooKeeper failure, Kafka will always be able to restore the state once the ZooKeeper restarts after failure. Zookeeper is also responsible for coordinating the partition leader election between the Kafka brokers in case of leader failure.
 

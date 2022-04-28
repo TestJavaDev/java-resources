@@ -23,11 +23,11 @@ A mother vertex in a graph G = (v,e) is a vertex v, such that all other vertices
 
 In this problem, you have to implement the findMotherVertex() method to take a graph as an input and find out which vertex is the mother vertex in the graph. Remember, there’s no mother vertex in a disconnected graph. An illustration is also provided below for your understanding:
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr4.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr4.png)
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr5.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr5.png)
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr6.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr6.png)
 
 ## Coding Exercise
 

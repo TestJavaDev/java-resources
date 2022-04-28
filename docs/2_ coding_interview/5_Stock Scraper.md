@@ -43,13 +43,13 @@ In the next few lessons, we’ll discuss the recommended implementations of thes
 ## Description
 First, we need to figure out a way to traverse the DOM structure that we obtain from a single web page. The HTML can be represented in a tree structure where the children of the HTML tag become the children of a node in the tree. Each level of the tree can have any number of nodes depending upon the number of nested HTML tags. We need to traverse the nodes in the tree level by level, starting at the root node.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale15.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale15.png)
 
 We’ll be provided with a root node of an n-ary tree. The root node in our case will be the body tag. This root node will have the complete web page nested within its children. We have to return the values of each levels’ nodes from left to right in separate subarrays. This way we can separately analyze their content for further data processing.
 
 Let’s try to understand this better with an illustration:
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale16.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale16.png)
 
 ## Solution
 Since we need to traverse all the nodes of each level before moving onto the next level, we can use the Breadth First Search (BFS) technique to solve this problem. We can use a queue to efficiently traverse in BFS fashion.
@@ -63,13 +63,13 @@ Let’s see how we might implement this functionality:
 
 The following illustration might clarify this process.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale17.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale18.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale19.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale20.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale21.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale22.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale23.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale17.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale18.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale19.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale20.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale21.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale22.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale23.png)
 
 Let’s look at the code for the solution:
 
@@ -138,7 +138,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale24.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale24.png)
 
 ## Feature #2: Locating Stock Data
 
@@ -163,8 +163,8 @@ After this step, we’ll find two nodes: one node with a high date score and one
 
 Let’s try to understand this better with an illustration:
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale25.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale26.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale25.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale26.png)
 
 We’ll be provided with an n-ary tree in which each node will have a score associated with it. We’ll also be given two nodes representing the highest date and stock percentage scores. We have to find the LCA node of the provided two nodes inside the n-ary tree. Once the LCA node is found, we can easily extract the stock data from its sub-tree.
 
@@ -256,7 +256,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale27.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale27.png)
 
 ## Feature #3: Traversing DOM Tree II
 
@@ -267,7 +267,7 @@ We’ll be provided with a root node of an n-ary tree. The root node in our case
 
 Let’s try to understand this better with an illustration:
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale28.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale28.png)
 
 ## Solution
 The tree structure that we get from the web is arbitrary, meaning a parent node can have any number of child nodes and the probability of a perfect tree is very low. So, we have no idea about the structure of the tree or its branches, and we want efficient access to all nodes that are on the same level.
@@ -280,7 +280,7 @@ Let’s see how we might implement this functionality:
 3. We’ll also maintain a curr pointer that will be used to traverse current level’s nodes. Since the next pointers of the current level L were established on level L - 1, we can simply traverse these nodes like a linked list. For each curr node we traverse, we’ll update its children’s next pointers.
 4. Now, we’ll use a prev pointer to establish the next pointers using the curr pointer. Initially, we’ll make it equal to the next level’s leftmost node. When the curr is updated, we assign prev.next to the first child of the curr if it exists. After this, the prev pointer is also updated to the same node, so the correct next pointer is assigned in the subsequent iterations.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale29.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale29.png)
 
 Let’s look at the code for the solution:
 
@@ -380,7 +380,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale30.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale30.png)
 
 ## Feature #4: Maximum Profit
 
@@ -391,7 +391,7 @@ We’ll be provided with an array of positive and negative integers. The indexes
 
 Let’s try to understand this better with an illustration:
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale31.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale31.png)
 
 ## Solution
 The basic idea is to scan the entire array and at each position find the maximum sum of the sub-array ending there. This is achieved by keeping a currentMax for the current array index and a globalMax.
@@ -406,16 +406,16 @@ Let’s see how we might implement this functionality:
 
 The following illustration might clarify this process.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale32.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale33.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale34.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale35.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale36.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale37.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale38.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale39.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale40.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale41.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale32.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale33.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale34.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale35.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale36.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale37.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale38.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale39.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale40.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale41.png)
 
 Let’s look at the code for the solution:
 
@@ -451,4 +451,4 @@ class Solution{
 }  
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale42.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale42.png)

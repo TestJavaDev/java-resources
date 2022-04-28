@@ -25,11 +25,11 @@ Note: Path will always exist if the source and destination nodes are the same.
 
 An illustration is also provided below for your understanding:
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr10.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr10.png)
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr11.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr11.png)
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr12.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr12.png)
 
 ## Coding Exercise
 

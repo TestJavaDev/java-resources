@@ -16,7 +16,7 @@ Challenge 9 / Java resources / Tutorial
 
 Given two lists, find the Union & Intersection of their elements using Hashing. Solve this exercise and see if your output matches the expected output.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has41.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has41.png)
 
 ## Problem Statement
 In this problem you have to implement two functions:
@@ -25,7 +25,7 @@ In this problem you have to implement two functions:
 
 You have to implement these functions using Hashing. The first function will take two linked lists as input and return the union of the two lists. A Union of two sets can be expressed as, “Union of two sets A and B is a set which contains all the elements present in A or B”. Similarly, the second function will return the Intersection of two lists. The Intersection is commonly defined as, “A set which contains all the common elements present in A and B”.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has42.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has42.png)
 
 ## Output
 The union and intersection of two linked lists.
@@ -40,7 +40,7 @@ list2 = 7->14->22->null
 Union = 15->22->8->7->14->null
 Intersection = 22->null
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has43.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has43.png)
 
 ## Coding Exercise
 
@@ -589,4 +589,4 @@ In this solution, we first traverse list1 and add all elements to the visited Ha
 ## Intersection 
 In this problem, we again use HashSet to keep track of duplicate elements. We first traverse list1 and add all elements into the visited set. Then, we traverse list2 and if any element from the second list is already visited, then we add that element into the result list. Same as above, the order of elements in output is not relevant.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has44.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has44.png)

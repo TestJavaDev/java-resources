@@ -48,18 +48,18 @@ We’ll be provided with an initial word, a final word, and a word group in the 
 
 Here is an illustration of this process:
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog12.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog13.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog14.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog15.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog16.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog17.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog12.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog13.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog14.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog15.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog16.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog17.png)
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog18.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog18.png)
 
 BFS (Breadth-First Search) is known to optimally find the shortest path in an unweighted graph. Before we can apply BFS, we need to build the graph. Additionally, we have to find adjacent nodes in which the corresponding words only differ by one letter. This requires some preprocessing steps.
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog19.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog19.png)
 
 Using the above example, the word let can have three intermediary states:
 1. let -> _et
@@ -153,8 +153,8 @@ class Solution {
 }
 {% endhighlight %}
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog20.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog21.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog20.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog21.png)
 
 ## Feature #2: Possible Results
 
@@ -163,7 +163,7 @@ In the previous lesson, we built a feature that will calculate the minimum numbe
 
 Here is an illustration of this process:
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog22.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog22.png)
 
 ## Solution
 The previous feature involved finding the shortest path from a start node to an end node, but to solve this problem, we have to find all the possible paths from the start node to the end node.
@@ -181,7 +181,7 @@ Here is how we will implement this feature:
 
 In BFS traversal, we will not use the Queue structure like in the previous lesson. We need to collect all the connections between two layers, so the set structure will be suitable here.
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog23.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog23.png)
 
 Let’s look at the code for the solution:
 
@@ -267,6 +267,6 @@ class Solution {
 }
 {% endhighlight %}
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog24.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog25.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog24.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog25.png)
 

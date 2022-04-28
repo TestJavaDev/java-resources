@@ -20,7 +20,7 @@ A similar problem appears in Silberschatz and Galvin's OS book, and variations o
 
 A barbershop consists of a waiting room with n chairs, and a barber chair for giving haircuts. If there are no customers to be served, the barber goes to sleep. If a customer enters the barbershop and all chairs are occupied, then the customer leaves the shop. If the barber is busy, but chairs are available, then the customer sits in one of the free chairs. If the barber is asleep, the customer wakes up the barber. Write a program to coordinate the interaction between the barber and the customers.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter44.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter44.png)
 
 ## Solution
 
@@ -31,13 +31,13 @@ First of all, we need to understand the different state transitions for this pro
 
 We'll have a class which will expose two APIs one for the barber thread to execute and the other for customers. The skeleton of the class would look like the following:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter45.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter45.png)
 
 Now let's think about the customer thread. It enters the shop, acquires a lock to test the value of the counter waitingCustomers. We must test the value of this variable while no other thread can modify its value, hinting that we'll wrap the test under a lock. If the value equals all the chairs available, then the customer thread gives up the lock and returns from the method. If a chair is available the customer thread increments the variable waitingCustomers. Remember, the barber might be asleep which can be modeled as the barber thread waiting on a semaphore waitForCustomerToEnter. The customer thread must signal the semaphore waitForCustomerToEnter in case the barber is asleep.
 
 Next, the customer thread itself needs to wait on a semaphore before the barber comes over, greets the customer and leads him to the salon chair. Let's call this semaphore waitForBarberToGetReady. This is the same semaphore the barber signals as soon as it wakes up. All customer threads waiting for a haircut will block on this waitForBarberToGetReady semaphore. The barber signaling this semaphore is akin to letting one customer come through and sit on the barber chair for a haircut. This logic when coded looks like the following:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter46.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter46.png)
 
 Now let's work with the barber code. This should be a perpetual loop, where the barber initially waits on the semaphore waitForCustomerToEnter to simulate no customers in the shop. If woken up, then it implies that there's at least one customer in the shop who needs a hair-cut and the barber gets up, greets the customer and leads him to his chair before starting the haircut. This sequence is translated into code as the barber thread signaling the waitForBarberToGetReady semaphore. Next, the barber simulates a haircut by sleeping for 50 milliseconds
 
@@ -45,11 +45,11 @@ Once the haircut is done. The barber needs to inform the customer thread too; it
 
 Finally, to make the barber thread know that the current customer thread has left the barber chair and the barber can bring in the next customer, we make the barber thread wait on yet another semaphore waitForCustomerToLeave. This is the same semaphore the customer thread needs to signal before exiting. The barber thread's implementation appears below:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter47.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter47.png)
 
 The complete customer thread code appears below:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter48.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter48.png)
 
 ## Complete Code
 The entire code alongwith the test appears below. Since the barber thread is perpetual, the widget execution would time-out.

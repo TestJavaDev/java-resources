@@ -22,14 +22,14 @@ Imagine you have a bucket that gets filled with tokens at the rate of 1 token pe
 
 The class should expose an API called getToken that various threads can call to get a token
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter12.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter12.png)
 
 ## Solution
 This problem is a naive form of a class of algorithms called the "token bucket" algorithms. A complimentary set of algorithms is called "leaky bucket" algorithms. One application of these algorithms is shaping network traffic flows. This particular problem is interesting because the majority of candidates incorrectly start with a multithreaded approach when taking a stab at the problem. One is tempted to create a background thread to fill the bucket with tokens at regular intervals but there is a far simpler solution devoid of threads and a message to make judicious use of threads. This question tests a candidate's comprehension prowess as well as concurrency knowledge.
 
 The key to the problem is to find a way to track the number of available tokens when a consumer requests for a token. Note the rate at which the tokens are being generated is constant. So if we know when the token bucket was instantiated and when a consumer called getToken() we can take the difference of the two instants and know the number of possible tokens we would have collected so far. However, we'll need to tweak our solution to account for the max number of tokens the bucket can hold. Let's start with the skeleton of our class
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter13.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter13.png)
 
 Note how getToken() doesn't return any token type ! The fact a thread can return from the getToken call would imply that the thread has the token, which is nothing more than a permission to undertake some action.
 
@@ -42,7 +42,7 @@ We need to think about the following three cases to roll out our algorithm. Let'
 
 The above logic is translated into code below
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter14.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter14.png)
 
 You can see the final solution comes out to be very trivial without the requirement for creating a bucket-filling thread of sorts, that runs perpetually and increments a counter every second to reflect the addition of a token to the bucket. Many candidates initially get off-track by taking this approach. Though you might be able to solve this problem using the mentioned approach, the code would unnecessarily be complex and unwieldy.
 
@@ -205,17 +205,17 @@ The previous solution consisted of manipulating pointers in time, thus avoiding 
 
 One simplification as a result of using threads is we now only need to remember the current number of tokens held by the token bucket filter object. We'll add an additional method daemonThread() that will be executed by the thread that adds a token every second to the bucket. The skeleton of our class looks as follows:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter15.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter15.png)
 
 The logic of the daemon thread is simple. It sleeps for one second, wakes up, checks if the number of tokens in the bucket is less than the maximum allowed tokens, if yes increments the possibleTokens variable and if not goes back to sleep for a second again.
 
 The implementation of the getToken() is even simpler. The user thread checks if the number of tokens is greater than zero, if yes it simulates taking away a token by decrementing the variable possibleTokens. If the number of available tokens is zero then the user thread must wait and be notified only when the daemon thread has added a token. We can use the current token bucket object this to wait and notify. The implementation of the getToken() method is shown below:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter16.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter16.png)
 
 Note that we are manipulating the shared mutable object possibleTokens in a synchronized block. Additionally, we wait() when the number of tokens is zero. The implementation of the daemon thread is given below. It runs in a perpetual loop.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter17.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter17.png)
 
 The complete implementation along with a test-case appears in the code widget below:
 

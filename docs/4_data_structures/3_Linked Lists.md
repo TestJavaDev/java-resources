@@ -29,7 +29,7 @@ Some important applications of Linked Lists include:
 ## Structure of Linked List 
 A linked list is formed by nodes that are linked together like a chain. Each node holds data, along with a pointer to the next node in the list. The Singly Linked List (SLL) is the type of linked list where each node has only one pointer that stores the reference to the next value. The following illustration shows a Singly Linked List.
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin1.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin1.png)
 
 In the next few lessons, we will look at how SLL is implemented and study its basic operations in detail. To implement a linked list, we need the following two classes:
 * Class Node
@@ -38,7 +38,7 @@ In the next few lessons, we will look at how SLL is implemented and study its ba
 ## Class Node
 The Node class stores data in a single node. It can store primitive data such as integers and string as well as complex objects having multiple attributes. Along with data, it also stores a pointer to the next element in the list, which helps in linking the nodes together like a chain. Here’s a typical definition of a Node class:
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin2.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin2.png)
 
 Explanation: The code above provides a basic definition of a Node class structure with two data members: one to hold the data and the other one to store a reference to the next element. This class is a generic class made by using Java Generics. The data variable can hold any data-type value specified.
 
@@ -47,7 +47,7 @@ As mentioned above, the Singly Linked list is made up of nodes that are linked t
 
 The Singly Linked List contains a head node: a pointer pointing to the first element of the list. Whenever we want to traverse the list, we can do so by using this head node. Below is a basic structure of the Singly Linked List’s class:
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin3.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin3.png)
 
 Explanation: In the above class, we see a headNode variable of type Node. It will point to the start of the list (i.e., head of the list). In the constructor, we initialize that headNode node so that it becomes functional. If a head node points to nothing (NULL), this means that the list is empty. As you can see in the above illustration, the head points to the first element and the last pointer points to NULL to indicate the end of the list.
 
@@ -56,7 +56,7 @@ Explanation: In the above class, we see a headNode variable of type Node. It wil
 ## Operations 
 Following are the basic operations of a Singly Linked List:
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin4.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin4.png)
 
 If you observe the list of methods mentioned above, the last function, isEmpty() is a helper function which will prove useful in defining all the other functions.
 
@@ -114,29 +114,29 @@ In this lesson, we are going to briefly explain the basic operations which were 
 ### Insertion at Head 
 This type of insertion means that we want to insert a new element as the first element of the list. As the head always points to the first element of the list, insertion at head means that we are inserting the first element in the list. The following figure shows how InsertAtHead() happens in Singly Linked List:
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin5.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin6.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin7.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin8.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin9.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin10.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin11.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin12.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin5.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin6.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin7.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin8.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin9.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin10.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin11.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin12.png)
 
 ## Insert at End 
 This type of insertion means that we want to insert a new element as the last element of the list. The original tail element of the list has a nextElement pointer that points to NULL. To insert a new tail node, we have to point the nextElement pointer of the previous tail node to the new tail node, allowing the nextElement of the new tail to now point to NULL. The following figure illustrates this insertion.
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin13.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin14.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin15.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin16.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin17.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin18.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin19.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin20.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin21.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin22.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin23.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin13.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin14.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin15.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin16.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin17.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin18.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin19.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin20.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin21.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin22.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin23.png)
 
 ## Insert After 
 This insertion is a little more tricky when compared to insert at the head and insert at the end. Here, we specify the node (e.g. n), after which we want to insert the new node. To insert this node, we follow these steps:
@@ -146,17 +146,17 @@ This insertion is a little more tricky when compared to insert at the head and i
 
 The following figure illustrates how this is done.
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin24.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin25.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin26.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin27.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin28.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin29.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin30.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin31.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin32.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin33.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin34.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin24.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin25.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin26.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin27.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin28.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin29.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin30.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin31.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin32.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin33.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin34.png)
 
 ## Implementation 
 For this lesson, we are only looking at the first strategy, insert at the head; the other two will be covered later. The implementation of this operation is simple and straightforward. Take a look at the following code that shows how to implement this method in Java:
@@ -214,7 +214,7 @@ public class SinglyLinkedList<T> {
 }
 {% endhighlight %}
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin35.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin35.png)
 
 ## Linked Lists vs. Arrays
 
@@ -231,7 +231,7 @@ In an array, it takes constant time to access an index. In a linked list, you ha
 
 The table given below will summarize the performance difference between linked lists and arrays.
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/add12.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/add12.png)
 
 ## What is a Doubly Linked List (DLL)?
 
@@ -245,17 +245,17 @@ The difference between a Doubly and a Singly Linked List is that a DLL is bi-dir
 
 To implement the node class for DLL, we only need to add a new data member, a node called prevNode, in the already constructed Node class of the SLL that we created in the previous lesson.
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser1.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser1.png)
 
 Explanation: The data and nextNode fields are the same as in SLL. The Doubly Linked List comes with an addition of the prevNode pointer that points to the previous element of the particular node. Below is an illustration of what a Doubly Linked List looks like:
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser2.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser3.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser4.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser5.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser6.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser7.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser8.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser2.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser3.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser4.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser5.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser6.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser7.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser8.png)
 
 ## Impact on Deletion 
 This strategy considerably helps in deletion as you don’t need to keep track of the previous element while searching. To see how effective this strategy is, let’s re-write the deleteByValue() operation for Doubly Linked List. We will use the same code which we implemented in the previous lesson and make additions to it.
@@ -378,12 +378,12 @@ Explanation: We will compare this code snippet with the one we created for SLL i
 
 Next, we start traversing the elements. If the value to be deleted is present at the start, all we have to do is call deleteAtHead(), which will make the headNode point to the nextNode pointer of the headNode,i.e., it will make it point to the second element of the list. Not only that, but it will also have to update the prevNode pointer of the new headNode to point at null now.
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser9.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser10.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser11.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser12.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser13.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser14.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser9.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser10.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser11.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser12.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser13.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser14.png)
 
 For the other case, where the value to be deleted is not the first element of the list, we will perform the following set of operations. Let’s name the nodes again:
 * currentNode: Node to be deleted
@@ -394,19 +394,19 @@ To delete the currentNode successfuly, we will follow these steps:
 1. Set the nextNode of prevCurrentNode to be nextCurrentNode.
 2. Set the prevNode of nextCurrentNode to be prevCurrentNode. This is expressed in the code statement below. The figure below illustrates this process:
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser15.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser15.png)
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser16.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser17.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser18.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser19.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser20.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser21.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser22.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser23.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser24.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser25.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser26.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser16.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser17.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser18.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser19.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser20.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser21.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser22.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser23.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser24.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser25.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser26.png)
 
 ## Linked List with Tail
 
@@ -416,7 +416,7 @@ Another variation of a basic linked list is a Linked List with a Tail. In this t
 ## Comparison between SLL with Tail and DLL with Tail 
 The benefit of using a tail pointer is seen in the insertion and deletion operations at the end of the list. Let’s analyze the efficiency, in terms of time complexity, of both of these operations in SLL and DLL.
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser27.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser27.png)
 
 From this comparison, we can see that the real advantage of using a tail pointer comes in the deleteAtEnd scenario while dealing with Doubly Linked Lists as the tail provides a more efficient implementation of this function.
 

@@ -29,17 +29,17 @@ Given a directed graph, find the topological ordering of its vertices.
 
 Example 1:
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg1.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg1.png)
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg2.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg2.png)
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg3.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg3.png)
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg4.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg4.png)
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg5.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg5.png)
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg6.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg6.png)
 
 ## Solution
 The basic idea behind the topological sort is to provide a partial ordering among the vertices of the graph such that if there is an edge from U to V then U≤V i.e., U comes before V in the ordering. Here are a few fundamental concepts related to topological sort:
@@ -52,7 +52,7 @@ To find the topological sort of a graph we can traverse the graph in a Breadth F
 
 Here is the visual representation of this algorithm for Example-3:
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg7.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg7.png)
 
 This is how we can implement this algorithm:
 
@@ -139,6 +139,6 @@ class TopologicalSort {
 }
 {% endhighlight %}
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg8.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg8.png)
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/gg9.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/gg9.png)

@@ -31,13 +31,13 @@ length = 5
 
 The figure below illustrates how length is calculated in a non-empty list:
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser28.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser29.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser30.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser31.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser32.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser33.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser34.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser28.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser29.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser30.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser31.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser32.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser33.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser34.png)
 
 ## Coding Exercise
 

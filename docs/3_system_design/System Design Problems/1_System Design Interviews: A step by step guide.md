@@ -63,7 +63,7 @@ Which database system should we use? Will NoSQL like Cassandra best fit our need
 Draw a block diagram with 5-6 boxes representing the core components of our system. We should identify enough components that are needed to solve the actual problem from end to end.
 
 For Twitter, at a high level, we will need multiple application servers to serve all the read/write requests with load balancers in front of them for traffic distributions. If we’re assuming that we will have a lot more read traffic (compared to write), we can decide to have separate servers to handle these scenarios. On the back-end, we need an efficient database that can store all the tweets and support a large number of reads. We will also need a distributed file storage system for storing photos and videos.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design1.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design1.png)
 ## Step 6: Detailed design
 Dig deeper into two or three major components; the interviewer’s feedback should always guide us to what parts of the system need further discussion. We should present different approaches, their pros and cons, and explain why we will prefer one approach over the other. Remember, there is no single answer; the only important thing is to consider tradeoffs between different options while keeping system constraints in mind.
 

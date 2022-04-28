@@ -35,7 +35,7 @@ Note: Order of the numbers doesn’t matter.
 
 {-1, -9, -6, 10, 20, 4, 5} = {-9, -1, -6, 10, 4, 20, 5}
 
-![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr89.png)
+![arr](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/arr/arr89.png)
 
 ## Coding Exercise
 

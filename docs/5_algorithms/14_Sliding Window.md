@@ -21,7 +21,7 @@ Given an array, find the average of all contiguous subarrays of size ‘K’ in 
 
 Let’s understand this problem with a real input:
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/qa1.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/qa1.png)
 
 {% highlight java %}
 import java.util.Arrays;
@@ -53,13 +53,13 @@ Can we find a better solution? Do you see any inefficiency in the above approach
 
 The inefficiency is that for any two consecutive subarrays of size ‘5’, the overlapping part (which will contain four elements) will be evaluated twice. For example, take the above-mentioned input:
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/qa2.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/qa2.png)
 
 As you can see, there are four overlapping elements between the subarray (indexed from 0-4) and the subarray (indexed from 1-5). Can we somehow reuse the sum we have calculated for the overlapping elements?
 
 The efficient way to solve this problem would be to visualize each contiguous subarray as a sliding window of ‘5’ elements. This means that we will slide the window by one element when we move on to the next subarray. To reuse the sum from the previous subarray, we will subtract the element going out of the window and add the element now being included in the sliding window. This will save us from going through the whole subarray to find the sum and, as a result, the algorithm complexity will reduce to O(N).
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/qa3.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/qa3.png)
 
 {% highlight java %}
 import java.util.Arrays;

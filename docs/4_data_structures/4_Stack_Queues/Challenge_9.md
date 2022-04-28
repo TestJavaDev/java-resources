@@ -14,11 +14,11 @@ Challenge 9 / Java resources / Tutorial
 
 ## Challenge 9: Check for Balanced Parentheses using a Stack
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt25.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt25.png)
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt26.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt26.png)
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt27.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt27.png)
 
 ## Coding Exercise
 

@@ -52,11 +52,11 @@ expression = "921*-8-4+" # 9 - 2 * 1 - 8 + 4
 * 3rd operation => 7 - 8 = -1,
 * 4th operation => -1 + 4 = 3
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt6.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt7.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt8.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt9.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt10.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt6.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt7.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt8.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt9.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt10.png)
 
 ## Coding Exercise
 

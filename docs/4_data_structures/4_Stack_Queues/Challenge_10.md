@@ -25,7 +25,7 @@ int min()
 ## Output: 
 It returns the minimum number in O(1) time
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt28.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt28.png)
 
 ## Coding Exercise
 

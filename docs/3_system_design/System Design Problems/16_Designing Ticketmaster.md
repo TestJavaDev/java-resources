@@ -76,7 +76,7 @@ sorting_order (string): Sorting order of the search result. Some allowable value
 
 Returns: (JSON)
 Here is a sample list of movies and their shows:
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design79.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design79.png)
 
 ReserveSeats(api_dev_key, session_id, movie_id, show_id, seats_to_reserve[])
 Parameters:
@@ -96,11 +96,11 @@ Here are a few observations about the data we are going to store:
 3. Each Movie will have many Shows and each Show will have multiple Bookings.
 4. A user can have multiple bookings.
 
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design80.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design80.png)
 
 ## 7. High Level Design
 At a high-level, our web servers will manage users’ sessions and application servers will handle all the ticket management, storing data in the databases as well as working with the cache servers to process reservations.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design81.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design81.png)
 
 ## 8. Detailed Component Design
 First, let’s try to build our service assuming it is being served from a single server.
@@ -124,14 +124,14 @@ Ticket Booking Workflow: The following would be a typical ticket booking workflo
   * At maximum, a user can wait one hour, after that user’s session gets expired and the user is taken back to the movie search page.
 
 If seats are reserved successfully, the user has five minutes to pay for the reservation. After payment, the booking is marked complete. If the user is not able to pay within five minutes, all their reserved seats are freed to become available to other users.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design82.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design83.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design84.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design85.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design86.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design87.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design88.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design89.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design82.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design83.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design84.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design85.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design86.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design87.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design88.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design89.png)
 
 How would the server keep track of all the active reservations that haven’t been booked yet? And how would the server keep track of all the waiting customers?
 We need two daemon services, one to keep track of all active reservations and remove any expired reservation from the system; let’s call it ActiveReservationService. The other service would be keeping track of all the waiting user requests and, as soon as the required number of seats become available, it will notify the (the longest waiting) user to choose the seats; let’s call it WaitingUserService.
@@ -144,7 +144,7 @@ To store every reservation for every show, we can have a HashTable where the ‘
 In the database, we will store the reservation in the ‘Booking’ table and the expiry time will be in the Timestamp column. The ‘Status’ field will have a value of ‘Reserved (1)’ and, as soon as a booking is complete, the system will update the ‘Status’ to ‘Booked (2)’ and remove the reservation record from the Linked HashMap of the relevant show. When the reservation is expired, we can either remove it from the Booking table or mark it ‘Expired (3)’ in addition to removing it from memory.
 
 ActiveReservationsService will also work with the external financial service to process user payments. Whenever a booking is completed, or a reservation gets expired, WaitingUsersService will get a signal so that any waiting customer can be served.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design90.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design90.png)
 
 ## b. WaitingUsersService
 Just like ActiveReservationsService, we can keep all the waiting users of a show in memory in a Linked HashMap or a TreeMap. We need a data structure similar to Linked HashMap so that we can jump to any user to remove them from the HashMap when the user cancels their request. Also, since we are serving in a first-come-first-serve manner, the head of the Linked HashMap would always be pointing to the longest waiting user, so that whenever seats become available, we can serve users in a fair manner.
@@ -158,7 +158,7 @@ On the server, ActiveReservationsService keeps track of expiry (based on reserva
 
 ## 9. Concurrency
 How to handle concurrency, such that no two users are able to book the same seat. We can use transactions in SQL databases to avoid any clashes. For example, if we are using an SQL server we can utilize Transaction Isolation Levels to lock the rows before we can update them. Here is the sample code:
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design91.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design91.png)
 
 ‘Serializable’ is the highest isolation level and guarantees safety from Dirty, Nonrepeatable, and Phantoms reads. One thing to note here; within a transaction, if we read rows, we get a write lock on them so that they can’t be updated by anyone else.
 

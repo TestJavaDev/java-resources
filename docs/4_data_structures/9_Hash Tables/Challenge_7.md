@@ -33,7 +33,7 @@ arr = {9, 2, 3, 2, 6, 6}
 ## Sample Output
 9
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has36.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has36.png)
 
 Note: We already covered this problem in chapter 2, but the approach used was different. Previously, a brute-force strategy was used because Hash Tables had not been discussed then. That solution was inefficient and should not be used in a technical interview. Now, let us create an optimized solution for the same problem using hashing!
 
@@ -95,7 +95,7 @@ class CheckFirstUnique {
 }
 {% endhighlight %}
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has37.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has37.png)
 
 ## Solution: Using a TreeMap
 
@@ -139,4 +139,4 @@ class CheckFirstUnique {
 }
 {% endhighlight %}
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has38.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has38.png)

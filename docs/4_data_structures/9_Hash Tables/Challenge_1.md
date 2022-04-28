@@ -43,7 +43,7 @@ true
 ## Explanation
 [7,1,-2] is present in arr1 from index 2 to 4, therefore arr2 is a subset of arr1.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has23.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has23.png)
 
 ## Coding Exercise
 
@@ -96,4 +96,4 @@ class CheckSubset {
 }
 {% endhighlight %}
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has24.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has24.png)

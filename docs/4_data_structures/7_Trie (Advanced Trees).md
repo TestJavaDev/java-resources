@@ -20,7 +20,7 @@ Till now, we only studied some of the commonly used Trees like Red-Black, 2-3 Tr
 💡## Did you know?
 Trie basically comes from the word “retrieval”, as the main purpose of using this structure is that it provides fast retrieval. Tries are mostly used for searching words in the dictionary, providing auto-suggestions in search engines, and for IP routing.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has1.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has1.png)
 
 ## Common Applications of Tries
 Tries are basically used where fast retrieval is required. Let’s have a look at some real-life examples to understand how Tries are being used:
@@ -47,7 +47,7 @@ To maintain its overall efficiency, Tries have to follow the rules given below:
 ## Introduction
 Previously, we discussed a few properties that a Trie must hold in order to improve the performance. In this lesson, we will take a look at the basic structure of Trie and then build a class in Java with the help of these concepts.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has2.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has2.png)
 
 ## Representation of a Node
 A node in a Trie represents a letter in an alphabet. For example, if we want to insert “hello” in the Trie, we will need to add 5 nodes, one for each alphabet. A typical Node in a Trie consists of two data members:
@@ -160,32 +160,32 @@ Insertion is simple for individual characters in the trie. If the character is a
 ## Case 1: What if the word has no common subsequence? i.e. No Common Prefix
 For example, if we want to insert a new word into the trie below, e.g. “any”, then we need to insert all of the characters for the word “any”; currently, “the” is the only word in the trie, and there are no common character subsequences between “any” and “the”.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has3.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has4.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has5.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has6.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has3.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has4.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has5.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has6.png)
 
 ## Case 2: If the word has a common subsequence? i.e. Common Prefix Found
 For example, if we want to insert the word “there” into the trie below-- which already consists of the word “ their”–then the path to “ the” already exists. After that, we need to insert two nodes for “e” and “r” as shown below.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has7.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has8.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has9.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has10.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has11.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has12.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has13.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has14.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has7.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has8.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has9.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has10.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has11.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has12.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has13.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has14.png)
 
 ## Case 3: If the word is already present? i.e. Common Prefix Found
 For example, if we want to insert the word “the” into the trie below-- which consists of a word “ their”–then the path for “ the” already exists. Therefore, we simply need to set the value of isEndWord() to true at “e” in order to represent the end of the word for “the” as shown below.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has15.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has16.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has17.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has18.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has19.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has20.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has15.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has16.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has17.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has18.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has19.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has20.png)
 
 ## Implementation
 The following is the code snippet, so try to understand the code. If you don’t understand any point, you can read the explanation below.
@@ -276,20 +276,20 @@ class TrieDemo{
 }
 {% endhighlight %}
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has21.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has22.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has23.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has24.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has25.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has26.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has27.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has28.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has29.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has30.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has31.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has21.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has22.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has23.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has24.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has25.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has26.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has27.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has28.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has29.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has30.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has31.png)
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has32.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has33.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has32.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has33.png)
 
 ## Search in a Trie
 
@@ -299,28 +299,28 @@ If we want to search whether a word is present in the Trie or not, then we just 
 ## Case 1: Word is not present in Trie
 If there is no path, as with the word “bedroom” in the below example, then we will only be able to trace till “bed”. Therefore, we return false because there is no character path for “r” after “bed”, indicating that this word is not present in the Trie.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has34.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has35.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has36.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has37.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has38.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has34.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has35.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has36.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has37.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has38.png)
 
 ## Case 2: Path found but isEndWord() is not set for the last character
 It returns false if the last node is not the end of the word, even if our word has been exhausted and the path is present. , For example, if we are searching for the word “be” then the path for “ being” is present. However, the value of isEndWord() for the “e” node is false, which indicates that the word does not terminate at “e”; hence "be” is not a valid word in Trie.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has39.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has40.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has41.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has42.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has39.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has40.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has41.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has42.png)
 
 ## Case 3: Word is found and isEndWord is set for last node of the path
 The success case is when there exists a path and the last node in the path is also end-of-word.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has43.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has44.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has45.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has46.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has47.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has43.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has44.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has45.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has46.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has47.png)
 
 ## Implementation
 The following is the code snippet, so try to understand the code. If you don’t understand any point, you can read the explanation below.
@@ -444,25 +444,25 @@ class TrieDemo{
 
 ## If this code had a face
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has48.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has49.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has50.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has51.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has52.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has53.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has54.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has55.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has56.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has57.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has58.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has59.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has60.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has61.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has62.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has63.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has48.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has49.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has50.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has51.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has52.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has53.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has54.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has55.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has56.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has57.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has58.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has59.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has60.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has61.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has62.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has63.png)
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has64.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/has65.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has64.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/has65.png)
 
 ## Deletion in a Trie
 
@@ -473,46 +473,46 @@ While deleting a word from a Trie, we make sure that the node that we are trying
 If the word to be deleted has no common subsequence, then all the nodes of that word are deleted.
 For example, in the figure given below, we have to delete all characters of “bat” in order to delete the word bat.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der1.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der2.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der3.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der4.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der5.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der6.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der7.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der8.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der9.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der1.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der2.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der3.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der4.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der5.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der6.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der7.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der8.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der9.png)
 
 ## Case 2: If the word to be deleted is a prefix of some other word
 If the word to be deleted is a prefix of some other word, then the value of isEndWord of the last node of that word is set to false, and no node is deleted.
 For example, we will simply unmark e to delete the word the and show that it doesn’t exist anymore.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der10.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der11.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der12.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der13.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der14.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der15.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der10.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der11.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der12.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der13.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der14.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der15.png)
 
 ## Case 3: If the word to be deleted has a common prefix
 If the word to be deleted has a common prefix and the last node of that word is also the leaf node (i.e. the last node of its branch), then this node is deleted along with all the higher-up nodes in its branch that do not have any other children and whose isEndWord is false.
 For example, we’ll traverse the common path up to the and delete the characters “i” and “r” in order to delete their.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der16.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der17.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der18.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der19.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der20.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der21.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der22.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der23.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der24.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der25.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der26.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der27.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der28.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der29.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der30.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der16.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der17.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der18.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der19.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der20.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der21.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der22.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der23.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der24.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der25.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der26.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der27.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der28.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der29.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der30.png)
 
 ## Implementation 
 The following is the code snippet, so try to understand the code. If you don’t understand any point, you can read the explanation below
@@ -728,5 +728,5 @@ class TrieDemo{
 }
 {% endhighlight %}
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der31.png)
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der32.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der31.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der32.png)

@@ -205,4 +205,4 @@ class CheckSearch {
 }
 {% endhighlight %}
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin59.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin59.png)

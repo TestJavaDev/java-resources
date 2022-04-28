@@ -29,7 +29,7 @@ linkedlist = 7->14->21->7
 ## Sample Output 
 true
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser36.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser36.png)
 
 ## Coding Exercise
 

@@ -32,7 +32,7 @@ k = 5
 ## Sample Output 
 result = {5,4,3,2,1,6,7,8,9,10}
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt3.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt3.png)
 
 ## Coding Exercise
 

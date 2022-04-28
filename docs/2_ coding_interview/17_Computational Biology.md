@@ -44,19 +44,19 @@ Every DNA strand contains multiple chromosomes of different types. The type of g
 
 We’ll be provided with two chromosome samples from different DNAs in the form of strings. The genes in these chromosome samples can be of the same or different types. Our task will be to determine whether one sample can be mutated to the other under the provided constraints.
 
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com1.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com2.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com1.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com2.png)
 
 For instance, if we replace all occurrences of a with c, all occurrences of b with d, and all occurrences of c with e, we can transform aabcc into ccdee. However, no substitutions can transform aabaa into aadac.
 
 ## Solution
 The above examples demonstrate that to convert one sample to another, both samples have to contain the same number of genes. Each character of string1 needs to be converted to a corresponding character in string2. We can map each element in string1 to what it needs to be in string2. We can model this as a graph problem by representing the mapping relationship as the edges of a graph. The graph for the above mutable example can be represented as follows:
 
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com3.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com3.png)
 
 The condition that all occurrences of the same gene need to be replaced in one iteration. This infers that a single gene in string1 can only be mapped to a single gene in string2. This means a single node of the graph can have only one outer edge. Otherwise, the mutation will not be possible. The graph for the above mutable example can be represented as follows:
 
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com4.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com4.png)
 
 For example, we have two strings: str1 = "abc" and str2 = "bcd". To transform str1 into str2, we get the following chain of conversions:
 
@@ -128,7 +128,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com5.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com5.png)
 
 ## Feature #2: Detect Virus
 
@@ -139,7 +139,7 @@ We’ll be provided with a string representing a chromosome from the infected DN
 
 Here is an illustration to better understand this process:
 
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com6.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com6.png)
 
 ## Solution
 Since we want to return a substring from a specific window over the original string, we can use a sliding window approach to accomplish this efficiently. We’ll use two pointers, left and right, to denote the boundaries of our sliding window.
@@ -159,19 +159,19 @@ Let’s see how we might implement this functionality:
 
 The following illustration might clarify this process.
 
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com7.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com8.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com9.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com10.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com11.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com12.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com13.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com14.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com15.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com16.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com17.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com18.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com19.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com7.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com8.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com9.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com10.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com11.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com12.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com13.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com14.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com15.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com16.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com17.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com18.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com19.png)
 
 Let’s look at the code for the solution:
 
@@ -227,7 +227,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com20.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com20.png)
 
 ## Feature #3: Locate Protein
 
@@ -236,7 +236,7 @@ Experiments have shown that a certain protein provides immunity against a specif
 
 We’ll be provided with a DNA generated protein sequence in the form of a string. Our task will be to locate and isolate the portion that has the nucleotides lined up as the longest palindrome to identify the correct protein.
 
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com21.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com21.png)
 
 ## Solution
 A palindrome is a string that reads the same backwards as forwards. For example, str = abba is a palindrome, but str' = abcd is not. Although there can be multiple palindromes in the input string, we have to find the longest one. There are two ways we can check if a string is a palindrome:
@@ -301,7 +301,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com22.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com22.png)
 
 ## Feature #4: Identifying Proteins
 
@@ -323,12 +323,12 @@ Let’s see how we might implement this functionality:
 
 The sequence of function calls is illustrated below:
 
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com23.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com24.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com25.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com26.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com27.png)
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com28.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com23.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com24.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com25.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com26.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com27.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com28.png)
 
 Let’s look at the code for the solution:
 
@@ -355,5 +355,5 @@ class Solution {
 }
 {% endhighlight %}
 
-![com](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/com/com29.png)
+![com](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/com/com29.png)
 

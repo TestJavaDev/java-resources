@@ -61,9 +61,9 @@ Transactions can also contain commands, which indicate the transaction’s inten
 Corda’s data model for electronic money#
 The following illustration shows a simple example of the Corda’s data model for electronic money:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car1.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car2.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car3.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car1.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car2.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car3.png)
 
 In the above illustration, each state represents an amount of money issued by a specific bank and owned by a specific party at some point in time. We can see that Alice combines two cash states to perform payment and transfer 10 GBP to Bob. After that, Bob decides to redeem this money to get some cash from the bank.
 
@@ -153,7 +153,7 @@ These APIs are accessed remotely via a client, which provides a remote procedure
 
 The following illustration contains a high-level overview of Corda’s architecture:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car4.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car4.png)
 
 ## Backwards Compatibility provided by Corda
 

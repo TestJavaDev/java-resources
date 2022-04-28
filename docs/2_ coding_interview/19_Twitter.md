@@ -57,11 +57,11 @@ To solve this problem, we will do digit-by-digit addition because we cannot conv
 * If both of the strings are traversed but the carry is still non-zero, we will append the carry to res as well.
 * At last, we will reverse the result, convert it to a string, and return that string.
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das30.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das31.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das32.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das33.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das34.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das30.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das31.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das32.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das33.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das34.png)
 
 The implementation of this algorithm is given below:
 
@@ -101,7 +101,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das35.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das35.png)
 
 ## Feature #2: Merge Tweets In Twitter Feed
 
@@ -120,15 +120,15 @@ We can solve this problem by comparing both arrays from the end and populating t
 * If the value at p1 is less than the value at p2, the result at p will be equal to the value at p1. Otherwise, the result at p will be set equal to the value at p2. We will decrement the pointer for the list that the entry was copied from.
 * The traversal will continue until tweet is merged.
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das36.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das37.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das38.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das39.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das40.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das41.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das42.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das43.png)
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das44.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das36.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das37.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das38.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das39.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das40.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das41.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das42.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das43.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das44.png)
 
 {% highlight java %}
 class Solution {
@@ -159,7 +159,7 @@ class Solution {
 
 {% endhighlight %}
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das45.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das45.png)
 
 ## Feature #3: Identify Peak Interaction Times
 
@@ -234,7 +234,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das46.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das46.png)
 
 ## Feature #4: Split Users into Two Groups
 
@@ -245,11 +245,11 @@ The “following” relationship graph is given in the form of an undirected gra
 
 For example, the graph can be { {3}, {2, 4}, {1}, {0, 4}, {1, 3} }. This can be illustrated as:
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das47.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das47.png)
 
 The nodes in this graph can be split into two groups:
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das48.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das48.png)
 
 As we can see, this graph can be split into two groups such that no one in the same group follows or is followed-by anyone in the same group. Therefore, in this case, your function should return True.
 
@@ -295,5 +295,5 @@ class Solution {
 }
 {% endhighlight %}
 
-![das](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/das/das49.png)
+![das](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/das/das49.png)
 

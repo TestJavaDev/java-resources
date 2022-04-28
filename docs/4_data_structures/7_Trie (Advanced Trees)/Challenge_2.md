@@ -36,7 +36,7 @@ There are 9 words total in the given keys array, so we just need to iterate the 
 
 Here’s an illustration of the given challenge:
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der35.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der35.png)
 
 ## Coding Exercise
 
@@ -432,4 +432,4 @@ class TrieWords {
 }
 {% endhighlight %}
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der36.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der36.png)

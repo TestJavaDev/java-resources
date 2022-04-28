@@ -1225,7 +1225,7 @@ using the approach described by Netflix (http://techblog.netflix.com/2012/02/fau
 
 ### The architecture of a build/deployment pipeline
 
-![micro](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/micro/micro34.png)
+![micro](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/micro/micro34.png)
 Figure 12.1 should look somewhat familiar because it’s based on the general build/
 deployment pattern used for implementing continuous integration (CI):
 1 A developer commits their code to the source code repository.

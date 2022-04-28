@@ -33,13 +33,13 @@ In this lesson, we will look at the implementation of the deletion at the head a
 ## Deletion at Head 
 This operation simply deletes a node from the head of the list, which means that it always deletes the first element of the list. This type of deletion is used when your list is ordered, and you want to implement a priority queue–via a linked list-- to keep track of all the elements. Here’s an illustration of how this type of deletion works in a Singly Linked List:
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin60.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin61.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin62.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin63.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin64.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin65.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin66.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin60.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin61.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin62.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin63.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin64.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin65.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin66.png)
 
 {% highlight java %}
 public class SinglyLinkedList<T> {
@@ -180,4 +180,4 @@ class CheckDeletion {
 }
 {% endhighlight %}
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin67.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin67.png)

@@ -35,7 +35,7 @@ arr = [9,4,7,1,-2,6,5]           k = 3
 ## Explanation
 As “k” is 3, we need to find the top 3 maximum elements from the given array. 9 is the largest value in the array, while 7 is the second-largest, and 6 is the third-largest.
 
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/res55.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/res55.png)
 
 ## Coding Exercise
 
@@ -120,4 +120,4 @@ class CheckLarge
 }
 {% endhighlight %}
 
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/res56.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/res56.png)

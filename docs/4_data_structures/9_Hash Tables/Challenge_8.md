@@ -31,7 +31,7 @@ linkedlist = 7->14->21->14->22->null
 ## Sample Output
 linkedlist = 7->14->21->22->null
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has39.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has39.png)
 
 Note: We already covered this problem in chapter 3, but the approach used was different. Previously, a brute-force strategy was used because Hash Tables had not been discussed then. That solution was inefficient and should not be used in a technical interview. Now, let us create an optimized solution for the same problem using hashing!
 
@@ -488,4 +488,4 @@ class RemoveDuplicatesChallenge {
 }
 {% endhighlight %}
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has40.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has40.png)

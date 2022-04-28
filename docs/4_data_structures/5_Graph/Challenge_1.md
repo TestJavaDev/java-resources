@@ -32,17 +32,17 @@ A string containing the vertices of the graph listed in the correct order of tra
 ## Sample Input
 Graph:
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff1.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff1.png)
 
 ## Sample Output
 "01234"
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff2.png)
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff3.png)
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff4.png)
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff5.png)
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff6.png)
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff7.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff2.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff3.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff4.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff5.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff6.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff7.png)
 
 ## Coding Exercise
 

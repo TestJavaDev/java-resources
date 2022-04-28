@@ -16,7 +16,7 @@ A proxy server is an intermediate server between the client and the back-end ser
 
 Typically, proxies are used to filter requests, log requests, or transform requests (by adding/removing headers, encrypting/decrypting, or compressing a resource). Another advantage of a proxy server is that its cache can serve a lot of requests. If multiple clients access a particular resource, the proxy server can cache it and serve it to all the clients without going to the remote server.
 
-![proxy](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/proxy.png)
+![proxy](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/proxy.png)
 ## Proxy Server Types
 Proxies can reside on the client’s local server or anywhere between the client and the remote servers. Here are a few famous types of proxy servers:
 

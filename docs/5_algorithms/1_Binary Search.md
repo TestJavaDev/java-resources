@@ -26,14 +26,14 @@ We repeat this process until we find the target. Instead of picking a random ele
 ## Implementation
 The search range is represented by the left and right indices that start from both ends of the array and move towards each other as we search. When we move the index, we discard elements and shrink the search range.
 
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/binary1.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/binary2.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/binary3.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/binary4.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/binary5.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/binary6.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/binary7.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/binary8.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/binary1.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/binary2.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/binary3.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/binary4.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/binary5.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/binary6.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/binary7.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/binary8.png)
 
 {% highlight java %}
 
@@ -112,14 +112,14 @@ We can either keep the current element in the range or record it somewhere and t
 
 We keep a variable boundary_index that represents the leftmost true's index currently recorded. If the current element is true, we update boundary_index with its index and discard everything to the right including the current element itself since its index has been recorded by the variable.
 
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/finding1.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/finding2.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/finding3.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/finding4.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/finding5.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/finding6.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/finding7.png)
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/finding8.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/finding1.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/finding2.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/finding3.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/finding4.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/finding5.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/finding6.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/finding7.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/finding8.png)
 
 {% highlight java %}
 
@@ -172,7 +172,7 @@ Explanation: the first element larger than 2 is 3, which has index 1.
 
 ## Explanation
 The problem is equivalent to finding the boundary of elements < 2 and elements >=2. If we apply a filter of arr[i] >= target, we would get:
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/binary_first1.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/binary_first1.png)
 
 Now the problem is reduced to finding the first true element in a boolean array. We already know how to do this from the Find the Boundary module.
 
@@ -218,13 +218,13 @@ But remember that binary search can work beyond sorted arrays as long as there i
 
 Let’s draw a figure and see if there’s any pattern. If we plot the numbers against their index, we get:
 
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/binary_min1.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/binary_min1.png)
 
 Notice the numbers are divided into two sections: numbers larger than the last element of the array and numbers smaller than it. The minimum element is at the boundary between the two sections.
 
 We can apply a filter of < the last element and get the boolean array that characterizes the two sections.
 
-![binary](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/binary/binary_min2.png)
+![binary](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/binary/binary_min2.png)
 
 Now the problem is yet again reduced to finding the first true element in a boolean array. We already know how to do this from the “Finding the Boundary” module.
 

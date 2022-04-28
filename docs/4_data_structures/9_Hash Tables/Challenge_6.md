@@ -39,7 +39,7 @@ arr[1] + arr[2] + arr[3] = 0
 
 4 - 7 + 3 = 0
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has34.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has34.png)
 
 ## Coding Exercise
 
@@ -103,4 +103,4 @@ class CheckSubZero {
 }
 {% endhighlight %}
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has35.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has35.png)

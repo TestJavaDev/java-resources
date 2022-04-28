@@ -82,18 +82,18 @@ On the other hand, the participants do not apply any timeouts while waiting for 
 
 The following illustration shows what this flow looks like.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car61.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car62.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car63.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car64.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car65.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car66.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car67.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car68.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car69.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car70.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car71.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car72.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car61.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car62.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car63.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car64.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car65.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car66.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car67.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car68.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car69.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car70.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car71.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car72.png)
 
 ## Handling failures
 Since the happy path is straightforward, let’s examine how the protocol handles various kinds of failures.
@@ -164,14 +164,14 @@ However, this comes at the cost of correctness, since the protocol is vulnerable
 ## Network partition failure in 3PC
 An example of such a failure case is shown in the following illustration.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car73.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car74.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car75.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car76.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car77.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car78.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car79.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car80.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car73.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car74.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car75.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car76.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car77.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car78.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car79.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car80.png)
 
 In this example, a network partition occurs at a point where the coordinator manages to send a prepare-to-commit message only to some participants. Meanwhile, the coordinator fails right after this point, so the participants time out and have to complete the protocol on their own.
 
@@ -244,29 +244,29 @@ The merge protocol is simple. It includes a leader election amongst the leaders 
 ## Example
 Let’s examine what would happen in the network partition example from the previous lesson. We have shown the same illustration below.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car81.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car82.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car83.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car84.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car85.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car86.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car87.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car88.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car81.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car82.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car83.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car84.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car85.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car86.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car87.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car88.png)
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car89.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car89.png)
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car90.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car91.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car92.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car93.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car94.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car95.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car96.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car97.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car98.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car99.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car100.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car101.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car90.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car91.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car92.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car93.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car94.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car95.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car96.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car97.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car98.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car99.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car100.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car101.png)
 
 ## Conclusion
 The quorum-based commit protocol satisfies the safety property that ensures that all participants will always arrive at the same decision (atomicity). It does not satisfy the liveness property that ensures that it will always make progress, since there are always degenerate, extreme failure cases (e.g., multiple, continuous, and small partitions). However, the quorum-based commit protocol is much more resilient that 2PC and other protocols, and can make progress in the most common types of failures.
@@ -358,7 +358,7 @@ An alternative, leveraging the saga pattern, would be to model the order operati
 
 For example, debiting a customer’s bank account could have a compensating transaction that would give a refund. Then, we can build the order operation as a sequential execution of these transactions, as shown in the following transactions. In case any of these transactions fail, we can rollback the transactions that have been executed and run their corresponding compensating transactions.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car102.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car102.png)
 
 There might still be cases where some form of isolation is needed.
 

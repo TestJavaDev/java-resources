@@ -46,7 +46,7 @@ If the dice rolls a 1, we roll it again. Therefore, you can assume that kk will 
 
 Let’s try to understand this better with an example:
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog26.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog26.png)
 
 In the example given above, the player was dealt a hand containing nine cards. The dice rolled a 3, so kk will be 3. Then, we rearranged the cards into groups, containing three cards in sequential order. During implementation, we will receive these cards in the form of an array, such as {10, 3, 6, 2, 13, 12, 5, 4, 7}. The jack, queen, and king cards are denoted by 11, 12, and 13, respectively. The number after rolling dice will be given as an integer, like 3. Your module should return true if a hand of straights can be formed. Otherwise, it should return false.
 
@@ -106,7 +106,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog27.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog27.png)
 
 ## Feature #2: Maximum Points You Can Obtain from Cards
 
@@ -117,7 +117,7 @@ Our task is to create a feature for Fizzle’s computer player. We will be given
 
 Let’s take a look at the following example:
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog28.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog28.png)
 
 In the example above, the player picked the cards 5, 3, 6, and 3, in the given order, to obtain the maximum points possible. During implementation, we will receive this deck of cards in the form of an array, like {5, 3, 4, 4, 2, 3, 4, 6, 3}. The number after rolling dice will be given as an integer, such as 4. Your module should return the maximum number of points obtained as an integer.
 
@@ -133,11 +133,11 @@ Let’s take a look at the complete algorithm:
 
 This algorithm is illustrated below:
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog29.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog30.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog31.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog32.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog33.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog29.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog30.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog31.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog32.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog33.png)
 
 Let’s take a look at the algorithm’s implementation:
 
@@ -169,4 +169,4 @@ class Solution {
 }
 {% endhighlight %}
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog34.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog34.png)

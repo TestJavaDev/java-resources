@@ -74,7 +74,7 @@ Let’s assume that each stored object will be approximately 500 bytes (just a b
 
 30 billion * 500 bytes = 15 TB
 In the following table, we can change our assumptions to see how the estimates change:
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design2.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design2.png)
 Bandwidth estimates: For write requests, since we expect 200 new URLs every second, total incoming data for our service will be 100KB per second:
 
 200 * 500 bytes = 100 KB/s
@@ -92,7 +92,7 @@ To cache 20% of these requests, we will need 170GB of memory.
 One thing to note here is that since there will be many duplicate requests (of the same URL), our actual memory usage will be less than 170GB.
 
 High-level estimates: Assuming 500 million new URLs per month and 100:1 read:write ratio, following is the summary of the high level estimates for our service:
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design3.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design3.png)
 ## 4. System APIs
 💡 Once we’ve finalized the requirements, it’s always a good idea to define the system APIs. This should explicitly state what is expected from the system.
 
@@ -124,7 +124,7 @@ A few observations about the nature of the data we will store:
 * Our service is read-heavy.
 ## Database Schema:
 We would need two tables: one for storing information about the URL mappings and one for the user’s data who created the short link.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design4.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design4.png)
 
 What kind of database should we use? Since we anticipate storing billions of rows, and we don’t need to use relationships between objects – a NoSQL store like DynamoDB, Cassandra or Riak is a better choice. A NoSQL choice would also be easier to scale. Please see SQL vs NoSQL for more details.
 
@@ -150,15 +150,15 @@ What if parts of the URL are URL-encoded? e.g., http://www.educative.io/distribu
 Workaround for the issues: We can append an increasing sequence number to each input URL to make it unique and then generate its hash. We don’t need to store this sequence number in the databases, though. Possible problems with this approach could be an ever-increasing sequence number. Can it overflow? Appending an increasing sequence number will also impact the performance of the service.
 
 Another solution could be to append the user id (which should be unique) to the input URL. However, if the user has not signed in, we would have to ask the user to choose a uniqueness key. Even after this, if we have a conflict, we have to keep generating a key until we get a unique one.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design5.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design6.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design7.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design8.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design9.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design10.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design11.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design12.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design13.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design5.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design6.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design7.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design8.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design9.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design10.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design11.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design12.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design13.png)
 ## b. Generating keys offline
 We can have a standalone Key Generation Service (KGS) that generates random six-letter strings beforehand and stores them in a database (let’s call it key-DB). Whenever we want to shorten a URL, we will take one of the already-generated keys and use it. This approach will make things quite simple and fast. Not only are we not encoding the URL, but we won’t have to worry about duplications or collisions. KGS will make sure all the keys inserted into key-DB are unique
 
@@ -180,7 +180,7 @@ Can each app server cache some keys from key-DB? Yes, this can surely speed thin
 How would we perform a key lookup? We can look up the key in our database to get the full URL. If it’s present in the DB, issue an “HTTP 302 Redirect” status back to the browser, passing the stored URL in the “Location” field of the request. If that key is not present in our system, issue an “HTTP 404 Not Found” status or redirect the user back to the homepage.
 
 Should we impose size limits on custom aliases? Our service supports custom aliases. Users can pick any ‘key’ they like, but providing a custom alias is not mandatory. However, it is reasonable (and often desirable) to impose a size limit on a custom alias to ensure we have a consistent URL database. Let’s assume users can specify a maximum of 16 characters per customer key (as reflected in the above database schema).
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design14.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design14.png)
 ## 7. Data Partitioning and Replication
 To scale out our DB, we need to partition it so that it can store information about billions of URLs. Therefore, we need to develop a partitioning scheme that would divide and store our data into different DB servers.
 
@@ -204,17 +204,17 @@ Which cache eviction policy would best fit our needs? When the cache is full, an
 To further increase the efficiency, we can replicate our caching servers to distribute the load between them.
 
 How can each cache replica be updated? Whenever there is a cache miss, our servers would be hitting a backend database. Whenever this happens, we can update the cache and pass the new entry to all the cache replicas. Each replica can update its cache by adding the new entry. If a replica already has that entry, it can simply ignore it.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design15.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design16.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design17.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design18.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design19.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design20.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design21.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design22.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design23.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design24.png)
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design25.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design15.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design16.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design17.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design18.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design19.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design20.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design21.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design22.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design23.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design24.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design25.png)
 ## 9. Load Balancer (LB)
 We can add a Load balancing layer at three places in our system:
 * Between Clients and Application servers
@@ -233,7 +233,7 @@ If we chose to continuously search for expired links to remove them, it would pu
 * We can have a default expiration time for each link (e.g., two years).
 * After removing an expired link, we can put the key back in the key-DB to be reused.
 * Should we remove links that haven’t been visited in some length of time, say six months? This could be tricky. Since storage is getting cheap, we can decide to keep links forever.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design26.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design26.png)
 ## 11. Telemetry
 How many times a short URL has been used, what were user locations, etc.? How would we store these statistics? If it is part of a DB row that gets updated on each view, what will happen when a popular URL is slammed with a large number of concurrent requests?
 

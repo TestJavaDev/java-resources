@@ -25,8 +25,8 @@ You need to find the minimum moves the knight needs to get from the origin (0,0)
 
 For example, given the input coordinate, (5, 5) you have to find the minimum number of moves required for the knight to get from the origin to the coordinate. In this case, the program will output four because the knight needs four moves to get to the coordinate.
 
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer1.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer2.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer1.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer2.png)
 
 ## Solution
 Notice that the knight’s movements to both the positive and negative coordinates and the axis are symmetrical. The same number of moves are required to get to both the positive and negative coordinates. The knight can move in any of the eight directions at any given time by adding the following coordinates, [{1, 2}, {2, 1}, {-1, 2}, {1, -2}, {-1, -2}, {-2, -1}, {-2, 1}, {2, -1}] to the current coordinates.
@@ -40,18 +40,18 @@ Here is how we will implement this solution:
 4. If the coordinate has already been explored, we can return that value; otherwise, we will explore the next possible coordinates the knight can move to.
 5. We pick the path with the minimum moves and backtrack to the input coordinate.
 
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer3.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer4.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer5.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer6.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer7.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer8.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer9.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer10.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer11.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer12.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer13.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer14.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer3.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer4.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer5.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer6.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer7.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer8.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer9.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer10.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer11.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer12.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer13.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer14.png)
 
 Let’s review the solution:
 
@@ -89,7 +89,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer15.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer15.png)
 
 ## Sparse Matrix Multiplication
 
@@ -107,7 +107,7 @@ The following are some constraints:
 * -100 <= A[i][j], B[i][j] <= 100
 * Let’s review this scenario using the example below:
 
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer16.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer16.png)
 
 ## Solution
 We have two sparse matrices, meaning most of the matrices’ elements are zero. We can represent the input matrices as hashmaps, and only save the non-zero elements and their indexes.
@@ -121,18 +121,18 @@ Here is how we will implement this solution:
 6. If it exists, we will multiply the value for hashmap A and the value for hashmap B and add it to the element at the (ith index of hashmap A, j) index in the output matrix.
 7. Once we have iterated over all the HashMap elements, the output matrix is ready.
 
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer17.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer18.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer19.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer20.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer21.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer22.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer23.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer24.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer25.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer26.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer27.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer28.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer17.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer18.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer19.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer20.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer21.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer22.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer23.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer24.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer25.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer26.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer27.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer28.png)
 
 {% highlight java %}
 class Solution {
@@ -188,7 +188,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer29.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer29.png)
 
 ## Design In-Memory File System
 
@@ -206,7 +206,7 @@ readContentFromFile: Given a file path, return its content in string format.
 ## Example
 Let’s look at an example input and output chart:
 
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer30.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer30.png)
 
 ## Assumptions
 * You can assume all file or directory paths are absolute paths that begin with /, and do not end with / except the path that is just "/".
@@ -221,7 +221,7 @@ We need a mechanism to represent files and directories. A directory can contain 
 
 We store the root file in our file system. Review the directory structure below:
 
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer31.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer31.png)
 
 Next, we will look at how to implement the methods one by one:
 * ls: We start by initializing a temporary file pointer and splitting the input path by "/". Once split, we traverse the files map going one level down through the directory structure during each iteration. Once we reach the subdirectory corresponding to the split path’s last element, we return the files in the current file pointer if it is a directory. Otherwise, we return the filename.
@@ -305,8 +305,8 @@ class FileSystem {
 }
 {% endhighlight %}
 
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer32.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer33.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer32.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer33.png)
 
 ## Spiral Matrix
 
@@ -315,17 +315,17 @@ Given an m * n matrix, you have to return all the matrix elements in spiral orde
 
 Let’s review the spiral order below:
 
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer34.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer35.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer36.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer37.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer38.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer39.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer40.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer41.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer42.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer43.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer44.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer34.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer35.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer36.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer37.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer38.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer39.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer40.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer41.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer42.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer43.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer44.png)
 
 ## Solution
 To solve this problem, we will use a layer by layer approach. In this approach, we iterate over the outer layers’ elements in clockwise order, followed by the inner layer’s elements.
@@ -342,15 +342,15 @@ We repeat these steps until either r1 > r2 or c1 > c2 or both.
 
 Let’s start from the outermost layer. In the solution below, the top-left coordinates are (0, 0), and the bottom-right coordinates are (5, 5).
 
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer45.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer46.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer47.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer48.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer49.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer50.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer51.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer52.png)
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer53.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer45.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer46.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer47.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer48.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer49.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer50.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer51.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer52.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer53.png)
 
 {% highlight java %}
 class Solution {
@@ -382,4 +382,4 @@ class Solution {
 }
 {% endhighlight %}
 
-![wer](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/wer/wer54.png)
+![wer](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/wer/wer54.png)

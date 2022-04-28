@@ -20,7 +20,7 @@ Imagine at the end of a political conference, republicans and democrats are tryi
 
 Your task as the Uber developer is to model the ride requestors as threads. Once an acceptable combination of riders is possible, threads are allowed to proceed to ride. Each thread invokes the method seated() when selected by the system for the next ride. When all the threads are seated, any one of the four threads can invoke the method drive() to inform the driver to start the ride.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter36.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter36.png)
 
 ## Solution
 First let us model the problem as a class. We'll have two methods one called by a Democrat and one by a Republican to get a ride home. When either one gets a seat on the next ride, it'll call the seated() method.
@@ -33,7 +33,7 @@ Once the doors are shut, one of the riders has to tell the driver to drive which
 
 The initial class skeleton looks like the following:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter37.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter37.png)
 
 Let's focus on the seatDemocrat() method first. For simplicity imagine the first thread is a democrat and invokes seatDemocrat(). Since there's no other rider available, it should be put to wait. We can use a semaphore to make this thread wait. We'll not use a barrier, because we don't know what party loyalty the threads arriving in future would have. It might be that the next four threads are all republican and this Democrat isn't placed on the next Uber ride. To differentiate between waiting democrats and waiting republicans, we'll use two different semaphores demsWaiting and repubsWaiting. Our first democrat thread will end up acquire()-ing the demsWaiting semaphore.
 
@@ -44,7 +44,7 @@ Now it's easy to reason about how we select the threads for a ride. A democrat t
 
 The logic we discussed so far is translated into code below:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter38.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter38.png)
 
 The thread that signals other threads to come along for the ride marks itself as the rideLeader. This thread is responsible for informing the driver to drive(). We can come up with some other criteria to choose the rider leader but given the logic we implemented, it is easiest to make the thread that determines an acceptable ride combination as the ride leader.
 

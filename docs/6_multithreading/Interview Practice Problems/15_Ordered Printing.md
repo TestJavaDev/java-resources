@@ -18,13 +18,13 @@ Ordered Printing / Java resources / Tutorial
 ## Problem Statement
 Suppose there are three threads t1, t2 and t3. t1 prints First, t2 prints Second and t3 prints Third. The code for the class is as follows:
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new1.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new1.png)
 
 Thread t1 calls printFirst(), thread t2 calls printSecond(), and thread t3 calls printThird(). The threads can run in any order. You have to synchronize the threads so that the functions printFirst(), printSecond() and printThird() are executed in order.
 
 The workflow of the program is shown below:
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new2.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new2.png)
 
 ## Solution
 We present two solutions for this problem; one using the basic wait() & notifyAll() functions and the other using CountDownLatch.
@@ -33,17 +33,17 @@ Solution 1
 
 In this solution, we have a class OrderedPrinting that consists of a private variable; count. The class consists of 3 functions printFirst(),printSecond() and printThird(). The structure of the class is as follows:
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new3.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new3.png)
 
 In printFirst(), "First" is printed. We do not need to check the value of count here. After printing, count is incremented for the next word to be printed. Any waiting threads are then notified via notifyAll(), signalling them to proceed.
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new4.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new4.png)
 
 The third method checks works in the same way as the second. The only difference being the check for count to be equal to 3. If it is, then "Third" is printed otherwise the calling thread waits.
 
 To run our proposed solution, we will create another class to achieve multi-threading. When we extend Thread class, each of our thread creates a unique object and associates with the parent class. This class has two variables: one is the object of OrderedPrinting and the other is a string variable method. The string parameter checks the method to be invoked from OrderedPrinting.
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new5.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new5.png)
 
 We will be creating 3 threads in the Main class for testing each solution. Each thread will be passed the same object of OrderedPrinting. t1 will call printFirst(), t2 will call printSecond() and t3 will call printThird(). The output shows printing done in the proper order i.e first, second and third irrespective of the calling order of threads.
 
@@ -165,11 +165,11 @@ The second solution includes the use of CountDownLatch; a synchronization utilit
 
 The basic structure of the class OrderedPrintingis the same as presented in solution 1 with the only difference of using countdownlatch instead of volatile variable. We have 2 countdownlatch variables that get initialized with 1 each.
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new6.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new6.png)
 
 In printFirst() method, latch1 decrements and reaches 0, waking up the waiting threads consequently. In printSecond(), if latch1 is free (reached 0), then the printing is done and latch2 is decremented. Similarly in the third method printThird(),latch2 is checked and printing is done. The latches here act like switches/gates that get closed and opened for particular actions to pass.
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new7.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new7.png)
 
 As in the previous solution, we create OrderedPrintingThread class which extends the Thread class. Details of this class are explained at length above.
 

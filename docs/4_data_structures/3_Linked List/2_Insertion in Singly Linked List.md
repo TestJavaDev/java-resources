@@ -17,17 +17,17 @@ Insertion in Singly Linked List / Java resources / Tutorial
 ## Insert After 
 As discussed earlier, the insertAfter function takes the data of the new node and the node after, which we want to insert this new node. The illustration below will help jog your memory.
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin48.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin49.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin50.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin51.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin52.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin53.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin54.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin55.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin56.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin57.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin58.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin48.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin49.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin50.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin51.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin52.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin53.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin54.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin55.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin56.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin57.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin58.png)
 
 ## Implementation 
 Now that we’ve revised the concept let’s implement it using Java code. The insertAfter method will take a value called data and the value of the node, after which we want to insert the new node called previous as parameters.

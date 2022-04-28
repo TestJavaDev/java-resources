@@ -101,7 +101,7 @@ At a high-level we would need the following components:
 4. Video and Thumbnail storage: To store video and thumbnail files in some distributed file storage.
 5. User Database: To store user’s information, e.g., name, email, address, etc.
 6. Video metadata storage: A metadata database to store all the information about videos like title, file path in the system, uploading user, total views, likes, dislikes, etc. It will also be used to store all the video comments.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design53.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design53.png)
 
 ## 6. Database Schema
 Video metadata storage - MySql
@@ -144,7 +144,7 @@ Bigtable can be a reasonable choice here as it combines multiple files into one 
 Video Uploads: Since videos could be huge, if while uploading, the connection drops, we should support resuming from the same point.
 
 Video Encoding: Newly uploaded videos are stored on the server, and a new task is added to the processing queue to encode the video into multiple formats. Once all the encoding is completed, the uploader will be notified, and the video is made available for view/sharing.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design54.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design54.png)
 
 ## 8. Metadata Sharding
 Since we have a huge number of new videos every day and our read load is extremely high, therefore, we need to distribute our data onto multiple machines so that we can perform read/write operations efficiently. We have many options to shard our data. Let’s go through different strategies of sharding this data one by one:

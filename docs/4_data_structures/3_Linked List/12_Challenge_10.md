@@ -31,7 +31,7 @@ linkedlist = 22->18->60->78->47->39->99 and n=3
 
 Consider the following example:
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser47.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser47.png)
 
 ## Coding Exercise
 
@@ -435,33 +435,33 @@ In the above solution, we first use the getter function list.getSize() to access
 
 We will now calculate the value of x. Suppose that the length of our list is 7, as shown in the following example:
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex1.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex2.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex3.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex4.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex5.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex6.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex7.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex8.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex9.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex10.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex11.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex12.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex13.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex14.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex15.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex16.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex17.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex18.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex19.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex20.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex21.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex22.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex23.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex24.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex25.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex26.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex27.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex1.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex2.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex3.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex4.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex5.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex6.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex7.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex8.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex9.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex10.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex11.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex12.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex13.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex14.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex15.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex16.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex17.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex18.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex19.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex20.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex21.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex22.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex23.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex24.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex25.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex26.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex27.png)
 
 ## Time Complexity 
 In the worst-case time complexity of this algorithm is O(n). Because we might have to access the 1st element from the end.

@@ -121,14 +121,14 @@ Note a program or a process are often used interchangeably but most of the times
 
 There's also the concept of "multiprocessing" systems, where multiple processes get scheduled on more than one CPU. Usually, this requires hardware support where a single system comes with multiple cores or the execution takes place in a cluster of machines. Processes don't share any resources amongst themselves whereas threads of a process can share the resources allocated to that particular process, including memory address space. However, languages do provide facilities to enable inter-process communication.
  
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm1.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm1.png)
 
 ## Counter Program
 Below is an example highlighting how multi-threading necessitates caution when accessing shared data amongst threads. Incorrect synchronization between threads can lead to wildly varying program outputs depending on in which order threads get executed.
 
 Consider the below snippet of code
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm2.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm2.png)
 
 The increment on line 4 is likely to be decompiled into the following steps on a computer:
 * Read the value of the variable counter from the register where it is stored
@@ -256,7 +256,7 @@ Concurrency is about dealing with lots of things at once. Parallelism is about d
 
 We end the lesson with an analogy, frequently quoted in online literature, of customers waiting in two queues to buy coffee. Single-processor concurrency is akin to alternatively serving customers from the two queues but with a single coffee machine, while parallelism is similar to serving each customer queue with a dedicated coffee machine.
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm3.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm3.png)
 
 ## Cooperative Multitasking vs Preemptive Multitasking
 
@@ -480,7 +480,7 @@ class RaceCondition {
 
 Below is a pictorial representation of what a race condition, in general, looks like.
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm4.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm4.png)
 
 ## Deadlocks, Liveness & Reentrant Locks
 
@@ -500,11 +500,11 @@ Other than a deadlock, an application thread can also experience starvation, whe
 
 ## Deadlock Example
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm5.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm5.png)
 
 The above code can potentially result in a deadlock. Note that deadlock may not always happen, but for certain execution sequences, deadlock can occur. Consider the below execution sequence that ends up in a deadlock:
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm6.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm6.png)
 
 Thread T2 can't make progress as it requires MUTEX_A which is being held by T1. Now when T1 wakes up, it can't make progress as it requires MUTEX_B and that is being held up by T2. This is a classic text-book example of a deadlock.
 
@@ -663,7 +663,7 @@ A semaphore with a single permit is called a binary semaphore and is often thoug
 ## Mutex Example
 The following illustration shows how two threads acquire and release a mutex one after the other to gain access to shared data. Mutex guarantees the shared state isn't corrupted when competing threads work on it.
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm7.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm7.png)
 
 ## When a Semaphore Masquerades as a Mutex?
 A semaphore can potentially act as a mutex if the permits it can give out is set to 1. However, the most important difference between the two is that in case of a mutex the same thread must call acquire and subsequent release on the mutex whereas in case of a binary sempahore, different threads can call acquire and release on the semaphore. The pthreads library documentation states this in the pthread_mutex_unlock() method's description.
@@ -676,11 +676,11 @@ Another distinction between a semaphore and a mutex is that semaphores can be us
 
 Below is a pictorial representation of how a mutex works.
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm8.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm8.png)
 
 Below is a depiction of how a semaphore works. The semaphore initially has two permits and allows at most two threads to enter the critical section or access protected resources
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm9.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm9.png)
 
 ## Summary
 
@@ -698,7 +698,7 @@ Concisely, a monitor is a mutex and then some. Monitors are generally language l
 
 To understand monitors, let's first see the problem they solve. Usually, in multi-threaded applications, a thread needs to wait for some program predicate to be true before it can proceed forward. Think about a producer/consumer application. If the producer hasn't produced anything the consumer can't consume anything, so the consumer must wait on a predicate that lets the consumer know that something has indeed been produced. What could be a crude way of accomplishing this? The consumer could repeatedly check in a loop for the predicate to be set to true. The pattern would resemble the pseudocode below:
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm10.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm10.png)
 
 Within the while loop we'll first release the mutex giving other threads a chance to acquire it and set the loop predicate to true. And before we check the loop predicate again, we make sure we have acquired the mutex again. This works but is an example of "spin waiting" which wastes a lot of CPU cycles. Next, let's see how condition variables solve the spin-waiting issue.
 
@@ -711,7 +711,7 @@ Now imagine a producer places an item in the buffer. The predicate, the size of 
 
 Lets see how this all translates into code.
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm11.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm11.png)
 
 Let's dry run the above code. Say thread A executes efficientWaitingFunction() first and finds the loop predicate is false and enters the loop. Next thread A executes the statement condVar.wait() and is be placed in a wait queue. At the same time thread A gives up the mutex. Now thread B comes along and executes changePredicate() method. Since the mutex was given up by thread A, thread B is be able to acquire it and set the predicate to true. Next it signals the condition variable condVar.signal(). This step places thread A into the ready queue but thread A doesn't start executing until thread B has released the mutex.
 
@@ -720,7 +720,7 @@ Note that the order of signaling the condition variable and releasing the mutex 
 ## Why the while Loop
 The wary reader would have noticed us using a while loop to test for the predicate. After all, the pseudocode could have been written as follows
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm12.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm12.png)
 
 If the snippet is re-written in the above manner using an if clause instead of a while then,, we need a guarantee that once the variable condVar is signaled, the predicate can't be changed by any other thread and that the signaled thread becomes the owner of the monitor. This may not be true. For one, a different thread could get scheduled and change the predicate back to false before the signaled thread gets a chance to execute, therefore the signaled thread must check the predicate again, once it acquires the monitor. Secondly, use of the loop is necessitated by design choices of monitors that we'll explore in the next section. Last but not the least, on POSIX systems, spurious or fake wakeups are possible (also discussed in later chapters) even though the condition variable has not been signaled and the predicate hasn't changed. The idiomatic and correct usage of a monitor dictates that the predicate always be tested for in a while loop.
 
@@ -730,9 +730,9 @@ After the above discussion, we can now realize that a monitor is made up of a mu
 Continuing with our hypothetical example, say another thread B comes along and gets placed in the entry set, while thread A sits in the wait set. Since no other thread owns the monitor, thread B successfully acquires the monitor and continues execution. If thread B exits the monitor section without calling notify() on the condition variable, then thread A will remain waiting in the wait set. Thread B can also invoke wait() and be placed in the wait set along with thread A. This then would require a third thread to come along and call notify() on the condition variable on which both threads A and B are waiting. Note that only a single thread will be able to own the monitor at any given point in time and will have exclusive access to data structures or critical sections protected by the monitor.
 
 Practically, in Java each object is a monitor and implicitly has a lock and is a condition variable too. You can think of a monitor as a mutex with a wait set. Monitors allow threads to exercise mutual exclusion as well as cooperation by allowing them to wait and signal on conditions.
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm13.png)
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm14.png)
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm15.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm13.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm14.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm15.png)
 
 ## Java's Monitor & Hoare vs Mesa Monitors
 
@@ -819,7 +819,7 @@ If you have a poultry farm where a hundred hens lay eggs each day, then no matte
 
 Amdahl's law describes the theoretical speedup a program can achieve at best by using additional computing resources. We'll skip the mathematical derivation and go straight to the simplified equation expressing Amdahl's law:
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm16.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm16.png)
 
 he speed-up steadily increases as we increase the number of processors or threads. However, as you can see the theoretical maximum speed-up for our program with 10% serial execution will be 10. We can't speed-up our program execution more than 10 times compared to when we run the same program on a single CPU or thread. To achieve greater speed-ups than 10 we must optimize or parallelize the serially executed portion of the code.
 
@@ -840,11 +840,11 @@ In this lesson, we'll cover a high-level overview of Moore's law to present a fi
 
 Gordon Moore, co-founder of Intel, observed the number of transistors that can be packed into a given unit of space doubles about every two years and in turn the processing power of computers doubles and the cost halves. Moore's law is more of an observation than a law grounded in formal scientific research. It states that the number of transistors per square inch on a chip will double every two years. This exponential growth has been going on since the 70’s and is only now starting to slow down. The following graph shows the growth of the transistor count.
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm17.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm17.png)
 
 Initially, the clock speeds of processors also doubled along with the transistor count. This is because as transistors get smaller, their frequency increases and propagation delays decrease because now the transistors are packed closer together. However, the promise of exponential growth by Moore’s law came to an end more than a decade ago with respect to clock speeds. The increase in clock speeds of processors has slowed down much faster than the increase in number of transistors that can be placed on a microchip. If we plot clock speeds we find that the linear exponential growth stopped after 2003 and the trend line flattened out. The clock speed (proportional to difference between supply voltage and threshold voltage) cannot increase because the supply voltage is already down to an extent where it cannot be decreased to get dramatic gains in clock speed. In 10 years from 2000 to 2009, clock speed just increased from 1.3 GHz to 2.8 GHz merely doubling in a decade rather than increasing 32 times as expected by Moore's law. The following plot shows the clock speeds flattening out towards 2010.
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm18.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm18.png)
 
 Since processors aren't getting faster as quickly as they use to, we need alternative measures to achieve performance gains. One of the ways to do that is to use multicore processors. Introduced in the early 2000s, multicore processors have more than one CPU on the same machine. To exploit this processing power, programs must be written as multi-threaded applications. A single-threaded application running on an octa-core processor will only use 1/8th of the total throughput of that machine, which is unacceptable in most scenarios.
 

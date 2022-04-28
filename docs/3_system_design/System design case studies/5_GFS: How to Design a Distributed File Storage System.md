@@ -62,22 +62,22 @@ In addition, GFS supports two special operations:
 
 The following illustration gives an overview of the GFS architecture:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big91.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big92.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big93.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big94.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big95.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big96.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big97.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big91.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big92.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big93.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big94.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big95.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big96.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big97.png)
 
 ## Read operation
 The following illustration displays the workflow for a read operation
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big81.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big82.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big83.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big84.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big85.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big81.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big82.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big83.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big84.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big85.png)
 
 ## Responsibilities of master
 The master stores:
@@ -87,24 +87,24 @@ The master stores:
 
 All metadata is stored in the master’s memory. The namespaces and the mappings are also kept persistent by logging mutating operations (e.g. file creation, renaming etc.) to an operation log that is stored on the master’s local disk and replicated on remote machines. This is shown in the following illustration:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big71.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big72.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big73.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big74.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big75.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big76.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big71.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big72.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big73.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big74.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big75.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big76.png)
 
 ## Concurrency support
 GFS supports multiple concurrent writers for a single file. The following illustration illustrates how this works:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big61.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big62.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big63.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big64.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big65.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big66.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big67.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big68.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big61.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big62.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big63.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big64.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big65.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big66.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big67.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big68.png)
 
 1. Identifying chunk servers
 
@@ -150,7 +150,7 @@ GFS is organized into a simple network of computers called a cluster. All GFS cl
 
 The master stores all metadata about the system, while the ChunkServers store the real file data.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big5.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big5.png)
 
 ## ChunkServer
 
@@ -158,7 +158,7 @@ ChunkServers store chunks on local disks as regular Linux files and read or writ
 
 For reliability, each chunk is replicated to multiple ChunkServers. By default, GFS stores three replicas, though different replication factors can be specified on a per-file basis.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big6.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big6.png)
 
 ## Master
 
@@ -187,7 +187,7 @@ Neither the client nor the ChunkServer caches file data. Client caches offer lit
 
 Having a single master vastly simplifies GFS design and enables the master to make sophisticated chunk placement and replication decisions using global knowledge. However, GFS minimizes the master’s involvement in reads and writes so that it does not become a bottleneck. Clients never read or write file data through the master. Instead, a client asks the master which ChunkServers it should contact. The client caches this information for a limited time and interacts with the ChunkServers directly for many subsequent operations.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big7.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big7.png)
 
 ## Chunk size
 
@@ -312,7 +312,7 @@ A typical read interaction with a GFS cluster by a client application goes like 
 5. The replica ChunkServer replies with the requested data.
 6. As evident from the above workflow, the master is involved at the start and is then completely out of the loop, implementing a separation of control and data flows – a separation that is crucial for maintaining high performance of file accesses.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big8.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big8.png)
 
 ## Anatomy of a Write Operation
 
@@ -337,7 +337,7 @@ Following is the stepwise breakdown of the data transfer:
 6. Secondary replicas reply to primary indicating they have completed operation.
 7. Primary replies to the client with success or error message
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big9.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big9.png)
 
 The key point to note is that the data flow is different from the control flow. The data flows from the client to a ChunkServer and then from that ChunkServer to another ChunkServer, until all ChunkServers that store replicas for that chunk have received the data. The control (the write request) flow goes from the client to the primary ChunkServer for that chunk. The primary then forwards the request to all the secondaries. This ensures that the primary controls the order of writes even if it receives multiple concurrent write requests. All replicas will have data written in the same sequence. Chunk version numbers are used to detect if any replica has stale data which has not been updated because that ChunkServer was down during some update.
 

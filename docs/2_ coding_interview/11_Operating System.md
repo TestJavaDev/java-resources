@@ -45,7 +45,7 @@ In this scenario, we will be provided with two inputs. First, we will be given a
 
 Here is an illustration of this behavior:
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op1.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op1.png)
 
 Solution#
 We can intuitively solve this problem by calculating the cumulative sum at each array index. Then, to identify the subarray, we can observe whether the cumulative sum, say Sum[i], is the same up to two indices. If they are the same, the sum of the elements at those indices will be zero. Extending this observation further, if the cumulative sum up to two indices, say i and j, have a difference of n, i.e., if sum[i] - sum[j] = n, the sum of elements lying between indices i and j will also be n.
@@ -58,12 +58,12 @@ We will implement this feature like so:
 
 The following illustration might clarify this process.
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op2.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op3.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op4.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op5.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op6.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op7.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op2.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op3.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op4.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op5.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op6.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op7.png)
 
 Let’s look at the code for the solution below:
 
@@ -94,7 +94,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op8.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op8.png)
 
 ## Feature #2: Resume Process
 
@@ -121,11 +121,11 @@ We’ll follow a recursive approach to implement the binary search. We will impl
 
 The following illustration might clarify this process.
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op9.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op10.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op11.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op12.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op13.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op9.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op10.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op11.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op12.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op13.png)
 
 Let’s look at the code for the solution below:
 
@@ -162,7 +162,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op14.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op14.png)
 
 ## Feature #3: Schedule Processes
 
@@ -173,7 +173,7 @@ We’ll be provided with the total number of processes, n, and an array of proce
 
 Here is an illustration to better understand this:
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op15.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op15.png)
 
 In this example, there are six processes, numbered 1 through 6. Here, arrows are used to represent dependencies. For example, process 3 depends on both processes 2 and 5.
 
@@ -206,13 +206,13 @@ Here is how we will implement this feature:
 
 The following illustration might clarify this process.
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op16.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op17.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op18.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op19.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op20.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op21.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op22.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op16.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op17.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op18.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op19.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op20.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op21.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op22.png)
 
 Let’s look at the code for the solution:
 
@@ -278,7 +278,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op23.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op23.png)
 
 ## Feature #4: Compress File
 
@@ -356,5 +356,5 @@ class Solution {
 }
 {% endhighlight %}
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op24.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op24.png)
 

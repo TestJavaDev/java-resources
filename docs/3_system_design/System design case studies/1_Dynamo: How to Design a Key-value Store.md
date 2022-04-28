@@ -31,7 +31,7 @@ As stated above, the main goal of Dynamo is to be highly available. Here is the 
 * Decentralized: To avoid single points of failure and performance bottlenecks, there should not be any central/leader process.
 * Eventually Consistent: Data can be optimistically replicated to become eventually consistent. This means that instead of incurring write-time costs to ensure data correctness throughout the system (i.e., strong consistency), inconsistencies can be resolved at some other time (e.g., during reads). Eventual consistency is used to achieve high availability.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced1.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced1.png)
 
 ## Dynamo’s use cases
 By default, Dynamo is an eventually consistent database. Therefore, any application where strong consistency is not a concern can utilize Dynamo. Though Dynamo can support strong consistency, it comes with a performance impact. Hence, if strong consistency is a requirement for an application, then Dynamo might not be a good option.
@@ -83,7 +83,7 @@ The act of distributing data across a set of nodes is called data partitioning. 
 
 A naive approach will be to use a suitable hash function that maps the data key to a number. Then, find the server by applying modulo on this number and the total number of servers. For example:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced2.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced2.png)
 
 The scheme described in the above diagram solves the problem of finding a server for storing/retrieving the data. But when we add or remove a server, we have to remap all the keys and move the data based on the new server count, which will be a complete mess!
 
@@ -92,7 +92,7 @@ Dynamo uses consistent hashing to solve these problems. The consistent hashing a
 ## Consistent hashing: Dynamo’s data distribution
 Consistent hashing represents the data managed by a cluster as a ring. Each node in the ring is assigned a range of data. Dynamo uses the consistent hashing algorithm to determine what row is stored to what node. Here is an example of the consistent hashing ring:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced3.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced3.png)
 
 With consistent hashing, the ring is divided into smaller predefined ranges. Each node is assigned one of these ranges. In Dynamo’s terminology, the start of the range is called a token. This means that each node will be assigned one token. The range assigned to each node is computed as follows:
 
@@ -101,11 +101,11 @@ Range end:    Next token value - 1
 
 Here are the tokens and data ranges of the four nodes described in the above diagram:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced4.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced4.png)
 
 Whenever Dynamo is serving a put() or a get() request, the first step it performs is to apply the MD5 hashing algorithm to the key. The output of this hashing algorithm determines within which range the data lies and hence, on which node the data will be stored. As we saw above, each node in Dynamo is supposed to store data for a fixed range. Hence, the hash generated from the data key tells us the node where the data will be stored. Here is an example showing how data gets distributed across the Consistent Hashing ring:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced5.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced5.png)
 
 The consistent hashing scheme described above works great when a node is added or removed from the ring; as only the next node is affected in these scenarios. For example, when a node is removed, the next node becomes responsible for all of the keys stored on the outgoing node. However, this scheme can result in non-uniform data and load distribution. Dynamo solves these issues with the help of Virtual nodes.
 
@@ -119,11 +119,11 @@ Hotspots: Since each node is assigned one large range, if the data is not evenly
 Node rebuilding: Since each node’s data is replicated on a fixed number of nodes (discussed later), when we need to rebuild a node, only its replica nodes can provide the data. This puts a lot of pressure on the replica nodes and can lead to service degradation.
 To handle these issues, Dynamo introduced a new scheme for distributing the tokens to physical nodes. Instead of assigning a single token to a node, the hash range is divided into multiple smaller ranges, and each physical node is assigned multiple of these smaller ranges. Each of these subranges is called a Vnode. With Vnodes, instead of a node being responsible for just one token, it is responsible for many tokens (or subranges).
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced6.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced6.png)
 
 Practically, Vnodes are randomly distributed across the cluster and are generally non-contiguous so that no two neighboring Vnodes are assigned to the same physical node. Furthermore, nodes do carry replicas of other nodes for fault-tolerance. Also, since there can be heterogeneous machines in the clusters, some servers might hold more Vnodes than others. The figure below shows how physical nodes A, B, C, D, & E are using Vnodes of the Consistent Hash ring. Each physical node is assigned a set of Vnodes and each Vnode is replicated once.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced7.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced7.png)
 
 ## Advantages of Vnodes
 Vnodes give the following advantages:
@@ -136,7 +136,7 @@ Vnodes give the following advantages:
 ## What is optimistic replication?
 To ensure high availability and durability, Dynamo replicates each data item on multiple NN nodes in the system where the value NN is equivalent to the replication factor and is configurable per instance of Dynamo. Each key is assigned to a coordinator node (the node that falls first in the hash range), which first stores the data locally and then replicates it to N-1N−1 clockwise successor nodes on the ring. This results in each node owning the region on the ring between it and its NthNth predecessor. This replication is done asynchronously (in the background), and Dynamo provides an eventually consistent model. This replication technique is called optimistic replication, which means that replicas are not guaranteed to be identical at all times.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced8.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced8.png)
 
 Each node in Dynamo serves as a replica for a different range of data. As Dynamo stores NN copies of data spread across different nodes, if one node is down, other replicas can respond to queries for that range of data. If a client cannot contact the coordinator node, it sends the request to a node holding a replica.
 
@@ -148,7 +148,7 @@ Following traditional quorum approaches, any distributed system becomes unavaila
 
 Consider the example of Dynamo configuration given in the figure below with N=3N=3. In this example, if Server 1 is temporarily down or unreachable during a write operation, its data will now be stored on Server 4. Thus, Dynamo transfers the replica stored on the failing node (i.e., Server 1) to the next node of the consistent hash ring that does not have the replica (i.e., Server 4). This is done to avoid unavailability caused by a short-term machine or network failure and to maintain desired availability and durability guarantees. The replica sent to Server 4 will have a hint in its metadata that suggests which node was the intended recipient of the replica (in this case, Server 1). Nodes that receive hinted replicas will keep them in a separate local database that is scanned periodically. Upon detecting that Server 1 has recovered, Server 4 will attempt to deliver the replica to Server 1. Once the transfer succeeds, Server 4 may delete the object from its local store without decreasing the total number of replicas in the system.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced9.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced9.png)
 
 ## Hinted handoff
 The interesting trick described above to increase availability is known as hinted handoff, i.e., when a node is unreachable, another node can accept writes on its behalf. The write is then kept in a local buffer and sent out once the destination node is reachable again. This makes Dynamo “always writeable.” Thus, even in the extreme case where only a single node is alive, write requests will still get accepted and eventually processed.
@@ -174,7 +174,7 @@ Instead of employing tight synchronization mechanics, Dynamo uses something call
 6. The network heals. Server A and B can talk to each other again.
 7. Either server gets a read request for key k1. It sees the same key with different versions [A:3] and [A:2][B:1], but it does not know which one is newer. It returns both and tells the client to figure out the version and write the newer version back into the system.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced10.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced10.png)
 
 As we saw in the above example, most of the time, new versions subsume the previous version(s), and the system itself can determine the correct version (e.g., [A:2] is newer than [A:1]). However, version branching may happen in the presence of failures combined with concurrent updates, resulting in conflicting versions of an object. In these cases, the system cannot reconcile the multiple versions of the same object, and the client must perform the reconciliation to collapse multiple branches of data evolution back into one (this process is called semantic reconciliation). A typical example of a collapse operation is “merging” different versions of a customer’s shopping cart. Using this reconciliation mechanism, an add operation (i.e., adding an item to the cart) is never lost. However, deleted items can resurface.
 
@@ -204,7 +204,7 @@ In the first strategy, the client is unaware of the Dynamo ring, which helps sca
 
 The second strategy helps in achieving lower latency, as in this case, the client maintains a copy of the ring and forwards the request to an appropriate node from the preference list. Because of this option, Dynamo is also called a zero-hop DHT, as the client can directly contact the node that holds the required data. However, in this case, Dynamo does not have much control over the load distribution and request handling.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced11.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced11.png)
 
 ## Consistency protocol
 Dynamo uses a consistency protocol similar to quorum systems. If R/WR/W is the minimum number of nodes that must participate in a successful read/write operation respectively:
@@ -249,7 +249,7 @@ As we know, Dynamo uses vector clocks to remove conflicts while serving read req
 What are Merkle trees?#
 A replica can contain a lot of data. Naively splitting up the entire data range for checksums is not very feasible; there is simply too much data to be transferred. Therefore, Dynamo uses Merkle trees to compare replicas of a range. A Merkle tree is a binary tree of hashes, where each internal node is the hash of its two children, and each leaf node is a hash of a portion of the original data.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced12.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced12.png)
 
 Comparing Merkle trees is conceptually simple:
 1. Compare the root hashes of both trees.
@@ -271,7 +271,7 @@ messages get sent every tick (NN being the number of nodes), which is a ridiculo
 
 Dynamo uses gossip protocol that enables each node to keep track of state information about the other nodes in the cluster, like which nodes are reachable, what key ranges they are responsible for, and so on (this is basically a copy of the hash ring). Nodes share state information with each other to stay in sync. Gossip protocol is a peer-to-peer communication mechanism in which nodes periodically exchange state information about themselves and other nodes they know about. Each node initiates a gossip round every second to exchange state information about itself and other nodes with one other random node. This means that any new event will eventually propagate through the system, and all nodes quickly learn about all other nodes in a cluster.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced13.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced13.png)
 
 ## External discovery through seed nodes
 As we know, Dynamo nodes use gossip protocol to find the current state of the ring. This can result in a logical partition of the cluster in a particular scenario. Let’s understand this with an example:
@@ -312,7 +312,7 @@ The following list contains criticism on Dynamo’s design:
 ## Datastores developed on the principles of Dynamo
 Dynamo is not open-source and was built for services running within Amazon. Two of the most famous datastores built on the principles of Dynamo are Riak and Cassandra. Riak is a distributed NoSQL key-value data store that is highly available, scalable, fault-tolerant, and easy to operate. Cassandra is a distributed, decentralized, scalable, and highly available NoSQL wide-column database. Here is how they adopted different algorithms offered by Dynamo:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced14.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced14.png)
 
 ## Summary
 
@@ -332,7 +332,7 @@ Dynamo is not open-source and was built for services running within Amazon. Two 
 
 The following table presents a summary of the list of techniques Dynamo uses and their respective advantages.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/advanced/advanced15.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/advanced/advanced15.png)
 
 ## System design patterns
 

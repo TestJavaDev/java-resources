@@ -30,7 +30,7 @@ This problem becomes simple if you think about each case:
 1. Before we allow a reader to enter the critical section, we need to make sure that there's no writer in progress. It is ok to have other readers in the critical section since they aren't making any modifications
 2. Before we allow a writer to enter the critical section, we need to make sure that there's no reader or writer in the critical section.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter23.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter23.png)
 
 Note that all the methods are synchronized on the ReadWriteLock object itself.
 
@@ -38,7 +38,7 @@ Let's start with the reader use case. We can have multiple readers acquire the r
 
 Releasing the read lock is easy but before we acquire the read lock, we need to be sure that no other writer is currently writing. Again, we'll need some variable to keep track of whether a writer is writing. Since only a single writer can write at a given point in time, we can just keep a boolean variable to denote if the write lock is acquired or not. Let's translate what we have discussed so far into code.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter24.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter24.png)
 
 Note how we are checking in a loop whether isWriteLocked is true and then calling wait(). Also pay attention to the fact that the methods are synchronized so only one reader will be able to decrement reader in releaseReadLock.
 
@@ -46,7 +46,7 @@ For the writer case, releasing the lock would be as simple as setting the isWrit
 
 Acquiring the write lock is a little tricky, we have to check two things whether any other writer has already set isWriteLocked to true and also if any reader has incremented the readers variable. If isWriteLocked equals false and no reader is writing then the writer should proceed forward.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter25.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter25.png)
 
 The astute reader will notice a bug in the code we have so far. Try finding it, before reading ahead !
 
@@ -54,7 +54,7 @@ For the impatient, note that in our acquireWriteLock() method we have a while lo
 
 Within the releaseReadLock() method, we should call notify() after decrementing readers to make sure that any blocked readers should be able to proceed forward.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter26.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter26.png)
 
 Note that with the given implementation, it is possible for a writer to starve and never get a chance to acquire the write lock since there could always be at least one reader which has the read lock acquired.
 

@@ -23,7 +23,7 @@ Imagine we have an Executor class that performs some useful task asynchronously 
 
 ## Executor Class
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter61.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter61.png)
 
 {% highlight java %}
 class Demonstration {
@@ -69,21 +69,21 @@ The problem here asks us to convert asynchronous code to synchronous code withou
 
 Since we can’t modify the original code, we’ll extend a new class SynchronousExecutor from the given Executor class and override the asynchronousExecution() method. The trick here is to invoke the original asynchronous implementation using super.asynchronousExecution() inside the overridden method. The overridden method would look like:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter62.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter62.png)
 
 Now we need to pass the signal object to the superclass’s asynchronousExecution() method so that the asynchronous execution thread can notify() the signal variable once asynchronous execution is complete. We pass in the callback object to the super class’s method. We can wrap the original callback in another callback object and pass also in our signal variable to the super class. Let’s see how we can achieve that:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter63.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter63.png)
 
 Note that the variable signal gets captured in the scope of the new callback that we define. However, the captured variable must be defined final or be effectively final. Since we are assigning the variable only once, it is effectively final. The code so far defines the basic structure of the solution and we need to add a few missing pieces for it to work.
 
 Remember we can’t use wait() method without enclosing it inside a while loop as supurious wakeups can occur. Let’s fix that
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter64.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter64.png)
 
 Note that the invariant here is isDone which is set to true after the asynchronous execution is complete. The last problem here is that isDone isn’t final. We can’t declare it final because isDone gets assigned to after initialization. At this a slighly less elegant but workable solution is to use a boolean array of size 1 to represent our boolean. The array can be final because it gets assigned memory at initialization but the contents of the array can be changed later without compromising the finality of the variable.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter65.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter65.png)
 
 ## Complete Code
 The complete code appears below:

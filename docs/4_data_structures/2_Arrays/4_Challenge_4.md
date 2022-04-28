@@ -34,7 +34,7 @@ arr = {1,2,3,4}
 ## Sample Output
 arr = {24,12,8,6}
 
-![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr83.png)
+![arr](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/arr/arr83.png)
 
 ## Coding Exercise
 
@@ -122,4 +122,4 @@ We can then multiply each element in the result array to the product of all the 
 multiply the value of temp to the current index of the result array. It is important to multiply the value of temp here as this will ensure that all elements of the result array are products of elements to the right and the left of the original element.
 update temp by multiplying it with the current element in the original array. This causes temp to be the product of the elements that the loop have traversed so far.
 
-![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr84.png)
+![arr](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/arr/arr84.png)

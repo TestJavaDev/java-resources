@@ -39,7 +39,7 @@ arr = {4,6,3,2,8,1}
 ## Sample Output 
 result = {6,8,8,8,-1,-1}
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt11.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt11.png)
 
 ## Coding Exercise
 

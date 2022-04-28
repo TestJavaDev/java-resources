@@ -32,7 +32,7 @@ value = 27
 ## Sample Output 
 arr = {21, 6} or {6, 21}
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has45.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has45.png)
 
 ## Coding Exercise
 
@@ -94,4 +94,4 @@ class CheckSum{
 }
 {% endhighlight %}
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has46.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has46.png)

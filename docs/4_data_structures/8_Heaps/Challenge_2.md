@@ -36,7 +36,7 @@ It returns the integer array containing first k smallest elements from arr
 ## Explanation
 As “k” is 3, we need to find the top 3 minimum elements from the given array. -2 is minimum value in the array, while 1 is the second-minimum, and 4 is the third-minimum.
 
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/res53.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/res53.png)
 
 ## Coding Exercise
 
@@ -133,4 +133,4 @@ class CheckSmall
 }
 {% endhighlight %}
 
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/res54.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/res54.png)

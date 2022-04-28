@@ -88,13 +88,13 @@ A successful post will return the URL to access that tweet. Otherwise, an approp
 We need a system that can efficiently store all the new tweets, 100M/86400s => 1150 tweets per second and read 28B/86400s => 325K tweets per second. It is clear from the requirements that this will be a read-heavy system.
 
 At a high level, we need multiple application servers to serve all these requests with load balancers in front of them for traffic distributions. On the backend, we need an efficient database that can store all the new tweets and can support a huge number of reads. We also need some file storage to store photos and videos.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design49.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design49.png)
 
 Although our expected daily write load is 100 million and read load is 28 billion tweets. This means on average our system will receive around 1160 new tweets and 325K read requests per second. This traffic will be distributed unevenly throughout the day, though, at peak time we should expect at least a few thousand write requests and around 1M read requests per second. We should keep this in mind while designing the architecture of our system.
 
 ## 6. Database Schema
 We need to store data about users, their tweets, their favorite tweets, and people they follow.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design50.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design50.png)
 For choosing between SQL and NoSQL databases to store the above schema, please see ‘Database schema’ under Designing Instagram.
 
 ## 7. Data Sharding
@@ -122,7 +122,7 @@ What if we can combine sharding by TweetID and Tweet creation time? If we don’
 We can use epoch time for this. Let’s say our TweetID will have two parts: the first part will be representing epoch seconds and the second part will be an auto-incrementing sequence. So, to make a new TweetID, we can take the current epoch time and append an auto-incrementing number to it. We can figure out the shard number from this TweetID and store it there.
 
 What could be the size of our TweetID? Let’s say our epoch time starts today, how many bits we would need to store the number of seconds for the next 50 years?
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design51.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design51.png)
 We would need 31 bits to store this number. Since on average we are expecting 1150 new tweets per second, we can allocate 17 bits to store auto incremented sequence; this will make our TweetID 48 bits long. So, every second we can store (2^17 => 130K) new tweets. We can reset our auto incrementing sequence every second. For fault tolerance and better performance, we can have two database servers to generate auto-incrementing keys for us, one generating even numbered keys and the other generating odd numbered keys.
 
 If we assume our current epoch seconds are “1483228800,” our TweetID will look like this:
@@ -150,7 +150,7 @@ How can we have a more intelligent cache? If we go with 80-20 rule, that is 20% 
 What if we cache the latest data? Our service can benefit from this approach. Let’s say if 80% of our users see tweets from the past three days only; we can try to cache all the tweets from the past three days. Let’s say we have dedicated cache servers that cache all the tweets from all the users from the past three days. As estimated above, we are getting 100 million new tweets or 30GB of new data every day (without photos and videos). If we want to store all the tweets from last three days, we will need less than 100GB of memory. This data can easily fit into one server, but we should replicate it onto multiple servers to distribute all the read traffic to reduce the load on cache servers. So whenever we are generating a user’s timeline, we can ask the cache servers if they have all the recent tweets for that user. If yes, we can simply return all the data from the cache. If we don’t have enough tweets in the cache, we have to query the backend server to fetch that data. On a similar design, we can try caching photos and videos from the last three days.
 
 Our cache would be like a hash table where ‘key’ would be ‘OwnerID’ and ‘value’ would be a doubly linked list containing all the tweets from that user in the past three days. Since we want to retrieve the most recent data first, we can always insert new tweets at the head of the linked list, which means all the older tweets will be near the tail of the linked list. Therefore, we can remove tweets from the tail to make space for newer tweets.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design52.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design52.png)
 
 ## 9. Timeline Generation
 For a detailed discussion about timeline generation, take a look at Designing Facebook’s Newsfeed.

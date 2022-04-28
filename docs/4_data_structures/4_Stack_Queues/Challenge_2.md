@@ -37,7 +37,7 @@ In this problem, using a single array to store elements, you have to implement t
 * pop2()
    * Output: returns and remove the top value of stack2
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt2.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt2.png)
 
 ## Coding Exercise
 

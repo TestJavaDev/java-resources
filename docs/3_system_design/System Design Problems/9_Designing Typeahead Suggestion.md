@@ -33,13 +33,13 @@ As we have to serve a lot of queries with minimum latency, we need to come up wi
 
 One of the most appropriate data structures that can serve our purpose is the Trie (pronounced “try”). A trie is a tree-like data structure used to store phrases where each node stores a character of the phrase in a sequential manner. For example, if we need to store ‘cap, cat, caption, captain, capital’ in the trie, it would look like:
 
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design55.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design55.png)
 
 Now if the user has typed ‘cap’, our service can traverse the trie to go to the node ‘P’ to find all the terms that start with this prefix (e.g., cap-tion, cap-ital etc).
 
 We can merge nodes that have only one branch to save storage space. The above trie can be stored like this:
 
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design56.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design56.png)
 
 Should we have case insensitive trie? For simplicity and search use-case, let’s assume our data is case insensitive.
 
@@ -71,7 +71,7 @@ What could be different ranking criteria for suggestions? In addition to a simpl
 
 ## 4. Permanent Storage of the Trie
 How to store trie in a file so that we can rebuild our trie easily - this will be needed when a machine restarts? We can take a snapshot of our trie periodically and store it in a file. This will enable us to rebuild a trie if the server goes down. To store, we can start with the root node and save the trie level-by-level. With each node, we can store what character it contains and how many children it has. Right after each node, we should put all of its children. Let’s assume we have the following trie:
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design57.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design57.png)
 
 If we store this trie in a file with the above-mentioned scheme, we will have: “C2,A2,R1,T,P,O1,D”. From this, we can easily rebuild our trie.
 

@@ -49,7 +49,7 @@ We want to split the list of titles into sets of words so that all words in a se
 
 Here is an illustration of this process:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code1.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code1.png)
 
 ## Solution
 From the above description, we see that all members of each set are characterized by the same frequency of each alphabet. This means that the frequency of each alphabet in words belonging to the same group is equal. In the set { {"speed", "spede"} }, the frequency of the characters s, p, e, and d are the same in each word.
@@ -61,7 +61,7 @@ Let’s see how we might implement this functionality:
 
 Let’s look at the following illustration to clarify this process:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code2.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code2.png)
 
 Let’s look at the code for the solution below:
 
@@ -114,7 +114,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code3.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code3.png)
 
 Let n be the size of the list of strings, and k be the maximum length that a single string can have.
 
@@ -131,7 +131,7 @@ Now, we need to build a criterion so the top movies from multiple countries will
 
 Let’s say that the following titles are represented by the provided IDs:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code4.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code4.png)
 
 We’ll be given n arrays that are all sorted in ascending order of popularity rank. We have to combine these lists into a single list that will be sorted by rank in ascending order, meaning from best to worst.
 
@@ -139,7 +139,7 @@ Keep in mind that the ranks are unique to individual movies and a single rank ca
 
 Let’s understand this better with an illustration:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code5.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code5.png)
 
 ## Solution
 Since our task involves multiple lists, you should divide the problem into multiple tasks, starting with the problem of combining two lists at a time. Then, you should combine the result of those first two lists with the third list, and so on, until the very last one is reached.
@@ -385,7 +385,7 @@ class MergeSortList{
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code6.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code6.png)
 
 ## Feature #3: Find Median Age
 
@@ -396,8 +396,8 @@ Because the number of users is constantly increasing on the Netflix platform, we
 
 Let’s understand this better with an illustration:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code7.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code8.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code7.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code8.png)
 
 ## Solution
 We will assume that ‘x’ is the median age of a user in a list. Half of the ages in the list will be smaller than (or equal to) ‘x’, and the other half will be greater than (or equal to) ‘x’. We can divide the list into two halves: one half to store the smaller numbers (say smallList), and one half to store the larger numbers (say largeList). The median of all ages will either be the largest number in the smallList or the smallest number in the largeList. If the total number of elements is even, we know that the median will be the average of these two numbers. The best data structure for finding the smallest or largest number among a list of numbers is a Heap.
@@ -460,7 +460,7 @@ class MedianOfAges {
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code9.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code9.png)
 
 ## Feature #4: Popularity Analysis
 
@@ -512,7 +512,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code10.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code10.png)
 
 ## Feature #5: Fetch Most Recently Watched Titles
 
@@ -521,15 +521,15 @@ We want to implement a feature so that the user can view the n titles that they�
 
 Let’s say that a user has gone through the following titles:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code11.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code11.png)
 
 We need to design a structure that takes the ID of our movies, adds them to our data structure, and fetches movie titles when accessed through their ID. We also need to consider the size of our data structure and maintain the least recently watched property.
 
 Take a look at an illustration of this process:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code12.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code13.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code14.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code12.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code13.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code14.png)
 
 ## Solution
 A doubly linked list provides an ideal way of maintaining ordered elements. We can keep the most recently accessed item at the tail. But when a recently watched item is accessed again, we’ll move it to the tail of the linked list. This will require searching for an element in the linked list, which is expensive. To fix this, we can use a hash table to store the pointers of the linked list elements.
@@ -539,14 +539,14 @@ Here’s how we implement the feature:
 2. If the data structure is at its capacity, remove the element at the head of the linked list and the Hash Map. Then, we add the new element at the tail of the linked list and in the Hash Map
 3. Finally, we retrieve the element and return
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code15.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code16.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code17.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code18.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code19.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code20.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code21.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code22.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code15.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code16.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code17.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code18.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code19.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code20.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code21.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code22.png)
 
 Let’s look at the code for the solution below:
 
@@ -635,7 +635,7 @@ class LinkedListNode {
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code23.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code23.png)
 
 ## Feature #6: Fetch Most Frequently Watched Titles
 
@@ -644,15 +644,15 @@ This feature and the one we discussed before are almost similar, but now the tit
 
 Let’s say that a user has gone through the following titles:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code24.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code24.png)
 
 We need to design a structure that takes the ID of the movies and adds them to our structure. It also needs to fetch a movie title when accessed through its ID. We also have to consider the size of the data structure and maintain the least frequently watched property. This means that when our structure is at its capacity then a newly inserted item will replace the item whose frequency count is the lowest.
 
 Here is an illustration of this process. When we insert the value 5, then the element with the least frequency is 1. Hence, it gets replaced by 5.
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code26.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code27.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code28.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code26.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code27.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code28.png)
 
 ## Solution
 We’ll build this structure on top of the one from the previous lesson. We will also use a Hash Map and a doubly linked list. In this case, we’ll also store data on how frequently titles are accessed along with their respective keys and values. We’ll append each new entry at the tail of the doubly linked list. A Hash Map will be used to keep track of the keys and their values in the linked list.
@@ -763,7 +763,7 @@ class LFUCache {
  }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code29.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code29.png)
 
 ## Feature #7: Browse Ratings
 
@@ -774,7 +774,7 @@ We’ll be provided with a sequential input of ratings to simulate the user view
 
 Let’s say that a user has browsed through the movies with the following ratings:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code30.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code30.png)
 
 ## Solution
 To enable a Back button, we need to store the user’s viewing history in some data structure. Pressing the Back button fetches the last viewed item. This indicates a last in first out (LIFO) structure, which is characteristic of a stack. In a stack, push and pop operations can be easily implemented in O(1)O(1). However, the stack doesn’t allow random access to its elements, let alone access to the element with the maximum rating. We will need to create a stack-like data structure that offers a get_max operation, in addition to push and pop, that all run in O(1)O(1).
@@ -787,16 +787,16 @@ The pop() function pops off from the mainStack as usual. However, it only pops o
 
 Below is an illustration of this process:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code31.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code32.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code33.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code34.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code35.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code36.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code37.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code38.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code39.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code40.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code31.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code32.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code33.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code34.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code35.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code36.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code37.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code38.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code39.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code40.png)
 
 Let’s look at the code for the solution:
 
@@ -927,7 +927,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code41.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code41.png)
 
 ## Feature #8: Verify User Session
 
@@ -940,7 +940,7 @@ We’ll receive two arrays of push and pop operations. These arrays will contain
 
 Let’s say that the user browsed through the following title pages mapped to their respective IDs. The following does not depict the order in which these were viewed.
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code42.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code42.png)
 
 ## Solution
 From the above example, we get these push and pop arrays:
@@ -962,16 +962,16 @@ Here is how the implementation will take place:
 
 Below is an illustration of this process:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code43.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code44.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code45.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code46.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code47.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code48.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code49.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code50.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code51.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code52.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code43.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code44.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code45.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code46.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code47.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code48.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code49.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code50.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code51.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code52.png)
 
 Let’s look at the code for the solution:
 
@@ -1015,4 +1015,4 @@ class Solution {
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code53.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code53.png)

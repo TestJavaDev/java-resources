@@ -51,7 +51,7 @@ In simple terms, BigTable can be characterized as a sparse, distributed, persist
 
 Traditional DBs have a two-dimensional layout of the data, where each cell value is identified by the ‘Row ID’ and ‘Column Name’:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big19.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big19.png)
 
 BigTable has a four-dimensional data model. The four dimensions are:
 1. Row Key: Uniquely identifies a row
@@ -59,7 +59,7 @@ BigTable has a four-dimensional data model. The four dimensions are:
 3. Column Name: Uniquely identifies a column
 4. Timestamp: Each column cell can have different versions of a value, each identified by a timestamp
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big20.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big20.png)
 
 The data is indexed (or sorted) by row key, column key, and a timestamp. Therefore, to access a cell’s contents, we need values for all of them. If no timestamp is specified, BigTable retrieves the most recent version.
 
@@ -81,7 +81,7 @@ Column keys are grouped into sets called column families. All data stored in a c
 
 The following figure shows a single row from a table. The row key is 294, and there are two column families: personal_info and work_info, with three columns under the personal_info column family.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big21.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big21.png)
 
 * Column family format: family:optional qualifier
 * All rows have the same set of column families.
@@ -138,7 +138,7 @@ A read or scan operation can read arbitrary cells in a BigTable:
 
 A single instance of a BigTable implementation is known as a cluster. Each cluster can store a number of tables where each table is split into multiple Tablets, each around 100–200 MB in size.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big22.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big22.png)
 
 * A Tablet holds a contiguous range of rows.
 * The table is broken into Tablets at row boundaries.
@@ -162,7 +162,7 @@ BigTable is built on top of several other pieces from Google infrastructure:
 
 Let’s understand these components one by one.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big23.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big23.png)
 
 ## SSTable
 
@@ -172,11 +172,11 @@ BigTable uses Google File System (GFS), a persistent distributed file storage sy
 * Each Tablet is stored in GFS as a sequence of files called SSTables.
 * An SSTable consists of a sequence of data blocks (typically 64KB in size).
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big24.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big24.png)
 
 * A block index is used to locate blocks; the index is loaded into memory when the SSTable is opened.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big25.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big25.png)
 
 * A lookup can be performed with a single disk seek. We first find the appropriate block by performing a binary search in the in-memory index, and then reading the appropriate block from the disk.
 * To read data from an SSTable, it can either be copied from disk to memory as a whole or just the index. The former approach avoids subsequent disk seeks for lookups, while the latter requires a single disk seek for each lookup.
@@ -195,13 +195,13 @@ Here is how we can define the relationship between Table, Tablet and SStable:
 * SSTables can be shared by multiple Tablets.
 * Tablets do not overlap, SSTables can overlap.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big26.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big26.png)
 
 * To improve write performance, BigTable uses an in-memory, mutable sorted buffer called MemTable to store recent updates. As more writes are performed, MemTable size increases, and when it reaches a threshold, the MemTable is frozen, a new MemTable is created, and the frozen MemTable is converted to an SSTable and written to GFS.
 * Each data update is also written to a commit-log which is also stored in GFS. This log contains redo records used for recovery if a Tablet server fails before committing a MemTable to SSTable.
 * While reading, the data can be in MemTables or SSTables. Since both these tables are sorted, it is easy to find the most recent data.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big27.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big27.png)
 
 ## GFS and Chubby
 
@@ -215,7 +215,7 @@ GFS is a scalable distributed file system developed by Google for its large data
 * Each chunk in GFS is replicated across multiple ChunkServers for reliability.
 * Clients interact with the GFS master for metadata, but all data transfers happen directly between the client and ChunkServers.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big28.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big28.png)
 
 For a detailed discussion, please see GFS.
 
@@ -235,7 +235,7 @@ Chubby is a highly available and persistent distributed locking service that all
    * Store BigTable schema information (the column family information for each table)
    * Store Access Control Lists (ACLs)
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big29.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big29.png)
 
 ## Bigtable Components
 
@@ -244,7 +244,7 @@ As described previously, a BigTable cluster consists of three major components:
 2. One master server
 3. Many Tablet servers
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big30.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big30.png)
 
 ## BigTable master server
 
@@ -270,17 +270,17 @@ Since Tablets move around from server to server (due to load balancing, Tablet s
 
 BigTable creates a special table, called Metadata table, to store Tablet locations. This Metadata table contains one row per Tablet that tells us which Tablet server is serving this Tablet. Each row in the METADATA table stores a Tablet’s location under a row key that is an encoding of the Tablet’s table identifier and its end row.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big31.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big31.png)
 
 BigTable stores the information about the Metadata table in two parts:
 1. Meta-1 Tablet has one row for each data Tablet (or non-meta Tablet). Since Meta-1 Tablet can be big, it is split into multiple metadata Tablets and distributed to multiple Tablet servers.
 2. Meta-0 Tablet has one row for each Meta-1 Tablet. Meta-0 table never gets split. BigTable stores the location of the Meta-0 Tablet in a Chubby file.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big32.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big32.png)
 
 A BigTable client seeking the location of a Tablet starts the search by looking up a particular file in Chubby that is known to hold the location of the Meta-0 Tablet. This Meta-0 Tablet contains information about other metadata Tablets, which in turn contain the location of the actual data Tablets. With this scheme, the depth of the tree is limited to three. For efficiency, the client library caches Tablet locations and also prefetch metadata associated with other Tablets whenever it reads the METADATA table.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big33.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big33.png)
 
 ## Assigning Tablets
 
@@ -316,7 +316,7 @@ Upon receiving a write request, a Tablet server performs the following set of st
 5. After inserting the data into the MemTable, acknowledgment is sent to the client that the data has been successfully written.
 6. Periodically, MemTables are flushed to SSTables, and SSTables are merged during compaction (discussed later).
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big34.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big34.png)
 
 ## Read request
 
@@ -327,7 +327,7 @@ Upon receiving a read request, a Tablet server performs the following set of ste
 4. Reads SSTable indexes that are loaded in memory to find SSTables that will have the required data, then reads the rows from those SSTables
 5. Merge rows read from MemTable and SSTables to find the required version of the data. Since the SSTables and the MemTable are sorted, the merged view can be formed efficiently.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big35.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big35.png)
 
 ## Fault Tolerance and Compaction
 
@@ -354,7 +354,7 @@ Mutilations in BigTable take up extra space till compaction happens. BigTable ma
 2. Merging Compaction — Minor compaction keeps increasing the count of SSTables. This means that read operations might need to merge updates from an arbitrary number of SSTables. To reduce the number of SSTables, a merging compaction is performed which reads the contents of a few SSTables and the MemTable and writes out a new SSTable. The input SSTables and MemTable can be discarded as soon as the compaction has finished.
 3. Major Compaction — In Major compaction, all the SSTables are written into a single SSTable. SSTables created as a result of major compaction do not contain any deletion information or deleted data, whereas SSTables created from non-major compactions may contain deleted entries. Major compaction allows BigTable to reclaim resources used by deleted data and ensures that deleted data disappears from the system quickly, which is important for services storing sensitive data.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big36.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big36.png)
 
 ## BigTable Refinements
 
@@ -367,7 +367,7 @@ Clients can club together multiple column families into a locality group. BigTab
 * Clients can explicitly declare any locality group to be in memory for faster access. This way, smaller locality groups that are frequently accessed can be kept in memory.
 * Scans over one locality group are O(O(bytes_in_locality_group)) and not O(O(bytes_in_table)).
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big37.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big37.png)
 
 ## Compression
 
@@ -416,7 +416,7 @@ Here are a few reasons behind BigTable’s performance and popularity:
 
 Here is the comparison between Dynamo and BigTable:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/big38.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/big38.png)
 
 ## Datastores developed on the principles of BigTable
 

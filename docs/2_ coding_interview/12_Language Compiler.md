@@ -53,13 +53,13 @@ When implementing this feature, you have to detect the comments in the code firs
 
 Imagine that you have to remove comments from the following C++ code:
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op25.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op25.png)
 
 This code will be given as input to you as a list of strings where each string represents a line of code. In the example given above, the source list will be {"/* Example code for feature */", "int main() {", " /*", " This is a", " block comment", " */", " int value = 10; // This is an inline comment", " int sum = value + /* this is // also a block */ value;", " return 0;", "}"}.
 
 Your program should remove all the comments, making the output for the example: {'int main() {', ' ', ' int value = 10; ', ' int sum = value + value;', ' return 0;', '}'}. It can be displayed in code as:
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op26.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op26.png)
 
 ## Solution
 The idea behind this solution is to find the comments’ starting characters by traversing the source code. Then, we use a Boolean variable to create a state that lets us know which characters to remove from the code.
@@ -130,7 +130,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op27.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op27.png)
 
 ## Feature #2: Evaluate the Arithmetic Expression
 
@@ -146,15 +146,15 @@ Let’s look at an example to understand the feature specifications. Suppose the
 ## Solution
 This problem is a great candidate for a stack use case. But first, we need to keep in mind the rules of addition and subtraction, the precedence of parentheses, and that the spaces in the string do not affect the output. We can use the stack to solve for the precedence of parentheses. If an expression contains an opening bracket (, we will push the elements into the stack until a closing bracket ) is found. Then, we will pop the elements and evaluate the sub-expression inside the brackets until the opening bracket (. However, when we calculate the final answer, we process the values from right to left, whereas it should be from left to right. The following slides illustrate this issue:
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op28.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op29.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op30.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op31.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op32.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op33.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op34.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op35.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op36.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op28.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op29.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op30.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op31.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op32.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op33.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op34.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op35.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op36.png)
 
 The example above shows how the string is reversed using the stack, and we will end up evaluating the expression in reverse order. Let’s look at a way to solve this problem.
 
@@ -216,7 +216,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op37.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op37.png)
 
 ## Feature #3: Loop Unrolling
 
@@ -235,7 +235,7 @@ These loops can also be nested. For example, this could be an intermediate code 
 2[sum = sum + i; 2[i++; ]]
 Now, your job is to translate these blocks of code and replace them with repeated instructions. The following illustration shows how to translate the above-mentioned nested loop block:
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op38.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op38.png)
 
 Your module will take a string as input with the format n[statements], and you have to implement a solution that outputs a string containing the repeated instructions as explained in the example above.
 
@@ -298,7 +298,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op39.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op39.png)
 
 ## Feature #4: Optimization by Replacement
 
@@ -317,11 +317,11 @@ The complete algorithm for this solution is given below:
 * If it exists, we replace source with the corresponding target.
 * The modified string is returned at the end.
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op40.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op41.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op42.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op43.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op44.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op40.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op41.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op42.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op43.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op44.png)
 
 {% highlight java %}
 class Solution {
@@ -350,7 +350,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op45.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op45.png)
 
 ## Feature #5: Compilation Step Failure
 
@@ -361,7 +361,7 @@ Assume that we are working with a system that specifies the build as steps 1 thr
 
 For instance, if you have n = 40 steps and the steps 28 to 40 fail. The API call is_failed_step(i) will give True for 28 to 40. Your module should then use these resources to output the first step that failed, i.e., 28.
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op46.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op46.png)
 
 ## Solution
 To implement this feature efficiently, we will use the binary search algorithm. Our goal is to find the first failing step by making a minimum number of calls to the API. We will check if the middle step failed. If the first failing step is in the left half (including the middle) of the list, we can ignore the right half of the list. Otherwise, we can ignore the left half of the list. By successively halving the search space, we can find the first failing step in O(logn)O(logn) steps.
@@ -374,10 +374,10 @@ The complete algorithm is given below:
 * In this way, each API call helps us divide our data set in half and narrow down the search space.
 * Now, we just have to keep iterating and narrowing down until the step is found.
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op47.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op48.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op49.png)
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op50.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op47.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op48.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op49.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op50.png)
 
 {% highlight java %}
 class Compilation{
@@ -407,7 +407,7 @@ class Compilation{
 }
 {% endhighlight %}
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op51.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op51.png)
 
 ## Feature #6: Most Common Token
 
@@ -416,7 +416,7 @@ For this feature of the language compiler, the program statements are given to u
 
 Let’s say you are given the following program as input:
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op52.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op52.png)
 
 The list of keywords given to you is ["int", "main", "return"]. In this example, your function will return "value". Note that, your functions should ignore syntax, such as parentheses, operators, semicolons, etc.
 
@@ -465,4 +465,4 @@ class HelloWorld {
 }
 {% endhighlight %}
 
-![op](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/op/op53.png)
+![op](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/op/op53.png)

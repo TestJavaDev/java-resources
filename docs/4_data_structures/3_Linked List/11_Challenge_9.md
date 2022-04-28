@@ -46,7 +46,7 @@ list2 = 7->14->22->null
 Union = 15->22->8->7->14->null
 Intersection = 22->null
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser46.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser46.png)
 
 ## Coding Exercise
 

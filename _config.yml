@@ -4,7 +4,7 @@ description: Useful resources to learn java
 
 # Remote Setting
 # baseurl: "/java-resources-to-learn"
-# url: "http://andriylevchenko.github.com"
+# url: "http://github.com"
 
 # Theme
 # theme: "just-the-docs"
@@ -21,6 +21,6 @@ search_enabled: true
 # Aux links for the upper right navigation
 aux_links:
   "View on GitHub":
-    - "//github.com/JavaLvivDev/prog-resources"
+    - "//github.com"
 
 theme: jekyll-theme-cayman

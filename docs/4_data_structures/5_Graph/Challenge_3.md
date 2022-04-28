@@ -19,11 +19,11 @@ If you are given a graph with all the information about its vertices and edges, 
 ## Problem Statement 
 In this problem, you have to implement the detectCycle() method to take a graph as input and detect a cycle in it. A cycle is formed when a few vertices are connected in such a way that they make a loop. An illustration is provided below for a better understanding:
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr1.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr1.png)
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr2.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr2.png)
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr3.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr3.png)
 
 ## Coding Exercise
 

@@ -16,11 +16,11 @@ Challenge 3 / Java resources / Tutorial
 
 Given the root to a Binary Search Tree and a node value "k", write a function to find the ancestor of that node. A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aa11.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aa12.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aa13.png)
 
 ## Coding Exercise
 
@@ -300,4 +300,4 @@ class IterativeAncesstors
 } 
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aa14.png)

@@ -18,42 +18,42 @@ Printing Number Series / Java resources / Tutorial
 ## Problem Statement
 Suppose we are given a number n based on which a program creates the series 010203...0n. There are three threads t1, t2 and t3 which print a specific type of number from the series. t1 only prints zeros, t2 prints odd numbers and t3 prints even numbers from the series. The code for the class is given as follows:
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new14.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new14.png)
 
 You are required to write a program which takes a user input n and outputs the number series using three threads. The three threads work together to print zero, even and odd numbers. The threads should be synchronized so that the functions PrintZero(), PrintOdd() and PrintEven() are executed in an order.
 
 The workflow of the program is shown below:
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new15.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new15.png)
 
 ## Solution
 This problem is solved by using Semaphores in Java. Semaphores are used to restrict the number of threads that can access some (physical or logical) resource at the same time. Our solution makes use of three semaphores; zeroSem for printing zeros, oddSem for printing odd numbers and evenSem for printing even numbers. The basic structure of the class is given below:
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new16.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new16.png)
 
 n is the user input that prints the series till nth number. The constructor of this class appears below:
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new17.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new17.png)
 
 The argument passed to semaphore's constructor is the number of 'permits' available. For oddSem and evenSem, all acquire()calls will be blocked initially as they are initialized with 0. For zeroSem, the first acquire() call will succeed as it is intialized with 1. The code of the first method PrintZero() is as follows:
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new18.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new18.png)
 
 PrintZero() begins with a loop iterating from 0 till n(exclusive). The semaphore zeroSem is acquired and '0' is printed. A very significant line in this method is line 6 in the loop. The modulus operator (%) gives the remainder of a division by the value following it. In our case, the current value is divided by 2 to determine if i is even or odd. If i is odd, then it means we just printed an odd number and the next number in the sequence will be an even number so,evenSem is released. In the same way if i is even then oddSem is released for printing the next odd number in the sequence. The second method PrintOdd() is shown below:
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new19.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new19.png)
 
 The loop iterates from 1 till n (inclusive) and i is incremented by 2 after each iteration to ensure that only odd numbers are printed. oddSem is acquired when PrintZero() releases it after determining that it is the turn for an odd number to be printed. Since zero is required to be printed before every even or odd number, zeroSem is released after printing the odd number.
 
 The last method of the class PrintEven() is shown below:
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new20.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new20.png)
 
 PrintEven() operates in the same manner as PrintOdd() except that its loop begins from 2. evenSem is acquired if it is released by PrintZero() and an even number is printed. zeroSem is released for zero to be printed next. If n is reached, the loop breaks.
 
 The working of this class can be seen as a lock-shift phenomenon where every method is given the control at its turn and blocked otherwise. n is manipulated by only one thread at a time.
 
-![new](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/new/new21.png)
+![new](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/new/new21.png)
 
 To test our solution, We will create 3 threads t1,t2 and t3 in Main class. t1 prints 0, t2 prints odd numbers and t3 prints even numbers. The threads are started in random order.
 

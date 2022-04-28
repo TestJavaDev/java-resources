@@ -42,7 +42,7 @@ For this project’s first feature, you are given a grid of letters, representin
 
 Take a look at the following illustration to better understand how to find words in the Boggle grid
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog1.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog1.png)
 
 In the above-mentioned example, you can see that we have a 2D grid containing twenty-five cells. Some of the words we can find on the grid are CAT, MOON, SAILOR, and COIL. In Python code, this grid will be represented by a list of lists. For the example above, the grid will be { {'C', 'S', 'L', 'I', 'M'}, {'O', 'I', 'L', 'M', 'O'}, {'O', 'L', 'I', 'E', 'O'}, {'R', 'T', 'A', 'S', 'N'}, {'S', 'I', 'T', 'A', 'C'} }. If the word you need to find is COIL, the program should return true in this case. However, if the word to find is COCOON, it should return false.
 
@@ -56,13 +56,13 @@ The algorithm for this program will be:
 * If the cell is valid, we will mark the cell as visited and then call the DFS recursive function for the next four possible choices.
 * When the functions return, we will unmark the visited cell.
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog2.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog3.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog4.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog5.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog6.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog7.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog8.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog2.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog3.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog4.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog5.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog6.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog7.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog8.png)
 
 Let’s look at the code for the solution:
 
@@ -126,7 +126,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog9.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog9.png)
 
 ## Feature #2: Search for Maximum Number of Words in the Boggle Grid
 
@@ -138,7 +138,7 @@ These adjacent cells can be horizontal or vertical neighbors only. Diagonally op
 A cell can only be part of one word on the Boggle board.
 The module will take in two inputs: the grid (in the form of a 2D list of characters) and a list of possible words. Your module should return a list containing the words from the input list that were also found in the Boggle grid. Suppose, the grid is { {'B', 'S', 'L', 'I', 'M'}, {'R', 'I', 'L', 'M', 'O'}, {'O', 'L', 'I', 'E', 'O'}, {'R', 'Y', 'I', 'L', 'N'}, {'B', 'U', 'N', 'E', 'C'} }, and the words to be searched are {"BUY", "SLICK", "SLIME", "ONLINE", "NOW"}. In this case, the feature will output: {"SLIME", "ONLINE", "BUY"}. A visual representation of this example is given below:
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog10.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog10.png)
 
 ## Solution
 To solve this problem, we will again use the backtracking strategy using the DFS exploration technique. However, we can reduce the exploration space by using the trie data structure. Let’s see how this works. The input list might contain multiple words with the same prefix. Now, if we know that there is no match for a particular prefix in the grid, we can determine that all words with that prefix cannot be found in the grid. Therefore, we do not need to explore that path in DFS further, reducing the exploration space.
@@ -260,4 +260,4 @@ class Solution {
 }
 {% endhighlight %}
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog11.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog11.png)

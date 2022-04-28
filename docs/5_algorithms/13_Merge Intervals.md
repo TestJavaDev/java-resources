@@ -39,16 +39,16 @@ To merge the intervals, we have to establish an order so that the intervals that
 
 Here we sort them by start time and go through each interval. We keep a list of final intervals. For each interval in the sorted interval list, if it has an overlap with the last interval in the final interval list, we update the last interval’s end position. Otherwise, we append the interval to the final interval list. The illustration below should make it very clear how this works.
 
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/interval/interval3.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/interval/interval4.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/interval/interval5.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/interval/interval6.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/interval/interval7.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/interval/interval8.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/interval/interval9.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/interval/interval10.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/interval/interval11.png)
-![quick](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/interval/interval12.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/interval/interval3.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/interval/interval4.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/interval/interval5.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/interval/interval6.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/interval/interval7.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/interval/interval8.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/interval/interval9.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/interval/interval10.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/interval/interval11.png)
+![quick](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/interval/interval12.png)
 
 While this works, one question you may ask is why we only have to check the last interval and not the second last or the ones before?
 

@@ -46,7 +46,7 @@ linkedlist = 1<->2<->3<->2<->1
 ## Sample Output
 true
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ex28.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ex28.png)
 
 ## Coding Exercise
 

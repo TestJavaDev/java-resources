@@ -27,27 +27,27 @@ The basic structure of a tree consists of the following components:
 
 The figure below shows all the terminologies described above:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a11.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a12.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a13.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a14.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a15.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a16.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a17.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a18.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a19.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a20.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/a21.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a19.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a20.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/a21.png)
 
 ## Explanation:
 In the figure above, 1 is the Root as well as the parent node to child nodes 2, 3 and 4. Node 3 is a parent node to child nodes 6 and 7. As nodes 2,3, and 4 share the same parent node 1 -they are sibling nodes. Similarly, 6 and 7 are sibling nodes because they both have 3 for their parent node.
@@ -68,17 +68,17 @@ The maximum number of connections between the node and a leaf node in its path i
 * Height of a Tree:
 The height of a tree is simply the height of its root node.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b11.png)
 
 There are a total of six sub-trees in the above tree, and each is marked with a number. Each node has two sub-trees, namely the left and right sub-tree. In a leaf node, the left and right sub-trees are null.
 
@@ -101,22 +101,22 @@ Let’s take a look at N-ary and Balanced Trees in this lesson and the other typ
 ## N-ary Tree
 In N-ary trees, each node can have child nodes anywhere from 0 to N. So if it’s a 2-ary tree, commonly known as a Binary Tree, it can have a max. of 0-2 child nodes. Can you guess the value of N in the figure shown below?
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b12.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b13.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b14.png)
 
 ## What Makes a Tree Balanced?
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b15.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b16.png)
 
 ## Checking if a binary tree is balanced 
 Try to guess if the following tree is balanced or not before looking at the answer!
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/b17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/b17.png)
 
 his tree is height-balanced! How did we determine that? Let’s go through and break our thought process down into a series of steps to find out.
 
@@ -130,24 +130,24 @@ This is the list of steps to follow to find out if a tree is balanced or not:
 ## Example
 In the illustration below, we are implementing what we learned from the above four steps. Here, HLT means the height of the Left Tree and HRT means the height of the right tree:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e11.png)
 
 ## What is a Binary Tree?
 
 ## Introduction
 The only characteristic which separates Binary Tree from N-ary trees is that any internal-node (non-leaf node) can only contain a maximum of two child nodes. Each node strictly has reference to a left and a right node; we call them its left and right child. The figure below shows what a Binary Tree looks like:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e12.png)
 
 ## Types of Binary Trees
 The following are further variations of binary trees, based on the structure and other features:
@@ -157,17 +157,17 @@ The following are further variations of binary trees, based on the structure and
 
 Starting with Complete Binary Tree, let’s discuss each one of them and look at their characteristics and structure.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e13.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e14.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e15.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e16.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e17.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e18.png)
 
 There are many other advanced trees derived from the basic structure of binary trees. These types will be discussed in the upcoming lessons. Some of the most common ones are:
 * Skewed Binary Tree
@@ -177,27 +177,27 @@ There are many other advanced trees derived from the basic structure of binary t
 
 ## More on Complete Binary Trees
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e19.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e19.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e20.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e20.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e21.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e21.png)
 
 ## Insertion in Complete Binary Tree
 The following steps are involved in inserting a value in a Complete Binary Tree:
 * Nodes are inserted level by level
 * Fill in the left-subtree before moving to the right one
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e22.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e23.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e24.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e25.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e26.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e27.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e28.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e29.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e30.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e31.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e22.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e23.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e24.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e25.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e26.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e27.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e28.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e29.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e30.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e31.png)
 
 ## Explanation
 As you can see in the above animation, Node 4 was inserted as a left child of Node 2 to fill the property of the Complete Binary Tree. In a Complete Binary Tree, nodes don’t exist with the right child only. The right child exists only when the left child is also present. So during Insertion, make sure to insert a node as a left child first (if it’s empty in the left sub-tree) before moving to right sub-tree.
@@ -212,18 +212,18 @@ There are two types of Skewed Binary Trees based on which side is dominated:
 * Left-Skewed Binary Tree
 * Right-Skewed Binary Tree
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e32.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e32.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e33.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e33.png)
 
 ## Note
 Try your best to avoid such tree structures, especially in the case of a Binary Search Tree, as it will kill efficient searching (the core purpose of a Binary Search Tree).
 
 ## What is a Binary Search Tree (BST)?
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e34.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e34.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e35.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e35.png)
 
 For example, in the above tree Node Y is a parent node having two child nodes, SubTree 1 and SubTree 2 respectively. To convert a binary tree into a binary search tree, we need to follow a general rule. According to that rule, all nodes in SubTree 1 will have a value less than Node Y, and similarly, all nodes in SubTree 2 will have a value greater than Node Y.
 
@@ -234,7 +234,7 @@ Not every Binary Tree is a Binary Search Tree. BST is simply a type of Binary Tr
 
 Let’s see an example to understand why every Binary Tree is not always a Binary Search Tree?
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e36.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e36.png)
 
 ## Explanation
 As you can see in the above figure, the first one is a Binary Tree because each node has a maximum of two children. But why isn’t it a Binary Search Tree? Because it does not follow the BST rule that Node 2 cannot be a left child of Node 1, and we would need to make Node 1 a left child of Node 2 to convert it into a Binary Search Tree.
@@ -276,7 +276,7 @@ class Node{
 
 Since every tree has a root or a starting node, we can start from there to move to any internal or child node and add a tree node in the class.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/e37.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/e37.png)
 
 ## Insert Function
 The insertion functionality works according to the following steps. See the illustration below for better understanding.
@@ -285,17 +285,17 @@ The insertion functionality works according to the following steps. See the illu
 3. If yes, then traverse the right sub-tree. Otherwise, if the value is less than or equal to the current node value, traverse its left sub-tree.
 4. Repeat steps two and three until you find a leaf node, then insert the data and connect the new node with the leaf node, which will now become parent of that new node.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w11.png)
 
 ## Explanation
 While inserting 17 into the tree, we first traverse the nodes from the root by comparing every node value with 17. This happens until we reach the right node, which is 15 in this case. Now we know 15 is smaller than 17 so we will add the new node at the right child node of 15. We will insert 12 by performing the same series of steps, starting from the root node.
@@ -309,7 +309,7 @@ There are two techniques to code an Insertion Function:
 
 First, let’s see how Iterative methodology works. The following tree is what we will build once we successfully implement the insertion functionality in Binary Search Tree code.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w12.png)
 
 {% highlight java %}
 class binarySearchTree {
@@ -449,7 +449,7 @@ Add function takes an integer value and then traverses the BST tree for a valid 
 
 When we reach the leaf node, we will create a new node, assign it a given value, and link it with the leaf node. If the leaf node’s value is less than the given value then make the new node rightChild of leafNode, or else make it leftChild.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w13.png)
 
 ## Insertion Implementation (Recursive)
 
@@ -559,9 +559,9 @@ class binarySearchTreeDemo {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w14.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w15.png)
 
 ## Search in Binary Search Trees (Implementation)
 
@@ -707,7 +707,7 @@ class binarySearchTreeDemo {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w16.png)
 
 {% highlight java %}
 class binarySearchTree {
@@ -853,7 +853,7 @@ class binarySearchTreeDemo {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w17.png)
 
 ## Deletion in Binary Search Trees
 
@@ -871,12 +871,12 @@ Now let’s look at all the case one by one.
 ## Deletion at Leaf Node
 If the node we want to delete is present at the leaf node in a Binary Search Tree, we simply remove that leaf node. After deletion, its parent node will point to null. If the leaf node was the left child of Node X, then make leftChild of Node X null; if it was the right one, then make the rightChild pointer of node X point to null. See the following example for clarification:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w18.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w19.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w20.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w21.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w22.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w23.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w19.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w20.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w21.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w22.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w23.png)
 
 ## Deletion at Parent Node
 Deletion at the Parent Node is further sub-divided into two cases:
@@ -888,13 +888,13 @@ If the parent node that you want to delete has only one child, then delete the p
 
 It will be easier to understand visually, so take a look at the following illustration:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w24.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w25.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w26.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w27.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w28.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w29.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/w30.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w24.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w25.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w26.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w27.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w28.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w29.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/w30.png)
 
 ## Parent Node has Two Children
 It is a little more complex than the first two cases. Here’s the list of steps you perform when deleting a parent node with two children in a BST:
@@ -902,16 +902,16 @@ It is a little more complex than the first two cases. Here’s the list of steps
 2. Replace the value of the node, found in the last step, with the parent’s node value.
 3. Finally, delete the leaf node.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q10.png)
 
 ## Deletion in Binary Search Trees (Implementation)
 
@@ -1192,15 +1192,15 @@ The following steps are required to perform Pre-Order Traversal, starting from t
 2. Traverse the left sub-tree of currentNode, recursively using the PreOrder() function.
 3. Traverse the right sub-tree of currentNode, recursively using the PreOrder() function.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q11.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q12.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q13.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q14.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q15.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q16.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q17.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q18.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q19.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q19.png)
 
 ## Implementation in Java
 Now we will try to implement the same example in the code below, so have a look:
@@ -1401,8 +1401,8 @@ class preOrderTraversal {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q20.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/q21.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q20.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/q21.png)
 
 ## In-Order Traversal in Binary Search Trees
 
@@ -1412,18 +1412,18 @@ In this type, the elements are traversed in a “left-root-right” order: we fi
 2. Visit the ​​​current node and read.
 3. Traverse the right sub-tree of currentNode, recursively using the In-Order() function.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r11.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r12.png)
 
 ## Implementation in Java
 Now we will try to implement the same example in the code below, so have a look:
@@ -1564,9 +1564,9 @@ class inOrderTraversal {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r13.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/r14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/r14.png)
 
 ## Post-Order Traversal in Binary Search Tree
 
@@ -1578,21 +1578,21 @@ Follow the steps below to perform Post-Order Traversal, starting from the root n
 * Traverse the right sub-tree of currentNode, recursively using PostOrder() function.
 * Visit current node and print its value.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d11.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d12.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d13.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d14.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d15.png)
 
 ## Implementation in Java
 Now we will try to implement the same example in the code below, so have a look:
@@ -1733,8 +1733,8 @@ class postOrderTraversal {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d16.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d17.png)
 
 ## What is an AVL Tree?
 
@@ -1753,13 +1753,13 @@ In the case of Skewed Trees, the complexity becomes O(n), where “n” is the n
 ## When to use AVL Trees?
 As AVL are strictly balanced, AVL Trees are preferred in those applications where the lookup​ is the​ ​ most vital operation. The following is an example of a valid AVL Tree:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d18.png)
 
 The tree in the above figure is an AVL Tree, as its subtrees follow the property that each node has a maximum height difference of ​​one.
 
 Given below is an example of an invalid AVL tree as the height between the sibling nodes exceeds one.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/d19.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/d19.png)
 
 ## AVL Insertion
 
@@ -1790,22 +1790,22 @@ We came across four different scenarios based on the arrangements of Nodes U, C 
 
 ## Case 1: Left-Left
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/se1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/se2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/se3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/se4.png)
 
 As you can see in the left-left case, we only need to make a single rotation towards the right at Node U to balance the AVL tree. In the final balanced version, Node C becomes the parent node of Node G and U and its two subtrees become balanced.
 
 ## Case 2: Left-Right
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/se11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/se5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/se6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/se7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/se8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/se9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/se10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/se11.png)
 
 In the left-right case we need to make two rotations:
 * First is a left rotation at Node C.
@@ -1815,23 +1815,23 @@ These two rotations balance the AVL tree. In this case, Node G becomes the paren
 
 ## Case 3: Right-Right
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw4.png)
 
 The right-right case is just like the left-left case. The only difference is that instead of rotating right, we ​need to make a ​single rotation towards the left at Node U to balance the AVL tree. In the final balanced version, Node C becomes the parent node of Node G and U and its two subtrees become balanced.
 
 ## Case 4: Right-Left
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw11.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw12.png)
 
 The right-left case is similar to the left-right case. The only difference is that the two rotations performed are as follows:
 * First is a right rotation at Node C.
@@ -1882,22 +1882,22 @@ After performing a successful rotation for the first unbalanced Node U, traverse
 
 ## Case 1: Left-Left
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw13.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw14.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw15.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw16.png)
 
 When a node in our AVL tree is deleted, ​and the tree becomes unbalanced, we traverse upwards from that node till we find the first unbalanced node. In the example above, the first unbalanced node is Node U. If it is the left-left case, we only need to make a single rotation towards the right at the Node U to balance the AVL tree. In the final balanced version, Node C becomes the parent node of Node G and U and its two subtrees become balanced.
 
 ## Case 2: Left-Right
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw17.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw18.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw19.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw20.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw21.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw22.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw23.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw19.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw20.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw21.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw22.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw23.png)
 
 Again, in the example above, the first unbalanced node after performing the deletion operation is denoted as Node U.
 
@@ -1909,23 +1909,23 @@ These two rotations balance the AVL tree. In this case, Node G becomes the paren
 
 ## Case 3: Right-Right
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw24.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw25.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw26.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qw27.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw24.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw25.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw26.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qw27.png)
 
 If the case after deletion is the right-right case, then we need to make a ​single rotation just like the left-left case. However​, in this case,​ it will be a left rotation at Node U to balance the AVL tree. In the final balanced version, Node C becomes the parent node of Node G and U and its two subtrees become balanced.
 
 ## Case 4: Right-Left
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/dd1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/dd2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/dd3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/dd4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/dd5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/dd6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/dd7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/dd8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/dd1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/dd2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/dd3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/dd4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/dd5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/dd6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/dd7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/dd8.png)
 
 If the case after deletion is a right-left case, then (similar to the left-right case) we need to make two rotations as follows:
 * First is a right rotation at Node C.
@@ -1952,11 +1952,11 @@ From the perspective of implementation, our node class will contain a boolean va
 
 Given below is the basic structure of a Node which will be used to build a Red-Black Tree.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa1.png)
 
 The following is an example of a valid Red-Black Tree:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa2.png)
 
 ## Time Complexity
 Balancing the tree doesn’t result in a tree being perfectly balanced, but it is good enough to get the time complexity close to O(log n)O(logn) for basic operations like searching, deletion, and insertion.
@@ -1993,12 +1993,12 @@ If currentNode is not a root, and the parent of currentNode is not black, first,
 
 Disclaimer: The illustrations given in this lesson are providing the visual representation of one case at a time. Therefore, you may notice that the tree gets unbalanced at the end of some of the illustrations. These trees have dummy values. However, in the case of an actual tree with real values, if one step ends up unbalancing the tree, then we keep moving in a bottom-up manner and applying the next possible case until the tree gets balanced again.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa8.png)
 
 If Node U (uncle) is black, then we come across four different scenarios based on the arrangements of Node P and G, just like we did in AVL trees. We will cover each of these scenarios and try to help you understand by using illustrations:
 * Left-Left: Node P is the leftChild of Node G, and currentNode is the leftChild of Node P
@@ -2013,11 +2013,11 @@ When Node P is the leftChild of Node G, and currentNode is the leftChild of Node
 
 Look at the illustration below for a better understanding.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa11.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa12.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa13.png)
 
 ## Case 2: Left-Right
 When Node P is the leftChild of Node G, and currentNode is the rightChild of Node P, we perform the following steps:
@@ -2026,14 +2026,14 @@ When Node P is the leftChild of Node G, and currentNode is the rightChild of Nod
 
 Look at the illustration below for a better understanding.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa14.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa15.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa16.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa17.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa18.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa19.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa20.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa21.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa19.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa20.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa21.png)
 
 ## Case 3: Right-Right
 When Node P is the rightChild of Node G, and currentNode is the rightChild of Node P, we perform the following steps:
@@ -2042,11 +2042,11 @@ When Node P is the rightChild of Node G, and currentNode is the rightChild of No
 
 Look at the illustration below for a better understanding.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa22.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa23.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa24.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa25.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa26.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa22.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa23.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa24.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa25.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa26.png)
 
 ## Case 4: Right-Left
 When Node P is the rightChild of Node G, and currentNode is the leftChild of Node P, we perform the following steps:
@@ -2055,14 +2055,14 @@ When Node P is the rightChild of Node G, and currentNode is the leftChild of Nod
 
 Look at the illustration below for a better understanding.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa27.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa28.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa29.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa30.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa31.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa32.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa33.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aaa34.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa27.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa28.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa29.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa30.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa31.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa32.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa33.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aaa34.png)
 
 ## Red-Black Tree Deletion
 
@@ -2094,21 +2094,21 @@ Let’s name some nodes relative to Node C, which is the node that we want to de
 ## Deletion Cases 
 Now we will take a look at some of the deletion cases and see what steps should be performed in each of these cases to make the tree balanced again. Given below is the first case in which Node C or Node R is red. In this type of scenario, we make Node R black and link it to Node P.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe5.png)
 
 The second case is if both Node C and Node R are black, then make Node R black. Now Node R is double black, i.e. it was already black, and when both Node C and Node R are black, then we make Node R black again. Remember that null is always considered to have a black color.
 
 Now we will convert Node R from double to single black.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe10.png)
 
 We need to perform the following steps while Node R is double black and not the root of the Tree. Use the specifications that Node S (sibling of Node R) is black and one or both of Node S children are red:
 * Left-Left: Node S is the leftChild of Node P, and Node SC (red) is the leftChild of S, or both children of S are red.
@@ -2123,13 +2123,13 @@ In the case when Node S is the leftChild of Node P, and Node SC (red) is the lef
 
 Look at the illustration below for a better understanding.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe11.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe12.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe13.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe14.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe15.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe16.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe17.png)
 
 ## Case 2: Right-Right 
 In the case when Node S is the rightChild of Node P, and Node SC (red) is the rightChild of S or both children of S are red, we perform the following steps:
@@ -2138,14 +2138,14 @@ In the case when Node S is the rightChild of Node P, and Node SC (red) is the ri
 
 Look at the illustration below for a better understanding.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe18.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe19.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe20.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe21.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe22.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe23.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe24.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe25.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe19.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe20.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe21.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe22.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe23.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe24.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe25.png)
 
 ## Case 3: Left-Right 
 In the case when Node S is the leftChild of Node P and Node SC (red) is the rightChild of S, we perform the following steps:
@@ -2154,15 +2154,15 @@ In the case when Node S is the leftChild of Node P and Node SC (red) is the righ
 
 Look at the illustration below for a better understanding.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe26.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe27.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe28.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe29.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe30.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe31.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe32.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe33.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe34.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe26.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe27.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe28.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe29.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe30.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe31.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe32.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe33.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe34.png)
 
 ## Case 4: Right-Left
 In the case when Node S is the rightChild of Node P and Node SC (red) is the leftChild of S, we perform the following steps:
@@ -2171,33 +2171,33 @@ In the case when Node S is the rightChild of Node P and Node SC (red) is the lef
 
 Look at the illustration below for a better understanding.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe35.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe36.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe37.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe38.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe39.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe40.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe41.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe42.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe43.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe44.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe35.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe36.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe37.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe38.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe39.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe40.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe41.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe42.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe43.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe44.png)
 
 Till this point, we have studied a number of trees from Binary Trees to different types of Binary Trees like BST, and then even further types of BST like AVL and Red-Black Trees. We have covered both basic deletion and insertion operations of these trees along with Java Implementation of BST. We are now left with only one important tree data structure known as 2-3 Trees. So, in the next lesson, we will cover it in detail just like we did with the rest of the tree structures.
 
 ## Overview of Trees
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe45.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe45.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe46.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe46.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe47.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe48.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe47.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe48.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe49.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe50.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe49.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe50.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe51.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/qwe52.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe51.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/qwe52.png)
 
 
 {% highlight java %}

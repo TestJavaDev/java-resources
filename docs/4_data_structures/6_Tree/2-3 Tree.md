@@ -23,20 +23,20 @@ One key feature of a 2-3 Tree is that it remains balanced, no matter how many in
 
 See the figures below to get the idea of how they are different. The first figure is a 2-3 Tree with only two nodes. To keep it ordered, the left child key must be smaller than the parent node key. Similarly, the right child key must be greater than the parent key.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/xx1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/xx1.png)
 
 The next shows a 3-node tree where each node can contain a maximum of two keys and three children. Here, the parent node has 2 keys and 3 children (all at the same level). Let’s say the first key at a parent node is X and we call the second one Y. As shown in the figure, X key is greater than the left child and Y key is smaller than the right child key. The middle child has the value that is greater than X and smaller than Y.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/xx2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/xx2.png)
 
 Concluding from the explanation above, 2-3 Trees acquire a certain set of properties to keep the structure balanced and ordered. Let’s take a look at these properties.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/xx3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/xx3.png)
 
 ## 2-3 Tree (Example)
 See the following example of a 2-3 Tree to get a better idea. Here, 20, 70 and 120-150 are internal nodes and all leaf nodes are present at the same level.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/xx4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/xx4.png)
 
 ## Operations
 The basic operations of 2-3 Trees are the same as those covered in previous lessons:
@@ -62,28 +62,28 @@ The insertion algorithm is based on these scenarios:
 ## Example -1
 Let’s take a look at the following example where we will build a 2-3 Tree from scratch by inserting elements one by one.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz11.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz12.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz13.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz14.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz15.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz16.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz17.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz18.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz19.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz20.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz21.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/zz22.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz19.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz20.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz21.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/zz22.png)
 
 ## Explanation
 As we see that the tree is initially empty, we will create a new node and insert 50 in it. Then we will insert 30 in the same node as it has one space left. Next, we’ll insert 10, but since the node can only contain a max of two values we must shift the median value to the top and split the node into two children. This makes 30 the root node, with 10 and 50 as its left and right child respectively.
@@ -93,35 +93,35 @@ Now we insert 70, as 70 is greater than the root key so it will be inserted in t
 ## Example - 2
 This example is a little harder than the previous one. See if you can solve it on your own!
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss11.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss12.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss13.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss14.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss15.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss16.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss17.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss18.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss19.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss21.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss22.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss23.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss24.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss25.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss26.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss27.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss28.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss29.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss19.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss21.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss22.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss23.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss24.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss25.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss26.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss27.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss28.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss29.png)
 
 ## Explanation
 In this illustration, we have nodes on three levels. Initially, we insert 39 at the leaf node of 40, then insert 38 in the same node. However, as the number of nodes exceeds two, we will shift the middle element to the top and 39 will move to its parent node (30). This is how we will keep inserting the elements till the end; you just need to make sure that all leaves come at the same height.
@@ -139,10 +139,10 @@ If the leaf of the element to be deleted has more than one key, then simply dele
 
 Example: See the following example where the node has more than one key.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss30.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss31.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss32.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ss33.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss30.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss31.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss32.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ss33.png)
 
 ## Leaf node only has one key
 If the leaf node of the element to be removed has only one key, then we will have to adjust the keys of that sub-tree in such a way that it remains ordered and balanced. This condition is further divided into two scenarios:
@@ -158,41 +158,41 @@ Rotation from Right Sibling
 
 In this case, we lend a key from the right sibling by shifting the key with the smallest value up to the parent node; then we move the parent node key (most left) down to our node.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee11.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee12.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee13.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee14.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee15.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee16.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee17.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee18.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee19.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee20.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee21.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee22.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee19.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee20.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee21.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee22.png)
 
 ## No sibling has more than one key
 * In the case when none of the siblings have more than one key, we have no other option but to merge the two nodes by rotation of keys. So we merge two child nodes into one node by rotating elements accordingly. This process is called Merge by Rotation.
 * If there’s a case where the child nodes have more than one key, we shift an element from the child node to make it the parent node. When we are left with only one key at each child node, then we are bound to delete the node.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee23.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee24.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee25.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee26.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee27.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee28.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee29.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/ee30.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee23.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee24.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee25.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee26.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee27.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee28.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee29.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/ee30.png)
 
 ## 2-3 Deletion (Case #2)
 
@@ -206,36 +206,36 @@ This is applicable when the child node has more than one key stored at the node.
 ## Example
 See the following illustration which covers the two scenarios that we discussed above:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee2.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee3.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee4.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee5.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee7.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee11.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee12.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee13.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee14.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee15.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee16.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee17.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee18.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee19.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee20.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee19.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee20.png)
 
 ## 2-3-4 Trees
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee21.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee21.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee22.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee22.png)
 
 ## Example
 Given below is an example of 2-3-4 Trees. The insertion/deletion is performed in the same way as we did in 2-3 Trees, keeping in mind the fact that nodes in 2-3-4 Trees are allowed to have three keys at a time instead of two.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/eee23.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/eee23.png)
 
 

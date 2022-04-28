@@ -36,7 +36,7 @@ There are 9 words total in the given keys array, so we need to sort them alphabe
 
 Here’s an illustration of the given challenge:
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der37.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der37.png)
 
 ## Coding Exercise
 
@@ -435,4 +435,4 @@ class Sort {
 }
 {% endhighlight %}
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der38.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der38.png)

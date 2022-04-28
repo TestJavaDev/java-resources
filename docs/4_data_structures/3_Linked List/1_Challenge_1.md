@@ -17,17 +17,17 @@ Challenge 1 / Java resources / Tutorial
 ## Insertion at End 
 Now, we are going to explain the second part (Insertion at End) and look at its examples, along with one coding challenge for the sake of practice. So let’s see how elements are inserted at the end of a linked list. In this type of insertion, we add an element at the end of the list. Here’s an illustration of how insertionAtEnd() works in a Singly Linked List:
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin36.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin37.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin38.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin39.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin40.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin41.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin42.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin43.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin44.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin45.png)
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin46.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin36.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin37.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin38.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin39.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin40.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin41.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin42.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin43.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin44.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin45.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin46.png)
 
 ## Problem Statement
 Here’s a small coding exercise made for your practice. In the code snippet provided below, you will complete the void insertAtEnd(T data) method. This will take a generic type T value called data and insert that value at the end of the list. This code would be the part of the SinglyLinkedList class that we created in the previous lesson, therefore, any private members of that class can be accessed inside the function as well. After writing the code, run it and see how many tests you passed.
@@ -162,7 +162,7 @@ class CheckInsertion {
 }
 {% endhighlight %}
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/lin47.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/lin47.png)
 
 
 

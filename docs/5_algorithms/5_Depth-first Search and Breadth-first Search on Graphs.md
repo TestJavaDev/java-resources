@@ -15,19 +15,19 @@ Depth-first Search and Breadth-first Search on Graphs / Java resources / Tutoria
 
 ## Tree with 0+ cycle
 At this point, you should be pretty familiar with trees. A tree is a special graph: a connected acyclic (cycle-less) graph. A graph may contain cycle(s) and nodes could be disconnected.
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs1.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs1.png)
 
 ## Graph Terminologies
 A graph consists of vertices (“nodes” in trees) and edges. Vertices are connected by edges. Two vertices connected by an edge are called neighbors and are adjacent (“children” and “parents” in trees).
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs2.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs2.png)
 Edges can be undirected or directed. For most interview problems, we will deal with undirected graphs. A tree is also an undirected graph. We’ll discuss directed graphs in the course schedule module.
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs3.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs3.png)
 A path is a sequence of vertices. A cycle is a path that starts and ends at the same vertex.
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs4.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs4.png)
 An undirected graph is connected if every vertex is joined by a path to another vertex. Otherwise, it’s disconnected.
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs5.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs5.png)
 A graph is most commonly stored as a map of adjacency lists: for each vertex, store a list of its neighbors.
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs6.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs6.png)
 Note that even though a graph is represented as an adjacency list, we don’t actually have to create it upfront. What we really need is a function to get a vertex’s neighbors. We’ll see that in the next module.
 
 ## BFS on Graphs
@@ -40,16 +40,16 @@ Hopefully, by this point, you are very familiar with DFS on trees and BFS on tre
 ## BFS on graphs
 
 Let’s visualize BFS:
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs7.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs8.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs9.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs10.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs11.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs12.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs13.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs14.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs15.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs16.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs7.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs8.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs9.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs10.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs11.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs12.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs13.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs14.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs15.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs16.png)
 
 ## Time complexity
 During a BFS, we visit each node and each vertex at most once. The time complexity for BFS on a graph is O(E + V)O(E+V) where EE is the number of edges of the graph, and VV is the number of vertices of the graph.
@@ -111,16 +111,16 @@ public void bfs(Node root) {
 {% endhighlight %}
 
 ## DFS on Graphs
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs17.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs18.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs19.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs20.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs21.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs22.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs33.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs34.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs25.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs26.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs17.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs18.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs19.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs20.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs21.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs22.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs33.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs34.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs25.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs26.png)
 
 Similar to BFS, we just have to add the visited variable to keep track of the visited nodes and use get_neighbors to get the next nodes to visit.
 
@@ -164,15 +164,15 @@ Very often, graph problems are represented as matrices. For example:
 * Knight Shortest Path
 
 A matrix translates to a graph (adjacency list):
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs27.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs27.png)
 When we code the problem, we have to build the graph as we go. Nodes/vertices are represented by coordinates of matrix entries.
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs28.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs28.png)
 
 ## Getting neighboring node’s coordinates
 The core of BFS/DFS is to add neighbors of the current vertex to a queue/stack. The get_neighbors function returns all 4 coordinates of neighboring nodes (or 8 if you are allowed to go diagonal).
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs29.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs29.png)
 One way to get each neighbor’s coordinates is to keep each neighbor’s horizontal and vertical offsets in a list and adding them to the each vertex’s coordinates.
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs30.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs30.png)
 {% highlight java %}
 
 public List<Coordinate> getNeighbors(Coordinate coord) {
@@ -238,7 +238,7 @@ public void bfs(Coordinate startingNode) {
 
 ## Shortest Path [BFS]
 Given an (unweighted) graph, return the length of the shortest path between two nodes A and B in terms of the number of edges.
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs31.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs31.png)
 
 ## Explanation
 BFS is the best for finding distance between two nodes since it traverses level by level. Apply the template from the BFS template. Since the graph is already built for us, get_neighbors retrieves the adjacency list.
@@ -324,7 +324,7 @@ Word Ladder is “a puzzle that begins with two words, and to solve the puzzle o
 
 For example: COLD → CORD → CARD → WARD → WARM
 
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs42.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs42.png)
 
 iven a start word, an end word, and a list of dictionary words, determine the minimum number of steps to go from the start word to the end word using only words from the dictionary.
 
@@ -342,7 +342,7 @@ Explanation: We can go from COLD to WARM by going through COLD → CORD → CARD
 ## Intuition
 
 We start from a word. In each step, we can only go from one word in the list to another, and we want to end up on some word. This suggests that we can represent each word with a node in a graph and each step that transforms a word to another as an edge between the corresponding nodes:
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs43.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs43.png)
 
 Now the problem becomes “find the minimum distance from one node in a graph to the other”, which is a problem that BFS handles very easily.
 
@@ -422,13 +422,13 @@ class Solution {
     }
 }
 {% endhighlight %}
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs44.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs44.png)
 
 ## Flood Fill
 
 ## Problem statement
 In computer graphics, an uncompressed raster image is presented as a matrix of numbers. Each entry of the matrix represents the color of a pixel. A flood fill algorithm takes a coordinate, r, c, and replaces all pixels connected to r, c that have the same color as r, c with the replacement color. An example of this is MS-Paint’s paint bucket tool.
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs45.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs45.png)
 
 ## Explanation
 The goal is to replace every neighboring cell of the same color with a different color. We can easily do this with a BFS or DFS.
@@ -533,7 +533,7 @@ class Solution {
 ## Number of Islands
 
 A map is represented as a 2D grid of 1s and 0s where 1 represents land and 0 represents water. An island is a horizontally and vertically (but not diagonally) continuous block of land surrounded by water. Find the number of islands on the map. Assume cells beyond grid boundaries are water.
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs32.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs32.png)
 
 ## Explanation
 
@@ -644,7 +644,7 @@ The time complexity is O(MN) where MM and NN are the length and width of the mat
 On an infinitely large chessboard, a knight is located on [0, 0].
 
 A knight can move in eight directions.
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs33.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs33.png)
 
 Given a destination coordinate [x, y], determine the minimum number of moves from [0, 0] to [x, y].
 
@@ -654,7 +654,7 @@ Given a destination coordinate [x, y], determine the minimum number of moves fro
 The problem asks for the minimum moves so BFS is our choice here. The chessboard being infinite is totally fine with BFS since we build the graph as we go.
 
 The get_neighbors function now returns cells in 8 directions.
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs34.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs34.png)
 The chessboard is infinite so we no longer have to worry about bound checking.
 
 ## Solution
@@ -764,7 +764,7 @@ Explanation: the two courses depend on each other, there is no way to take them
 Naturally, the dependency relationship can be modelled as a directed graph.
 
 Notice that a course is “not takeable” if any of its dependencies are “not takeable”. This only happens when there is a circular dependency, e.g., A depends on B and B depends on A. In graph terms, this is called a cycle. This problem then comes down to determining if the graph contains a cycle. Note that this is a directed graph, and a path is only a cycle if one of the nodes points back to one of the nodes in the current path.
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs35.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs35.png)
 
 ## Cycle detection
 One way to detect cycles is to use DFS. For normal graph DFS a node has two states: to be visited and visited. We traverse the graph and visit each node and mark it as visited.
@@ -776,12 +776,12 @@ In cycle detection, we need a third state visiting. We perform DFS on each node 
 When we reach the end of the path, i.e. no more out edges from the last node in the path, we mark the node in the path as visited. If during the DFS we happen to come back to a node that is in the visiting state, we have a cycle.
 
 Draw a figure
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs36.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs37.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs38.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs39.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs40.png)
-![dsbs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/dsbs/dsbs41.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs36.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs37.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs38.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs39.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs40.png)
+![dsbs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/dsbs/dsbs41.png)
 
 ## Solution
 One question you may ask is why we have to introduce an additional state visiting. Couldn’t we have solved it with only visited and to be visited as in normal DFS?

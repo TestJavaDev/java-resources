@@ -19,11 +19,11 @@ Given a graph, find the shortest path between two vertices. A solution is placed
 ## Problem Statement
 In this problem, you have to implement the findShortestPathLength() method to take an undirected graph and two vertices (A and B) as inputs, and return the length of the shortest path between those vertices in Graph. Remember, the shortest path will contain the minimum number of edges. An illustration is provided below for your understanding:
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr16.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr16.png)
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr17.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr17.png)
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr18.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr18.png)
 
 ## Coding Exercise
 

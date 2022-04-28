@@ -26,12 +26,12 @@ Here, map is a HashMap containing strings as keys and values corresponding to th
 ## Output:
 It returns the String containing the complete path from the start until the end of the journey.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has29.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has29.png)
 
 ## Explanation
 The starting point of the path is “Boston”, so we find it first to help us traverse the whole path; we get to Texas through Boston, to Missouri through Texas, and so on.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has30.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has30.png)
 
 ## Coding Exercise
 
@@ -126,4 +126,4 @@ class CheckPath {
 }
 {% endhighlight %}
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has31.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has31.png)

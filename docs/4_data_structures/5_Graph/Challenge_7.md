@@ -24,16 +24,16 @@ In this problem, you have to implement isTree() method to take a directed graph 
 
 A graph is connected when there is a path between every pair of vertices. In a connected graph, there are no unreachable vertices. Each vertex must be able to reach every other vertex through either a direct edge or through a graph traversal.
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr13.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr13.png)
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr14.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr14.png)
 
 ## Explanation
 A graph from the sample input is a tree because it doesn’t contain any loop, and if we start from any vertex as a source we can reach all the remaining vertices of the graph.
 
 An illustration is also provided for your understanding.
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr15.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr15.png)
 
 ## Coding Exercise
 

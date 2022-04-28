@@ -21,7 +21,7 @@ You can think of the Stack as a container, in which we can add items and remove 
 
 A real-life example of a Stack can be a pile of books placed in a vertical order. So, to get the book that’s somewhere in the middle, you need to remove all the books placed on top of it. That is how the LIFO method works. The following figure illustrates a Stack:
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st1.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st1.png)
 
 ## What are Stacks Used for? 
 A stack is one of the most fundamental data structures. Its implementation is very simple, yet it can be used to solve complex problems!
@@ -33,20 +33,20 @@ There are many computer algorithms like Depth First Search and Expression Evalua
 ## How do stacks work? 
 A Stack can be implemented in many ways, but a typical Stack must offer the following functionalities:
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st2.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st2.png)
 
 The entire functionality of a stack depends on the push and pop methods listed in the table. The following animation shows how to push elements in the given stack and then pop them off.
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st3.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st4.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st5.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st6.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st7.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st8.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st9.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st10.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st11.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st12.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st3.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st4.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st5.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st6.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st7.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st8.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st9.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st10.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st11.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st12.png)
 
 ## Explanation 
 When you insert an element into the stack, the variable that stores the position of the top element would be pointing to the number below it. So, you will have to update its value every time you insert a new element into the stack. Similarly, the value of the top variable will also change when you delete an element from the stack. It’s a good practice to update the top variable first, and then perform the operation; otherwise, the variable would be pointing to nothing or a wrong value in case of insertion.
@@ -260,7 +260,7 @@ If you look at the output of the code, you can see that the elements popped out 
 ## Complexities of Stack Operations 
 Let’s look at the time complexity of each stack operation.
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st13.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st13.png)
 
 ## What is a Queue?
 
@@ -269,24 +269,24 @@ Similar to Stack, Queue is another linear data structure that stores the element
 
 According to FIFO, the first element inserted is the one that comes out first. You can think of a queue as a pipe with both ends open. Elements enter from one end (back) and leave from the other (front). The following animation illustrates the structure of a queue.
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st14.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st15.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st16.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st17.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st18.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st19.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st20.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st21.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st22.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st23.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st24.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st25.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st26.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st27.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st28.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st29.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st30.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st31.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st14.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st15.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st16.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st17.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st18.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st19.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st20.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st21.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st22.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st23.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st24.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st25.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st26.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st27.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st28.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st29.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st30.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st31.png)
 
 Queues are slightly trickier to implement compared to stacks, as we have to keep track of both ends of the array. The elements are inserted from the back and removed from the front.
 
@@ -300,32 +300,32 @@ Most operating systems also perform operations based on a Priority Queue—a kin
 ## How does a Queue work?
 A typical queue contains the following set of methods to work perfectly:
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/st32.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/st32.png)
 
 The entire functionality of Queue depends on the enqueue and dequeue methods; the rest are just helper methods to produce simple, understandable code.
 
 ## Example 
 Take a look at the animation below to understand the working of a Queue. The variables that store the positions of front and back of the array will have to be updated accordingly whenever you will enqueue or dequeue an element from the queue.
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t1.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t2.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t3.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t4.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t5.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t6.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t7.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t8.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t9.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t10.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t11.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t12.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t13.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t14.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t15.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t16.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t17.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t18.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t19.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t1.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t2.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t3.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t4.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t5.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t6.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t7.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t8.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t9.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t10.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t11.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t12.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t13.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t14.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t15.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t16.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t17.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t18.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t19.png)
 
 ## Types of Queues 
 There are three common types of queues which cover a wide range of problems:
@@ -342,15 +342,15 @@ Circular Queues are almost similar to Linear Queues with only one exception. As 
 
 The following illustration shows how circular queues work.
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t20.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t21.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t22.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t23.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t24.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t25.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t26.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t27.png)
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/t28.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t20.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t21.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t22.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t23.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t24.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t25.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t26.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t27.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/t28.png)
 
 ## Priority Queue 
 In Priority Queues, elements are sorted in a specific order. Based on that order, the most prioritized object appears at the front of the queue, the least prioritized object appears at the end, and so on. These queues are widely used in an operating system to determine which programs should be given more priority.

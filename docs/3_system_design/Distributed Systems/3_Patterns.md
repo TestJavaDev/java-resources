@@ -19,7 +19,7 @@ One of the main differentiating characteristics of distributed systems with othe
 ## Serialization and deserialization
 Every node needs a way to transform data that resides in memory into a format that can be transmitted over the network, and it also needs a way to translate data received from the network back to the appropriate in-memory representation. These processes are called serialization and deserialization, respectively. The following illustration shows this process:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za1.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za1.png)
 
 Note: Serialization are also used to transform data in a format that’s suitable for storage, not only communication.
 
@@ -62,7 +62,7 @@ These definitions can dynamically generate code in different languages that will
 They also reduce duplicate development effort, but they require adjusting build processes so that they can integrate with the code generation mechanisms. Some examples of IDLs are Protocol Buffers, Avro, and Thrift.
 The difference between the library and the interface definition languages (IDL) approach, using Jackson and Protocol Buffers, is shown in the following illustration:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za2.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za2.png)
 
 ## Transfer of Data
 
@@ -77,7 +77,7 @@ If node A is communicating asynchronously instead, this means that it does not h
 
 The Following illustration shows the difference between synchronous and asynchronous communication:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za3.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za3.png)
 
 ## Example
 Synchronous communication is typically used in cases where node A needs to retrieve some data to execute the next task, or it needs to be sure a side-effect has been performed successfully on node B’s system before proceeding.
@@ -125,7 +125,7 @@ Note: The side-effects from the operation and the storage of the unique identifi
 
 The following illustration shows a practical example of exactly-once processing through deduplication:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za4.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za4.png)
 
 ## Event log
 An event log provides a slightly different abstraction than a message queue. Messages are still inserted by producers at the tail of the log and stored in an ordered fashion. However, the consumers are free to select the point of the log they want to consume messages from, which is not necessarily the head.
@@ -168,7 +168,7 @@ When using an event log, both models of communication can be implemented in the 
 
 This difference in implementing these models using the message queue and the event log is shown in the following illustration:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za5.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za5.png)
 
 # Coordination Patterns
 
@@ -179,12 +179,12 @@ The previous chapter examined the basic ways in which two different systems can 
 ## Orchestration
 In orchestration, a single, central system is responsible for coordinating the execution of the various other systems, thus resembling a star topology, as shown in the following illustration. That central system is referred to as the orchestrator. It needs to know about all the other systems and their capabilities. But these systems can be unaware of each other.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za6.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za6.png)
 
 ## Choreography
 In choreography, systems coordinate with each other without the need for an external coordinator. They are essentially placed in a chain, where each system is aware of the previous and the next system in the topology. A request is successively passed through the chain from each system to the next one. We can see this process in the following illustration:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za7.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za7.png)
 
 Note: The communication link between two systems can be of any of the two forms described in the previous section. The systems can either communicate synchronously (i.e., using RPC calls) or asynchronously (i.e., via an intermediary message queue).
 
@@ -219,14 +219,14 @@ Note: Given that the data resides in multiple places, we need a mechanism that k
 ## Synchronizing data using dual writes
 One approach is to perform writes to all the associated datastores from a single application that receives update operations. This approach is sometimes referred to as dual writes. Typically, writes to the associated data stores are performed synchronously to update data in all the locations before responding to the client with a confirmation that the update operation was successful.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za8.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za8.png)
 
 ## Problems
 One drawback of this approach is how the system handles partial failures and their impact on atomicity. If the application updates the first datastore successfully, but the request to update the second datastore fails, then atomicity is violated. Due to this the overall system becomes inconsistent. It’s also unclear what the response to the client should be in this case since data has been updated, but only in some places.
 
 However, even if we assume that there are no partial failures, there is another pitfall in how concurrent writers handle the race conditions and their impact on isolation. Let’s assume two writers submit an update operation for the same item. The application receives them and attempts to update both datastores, but the associated requests are re-ordered, as shown in the following illustration:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za9.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za9.png)
 
 In the above illustration, the first datastore contains data from the first request, while the second datastore contains data from the second request. This also leaves the overall system in an inconsistent state.
 
@@ -240,7 +240,7 @@ Event sourcing is another approach for data synchronization. It writes any updat
 
 However, applications typically save periodical snapshots (also known as checkpoints) of the state to avoid having to re-consume the whole log in case of failures. In this case, an application that recovers from a failure only needs to replay the events of the log after the latest snapshot.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za10.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za10.png)
 
 ## Mitigating the problems of dual writes
 Event sourcing approach does not violate atomicity, which means there is no need for an atomic commit protocol. The reason is every application is consuming the log independently, and they will eventually process all the events successfully, restarting from the last consumed event in case of a temporary failure.
@@ -266,7 +266,7 @@ In the next lesson, we will learn another approach that solves this problem.
 ## Data synchronization using change data capture (CDC)
 Change data capture (CDC) is another approach used for data synchronization. It solves the asynchronous consumption of log of event sourcing, as discussed in the previous lesson.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za11.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za11.png)
 
 ## Mitigating the problem of event sourcing
 In the CDC approach, The application selects a datastore as the authoritative source of data, where all update operations are performed. It then creates an event log from this datastore that is consumed by all the remaining operations the same way as in event sourcing. This primary datastore needs to provide the necessary transactional semantics and a way to monitor changes in the underlying data to produce the event log. Relational databases are usually a good fit for this since most of them provide strong transactional guarantees. In addition, they internally use a write- ahead-log (WAL) that imposes an order on the performed operations and can feed an order event log.
@@ -323,7 +323,7 @@ Lastly, systems that store all the data in a single node fall somewhere on the o
 ## A typical shared-nothing architecture
 The following illustration shows an example of a shared-nothing architecture:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za12.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za12.png)
 
 ## Benefits and Drawbacks
 
@@ -457,7 +457,7 @@ Let’s consider an example mentioned previously, where the client of an applica
 
 For example, consider a feature introduced on version 4.1.2 that is backward incompatible with versions < 4.x.x. If the application receives a request from a 3.0.1 client, it can disable that feature to maintain compatibility. If it receives a request from a 4.0.3 client, it can enable the feature.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za13.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za13.png)
 
 Patch version: This version is incremented when a backwards compatible bug fix is made to the software.
 
@@ -539,7 +539,7 @@ As shown in the following illustration, hardware failures can happen in many pla
 * The hardware processors, their local memory
 * The communication system
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za14.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za14.png)
 
 ## Implementing error recovery functionality at the application level
 Even if the various subsystems embed error recovery functionality, this can only cover lower levels of the system, and it cannot protect from errors that happen at a higher level of the system.
@@ -757,7 +757,7 @@ This anomaly could lead to the following problem:
 
 See the following illustration for a visualization of this example.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za15.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za15.png)
 
 Depending on the application, it might be safe to allow lost updates in some cases. For example, consider an application that allows multiple administrators to update specific parts of an internal website used by employees of a company.
 
@@ -774,7 +774,7 @@ Note that this case is not a dirty read, because any values written by the first
 
 See the following illustration for a visualization of this example.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za16.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za16.png)
 
 A strict requirement to prevent read skew is quite rare, as we might have guessed already. For example, a common application of this type might allow a user to view the profile of only one person at a time along with their friends, thus not requiring the integrity constraint described above.
 
@@ -789,7 +789,7 @@ Now, let’s look at the problems that can arise from the write skew phenomenon.
 
 See the following illustration for visualization of this example.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za17.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za17.png)
 
 ## Prevention of Anomalies in Isolation Levels
 
@@ -806,13 +806,13 @@ Isolation levels other than the serializable ones are less strict and provide be
 
 These models allow some of the anomalies we described previously. The following illustration contains a table with the most basic isolation levels, along with the anomalies they prevent.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za18.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za18.png)
 
 ## Consistency and Isolation
 
 The following illustration will help us remember the consistency models and isolation levels.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za19.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za19.png)
 
 ## Similarities between consistency models and isolation models
 It is interesting to observe that isolation levels are not that different from consistency models.
@@ -845,7 +845,7 @@ Serializability only guarantees that the effects of multiple transactions will b
 ## Why real-time guarantees are important
 The following illustration shows why real-time guarantees are important from an application perspective.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za20.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za20.png)
 
 Think of an automated teller machine that can support two transactions:
 * GET_BALANCE()
@@ -889,7 +889,7 @@ We can organize all of the models we presented so far— and many others that ar
 ## Hierarchy tree
 The following illustration depicts such a tree that contains only the models presented in this course.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/za21.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/za21.png)
 
 ## Consistency Models
 

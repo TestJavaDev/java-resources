@@ -65,7 +65,7 @@ The user will specify a folder as the workspace on their device. Any file/photo/
 At a high level, we need to store files and their metadata information like File Name, File Size, Directory, etc., and who this file is shared with. So, we need some servers that can help the clients to upload/download files to Cloud Storage and some servers that can facilitate updating metadata about files and users. We also need some mechanism to notify all clients whenever an update happens so they can synchronize their files.
 
 As shown in the diagram below, Block servers will work with the clients to upload/download files from cloud storage and Metadata servers will keep metadata of files updated in a SQL or NoSQL database. Synchronization servers will handle the workflow of notifying all clients about different changes for synchronization.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design34.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design34.png)
 
 ## 6. Component Design
 Let’s go through the major components of our system one by one:
@@ -95,7 +95,7 @@ II. Chunker will split the files into smaller pieces called chunks. It will also
 III. Watcher will monitor the local workspace folders and notify the Indexer (discussed below) of any action performed by the users, e.g. when users create, delete, or update files or folders. Watcher also listens to any changes happening on other clients that are broadcasted by Synchronization service.
 
 IV. Indexer will process the events received from the Watcher and update the internal metadata database with information about the chunks of the modified files. Once the chunks are successfully submitted/downloaded to the Cloud Storage, the Indexer will communicate with the remote Synchronization Service to broadcast changes to other clients and update the remote metadata databas
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design35.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design35.png)
 How should clients handle slow servers? Clients should exponentially back-off if the server is busy/not-responding. Meaning, if a server is too slow to respond, clients should delay their retries, and this delay should increase exponentially.
 
 Should mobile clients sync remote changes immediately? Unlike desktop or web clients, mobile clients usually sync on-demand to save user’s bandwidth and space.
@@ -121,11 +121,11 @@ To be able to provide an efficient and scalable synchronization protocol, we can
 An important part of our architecture is a messaging middleware that should be able to handle a substantial number of requests. A scalable Message Queuing Service that supports asynchronous message-based communication between clients and the Synchronization Service best fits the requirements of our application. The Message Queuing Service supports asynchronous and loosely coupled message-based communication between distributed components of the system. The Message Queuing Service should be able to efficiently store any number of messages in a highly available, reliable, and scalable queue.
 
 The Message Queuing Service will implement two types of queues in our system. The Request Queue is a global queue and all clients will share it. Clients’ requests to update the Metadata Database will be sent to the Request Queue first; from there, the Synchronization Service will take it to update metadata. The Response Queues that correspond to individual subscribed clients are responsible for delivering the update messages to each client. Since a message will be deleted from the queue once received by a client, we need to create separate Response Queues for each subscribed client to share update messages.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design36.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design36.png)
 
 ## e. Cloud/Block Storage
 Cloud/Block Storage stores chunks of files uploaded by the users. Clients directly interact with the storage to send and receive objects from it. Separation of the metadata from storage enables us to use any storage either in the cloud or in-house.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design37.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design37.png)
 
 ## 7. File Processing Workflow
 The sequence below shows the interaction between the components of the application in a scenario when Client A updates a file that is shared with Client B and C, so they should receive the update too. If the other clients are not online at the time of the update, the Message Queuing Service keeps the update notifications in separate response queues for them until they come online later.

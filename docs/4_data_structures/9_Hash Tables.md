@@ -39,7 +39,7 @@ value = arr[key]
 
 Here’s an illustration of how a Hash Table is mapped to the indices (1,2,3,…,5) in an array, with the index of this array calculated through a Hash function. (Hash function will be discussed later)
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has1.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has1.png)
 
 Have a look at the following snippet, where a value is returned corresponding to the key passed to the function.
 
@@ -84,19 +84,19 @@ This index calculation can be a simple or a very complicated encryption method. 
 ## What Hash Functions Do?
 Have a look at the following illustration to get the analogy of a Hash function.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has2.png)
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has3.png)
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has4.png)
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has5.png)
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has6.png)
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has7.png)
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has8.png)
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has9.png)
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has10.png)
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has11.png)
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has12.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has2.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has3.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has4.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has5.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has6.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has7.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has8.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has9.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has10.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has11.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has12.png)
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has13.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has13.png)
 
 {% highlight java %}
 class HashFunctions 
@@ -115,7 +115,7 @@ class HashFunctions
 }
 {% endhighlight %}
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has14.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has14.png)
 
 {% highlight java %}
 class HashFunctions 
@@ -133,7 +133,7 @@ class HashFunctions
 }
 {% endhighlight %}
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has15.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has15.png)
 
 {% highlight java %}
 class HashFunctions
@@ -179,15 +179,15 @@ For Example:
 
 Let’s say we are storing phone numbers as keys, but each number (e.g. 1-123-123) is too large itself to be stored as a key, or in another way, to be used in an array’s index. It is passed to the hash function, (which performs certain calculations) and the index is returned:
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has16.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has16.png)
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has17.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has17.png)
 
 You can clearly observe that 247 is returned in either case! Since we cannot place 2 keys at the same index, this is called a collision.
 
 The rate of collision depends on the method we’re choosing to calculate the index in the Hash Function.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has18.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has18.png)
 
 ## Strategies to Handle Collisions 
 When you map a big integer onto a small range of numbers from 0-N, where N is the size of the array, there is a huge possibility that two different keys may return the same index. This phenomenon is called collision. There are many methods to avoid collisions in the array, out of which these three are the most common:
@@ -202,7 +202,7 @@ Disadvantage: One drawback of using this strategy is that if you don’t pick an
 
 Example: Let’s say the size of your array is 20. You pass a key to the Hash function which returns 2 (index of the array) by computing the key as key%size. If that position is already filled, then you can jump to another location by adding an offset value, let’s say 4. However, if that is filled too then you can add the offset again and jump to the next value, which will be 10 in this case. We will keep adding the offset until we find an empty spot. See the following illustration for better understanding:
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has19.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has19.png)
 
 n the above example we can observe that the indices 5 and 6 remain empty.
 
@@ -211,7 +211,7 @@ Chaining was initially implemented by combining multiple arrays as buckets, but 
 
 In case of a linked-list, each cell at the Hash Table points to the head of a different linked-list. Each list stores records, and all the content stored in one linked-list shares the same Hashed key. This strategy guarantees no collisions, but it gets costly in terms of space. An illustration is provided below for better understanding:
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has20.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has20.png)
 
 In the above example, we can observe that due to a collision, the indices 0 and 2 both contain multiple-element linked lists. This strategy also increases the look-up time.
 
@@ -235,7 +235,7 @@ n*m
 
 Here, n is the number of keys it can hold, and m is the number of slots each bucket contains. Each slot holds a key/value pair.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has21.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has21.png)
 
 ## Implementation
 We will start by building a simple class. As discussed earlier, a typical Hash entry consists of three data members: a key, the data itself, and the reference to a new entry.
@@ -616,7 +616,7 @@ class HashTableDemo {
 ## Overview of Complexities
 To sum up the discussion here, HashTables are ideally used when you have a large amount of data, and you need constant time for all basic operations. But you need to come up with a good Hash function to encrypt the keys to avoid collisions. Given below are the tables which show the time complexity of a Hash Table in different scenarios.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has22.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has22.png)
 
 ## Trie vs Hash Table
 

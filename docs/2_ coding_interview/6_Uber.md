@@ -61,11 +61,11 @@ This will ensure that we always have K minimum distances in the Heap. The most e
 
 Below is an illustration of this process. We have mapped the city of Seattle onto the cartesian plane to get simpler latitude and longitude values for the driver’s location.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale43.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale44.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale45.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale46.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale47.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale43.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale44.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale45.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale46.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale47.png)
 
 Let’s look at the code for the solution:
 
@@ -119,7 +119,7 @@ class Solution {
 
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale48.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale48.png)
 
 ## Feature #2: Path Cost
 
@@ -130,13 +130,13 @@ We’ll be given an array whose length is equal to the length of the road betwee
 
 Below is an illustration of this process:
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale49.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale50.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale49.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale50.png)
 
 ## Solution
 We need to calculate the amount of water that has accumulated above each road elevation and sum it up. At a single index/elevation (X), the amount of water depends on the heights of the highest bars to it left and right, regardless of how far apart they are. Upon further exploration, we also observe that the elevation (X) + the height of the water above this elevation, is equivalent to the minimum height of the highest bars around it. Therefore, the accumulation of the water, above a certain point (X), can be calculated using the formula:
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale51.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale51.png)
 
 Here is how implementation will take place:
 * Traverse through the array once.
@@ -190,7 +190,7 @@ class Solution
 } 
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale52.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale52.png)
 
 ## Feature #3: Plot and Select Path
 
@@ -199,7 +199,7 @@ After obtaining the closest drivers and calculating the cost of traveling on dif
 
 We’ll be given a city map G_map as a list of different checkpoints. Another list path_costs, at each index, will represent the cost of traveling between the corresponding checkpoints in G_map. We are also given some drivers, where each drivers[i] represents a single driver node. We need to determine whether a path from the driver node drivers[i] to a user node exists or not. If the path exists, return the accumulated sum of the checkpoints between the two nodes. Otherwise, return -1.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale53.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale53.png)
 
 In the above example,
 
@@ -303,8 +303,8 @@ class Solution {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale54.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale55.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale54.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale55.png)
 
 ## Feature #4: Fare in Words
 
@@ -442,7 +442,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale56.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale56.png)
 
 ## Feature #5: Uber Pool
 
@@ -455,9 +455,9 @@ We’ll be provided with an array where the index represents a route that the dr
 
 Let’s understand this better with an illustration:
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale57.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale58.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale59.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale57.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale58.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale59.png)
 
 On a number line, make marks at arr[0], arr[0] + arr[1], arr[0] + arr[1] + arr[2], ...., arr[0] + arr[1] + … arr[n-1]. This results in n line segments each corresponding to one of the entries in the array. Let the last mark be at a value k. Now, if we draw a random value between 0 and k, it will lie on one of these line segments. If the random value lies on the ith line segment, we’ll say that the ith array value has been picked. The likelihood of a random value between 0 and k falling on a specific line segment depends on the length of the line segment, which equals the value of the corresponding array element. This means that we have picked an array element using probability determined by its value.
 
@@ -513,7 +513,7 @@ class Uber {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale60.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale60.png)
 
 ## Feature #6: Longest Route
 
@@ -522,7 +522,7 @@ A city cannot be represented by a single straight road because there are numerou
 
 We’ll be provided with the root of a binary tree structure representing our city with each node as a checkpoint. We have to find the longest path/route so that drivers are likely to find more customers.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale61.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale61.png)
 
 ## Solution
 As seen in the above example, the longest path is one in which there is a maximum number of edges between two nodes or checkpoints. The edges here represent the roads. As the city structure represents a binary tree, the longest path in the tree will either pass through the root node or not. Let’s explore both of these conditions.
@@ -537,7 +537,7 @@ The path passes through the root (the +1 at the end of the above expression). It
 
 Let’s look at an example of this case in the illustration below.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale62.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale62.png)
 
 The longest path that does not pass through the root of the tree:
 
@@ -545,7 +545,7 @@ In this case, the longest path can exist in either the left subtree or the right
 
 max(l_path(root -> left), r_path(root -> right)), where l_path(x) represents the length of the longest path in a tree rooted at x.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale63.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale63.png)
 
 We can’t know for sure which of the two cases we’ll encounter, so we’ll calculate both of the above metrics and choose the one with the maximum value as the longest path.
 
@@ -611,7 +611,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale64.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale64.png)
 
 ## Feature #7: Highest Rank
 
@@ -620,7 +620,7 @@ At Uber, each driver is assigned a rank based on the reviews they receive from t
 
 We’ll be provided with an unsorted array of integers representing the divers’ ranks. The drivers are represented by the index of this array. The value of k will be made available from the hidden API. Our task will be to determine the kth highest rank, so the driver associated with that rank can be selected.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale65.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale65.png)
 
 ## Solution
 Just like in Feature #1, we can use a heap to obtain the kth highest rank from our unsorted array. We now have to select the largest number, so we’ll use a min-heap. We’ll insert ranks of the first k drivers into the min-heap.
@@ -629,14 +629,14 @@ As we know, the root is the smallest element in a min-heap. So, since we want to
 
 Below is an illustration of this process:
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale66.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale67.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale68.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale69.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale70.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale71.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale72.png)
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale73.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale66.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale67.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale68.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale69.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale70.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale71.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale72.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale73.png)
 
 Let’s look at the code for the solution:
 
@@ -675,4 +675,4 @@ class Solution {
 
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale74.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale74.png)

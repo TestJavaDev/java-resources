@@ -46,7 +46,7 @@ Our list of meetings times looks like the following: { {2, 8}, {3, 4}, {3, 9}, {
 
 Take a look at the illustration below to see how we can schedule all the meetings in just three rooms:
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale1.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale1.png)
 
 ## Solution
 We can use a heap or priority queue to keep the meeting timings, where the key would be the end_time of each meeting. This way, we can check if any room is free or not by simply checking the heap’s topmost element. The room at the top of the heap would get free the earliest out of all the other rooms currently occupied.
@@ -100,7 +100,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale2.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale2.png)
 
 ## Feature #2: Show Busy Schedule
 
@@ -111,7 +111,7 @@ We will be provided a list of scheduled meetings, such as [[1, 4], [2, 5], [6, 8
 
 The illustration below shows a visual representation of the example.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale3.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale3.png)
 
 Note: For simplicity, we are mapping the military timing to integers in the input. So, for example, 8:00 will be denoted by 8 in the code.
 
@@ -152,7 +152,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale4.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale4.png)
 
 ## Feature #3: Check if Meeting is Possible
 
@@ -165,7 +165,7 @@ You will be given a list of start and end times of User B’s scheduled meetings
 
 Suppose that the list of timings is { {1, 3}, {4, 6}, {8, 10}, {10, 12}, {13, 15} }, and the new meeting is {7, 8}. In this example, you can see that the new meeting does not overlap with any existing meetings. Therefore, it can be scheduled, and the output will be True. Now, consider if the new meeting had been {9, 11}. It would have overlapped with {8, 10} and {10, 12}. Therefore, the output would have been false.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale5.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale5.png)
 
 Note: For simplicity, we are mapping the military timing to integers in the input. So, for example, 8:00 will be denoted by 8 in the code.
 
@@ -250,7 +250,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale6.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale6.png)
 
 ## Feature #4: Schedule a New Meeting
 
@@ -261,7 +261,7 @@ Suppose you are given a list of non-overlapping scheduled meetings, such as { {1
 
 The illustration below shows a visual representation of the example.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale7.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale7.png)
 
 Note: For simplicity, we are mapping the military timing to integers in the input. So, for example, 8:00 will be denoted by 8 in the code.
 
@@ -320,7 +320,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale8.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale8.png)
 
 ## Feature #5: Find Common Meeting Times
 
@@ -333,7 +333,7 @@ Let’s say that we are given the following pairs of meeting schedules: { {1, 3}
 
 Take a look at the illustration given below:
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale9.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale9.png)
 
 Note: For simplicity, we are mapping the military timing to integers in the input. So, for example, 8:00 will be denoted by 8 in the code.
 
@@ -375,7 +375,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale10.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale10.png)
 
 ## Feature #6: Find Two Sets of Consecutive Days
 
@@ -431,7 +431,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale11.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale11.png)
 
 ## Feature #7: Longest Busy Period
 
@@ -440,11 +440,11 @@ A person has divided their workday into 15-minute time slots numbered as 1, 2, 3
 
 The following illustration shows how we will be mapping the 15-minute time slots to the numbers given in the input:
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale12.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale12.png)
 
 For example, you are given the following list of busy slots: [3, 1, 15, 5, 2, 12, 10, 4, 8, 9]. In this list, the longest sequence of consecutive slots is [1, 2, 3, 4, 5]. Since the length of this sequence is five, your function should return 5.
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale13.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale13.png)
 
 ## Solution
 
@@ -486,4 +486,4 @@ class Solution {
 }
 {% endhighlight %}
 
-![cale](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/cale/cale14.png)
+![cale](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/cale/cale14.png)

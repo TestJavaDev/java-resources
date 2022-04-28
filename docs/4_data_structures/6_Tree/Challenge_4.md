@@ -14,11 +14,11 @@ Challenge 4 / Java resources / Tutorial
 
 ## Challenge 4: Find the Height of a Binary Search Tree
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aa15.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aa16.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aa17.png)
 
 ## Coding Exercise
 
@@ -274,4 +274,4 @@ class checkHeight {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aa18.png)

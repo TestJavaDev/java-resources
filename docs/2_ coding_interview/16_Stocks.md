@@ -56,7 +56,7 @@ We’ll be provided with an input price in the form of a string. We have to vali
 ## Solution
 We’ll use the state machine below to check if a price is valid or not. The initial state is Start. We’ll process each character to identify the next state. The input string is not a valid price if we reach an UNKNOWN state at any point or if it ends in a DECIMAL point.
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog35.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog35.png)
 
 In the state machine, we are not looking at the sign (+ or -) at the start of a price. If there is a sign at the start of the input string, we start processing the string for the state machine after that sign character.
 
@@ -134,7 +134,7 @@ class Solution{
 }
 {% endhighlight %}
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog36.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog36.png)
 
 ## Feature #2: Settling Period
 
@@ -147,11 +147,11 @@ For example, if a user wants to trade four stocks of APPLE, two stocks of TESLA 
 
 This is an example of mapping of stocks to characters’ array:
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog37.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog37.png)
 
 This is an example of the input array:
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog38.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog38.png)
 
 ## Solution
 First, calculate and store the number of trades needed for each stock in a list named frequencies.
@@ -162,9 +162,9 @@ Initially, (fMax - 1) is multiplied by settling time, this gives the number of i
 
 Let’s take a look at the example below:
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog39.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog40.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog41.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog39.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog40.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog41.png)
 
 Here is how we will implement this feature:
 1. Calculate and store the frequencies of the trades for each company in an array called frequencies. Sort this array in descending order.
@@ -177,7 +177,7 @@ Here is how we will implement this feature:
 
 {% endhighlight %}
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog42.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog42.png)
 
 ## Feature #3: Goals Fulfilled
 
@@ -192,8 +192,8 @@ We’ll be provided with an array of sorted numbers representing trades. This ar
 
 Here is an illustration to better understand this:
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog43.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog44.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog43.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog44.png)
 
 ## Solution
 We need to determine if valid subsequences can be made under the above-mentioned constraints. Each number can either be part of an existing subsequence, or it will make a new subsequence starting from itself. We’ll need two maps to store the count of our numbers. The first map, frequencyMap, will store the frequency with which a number occurs in our trades array. The second map, imaginedMap, will help us determine if a new number should be part of an existing subsequence or not.
@@ -209,16 +209,16 @@ Here is how we will implement this feature:
 4. For every n, check if it exists in the imaginedMap. If it exists, we will decrement its count in both maps.
 5. Otherwise, create a new sequence and repeat from step 3.
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog45.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog46.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog47.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog48.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog49.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog50.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog51.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog52.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog53.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog54.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog45.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog46.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog47.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog48.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog49.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog50.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog51.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog52.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog53.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog54.png)
 
 Let’s look at the code for the solution:
 
@@ -288,7 +288,7 @@ class Counter extends HashMap<Integer, Integer> {
 }
 {% endhighlight %}
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog55.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog55.png)
 
 ## Feature #4: Milestone Reached
 
@@ -300,11 +300,11 @@ We’ll be provided with an m x 5 matrix and a target milestone value. Our task 
 ## Solution
 Each day stores the cumulative sum of all the trades, so we’ll have a matrix with an increasing number of values along each day. We can observed that the 2D matrix, with its unique properties, can be visualized as a sorted 1D array of size m x n. Since the array is sorted, we can simply apply the binary search algorithm on it to get the required value.
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog56.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog56.png)
 
 Since we are not actually converting the matrix into an array, we need a way to access the elements located at a (row, col) index. If we have an index, ind, from a linear array, it’s corresponding (row, col) pair can be obtained as follows
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog57.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog57.png)
 
 At each step of the binary search, convert the 1D index into row and column indices to look up the element in the 2D array.
 
@@ -317,10 +317,10 @@ Let’s see how we might implement this functionality:
 6. If our milestone value is greater than the middle element, skip the entire array left of the middle element as left = middleInd + 1.
 7. If at any point the middle element becomes equal to milestone, return the index positions. Otherwise, return -1, -1.
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog58.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog59.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog60.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog61.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog58.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog59.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog60.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog61.png)
 
 Let’s look at the code for the solution:
 
@@ -373,7 +373,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog62.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog62.png)
 
 ## Feature #5: Top Brokers
 
@@ -382,7 +382,7 @@ The company is doing performance evaluations. Each broker’s increments will be
 
 We’ll be provided with an array of integers representing the brokers’ IDs. Our task is to determine the top k most active brokers based on the number of times their ID occurs in the array.
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog63.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog63.png)
 
 ## Solution
 We need to find the top k IDs based on each number’s frequency count. In this problem, we first need to know the frequency of each number; we can do this using a, HashMap. Once we have the frequency map, the best data structure to keep track of the top k frequencies is heap. We’ll iterate through the frequency map and insert each element into our heap. If for an element, i, the size of our heap is k + 1, we do two things:
@@ -393,13 +393,13 @@ This will ensure that we always have k maximum frequencies in the heap. The most
 
 Below is an illustration of this process:
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog64.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog65.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog66.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog67.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog68.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog69.png)
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog70.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog64.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog65.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog66.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog67.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog68.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog69.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog70.png)
 
 Let’s look at the code for the solution:
 
@@ -442,4 +442,4 @@ class Solution {
 
 {% endhighlight %}
 
-![bog](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bog/bog71.png)
+![bog](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bog/bog71.png)

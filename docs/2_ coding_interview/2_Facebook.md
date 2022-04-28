@@ -46,7 +46,7 @@ First, we need to find all the people that are in each user’s friends circle o
 
 We’ll be provided with an n x n square matrix, where n is the number of users on Facebook. A cell [i,j] will hold the value 1 if user i and user j are friends. Otherwise, the cell will hold the value 0. For example, consider the input:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code54.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code54.png)
 
 There are two friend circles in the above example. Shaw is friends with Andy only, but Andy is friends with both​ Shaw and Noah. These three users make one friend circle. Dana, alone, makes another friend circle.
 
@@ -120,7 +120,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code55.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code55.png)
 
 ## Feature #2: Copy Connections
 
@@ -129,29 +129,29 @@ After identifying every user’s friend circles, we need to duplicate this data 
 
 Let’s say we want to duplicate the data for the following users:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code56.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code56.png)
 
 For each user, we’ll be provided with a node and its information. This node will point to other nodes, and from that one node, we need to reach and make an exact clone of every other node. An edge between two nodes means that they are friends with each other. A bi-directional edge means that both users follow each other, whereas a uni-directional edge means that only one user follows the other.
 
 Below is an illustration of this:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code57.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code57.png)
 
 ## Solution
 We can use depth-first traversal and create a copy of each node while traversing the graph. To avoid getting stuck in cycles, we’ll use a hashtable to store each completed node, and we will not revisit nodes that exist in the hashtable. The hashtable key will be a node in the original graph, and its value will be the corresponding node in the cloned graph.
 
 For the above graph, let’s assume the root (the randomly selected node from which we start the cloning process) is node 0. We’ll start with the root node 0.
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code58.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code59.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code60.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code61.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code62.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code63.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code64.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code65.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code66.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code67.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code58.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code59.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code60.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code61.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code62.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code63.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code64.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code65.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code66.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code67.png)
 
 Let’s look at the code for the solution:
 
@@ -316,7 +316,7 @@ class CloneGraph {
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code68.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code68.png)
 
 ## Feature #3: Find Story ID
 
@@ -325,8 +325,8 @@ This feature will allow us to watch or re-watch stories on Instagram that are up
 
 Observe this behavior in the illustration below:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code69.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code70.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code69.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code70.png)
 
 We’ll have an array containing the story id’s. Some of the stories will be watched and will be at the end of the array, and some will be unwatched and will be at the start of the array. If a user clicks a story, we need to search for its id in the array and return the index of that id.
 
@@ -335,10 +335,10 @@ The solution is essentially a binary search with some modifications. If we look 
 
 Let’s assume we have the following array and we have to find 6.
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code71.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code72.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code73.png)
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code74.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code71.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code72.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code73.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code74.png)
 
 Let’s look at the code for the solution:
 
@@ -391,7 +391,7 @@ class Solution{
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code75.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code75.png)
 
 ## Feature #4: Request Limiter
 
@@ -409,7 +409,7 @@ Here is how we will implement this feature:
 3. If either of the above conditions is satisfied, accept the request and update the entry associated with that request in the hashtable.
 4. If not, reject the request.
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code76.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code76.png)
 
 As you can see, the HashMap above has an entry with a request #2 and a timestamp T4. A new request arrives with the same number and a timestamp of T12 because the first request was made eight days ago. This exceeds our time limit. Therefore, we can allow this request to proceed, and as a result, the timestamp of request #2 will be updated to T12.
 
@@ -464,7 +464,7 @@ class RequestLimiter {
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code77.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code77.png)
 
 ## Feature #5: Flag Words
 
@@ -473,7 +473,7 @@ Facebook recently conducted a survey on the techniques people use to hide offens
 
 We’ll be provided with a string, S, representing the profane or offensive input word and another string, W, representing the original word. We have to determine if the original word, W, can be modified into S following the above-mentioned rules.
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code78.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code78.png)
 
 Since we have to observe letters of two strings at a time, we can follow a two-pointer approach to solve this problem.
 
@@ -536,7 +536,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code79.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code79.png)
 
 ## Feature #6: Combine Similar Messages
 
@@ -547,7 +547,7 @@ We’ll be provided with an array of strings in which each string represents a g
 
 Here is an illustration of this process:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code80.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code80.png)
 
 ## Solution
 From the above example, we can see that the difference between consecutive characters of each word is equal for each set. Consider the words lmn and mno from Set 1 of the example above. The difference between the ASCII values of each pair of consecutive characters of lmn is (1, 1), respectively, and the difference between each character of mno is also (1, 1). Words that are shifted versions of each other have identical character code differences. Using this, we can combine shifted words into separate sets. We can use a HashMap in which the keys can be represented by the differences between adjacent characters. The words that have these differences between their characters will be mapped as the values of these keys. For example, (1,1) will be a key with lmn and mno as its values. When all words are processed, the values of our HashMap will be the different groups.
@@ -563,7 +563,7 @@ Here is how we will implement this feature:
 
 The following illustration shows us the key-value structure in which the groups are formed against their difference in characters:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code81.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code81.png)
 
 Let’s look at this solution’s code:
 
@@ -612,7 +612,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code82.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code82.png)
 
 ## Feature #7: Divide Posts
 
@@ -623,7 +623,7 @@ We’ll be provided with an array of integers representing the daily number of p
 
 Let’s understand this behavior in the illustration below:
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code83.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code83.png)
 
 In the above example, the 4 thousand posts from Day 3 will be assigned to the master node. This is the maximum number of posts that the master node can handle while assigning a greater number of posts than itself to the other worker nodes.
 
@@ -692,4 +692,4 @@ class Solution {
 }
 {% endhighlight %}
 
-![code](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/code/code84.png)
+![code](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/code/code84.png)

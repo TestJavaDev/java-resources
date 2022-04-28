@@ -44,7 +44,7 @@ For the first feature of the Zoom application, we need to develop a display stru
 
 Our task is to use the binary search tree containing the names of participants and implement the pagination. Whenever our function is called, the names of the next ten participants should be returned in alphabetical order. Consider the following binary search tree, which contains the names of meeting attendees:
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon32.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon32.png)
 
 Assume that the above-mentioned binary search tree is provided as our feature’s input. The first time the function is called, it should return the following list: ["Albert", "Antoinette", "Anya", "Caryl", "Cassie", "Charity", "Cherlyn", "Elia", "Elvira", "Iliana"]. After the second call, it should return [ "Jeanette", "Kandice", "Lala", "Latasha", "Lyn"]. All calls after that should return [].
 
@@ -58,16 +58,16 @@ We can implement this feature with the help of the in-order traversal algorithm.
 
 The following illustration demonstrates all the algorithm’s steps:
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon33.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon34.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon35.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon36.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon37.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon38.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon39.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon40.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon41.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon42.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon33.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon34.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon35.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon36.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon37.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon38.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon39.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon40.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon41.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon42.png)
 
 The implementation of this algorithm is given below:
 
@@ -165,8 +165,8 @@ class Solution {
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon43.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon44.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon43.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon44.png)
 
 ## Feature #2: Serialize and Deserialize Participant Data
 
@@ -177,7 +177,7 @@ There are many ways to represent a serialized representation of a binary search 
 
 Let’s look at an example of serializing a binary search tree. Suppose we are given the followin
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon45.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon45.png)
 
 The serializer will take the root of this BST as an input and return a string, which is the serialized form. This string can be (but is not limited to): Jeanette, Elia, Albert, Elvira, Latasha, Kandice, Maggie. Then, the deserializer will take this string as input and return the root as a BST containing all the values identical to the original BST.
 
@@ -253,7 +253,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon46.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon46.png)
 
 ## Feature #3: Meeting Activity
 
@@ -267,8 +267,8 @@ Your task is to implement a function that can find the correct answer given an a
 
 For example, consider the following mini-game and its solution:
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon47.png)
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon48.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon47.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon48.png)
 
 In the example given above, four jumps are needed to reach the end. The k array for this example will be [2, 5, 7, 5, 3, 4], and your function should return 4 as output.
 
@@ -347,4 +347,4 @@ class Solution {
 }
 {% endhighlight %}
 
-![zon](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/zon/zon49.png)
+![zon](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/zon/zon49.png)

@@ -36,7 +36,7 @@ Note: We will return {3, 4} and {5, 9} instead of {4, 3} and {9, 5} because the 
 ## Explanation
 { 3 , 4 } has a symmetrical pair to { 4 , 3 } in the given array, Similarly, { 5 , 9 } has a symmetrical pair to { 9 , 5 }.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has27.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has27.png)
 
 ## Coding Exercise
 
@@ -102,4 +102,4 @@ class CheckSymmetric {
 }
 {% endhighlight %}
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has28.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has28.png)

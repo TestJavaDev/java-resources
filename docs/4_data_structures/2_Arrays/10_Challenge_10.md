@@ -32,7 +32,7 @@ arr = {1, 2, 3, 4, 5}
 ## Sample Output 
 arr = {5, 1, 4, 2, 3}
 
-![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr90.png)
+![arr](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/arr/arr90.png)
 
 ## Coding Exercise
 

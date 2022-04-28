@@ -16,11 +16,11 @@ Challenge 1 / Java resources / Tutorial
 
 Given the root to a binary search tree, write a function to find the minimum value in that tree. A solution is placed in the "solution" section to help you, but we would suggest you try to solve it on your own first.
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa1.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aa1.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aa2.png)
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aa3.png)
 
 ## Coding Exercise
 
@@ -263,7 +263,7 @@ class CheckMin {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aa4.png)
 
 ## Solution #2 : Recursive findMin()
 
@@ -408,4 +408,4 @@ class CheckMin {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/aa5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/aa5.png)

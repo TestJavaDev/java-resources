@@ -27,7 +27,7 @@ Stream processing systems receive and process data continuously as a stream of d
 
 The following illustration helps us differentiate between a batch and a stream processing system:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car5.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car5.png)
 
 There is also a form of processing that is essentially a hybrid between these two categories, called micro-batch processing. This approach processes data in batches, but these are kept very small to achieve a balance between throughput and latency.
 
@@ -63,13 +63,13 @@ Let’s see a typical example to understand better how this programming model pr
 
 Suppose we have a huge collection of documents (e.g., webpages), and we need to count the number of occurrences for each word. To achieve that via MapReduce, we would use the following functions:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car6.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car6.png)
 
 ## MapReduce's Master-Worker Architecture
 
 The master node is responsible for scheduling tasks for worker nodes and managing their execution, as shown in the following illustration:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car7.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car7.png)
 
 Apart from the definition of the map and reduce functions, the user can also specify the number M of map tasks, the number R of reduce tasks. MapReduce can also specify the number of input or output files, and a partitioning function that defines how key-value pairs from the map tasks are partitioned before being processed by the reduce tasks. By default, a hash partitioner is used that selects a reduce task using the formula hash(key) mod R.
 
@@ -143,7 +143,7 @@ A typical Spark application will create an RDD by reading some data from a distr
 For example, an application used to read some log files from HDFS and count the number of lines that contain the word “sale completed” would look like the following:
 
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car8.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car8.png)
 
 The above program can either be submitted as an individual application in the background or each one of the commands can be executed interactively in the Spark interpreter.
 
@@ -152,7 +152,7 @@ Note: A Spark program is executed from a coordinator process, called the driver.
 Architecture of Spark#
 The Spark cluster contains a cluster manager node, and a set of worker nodes as shown in the following illustration:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car9.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car9.png)
 
 The responsibilities between Spark components are split in the following ways:
 
@@ -196,14 +196,14 @@ Note: join of two RDDs can lead to two narrow dependencies if both RDDs are part
 
 iterator(p, parentIters): Computes the elements of a partition p given iterators for its parent partitions.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car10.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car10.png)
 
 ## Stages of Digital Acrylic Graph (DAG) in Apache Spark
 
 DAG scheduler of stages#
 A DAG of Stages is shown in the following illustration:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car11.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car11.png)
 
 Each stage contains as many pipelined transformations with narrow dependencies (one-to-one) as possible.
 The boundaries of each stage correspond to operations with wide dependencies (one-to-many) that require a data shuffle between partitions or any previously computed partitions that have been persisted. And it can short-circuit the computation of ancestor RDDs.
@@ -220,7 +220,7 @@ Note: This graph is the basic building block for efficient fault tolerance.
 Tolerating fault#
 When an executor fails for some reason, any tasks running on it are re-scheduled on another executor. Along with this, tasks are scheduled for any parent RDDs required to calculate the RDD of this task. Consequently, wide dependencies are much more inefficient than narrow dependencies when recovering from failures, as shown in the following illustration:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car12.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car12.png)
 
 Slow recovery#
 Long lineage graphs can make a recovery very slow since many RDDs will need to be recomputed in a potential failure near the end of the graph.
@@ -251,7 +251,7 @@ The following code performs a word count in two different ways:
 The first one will send multiple records of value 1 for each word across the network
 The second one will send one record for each word containing the number of occurrences.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car13.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car13.png)
 
 Resilient to failures of the master process#
 We can configure Spark in a way that is resilient to failures of the master process. This is achieved via Zookeeper.
@@ -308,19 +308,19 @@ Note: Flink also supports cyclic dataflow graphs, which can be used for use-case
 
 Flink is responsible for translating the logical graph corresponding to the application code to the actual physical graph executed. It includes logical data flow optimizations, such as the fusion of multiple operations to a single task (e.g., a combination of two consecutive filters). It also includes partitioning each task into multiple instances that can be executed in parallel in different compute nodes. This process is shown in the following illustration:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car14.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car14.png)
 
 The architecture of Flink#
 The high-level architecture of Flink consists of three main components , as shown in the following illustration:
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car15.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car16.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car17.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car18.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car19.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car20.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car21.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car22.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car15.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car16.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car17.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car18.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car19.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car20.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car21.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car22.png)
 
 The Flink client receives the program code, transforms it into a dataflow graph, and submits it to the Job Manager, which coordinates the distributed execution of the dataflow.
 
@@ -371,7 +371,7 @@ Flink provides different ways to deal with late elements, such as discarding the
 
 The following illustration shows the flow of watermarks and the progress of event time in a flink pipeline.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car23.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car23.png)
 
 ## Failure Recovery in Flink
 

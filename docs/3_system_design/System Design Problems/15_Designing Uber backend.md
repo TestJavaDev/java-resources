@@ -82,7 +82,7 @@ How will the new publishers/drivers get added for a current customer? As we have
 How about if clients pull information about nearby drivers from the server? Clients can send their current location, and the server will find all the nearby drivers from the QuadTree to return them to the client. Upon receiving this information, the client can update their screen to reflect the current positions of the drivers. Clients can query every five seconds to limit the number of round trips to the server. This solution looks simpler compared to the push model described above.
 
 Do we need to repartition a grid as soon as it reaches the maximum limit? We can have a cushion to let each grid grow a little bigger beyond the limit before we decide to partition it. Let’s say our grids can grow/shrink an extra 10% before we partition/merge them. This should decrease the load for a grid partition or merge on high traffic grids.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design78.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design78.png)
 How would “Request Ride” use case work?
 1. The customer will put a request for a ride.
 2. One of the Aggregator servers will take the request and asks QuadTree servers to return nearby drivers.

@@ -123,14 +123,14 @@ A few observations about the nature of the data we are storing:
 ## Database Schema:
 We would need two tables, one for storing information about the Pastes and the other for users’ data.
 
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design27.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design27.png)
 
 Here, ‘URlHash’ is the URL equivalent of the TinyURL, and ‘ContentKey’ is a reference to an external object storing the contents of the paste; we’ll discuss the external storage of the paste contents later in the chapter.
 
 ## 7. High Level Design
 At a high level, we need an application layer that will serve all the read and write requests. Application layer will talk to a storage layer to store and retrieve data. We can segregate our storage layer with one database storing metadata related to each paste, users, etc., while the other storing the paste contents in some object storage (like Amazon S3). This division of data will also allow us to scale them individually.
 
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design28.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design28.png)
 
 ## 8. Component Design
 ##a. Application layer
@@ -152,7 +152,7 @@ We can divide our datastore layer into two:
 
 Metadata database: We can use a relational database like MySQL or a Distributed Key-Value store like Dynamo or Cassandra.
 Object storage: We can store our contents in an Object Storage like Amazon’s S3. Whenever we feel like hitting our full capacity on content storage, we can easily increase it by adding more servers.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design29.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design29.png)
 
 ## 9. Load Balancer (LB)
 We can add a Load balancing layer at three places in our system:
@@ -172,4 +172,4 @@ If we chose to continuously search for expired links to remove them, it would pu
 * We can have a default expiration time for each link (e.g., two years).
 * After removing an expired link, we can put the key back in the key-DB to be reused.
 * Should we remove links that haven’t been visited in some length of time, say six months? This could be tricky. Since storage is getting cheap, we can decide to keep links forever.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design26.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design26.png)

@@ -23,12 +23,12 @@ A bathroom is being designed for the use of both males and females in an office 
 
 The solution should avoid deadlocks. For now, though, don’t worry about starvation.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter27.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter27.png)
 
 ## Solution
 First let us come up with the skeleton of our Unisex Bathroom class. We want to model the problem programmatically first. We'll need two APIs, one that is called by a male to use the bathroom and another one that is called by the woman to use the bathroom. Initially our class looks like the following
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter28.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter28.png)
 
 Let us try to address the first problem of allowing either men or women to use the bathroom. We'll worry about the max employees later. We need to maintain state in a variable which would tell us which gender is currently using the bathroom. Let's call this variable inUseBy. To make the code more readable we'll make the type of the variable inUseBy a string which can take on the values men, women or none.
 
@@ -38,8 +38,8 @@ Assume there's no one in the bathroom and a male thread invokes the maleUseBathr
 
 The astute reader would immediately realize that we'll need to guard the variable inUseBy since it can possibly be both read and written to by different threads at the same time. Does that mean we should mark our methods as synchronized? The wary reader would know that doing so would essentially make the threads serially access the methods, i.e., if one male thread is accessing the bathroom, then another one can't access the bathroom even though the problem says that more than one male should be able to use the bathroom. This requires us to take synchronization to a finer granular level rather than implementing it at the method level. So far what we discussed looks like the below when translated into code:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter29.png)
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter30.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter29.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter30.png)
 
 The code so far allows any number of men or women to gather in the bathroom. However, it allows only one gender to do so. The methods are mirror images of each other with only gender-specific variable changes. Let's discuss the important portions of the code.
 * Lines 17-26: Since java monitors are mesa monitors, we use a while loop to check for the variable inUseBy. If it is set to MEN or NONE then, we know the bathroom is either empty or already has men and therefore it is safe to proceed ahead. If the inUseBy is set to WOMEN, then the male thread, invokes wait() on line 23. Note, the thread would give up the monitor for the object on which it is synchronized thus allowing other threads to synchronize on the same object and maybe update the inUseBy variable

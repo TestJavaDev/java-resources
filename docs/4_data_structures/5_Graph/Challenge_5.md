@@ -19,11 +19,11 @@ Given a graph, can you write a code to find the number of edges in a graph? A so
 ## Problem Statement 
 In this problem, you have to implement the numEdges() method to take an undirected graph as an input and find the total number of edges in the graph. An illustration is also provided below for your understanding:
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr7.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr7.png)
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr8.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr8.png)
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/rr9.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/rr9.png)
 
 ## Coding Exercise
 

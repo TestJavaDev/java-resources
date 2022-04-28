@@ -35,7 +35,7 @@ There are 9 words total in the given keys array.
 
 Here’s an illustration of the given challenge:
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der33.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der33.png)
 
 ## Coding Exercise
 
@@ -405,4 +405,4 @@ class numWords{
 }
 {% endhighlight %}
 
-![trie](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/trie/der34.png)
+![trie](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/trie/der34.png)

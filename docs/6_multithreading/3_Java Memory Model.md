@@ -18,7 +18,7 @@ A memory model is defined as the set of rules according to which the compiler, t
 
 Consider the below code snippet executed in our main thread. Assume the application also spawns a couple of other threads, that'll execute the method runMethodForOtherThreads()
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm23.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm23.png)
 
 Now you would expect that the other threads would see the myVariable value change to 7 as soon as the main thread executes the assignment on line 9. This assumption is false in modern architectures and other threads may see the change in the value of the variable myVariable with a delay or not at all. Below are some of the reasons that can cause this to happen
 * Use of sophisticated multi-level memory caches or processor caches
@@ -106,7 +106,7 @@ Note that with the reordering of the statements the JVM still is able to honor t
 ## Affect of memory architectures
 Java is touts the famous code once, run anywhere mantra as one of its strengths. However, this isn't possible without Java shielding us from the vagrancies of the multitude of memory architectures that exist in the wild. For instance, the frequency of reconciling a processor's cache with the main memory depends on the processor architecture. A processor may relax its memory coherence guarantees in favor of better performance. The architecture's memory model specifies the guarantees a program can expect from the memory model. It will also specify instructions required to get additional memory coordination guarantees when data is being shared among threads. These instructions are usually called memory fences or barriers but the Java developer can rely on the JVM to interface with the underlying platform's memory model through its own memory model called JMM (Java Memory Model) and insert these platform memory specific instructions appropriately. Conversely, the JVM relies on the developer to identify when data is shared through the use of proper synchronization.
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm24.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm24.png)
 
 ## The happens-before Relationship
 
@@ -136,7 +136,7 @@ The JMM is defined in terms of actions which can be any of the following
 
 The JMM enforces a happens-before ordering on these actions. When an action A happens-before an action B, it implies that A is guaranteed to be ordered before B and visible to B. Consider the below program
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm25.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm25.png)
 
 Now note that even though all this reordering magic can happen in the background but the notion of program order is still maintained i.e. the final outcome is exactly the same as without the ordering. Furthermore, block#1 will appear to happen-before block#2 even if block#2 gets executed before. Also note that block#2 and block#4 have no ordering dependency on each other.
 
@@ -144,7 +144,7 @@ One can see that there's no partial ordering between block#1 and block#2 but the
 
 The reordering tricks are harmless in case of a single threaded program but all hell will break loose when we introduce another thread that shares the data that is being read or written to in the writerThread method. Consider the addition of the following method to the previous class.
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm26.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm26.png)
 
 Note we moved out block#4 into the new method readerThread. Say if the readerThread runs to completion, it is possible for the writerThread to never see the updated value of the variable a as it may never have been flushed out to the main memory, where the writerThread would attempt to read from. There's no happens before relationship between the two code snippets executed in two different threads!
 
@@ -161,4 +161,4 @@ This implies that any memory operations which were visible to a thread before ex
 
 In our readerThread if we synchronize on the same lock object as the one we synchronize on in the writerThread then we would establish a happens-before relationship between the two threads. Don't confuse it to mean that one thread executes before the other. All it means is that when readerThread releases the monitor, up till that point, whatever shared variables it has manipulated will have their latest values visible to the writerThread as soon as it acquires the same monitor. If it acquires a different monitor then there's no happens-before relationship and it may or may not see the latest values for the shared variables
 
-![jmm](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/jmm/jmm27.png)
+![jmm](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/jmm/jmm27.png)

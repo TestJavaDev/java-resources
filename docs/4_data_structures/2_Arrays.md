@@ -23,7 +23,7 @@ An array also referred to as a collection of elements, is the simplest and most 
 
 Look at the figure below; we have made a simple array with four elements. Each item in the collection is called a Data Element, and the number of data elements stored in an Array is known as its size. You can see that each data element has a maximum of two neighbors, except the first and last one.
 
-![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr1.png)
+![arr](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/arr/arr1.png)
 
 ## Array Indexing
 Each data element is assigned a numerical value called the index, which corresponds to the position of that item in the array. It is important to note that the value of the index is non-negative and always starts from zero. So the first element of an array will be stored at index 0 and the last one at index size-1.
@@ -43,11 +43,11 @@ The basic syntax for declaring and initializing the one-dimensional array is giv
 ## Array Declaration
 In the array declaration, reference of an array is created. To declare an array, you have to specify the data type and name of the array.
 
-![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr2.png)
+![arr](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/arr/arr2.png)
 
-![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arra6.png)
+![arr](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/arr/arra6.png)
 
-![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr3.png)
+![arr](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/arr/arr3.png)
 
 ## Two Dimensional Arrays
 
@@ -61,7 +61,7 @@ A Two Dimensional Array is an array of references that holds references to other
 
 Take a look at the figure below to get a good understanding of what a Two Dimensional Array looks like:
 
-![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr4.png)
+![arr](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/arr/arr4.png)
 
 Explanation: If we take a look at the structure of the Two Dimensional Array, we get the idea that a Two Dimensional Array is basically an array of One Dimensional Array; in other words, every element points to the first element of a different One Dimensional Array.
 
@@ -73,7 +73,7 @@ Let’s say there’s a class of 30 students, and we want to store their grades 
 
 All we need to do is to keep the first column(i.e., Column 0), fixed for students, and the rest of the columns to store grades. We will have to follow a specific order to make sure the scores and students don’t get mixed up. Each element of the first column will hold a reference to an array containing marks of the student. So, there will be 30 rows and 6 columns. Now we can calculate the student’s percentage, class average, and the student’s position.
 
-![arr](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/arr/arr5.png)
+![arr](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/arr/arr5.png)
 
 ## Three Dimensional Arrays
 Just like Two Dimensional Arrays, we can also design Three Dimensional Arrays. These arrays are an extension to 2D Arrays but are slightly more complex as they have one additional feature. Now the values in the cell will also hold a reference to some object, any primitive type value, or any other data structure.

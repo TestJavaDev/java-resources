@@ -21,8 +21,8 @@ In this lesson, your task is to invert a given a binary tree, T.
 
 Let’s look at an example below:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree1.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree2.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree1.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree2.png)
 
 ## Solution
 We can solve this problem using depth-first search (DFS).
@@ -70,7 +70,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree3.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree3.png)
 
 ## Flip Equivalent Binary Trees
 
@@ -86,7 +86,7 @@ Given the roots of two binary trees, root1 and root2, you have to find out wheth
 ## Example
 Let’s look at the example below:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree4.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree4.png)
 
 ## Solution
 We implement the flipEquiv function using recursion. Like any recursive function, we start by defining the base conditions. We have two base conditions:
@@ -163,7 +163,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree5.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree5.png)
 
 ## Binary Tree Maximum Path Sum
 
@@ -177,21 +177,21 @@ The path sum can be calculated by adding up all nodes’ values in the path. To 
 ## Example
 Let’s discuss the example below:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree6.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree7.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree6.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree7.png)
 
 ## Solution
 We’ll start by simplifying the problem and looking at the implementation of the maxContrib(node) function which takes a node as an argument and computes a maximum contribution that this node and one or none of its subtrees can add.
 
 For example:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree8.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree9.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree10.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree11.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree12.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree13.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree14.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree8.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree9.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree10.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree11.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree12.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree13.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree14.png)
 
 Now, if we are sure that the root is also included in the maximum path, the problem can be solved using maxContrib(root), and then adding both the maxContrib of the left child if its greater than zero, and same for the right child. Unfortunately, this isn’t always the case, and maximum path can exclude root. Therefore, we need to make a few additions to the solution to check whether to continue with the current path or to start a new path with the current node as the highest node at each step.
 
@@ -275,7 +275,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree15.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree15.png)
 
 ## Binary Tree Zigzag Level Order Traversal
 
@@ -286,10 +286,10 @@ You have to return the element in each level in a two-dimensional array.
 
 Let’s look at an example:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree16.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree17.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree18.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree19.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree16.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree17.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree18.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree19.png)
 
 ## Solution
 As per the problem statement, we need to traverse the tree in a level-by-level zigzag order. An intuitive approach for this problem would be to use Breadth-First Search (BFS). By default, BFS provides ordering from left to right within a single level.
@@ -306,21 +306,21 @@ Let’s review the steps to implement the solution:
 5. Pop the deque from the back or front on an alternate basis. Append the current node’s value to the last element of the 2d results array.
 6. Alternate between the order by appending nodes to the front or back of the deque.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree20.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree21.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree22.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree23.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree24.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree25.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree26.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree27.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree28.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree29.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree30.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree31.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree32.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree33.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree34.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree20.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree21.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree22.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree23.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree24.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree25.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree26.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree27.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree28.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree29.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree30.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree31.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree32.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree33.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree34.png)
 
 {% highlight java %}
 public class TreeNode {
@@ -380,7 +380,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree35.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree35.png)
 
 ## Binary Tree Right Side View
 
@@ -391,7 +391,7 @@ You have to return the rightmost nodes on their respective levels in the form of
 
 Let’s discuss an example below:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree36.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree36.png)
 
 ## Solution
 We can use a depth-first search (DFS) to solve this problem. The intuition here is to traverse the tree level by level recursively, starting from the rightmost node for each recursive call.
@@ -446,15 +446,15 @@ class Solution {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree37.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree37.png)
 
 ## Binary Tree Vertical Order Traversal
 
 ## Description
 The goal is to find the binary tree vertical order traversal of the binary tree when the root of this binary tree is given. In other words, you have to return the values of the nodes from top to bottom in each column, column by column from left to right. If there is more than one node in the same column and row, return the values from left to right. Let’s go over some examples:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree38.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree39.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree38.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree39.png)
 
 ## Solution
 The solution we will implement follows a breadth-first search. The intuition behind BFS is that it guarantees that nodes at the top will be visited first and the nodes at the bottom will be visited last. As for the traversal of the tree from left to right, we need to maintain a HashMap that contains the list of all the nodes in a specific column. We will denote these columns by their index, where the column of the root will be index 0, the columns on the left side of the root will have a negative index, and the columns on the right side of the root will have a positive index. The index of each column will be a key.
@@ -470,14 +470,14 @@ Let’s go over the algorithm in detail:
 6. At the end of all the iterations, the nodesList HashMap contains the values of all the nodes in all the columns, but the values of each column are not in the correct order.
 7. After BFS, we will iterate over the index range using the variables that stored the minimum and maximum indexes. Finally, we return the values of the nodes in the correct order.
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree40.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree41.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree42.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree43.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree44.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree45.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree46.png)
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree47.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree40.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree41.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree42.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree43.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree44.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree45.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree46.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree47.png)
 
 {% highlight java %}
 public class TreeNode {
@@ -560,7 +560,7 @@ class Solution {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree48.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree48.png)
 
 ## Boundary of Binary Tree
 
@@ -571,7 +571,7 @@ The boundary of a binary tree is the concatenation of the root, the left boundar
 
 Take a look at the example given below:
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree49.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree49.png)
 
 As mentioned above, the boundary can be divided into four categories; the following explains these categories:
 
@@ -671,4 +671,4 @@ class Solution {
 }
 {% endhighlight %}
 
-![tree](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/tree/tree50.png)
+![tree](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/tree/tree50.png)

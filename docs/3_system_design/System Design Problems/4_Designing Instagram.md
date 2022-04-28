@@ -55,12 +55,12 @@ Total space required for 10 years:
 400GB * 365 (days a year) * 10 (years) ~= 1425TB
 5. High Level System Design#
 At a high-level, we need to support two scenarios, one to upload photos and the other to view/search photos. Our service would need some object storage servers to store photos and some database servers to store metadata information about the photos.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design30.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design30.png)
 
 ## 6. Database Schema
 💡      Defining the DB schema in the early stages of the interview would help to understand the data flow among various components and later would guide towards data partitioning.
 We need to store data about users, their uploaded photos, and the people they follow. The Photo table will store all data related to a photo; we need to have an index on (PhotoID, CreationDate) since we need to fetch recent photos first.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design31.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design31.png)
 A straightforward approach for storing the above schema would be to use an RDBMS like MySQL since we require joins. But relational databases come with their challenges, especially when we need to scale them. For details, please take a look at SQL vs. NoSQL.
 
 We can store photos in a distributed file storage like HDFS or S3.
@@ -100,7 +100,7 @@ Photo uploads (or writes) can be slow as they have to go to the disk, whereas re
 Uploading users can consume all the available connections, as uploading is a slow process. This means that ‘reads’ cannot be served if the system gets busy with all the ‘write’ requests. We should keep in mind that web servers have a connection limit before designing our system. If we assume that a web server can have a maximum of 500 connections at any time, then it can’t have more than 500 concurrent uploads or reads. To handle this bottleneck, we can split reads and writes into separate services. We will have dedicated servers for reads and different servers for writes to ensure that uploads don’t hog the system.
 
 Separating photos’ read and write requests will also allow us to scale and optimize each of these operations independently.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design32.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design32.png)
 
 ## 9. Reliability and Redundancy
 Losing files is not an option for our service. Therefore, we will store multiple copies of each file so that if one storage server dies, we can retrieve the photo from the other copy present on a different storage server.
@@ -110,7 +110,7 @@ This same principle also applies to other components of the system. If we want t
 If only one instance of a service is required to run at any point, we can run a redundant secondary copy of the service that is not serving any traffic, but it can take control after the failover when the primary has a problem.
 
 Creating redundancy in a system can remove single points of failure and provide a backup or spare functionality if needed in a crisis. For example, if there are two instances of the same service running in production and one fails or degrades, the system can failover to the healthy copy. Failover can happen automatically or require manual intervention.
-![design](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/design/design33.png)
+![design](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/design/design33.png)
 
 
 ## 10. Data Sharding

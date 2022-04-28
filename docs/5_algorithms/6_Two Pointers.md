@@ -37,15 +37,15 @@ But we are not allowed extra memory so we have to look at the conditions and see
 
 ## Draw a figure
 
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two1.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two2.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two3.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two4.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two5.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two6.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two7.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two8.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two9.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two1.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two2.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two3.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two4.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two5.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two6.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two7.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two8.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two9.png)
 
 ## Implementation
 {% highlight java %}
@@ -99,18 +99,18 @@ Since the speed of the fast pointer is 2x of the slow pointer, by the time the f
 
 ## Draw a figure
 
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two10.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two11.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two12.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two10.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two11.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two12.png)
 
 ## Review
 Notice that
 1. We have to check the existence of fast and fast.next in the while loop condition. We have to do this because if list length is odd (illustrated above), the fast pointer would reach the last node. If list length is even (illustrated below), the fast pointer would land on null (Node 6’s next).
 
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two13.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two14.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two15.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two16.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two13.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two14.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two15.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two16.png)
 {% highlight java %}
 
 class Solution {
@@ -167,7 +167,7 @@ Output: 1 3
 Provided that we understand the problem, the first step to finding a solution is to solve it by brute force.
 
 Since the problem asks for two elements that sum to target, we can simply try every pair of numbers and see if they sum to it. This would take O(n^2) time.
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two17.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two17.png)
 To improve the brute force solution, two questions to ask are “can we skip any pairs?” and “have we used all the unknowns?”
 
 We noticed that the array is sorted. This means the smallest two sum we can get is the sum of the first two numbers 2 + 3 of input array [2, 3, 4, 5, 8, 11, 18], and the largest two sum we can get is the sum of the last two numbers 11 + 18 of input array [2, 3, 4, 5, 8, 11, 18]. If we sort all two sum pairs by their sum value, the middle point is the smallest number + largest number 2 + 18. From this point, we can compare with our target 8 in the input array [2, 3, 4, 5, 8, 11, 18].
@@ -176,7 +176,7 @@ We noticed that the array is sorted. This means the smallest two sum we can get 
 * If our sum is greater than the target, we need to exchange one of the numbers for a smaller number. Since 2 is the smallest number available, we have to exchange 18 for a smaller number. We go to 11.
 * Repeat the process until the sum is equal to our target.
 
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two18.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two18.png)
 
 {% highlight java %}
 
@@ -238,16 +238,16 @@ Output: False
 This is a straightforward two-pointer problem. We have two pointers, l and r, starting from the leftmost and rightmost positions and moving towards each other. At each step, if the elements they point to are the same, we move each pointer one position towards each other. If the elements under the pointers are different at any step, then the string is not a palindrome.
 
 Note that the problem asks us to ignore all non-alphanumeric characters. So, any time we see one, we have to skip it by incrementing the corresponding pointer only.
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two19.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two20.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two21.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two22.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two23.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two24.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two25.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two26.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two27.png)
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two28.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two19.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two20.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two21.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two22.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two23.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two24.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two25.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two26.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two27.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two28.png)
 
 ## Implementation
 The implementation is relatively straightforward.
@@ -309,11 +309,11 @@ Explanation: -20 - 3 + 30 = 7. The indices for subarray [-20,-3,30] is 1 and 4 (
 ## Explanation
 
 ## Intuition
-The brute force way is to find the sum of each subarray and compare it with the target. Let NN be the number of elements in the array. There are N subarrays with size 1, N-1 subarrays with size 2, and 1 subarray with size N. . Time complexity is ![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two29.png)
+The brute force way is to find the sum of each subarray and compare it with the target. Let NN be the number of elements in the array. There are N subarrays with size 1, N-1 subarrays with size 2, and 1 subarray with size N. . Time complexity is ![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two29.png)
 
 A key observation is that the sum of a subarray [i, j] is equal to the sum of [0, j] minus the sum of [0, i - 1].
 
-![two](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/two/two30.png)
+![two](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/two/two30.png)
 
 The sum of elements from index 0 to i is called the prefix sum. If we have the subarray sum for each index, we can find the sum of any subarray in constant time.
 

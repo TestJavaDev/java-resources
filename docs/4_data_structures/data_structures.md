@@ -28,6 +28,6 @@ Here’s a quick refresher of all the complexities for the data structures we’
 
 Note: In the table, n is the total number of elements stored in the structure.
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has47.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has47.png)
 
-![has](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/has/has48.png)
+![has](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/has/has48.png)

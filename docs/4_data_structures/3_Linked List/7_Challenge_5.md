@@ -29,7 +29,7 @@ linkedlist = 10->9->4->4-6
 ## Sample Output 
 linkedlist = 6->4->4->9->10
 
-![lin](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/lin/ser35.png)
+![lin](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/lin/ser35.png)
 
 ## Coding Exercise
 

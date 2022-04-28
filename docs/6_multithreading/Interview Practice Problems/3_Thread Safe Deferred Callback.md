@@ -31,13 +31,13 @@ Consider this example: initially, the execution thread is sleeping for 30 mins b
 
 Let's see how the skeleton of our class would look like:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter18.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter18.png)
 
 We define a simple CallBack class, an object of which will be passed into the registerCallback() method. This method will add a new callback to our min heap. In Java the generic PriorityQueue is an implementation of a heap which can be passed a comparator to either act as a min or max heap. In our case, we pass in a comparator in the constructor so that the callbacks are ordered by their execution times, the earliest callback to be executed sits at the top of the heap.
 
 For guarding access to critical sections we'll use an object of the ReentrantLock class offered by Java. It acts similar to a mutex. Also we'll introduce the use of a Condition variable. The execution thread will wait on it while the consumer threads will signal it. The condition variable allows the consumer threads to wake up the execution thread whenever a new callback is registered. Let's write out what we just discussed as code.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter19.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter19.png)
 
 Note how in registerCallback() method we lock the critical section before adding the callback to the queue. Also, we signal the condition associated with the lock. As a reminder, note the execution thread, if waiting on the condition variable, will not be able to make progress until the consumer thread gives up the lock, even though the condition has been signaled.
 

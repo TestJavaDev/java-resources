@@ -40,8 +40,8 @@ Instead, what if we iterate the array one number at a time, and if the current n
 
 Let’s see this visually with the above-mentioned Example-2:
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/qa4.png)
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/qa5.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/qa4.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/qa5.png)
 
 ## Code
 
@@ -88,7 +88,7 @@ class CyclicSort {
 
 {% endhighlight %}
 
-![alg](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/alg/qa6.png)
+![alg](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/alg/qa6.png)
 
 ## Find the Missing Number
 

@@ -31,7 +31,7 @@ int dequeue()
    * Input: an integer
    * Output: returns true after removing value from the queue
 
-![stack](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/stack/tt4.png)
+![stack](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/stack/tt4.png)
 
 ## Coding Exercise
 

@@ -18,12 +18,12 @@ Blocking Queue / Java resources / Tutorial
 ## Problem Statement
 A blocking queue is defined as a queue which blocks the caller of the enqueue method if there's no more capacity to add the new item being enqueued. Similarly, the queue blocks the dequeue caller if there are no items in the queue. Also, the queue notifies a blocked enqueuing thread when space becomes available and a blocked dequeuing thread when an item becomes available in the queue.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter1.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter1.png)
 
 ## Solution
 Our queue will have a finite size that is passed in via the constructor. Additionally, we'll use an array as the data structure for backing our queue. Furthermore, we'll expose the APIs enqueue and dequeue for our blocking queue class. We'll also need a head and a tail pointer to keep track of the front and back of the queue and a size variable to keep track of the queue size at any given point in time. Given this, the skeleton of our blocking queue class would look something like below:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter2.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter2.png)
 
 Let's start with the enqueue method. If the current size of the queue == capacity then we know we'll need to block the caller of the method. We can do so by appropriately calling wait() method in a while loop. The while loop is conditioned on the size of the queue being equal to the max capacity. The loop's predicate would become false, as soon as, another thread performs a dequeue.
 
@@ -31,7 +31,7 @@ Note that whenever we test for the value of the size variable, we also need to m
 
 Finally, as the queue grows, it'll reach the end of our backing array, so we need to reset the tail of the queue back to zero. Notice that since we only proceed to enqueue an item when size of queue < capacity we are guaranteed that tail would not be overwriting an existing item.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter3.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter3.png)
 
 Note that in the end we are calling notifyAll() method. Since we just added an item to the queue, it is possible that a consumer thread is blocked in the dequeue method of the queue class waiting for an item to become available so it's necessary we send a signal to wake up any waiting threads.
 
@@ -43,7 +43,7 @@ We need to reset head of the queue back to zero in-case it's pointing past the e
 
 Finally, we remember to call notifyAll() since if the queue were full then there might be producer threads blocked in the enqueue method. This logic in code appears as below:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter4.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter4.png)
 
 We see the dequeue method is analogous to enqueue method. Note that we could have eliminated lines 17 & 18 and instead just returned the following:
 
@@ -186,7 +186,7 @@ In the previous lesson, we solved the consumer producer problem using the synchr
 
 Let's start with the enqueue() method. If the current size of the queue == capacity then we know we need to block the caller of the method until the queue has space for a new item. Since a mutex only allows locking, we give up the mutex at this point. The logic is shown below.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter5.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter5.png)
 
 The most important point to realize in the above code is the weird-looking while loop construct, where we release the lock and then immediately attempt to reacquire it. Convince yourself that whenever we test the while loop condition size == capacity, we do so while holding the mutex! Also, it may not be immediately obvious but a different thread can acquire the mutex just when a thread releases the mutex and attempts to reacquire it within the while loop. Lastly, we modify the array variable only when holding the mutex.
 
@@ -194,7 +194,7 @@ We also need to manage the tail as the queue grows. Once it reaches the end of o
 
 Now let us see the code for the dequeue() method which is analogous to the enqueue() one.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter6.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter6.png)
 
 Again note that we always test for the condition size == 0 when holding the lock. Additionally, all shared state is manipulated in mutual exclusion. Additionally, we reset head of the queue back to zero in case it's pointing past the end of the array. We need to decrement the size variable too since the queue will now have one less item. The complete code appears in the widget below. It also runs a simulation of several producers and consumers that constantly write and retrieve from an instance of the blocking queue, for one second.
 
@@ -366,11 +366,11 @@ class Demonstration {
 ## Faulty Implementation
 As an exercise, we reproduce the two enqueue() and dequeue() methods, without locking the mutex object when checking for the while-loop conditions. If you run the code in the widget below multiple times, some of the runs would display a dequeue value of null. We set an array index to null whenever we remove its content to indicate the index is now empty. A race condition is introduced when we check for while-loop predicate without holding a mutex.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter7.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter7.png)
 
 and,
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter8.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter8.png)
 
 {% highlight java %}
 public class FaultyBlockingQueueWithMutex<T> {
@@ -517,15 +517,15 @@ We can also implement the bounded buffer problem using a semaphore. For this pro
 
 We'll augment the CountingSemaphore class with a new constructor that takes in the maximum permits and also sets the number of permits already given out. We can use two semaphores, one semConsumer and the other semProducer. The trick is to initialize semProducer semaphore with a maximum number of permits equal to the size of the buffer and set all permits as available. Each permit allows a producer thread to enqueue an item in the buffer. Since the number of permits is equal to the size of the buffer, the producer threads can only enqueue items equal to the size of the buffer and then blocks. However, the semProducer is only released/incremented by a consumer thread whenever it consumes an item. If there are no consumer threads, the producer threads will block when the buffer becomes full. In case of the consumer threads, when the buffer is empty, we would want to block any consumer threads on a dequeue() call. This implies that we should initialize the semConsumer semaphore with a maximum capacity equal to the size of the buffer and set all the permits as currently given out. Let's look at the implementation of enqueue() method.
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter9.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter9.png)
 
 Suppose the size of the buffer is N. If you study the code above, it should be evident that only N items can be enqueued in the items buffer. At the end of the method, we signal any consumer threads waiting on the semConsumer semaphore. However, the code is not yet complete. We have only solved the problem of coordinating between the producer and the consumer threads. The astute reader would immediately realize that multiple producer threads can manipulate the code lines between the first and the last semaphore statements in the above enqueue() method. In our earlier implementations, we were able to guard the critical section by synchronizing on objects that ensured only a single thread is active in the critical section at a time. We need similar functionality using semaphores. Recall that we can use a binary semaphore to exercise mutual exclusion, however, any thread is free to signal the semaphore, not just the one that acquired it. We'll introduce a semLock semaphore that acts as a mutex. The complete version of the enqueue() method appears below:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter10.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter10.png)
 
 Realize that we have modeled each item in the buffer as a permit. When the buffer is full, the consumer threads have N permits to perform dequeue() and when the buffer is empty the producer threads have N permits to perform enqueue(). The code for dequeue() is similar and appears below:
 
-![inter](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/inter/inter11.png)
+![inter](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/inter/inter11.png)
 
 The complete code appears in the code widget below. We also include a simple test with one producer and two consumer threads.
 

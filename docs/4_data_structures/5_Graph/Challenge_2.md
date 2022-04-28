@@ -32,22 +32,22 @@ A string containing the vertices of the graph listed in the correct order of tra
 ## Sample Input
 Graph:
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff8.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff8.png)
 
 In the Input column of Test cases, this graph will be represented as: |V|=5, E:[(0,1)(0,2)(1,3)(1,4)], where, |V| represents the number of vertices while E represents the edges.
 
 ## Sample Output
 "01342"
 
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff9.png)
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff10.png)
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff11.png)
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff12.png)
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff13.png)
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff14.png)
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff15.png)
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff16.png)
-![graph](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/graph/ff17.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff9.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff10.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff11.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff12.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff13.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff14.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff15.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff16.png)
+![graph](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/graph/ff17.png)
 
 ## Coding Exercise
 

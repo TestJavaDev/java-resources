@@ -76,13 +76,13 @@ Let’s look at an example to get a better idea about this rule.
 
 ## Example
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car30.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car30.png)
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car31.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car31.png)
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car32.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car32.png)
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car33.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car33.png)
 
 
 ## Generating a schedule that is serializable
@@ -137,7 +137,7 @@ There are two basic types of locks used in this protocol:
 
 As a result, the relationships described above can be visualized in a compatibility matrix, as shown in the following illustration.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car34.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car34.png)
 
 The astute reader might notice a similarity between this matrix and the definition of conflicts in conflict serializability. This is not a coincidence. The two-phase locking protocol makes use of these locks to prevent cycles of these conflicts from forming, as described before.
 
@@ -154,8 +154,8 @@ In this phase, a transaction is allowed to only release locks, but not acquire a
 
 The following illustration shows these phases.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car35.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car36.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car35.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car36.png)
 
 It’s been implied so far that locks are held per record. However, it’s important to note that if the associated database supports operations based on predicates, there must also be a way to lock ranges of records (predicate locking), e.g., all the customers of ages between 23 and 29. This is to prevent anomalies like phantom reads.
 
@@ -170,7 +170,7 @@ There are some slight variations of the protocol that can provide some additiona
 ## Deadlocks
 The locking mechanism introduces the risk for deadlocks, where two transactions might wait on each other for the release of a lock, thus never making progress. This is shown in the following illustration.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car37.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car37.png)
 
 ## Ways to deal with deadlocks
 In general, there are two ways to deal with these deadlocks.
@@ -205,9 +205,9 @@ During this phase, the transaction checks whether there are other transactions t
 
 This is shown in the following illustration.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car38.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car39.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car40.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car38.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car39.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car40.png)
 
 The commit of a transaction is performed by copying all the values from write operations, from the local storage to the common database storage that other transactions access.
 
@@ -272,7 +272,7 @@ Fuzzy reads are also prevented since all the reads return values from the same s
 ## Performing a write operation
 When performing a write operation for an item, a transaction checks whether there is an entry for the same item that satisfies one of the following criteria: its version is higher than this transaction’s timestamp, or its version is lower than this transaction’s timestamp, but this version belongs to one of the transactions that were active at the beginning of this transaction.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car41.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car41.png)
 
 ## Not all anomalies can be prevented in MVCC
 An example of an anomaly that would not be prevented is a write skew.
@@ -280,12 +280,12 @@ An example of an anomaly that would not be prevented is a write skew.
 ## Write-skew example
 The following illustration shows why we can’t prevent a write skew from happening.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car42.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car43.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car44.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car45.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car46.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car47.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car42.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car43.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car44.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car45.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car46.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car47.png)
 
 In the schedule shown in the above illustration, none of the transactions sees the versions written by the other transaction. However, this would not be possible in a serial execution.
 
@@ -301,9 +301,9 @@ The solution mechanics are based on a key principle of previous research that sh
 ## Statement
 SSI states this: in the precedence graph of any non-serializable execution, there are two rw-dependency edges that form consecutive edges in a cycle. These involve two transactions that have been active concurrently, as shown in the following illustration.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car48.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car48.png)
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car49.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car49.png)
 
 ## Approach
 The SSI approach detects these cases and breaks the cycle when they are about to happen. It prevents them from being formed by aborting one of the involved transactions. To do this, the SSI performs the following steps:
@@ -326,12 +326,12 @@ Note that these are a softer form of locks, since they do not block other transa
 
 The following illustration shows how this approach would prevent the write skew anomaly we have seen in the previous lesson.
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car50.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car51.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car52.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car53.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car54.png)
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car55.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car50.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car51.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car52.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car53.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car54.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car55.png)
 
-![advanced](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/big/car56.png)
+![advanced](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/big/car56.png)
 

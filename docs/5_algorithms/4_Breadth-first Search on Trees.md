@@ -17,17 +17,17 @@ Hopefully, by this time, you’ve drunk enough DFS kool-aid to understand its im
 
 While DFS uses recursion/stack to keep track of progress, BFS uses a queue (First In First Out). When we dequeue a node, we enqueue its children.
 
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs1.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs2.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs3.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs4.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs5.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs6.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs7.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs8.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs9.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs10.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs11.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs1.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs2.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs3.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs4.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs5.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs6.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs7.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs8.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs9.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs10.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs11.png)
 
 ## DFS vs BFS
 
@@ -63,7 +63,7 @@ def bfs_by_queue(root):
 ## Binary Tree Level Order Traversal
 
 Given a binary tree, return its level order traversal. The input is the root node of the tree. The output should be a list of lists containing tree nodes at each level.
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs12.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs12.png)
 
 ## Explanation
 We can use DFS for this problem by keeping track of the depth for each node. A better way though is to use BFS since it traverses the tree by level by default.
@@ -78,13 +78,13 @@ One observation is that the queue contains at most two levels of nodes. To see w
 Observe that we always push the leftmost node of a level into the queue first. When we dequeue the leftmost node (and before we add its children), the queue contains only one level of nodes. We can save the number of nodes in the queue in a variable n and dequeue the next n nodes.
 
 The time complexity is O(N) since each node is visited once.
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs13.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs14.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs15.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs16.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs17.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs18.png)
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs19.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs13.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs14.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs15.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs16.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs17.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs18.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs19.png)
 
 {% highlight java %}
 class Solution {
@@ -151,7 +151,7 @@ class Node {
 ## Problem statement
 
 Given a binary tree, return its level order traversal but in alternate left to right order.
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs22.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs22.png)
 
 ## Explanation
 This problem is almost the same as level order traversal. We just have to keep a flag to track if we are currently traversing left-to-right or right-to-left.
@@ -227,7 +227,7 @@ class Node {
 ## Binary Tree Right Side View
 
 Given a binary tree, return the rightmost node of each level.
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs23.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs23.png)
 
 ## Explanation
 We can do a level order traversal and add the last node to return the result. The time complexity is O(N) since each node is visited at most once.
@@ -296,7 +296,7 @@ class Node {
 
 ## Binary Tree Min Depth
 Given a binary tree, find the depth of the shallowest leaf node.
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs20.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs20.png)
 
 ## Explanation
 We can solve this problem with either DFS or BFS. With DFS, we traverse the whole tree looking for leaf nodes, and record and update the minimum depth as we go. With BFS, since we search level by level, we are guaranteed to find the shallowest leaf node earlier than other leaf nodes. This is the biggest advantage of BFS over DFS. The time complexity is O(N)O(N) since each node is visited at most once.
@@ -361,7 +361,7 @@ class Node {
 ## Binary Tree Distance K from Target Node
 
 Given a binary tree, a target node, and an integer K, find all nodes whose depth (level) is K away from the target node’s depth. The order of returned nodes does not matter.
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs21.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs21.png)
 
 ## Explanation
 To find the nodes distance K away from the target node, we have to first find the target node and its depth. We can do this with a simple BFS using the template in the intro module.
@@ -474,7 +474,7 @@ class Node {
 
 Given a binary tree, a target node, and an integer K, find all nodes whose depth (level) is K away from the target node’s depth. The order of returned nodes does not matter.
 
-![bfs](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/bfs/bfs24.png)
+![bfs](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/bfs/bfs24.png)
 
 ## Explanation
 To find the nodes distance K away from the target node, we have to first find the target node and its depth. We can do this with a simple BFS using the template in the intro module.

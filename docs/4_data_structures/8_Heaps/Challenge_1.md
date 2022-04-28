@@ -34,9 +34,9 @@ It does not return anything. The maxHeap array is manipulated and changed to a m
 
 ## Explanation
 
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/res50.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/res50.png)
 
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/res51.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/res51.png)
 
 ## Coding Exercise
 
@@ -110,5 +110,5 @@ class CheckConvert {
 }
 {% endhighlight %}
 
-![heap](https://raw.githubusercontent.com/JavaLvivDev/prog-resources/master/resources/heap/res52.png)
+![heap](https://raw.githubusercontent.com/TestJavaDev/java-resources/master/resources/heap/res52.png)
 
