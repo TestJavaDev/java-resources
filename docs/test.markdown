@@ -55,6 +55,7 @@ Callable, Future, чего не хватает j.u.c.Future
 внутреннее устройство j.u.c.AQS
 строим свои примитивы на j.u.c.AQS + LockSupport
 
+
 Модуль #3: Fork/Join Framework (java 7) + Parallel Streams (Java 8)
 Fork/Join Framework
 решаем задачи в стиле рекурсивного параллелизма
