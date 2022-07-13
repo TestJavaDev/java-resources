@@ -13,16 +13,77 @@ Java interview / Java resources / Grokking the interview
 
 ## Spring
 
+### Spring Core
+
+* [Spring Core in Spring Certification](https://mossgreen.github.io/Spring-Certification-Spring-Core/)
 * [Spring изнутри. Этапы инициализации контекста / Хабр](https://habr.com/ru/post/222579/)
 * [Injecting Spring Prototype bean into Singleton bean](http://dolszewski.com/spring/accessing-prototype-bean-in-singleton)
-* [How Does Spring @Transactional Really Work? - DZone Integration](https://dzone.com/articles/how-does-spring-transactional)
-* [java - Spring @Transactional - isolation, propagation - Stack Overflow](https://stackoverflow.com/questions/8490852/spring-transactional-isolation-propagation)
-* [Микросервисная архитектура, Spring Cloud и Docker / Хабр](https://habr.com/ru/post/280786/)
-* [Spring Transaction Management: @Transactional In-Depth](https://www.marcobehler.com/guides/spring-transaction-management-transactional-in-depth)
+* [Spring: @Component versus @Bean](https://stackoverflow.com/questions/10604298/spring-component-versus-bean)
+* [Difference between @Bean and @Component annotation in Spring.](https://www.tutorialspoint.com/difference-between-bean-and-component-annotation-in-spring#:~:text=It%20is%20used%20to%20explicitly,detect%20by%20using%20classpath%20scan.&text=We%20should%20use%20%40bean%2C%20if,implementation%20based%20on%20dynamic%20condition.)
+* [Circular Dependencies in Spring](https://www.baeldung.com/circular-dependencies-in-spring)
+* [Circular dependency in Spring](https://stackoverflow.com/questions/3485347/circular-dependency-in-spring)
+* [BeanFactoryPostProcessor and BeanPostProcessor in lifecycle events](https://stackoverflow.com/questions/30455536/beanfactorypostprocessor-and-beanpostprocessor-in-lifecycle-events#:~:text=BeanFactoryPostProcessor%20implementations%20are%20%22called%22%20during,demand%20for%20the%20proptotypes%20one))
+* [@PostConstruct annotation and spring lifecycle](https://stackoverflow.com/questions/44681142/postconstruct-annotation-and-spring-lifecycle)
+* [Spring под капотом](https://medium.com/@kirill.sereda/spring-%D0%BF%D0%BE%D0%B4-%D0%BA%D0%B0%D0%BF%D0%BE%D1%82%D0%BE%D0%BC-9d92f2bf1a04)
+
+### Spring AOP
+
+* [Spring AOP in Spring Certification](https://mossgreen.github.io/Spring-Certification-Spring-AOP/)
 * [Spring AOP. Маленький вопросик с собеседования / Хабр](https://habr.com/ru/post/347752/)
+
+### Spring Data Management
+
+* [Spring Data Management in Spring Certification](https://mossgreen.github.io/Spring-Certification-Spring-Data-Management/)
+* [Spring Data – One API To Rule Them All](https://www.infoq.com/articles/spring-data-intro/)
+* [Why should you use Unchecked exceptions over Checked exceptions in Java](https://www.javacodegeeks.com/2012/03/why-should-you-use-unchecked-exceptions.html)
+* [Why does spring prefer unchecked exceptions?](https://stackoverflow.com/questions/52983402/why-does-spring-prefer-unchecked-exceptions)
+* [Spring Transaction Management: @Transactional In-Depth](https://www.marcobehler.com/guides/spring-transaction-management-transactional-in-depth)
+* [java - Spring @Transactional - isolation, propagation - Stack Overflow](https://stackoverflow.com/questions/8490852/spring-transactional-isolation-propagation)
+* [Spring self injection for transactions](https://stackoverflow.com/questions/43280460/spring-self-injection-for-transactions/43282215)
+* [@Transactional on @PostConstruct method](https://stackoverflow.com/questions/17346679/transactional-on-postconstruct-method)
+* [What are advantages of using @Transactional(readOnly = true)?](https://stackoverflow.com/questions/44984781/what-are-advantages-of-using-transactionalreadonly-true)
+* [Spring transaction and non-transaction methods call each other](https://blog.fearcat.in/a?ID=01700-718e2a5b-5ee2-45ab-8706-9cd87328989e)
+
+### Spring Boot
+
+* [Spring Boot in Spring Professional Certification](https://mossgreen.github.io/Spring-Certification-Spring-Boot/)
+* [Introducing spring boot](https://topjava.ru/blog/introducing-spring-boot)
+* [Spring Boot DevTools](https://habr.com/ru/post/479382/)
+* [Spring Boot Actuator](https://habr.com/ru/company/otus/blog/452624/)
+* [Spring Boot Starter](https://java-ru-blog.blogspot.com/2020/02/spring-boot-starters.html)
+* [Spring Boot Auto-Configuration](https://habr.com/ru/post/487980/)
+
+### Spring MVC
+
+* [Spring MVC in Spring Professional Certification](https://mossgreen.github.io/Spring-Certification-Spring-MVC/)
+
+### Spring Security
+
+* [Spring Security in Spring Certification](https://mossgreen.github.io/Spring-Certification-Spring-Security/)
+* [How Spring Security Filter Chain works](https://stackoverflow.com/questions/41480102/how-spring-security-filter-chain-works)
+* [Difference between Role and GrantedAuthority in Spring Security](https://stackoverflow.com/questions/19525380/difference-between-role-and-grantedauthority-in-spring-security)
+
+### Spring REST
+
+* [Spring REST in Spring Certification](https://mossgreen.github.io/Spring-Certification-Spring-REST/)
+* [Spring RestTemplate](https://mossgreen.github.io/Spring-RestTemplate/)
+* [Spring RestTemplate Vs Jersey Rest Client Vs RestEasy Client](https://stackoverflow.com/questions/32337775/spring-resttemplate-vs-jersey-rest-client-vs-resteasy-client)
+* [Declarative REST Client: Feign](https://cloud.spring.io/spring-cloud-static/spring-cloud-openfeign/2.1.5.RELEASE/multi/multi_spring-cloud-feign.html)
+* [Spring WebClient vs. RestTemplate](https://www.baeldung.com/spring-webclient-resttemplate)
+
+### Spring Testing
+
+* [Spring Testing in Spring Certification](https://mossgreen.github.io/Spring-Certification-Testing/)
+* [How to test Spring transactions](https://stackoverflow.com/questions/53380923/how-to-test-spring-transactions)
+
+### Others
+
+* [Евгений Борисов, Кирилл Толкачев — Boot yourself, Spring is coming](https://www.youtube.com/watch?v=yy43NOreJG4)
+* [Микросервисная архитектура, Spring Cloud и Docker / Хабр](https://habr.com/ru/post/280786/)
 * [Алексей Нестеров — Spring Cloud в эру Kubernetes - YouTube](https://www.youtube.com/watch?v=vUo3cTE3Y0g&t=2260s)
 * [Spring Boot Starter](https://www.youtube.com/watch?v=2_iE7jZWl3U&list=WL&index=4&t=2465s)
 * [Стратегии обработки ошибок: Circuit Breaker pattern](https://medium.com/@kirill.sereda/%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8-%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA-circuit-breaker-pattern-650232944e37)
+* [Spring Application Context Events](https://www.baeldung.com/spring-context-events)
 
 ## Message communication
 * [point-to-point](www.enterpriseintegrationpatterns.com/PointToPointChannel.html) 
@@ -34,6 +95,8 @@ often sent over a point-to-point channel.(AWS SQS)
 * [Handling duplicate SNS deliveries : aws](https://www.reddit.com/r/aws/comments/8u1b1v/handling_duplicate_sns_deliveries/)
 * [Николай Алименков — Нужен ли нам JMS в мире современных Java-технологий? - YouTube](https://www.youtube.com/watch?v=ExjPxDxkmFo)
 * [Producer Consumer Solution](https://www.geeksforgeeks.org/producer-consumer-solution-using-blockingqueue-in-java-thread/)
+
+* [Implementing the Outbox Pattern](https://dzone.com/articles/implementing-the-outbox-pattern)
 
 ## DB
 
@@ -59,6 +122,7 @@ Hibernate save object - strategies, hibernate events, dirty checking, intercepto
 
 * [Строим продвинутый поиск с ElasticSearch DOU](https://dou.ua/lenta/columns/building-advanced-search-with-elasticsearch/)
 * [С чего начинается Elasticsearch / Хабр](https://habr.com/ru/post/489924/)
+* [How Elasticsearch Search So Fast](https://medium.com/analytics-vidhya/how-elasticsearch-search-so-fast-248630b70ba4)
 
 ## Multithreading
 
@@ -87,6 +151,8 @@ Hibernate save object - strategies, hibernate events, dirty checking, intercepto
 
 Metaspace, JVM tuning flags, memory leaks, GC algorithms
 * [JVM: краткий курс общей анатомии](https://www.youtube.com/watch?v=-fcj6EL9rc4&list=WL&index=5&t=369s)
+* [What is profiling?](https://stackoverflow.com/questions/619898/what-is-profiling)
+* [ava Profilers: Why You Need These 3 Different Types](https://stackify.com/java-profilers-3-types/)
 * [JVM Tutorial - Java Virtual Machine Architecture Explained for Beginners](https://www.freecodecamp.org/news/jvm-tutorial-java-virtual-machine-architecture-explained-for-beginners/)
 * [Understanding JVM Architecture. Understanding JVM architecture Medium](https://medium.com/platform-engineer/understanding-jvm-architecture-22c0ddf09722)
 * [Разрешение конфликтов в транзитивных зависимостях — Хороший, Плохой, Злой / Хабр](https://habr.com/ru/company/jugru/blog/191246/)
