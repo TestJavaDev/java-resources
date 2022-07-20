@@ -85,6 +85,24 @@ Java interview / Java resources / Grokking the interview
 * [Стратегии обработки ошибок: Circuit Breaker pattern](https://medium.com/@kirill.sereda/%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8-%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA-circuit-breaker-pattern-650232944e37)
 * [Spring Application Context Events](https://www.baeldung.com/spring-context-events)
 
+## Multithreading
+
+//TODO learn jobs from work project
+
+* [Обзор java.util.concurrent.* / Хабр](https://habr.com/ru/company/luxoft/blog/157273/)
+* [Справочник по синхронизаторам java.util.concurrent.*](https://habr.com/ru/post/277669/)
+
+* [Monitor vs Mutex](https://stackoverflow.com/questions/38159668/monitor-vs-mutex)
+* [В чем разница между мьютексом, монитором и семафором](https://javarush.ru/groups/posts/2174-v-chem-raznica-mezhdu-mjhjuteksom-monitorom-i-semaforom)
+* [Semaphore vs. Monitors - what's the difference?](https://stackoverflow.com/questions/7335950/semaphore-vs-monitors-whats-the-difference)
+* [The usage case of counting semaphore](https://stackoverflow.com/questions/26217282/the-usage-case-of-counting-semaphore)
+* [What are the practical uses of semaphores?](https://stackoverflow.com/questions/21736741/what-are-the-practical-uses-of-semaphores)
+
+* [How does multithreading work for a java Servlet? - Stack Overflow](https://stackoverflow.com/questions/7701772/how-does-multithreading-work-for-a-java-servlet)
+* [Java Memory Model вкратце](http://www.javaspecialist.ru/2011/06/java-memory-model.html)
+* [Java Memory Model](https://www.slideshare.net/buzdin/java-jmm2011v8)
+* [Синхронизация потоков](http://www.skipy.ru/technics/synchronization.html)
+
 ## Message communication
 * [point-to-point](www.enterpriseintegrationpatterns.com/PointToPointChannel.html) 
 A point-to-point channel delivers a message to exactly one of the consumers that
@@ -123,11 +141,6 @@ Hibernate save object - strategies, hibernate events, dirty checking, intercepto
 * [Строим продвинутый поиск с ElasticSearch DOU](https://dou.ua/lenta/columns/building-advanced-search-with-elasticsearch/)
 * [С чего начинается Elasticsearch / Хабр](https://habr.com/ru/post/489924/)
 * [How Elasticsearch Search So Fast](https://medium.com/analytics-vidhya/how-elasticsearch-search-so-fast-248630b70ba4)
-
-## Multithreading
-
-* [How does multithreading work for a java Servlet? - Stack Overflow](https://stackoverflow.com/questions/7701772/how-does-multithreading-work-for-a-java-servlet)
-* [Обзор java.util.concurrent.* / Хабр](https://habr.com/ru/company/luxoft/blog/157273/)
 
 ## Testing
 
