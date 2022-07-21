@@ -16,25 +16,43 @@ Java interview / Java resources / Grokking the interview
 ### Spring Core
 
 * [Spring Core in Spring Certification](https://mossgreen.github.io/Spring-Certification-Spring-Core/)
-* [Spring изнутри. Этапы инициализации контекста / Хабр](https://habr.com/ru/post/222579/)
+* [All about spring bean lifecycle and beanPostProcessor](https://www.youtube.com/watch?v=BmBr5diz8WA)
+* [Spring is general](https://medium.com/@kirill.sereda/spring-%D0%BF%D0%BE%D0%B4-%D0%BA%D0%B0%D0%BF%D0%BE%D1%82%D0%BE%D0%BC-9d92f2bf1a04)
+
+- Questions from interviews
+* [Spring Context initialization steps / Хабр](https://habr.com/ru/post/222579/)
 * [Injecting Spring Prototype bean into Singleton bean](http://dolszewski.com/spring/accessing-prototype-bean-in-singleton)
-* [Spring: @Component versus @Bean](https://stackoverflow.com/questions/10604298/spring-component-versus-bean)
-* [Difference between @Bean and @Component annotation in Spring.](https://www.tutorialspoint.com/difference-between-bean-and-component-annotation-in-spring#:~:text=It%20is%20used%20to%20explicitly,detect%20by%20using%20classpath%20scan.&text=We%20should%20use%20%40bean%2C%20if,implementation%20based%20on%20dynamic%20condition.)
-* [Circular Dependencies in Spring](https://www.baeldung.com/circular-dependencies-in-spring)
-* [Circular dependency in Spring](https://stackoverflow.com/questions/3485347/circular-dependency-in-spring)
-* [BeanFactoryPostProcessor and BeanPostProcessor in lifecycle events](https://stackoverflow.com/questions/30455536/beanfactorypostprocessor-and-beanpostprocessor-in-lifecycle-events#:~:text=BeanFactoryPostProcessor%20implementations%20are%20%22called%22%20during,demand%20for%20the%20proptotypes%20one))
+* [Spring: Difference between  @Component and @Bean](https://stackoverflow.com/questions/10604298/spring-component-versus-bean)
+* [Difference between @Bean and @Component annotation](https://www.tutorialspoint.com/difference-between-bean-and-component-annotation-in-spring#:~:text=It%20is%20used%20to%20explicitly,detect%20by%20using%20classpath%20scan.&text=We%20should%20use%20%40bean%2C%20if,implementation%20based%20on%20dynamic%20condition.)
+* [How to resolve Circular Dependencies in Spring](https://www.baeldung.com/circular-dependencies-in-spring)
+* [Spring Context and Bean Lifecycle callbacks](https://stackoverflow.com/questions/21163355/spring-context-and-bean-lifecycle-callbacks-practical-examples-of-usage)
+* [Real use case of bean scopes](https://stackoverflow.com/questions/39400697/real-world-use-case-of-bean-scopes)
+* [Real World example of Spring prototype](https://techhelpnotes.com/java-real-world-example-of-spring-prototype-bean/)
+* [When to use Spring prototype scope](https://stackoverflow.com/questions/21969044/when-to-use-spring-prototype-scope)
+* [BeanFactory vs ApplicationContext](https://stackoverflow.com/questions/243385/beanfactory-vs-applicationcontext)
+* [Spring Bean Lifecycle](https://springframework.guru/spring-bean-lifecycle/)
+* [Bean lifecycle and CallBack Methods in Spring](https://technicalstack.com/bean-lifecycle-and-callback-methods-in-spring/)
+* [Understanding proxy usage in Spring](https://spring.io/blog/2012/05/23/transactions-caching-and-aop-understanding-proxy-usage-in-spring)
+* [Difference between BeanFactoryPostProcessor and BeanPostProcessor](https://stackoverflow.com/questions/30455536/beanfactorypostprocessor-and-beanpostprocessor-in-lifecycle-events#:~:text=BeanFactoryPostProcessor%20implementations%20are%20%22called%22%20during,demand%20for%20the%20proptotypes%20one)
 * [@PostConstruct annotation and spring lifecycle](https://stackoverflow.com/questions/44681142/postconstruct-annotation-and-spring-lifecycle)
-* [Spring под капотом](https://medium.com/@kirill.sereda/spring-%D0%BF%D0%BE%D0%B4-%D0%BA%D0%B0%D0%BF%D0%BE%D1%82%D0%BE%D0%BC-9d92f2bf1a04)
+* [Spring Application Context Events](https://www.baeldung.com/spring-context-events)
 
 ### Spring AOP
 
 * [Spring AOP in Spring Certification](https://mossgreen.github.io/Spring-Certification-Spring-AOP/)
+* [Understanding Spring AOP](https://www.codejava.net/frameworks/spring/understanding-spring-aop)
+
+- Questions from interviews
+* [What is the concept of AOP? Which problem does it solve? What is a cross cutting concern?](https://www.youtube.com/watch?v=I-0p7IIA5wk)
 * [Spring AOP. Маленький вопросик с собеседования / Хабр](https://habr.com/ru/post/347752/)
 
 ### Spring Data Management
 
 * [Spring Data Management in Spring Certification](https://mossgreen.github.io/Spring-Certification-Spring-Data-Management/)
 * [Spring Data – One API To Rule Them All](https://www.infoq.com/articles/spring-data-intro/)
+ 
+- Questions from interviews
+* [JDBC: Statements, PreparedStatement and CallableStatement](https://www.tutorialspoint.com/jdbc/jdbc-statements.htm)
 * [Why should you use Unchecked exceptions over Checked exceptions in Java](https://www.javacodegeeks.com/2012/03/why-should-you-use-unchecked-exceptions.html)
 * [Why does spring prefer unchecked exceptions?](https://stackoverflow.com/questions/52983402/why-does-spring-prefer-unchecked-exceptions)
 * [Spring Transaction Management: @Transactional In-Depth](https://www.marcobehler.com/guides/spring-transaction-management-transactional-in-depth)
@@ -48,6 +66,8 @@ Java interview / Java resources / Grokking the interview
 
 * [Spring Boot in Spring Professional Certification](https://mossgreen.github.io/Spring-Certification-Spring-Boot/)
 * [Introducing spring boot](https://topjava.ru/blog/introducing-spring-boot)
+
+- Questions from interviews
 * [Spring Boot DevTools](https://habr.com/ru/post/479382/)
 * [Spring Boot Actuator](https://habr.com/ru/company/otus/blog/452624/)
 * [Spring Boot Starter](https://java-ru-blog.blogspot.com/2020/02/spring-boot-starters.html)
@@ -60,6 +80,7 @@ Java interview / Java resources / Grokking the interview
 ### Spring Security
 
 * [Spring Security in Spring Certification](https://mossgreen.github.io/Spring-Certification-Spring-Security/)
+
 * [How Spring Security Filter Chain works](https://stackoverflow.com/questions/41480102/how-spring-security-filter-chain-works)
 * [Difference between Role and GrantedAuthority in Spring Security](https://stackoverflow.com/questions/19525380/difference-between-role-and-grantedauthority-in-spring-security)
 
@@ -83,7 +104,6 @@ Java interview / Java resources / Grokking the interview
 * [Алексей Нестеров — Spring Cloud в эру Kubernetes - YouTube](https://www.youtube.com/watch?v=vUo3cTE3Y0g&t=2260s)
 * [Spring Boot Starter](https://www.youtube.com/watch?v=2_iE7jZWl3U&list=WL&index=4&t=2465s)
 * [Стратегии обработки ошибок: Circuit Breaker pattern](https://medium.com/@kirill.sereda/%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8-%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA-circuit-breaker-pattern-650232944e37)
-* [Spring Application Context Events](https://www.baeldung.com/spring-context-events)
 
 ## Multithreading
 
@@ -102,6 +122,8 @@ Java interview / Java resources / Grokking the interview
 * [Java Memory Model вкратце](http://www.javaspecialist.ru/2011/06/java-memory-model.html)
 * [Java Memory Model](https://www.slideshare.net/buzdin/java-jmm2011v8)
 * [Синхронизация потоков](http://www.skipy.ru/technics/synchronization.html)
+* [Как работает java.util.concurrent.Phaser?](https://ru.stackoverflow.com/questions/544790/%D0%9A%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-java-util-concurrent-phaser)
+* [The difference between blocking queue and non-blocking queue](https://blog.katastros.com/a?ID=00700-24845d54-e3db-4666-809e-f5f1eaa1b2fb)
 
 ## Message communication
 * [point-to-point](www.enterpriseintegrationpatterns.com/PointToPointChannel.html) 
